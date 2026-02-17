@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: fd191fc4-c4f3-46ad-bc80-d7dcd9ed2eea
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Certificates
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /products/certificates
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte's digital certificate management platform provides secure, compliant identity verification for organizations of all sizes. Manage the complete lifecycle of digital certificates from issuance to renewal and revocation.</p><h2>Certificate Management Features</h2><ul><li><strong>Automated Discovery</strong> — Find all certificates across your infrastructure automatically</li><li><strong>Lifecycle Management</strong> — Track expiration dates and automate renewals</li><li><strong>Policy Enforcement</strong> — Ensure certificates meet security and compliance standards</li><li><strong>Multi-CA Support</strong> — Manage certificates from multiple Certificate Authorities</li></ul><h2>Supported Certificate Types</h2><table><thead><tr><th>Type</th><th>Use Case</th></tr></thead><tbody><tr><td>SSL/TLS</td><td>Website and API security</td></tr><tr><td>Code Signing</td><td>Software distribution</td></tr><tr><td>Email (S/MIME)</td><td>Secure communications</td></tr><tr><td>Client Auth</td><td>User and device authentication</td></tr><tr><td>Document Signing</td><td>Legal and compliance documents</td></tr></tbody></table><h2>Why Centralized Certificate Management</h2><ol><li>Prevent outages from expired certificates</li><li>Reduce manual tracking and spreadsheet management</li><li>Ensure compliance with industry regulations</li><li>Gain visibility across cloud and on-premise infrastructure</li></ol><p>Integrate with your existing PKI infrastructure or use NeonByte as your managed CA for a complete certificate solution.</p>"
+      format: full_html
+      summary: ''

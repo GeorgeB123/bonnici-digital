@@ -1,0 +1,29 @@
+{% embed 'dripyard_base:layout-dynamic' with {
+    container_size: 'default',
+    section_width: 'edge-to-edge',
+    content_width: 'max-width',
+    row_count: 1,
+    column_count: 4,
+    cell_align_x: 'default',
+    cell_align_y: 'default',
+    margin_top: 'zero',
+    margin_bottom: 'zero',
+    padding_top: 'large',
+    padding_bottom: 'large',
+    row_gutter: 'default',
+    column_gutter: 'default',
+    rows: rows,
+    } only %}
+  {% block cell_1 %}
+    {{ rows[0].content}}
+  {% endblock %}
+  {% block cell_2 %}
+    {{ rows[1].content}}
+  {% endblock %}
+  {% block cell_3 %}
+    {{ rows[2].content}}
+  {% endblock %}
+  {% block cell_4 %}
+    {{ rows[3].content}}
+  {% endblock %}
+{% endembed %}

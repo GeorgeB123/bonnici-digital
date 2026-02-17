@@ -1,0 +1,90 @@
+/*
+ * @file
+ * Drupal's vertical tab styling.
+ */
+
+.vertical-tabs {
+  background-color: var(--theme-surface-alt);
+  border-radius: var(--radius-md);
+  border-top-left-radius: 0;
+
+  &:dir(rtl) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .details__wrapper {
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.vertical-tabs__menu {
+  border-top-left-radius: var(--radius-sm);
+
+  &:dir(rtl) {
+    border-top-right-radius: var(--radius-sm);
+  }
+}
+
+.vertical-tabs__menu-item {
+  margin: 0;
+  background-color: var(--theme-surface);
+
+  &:first-child {
+    border-top-left-radius: var(--radius-sm);
+
+    &:dir(rtl) {
+      border-top-right-radius: var(--radius-sm);
+    }
+  }
+
+  &:last-child  {
+    border-bottom-left-radius: var(--radius-sm);
+
+    &:dir(rtl) {
+      border-bottom-right-radius: var(--radius-sm);
+    }
+  }
+
+  &.is-selected {
+    background-color: var(--theme-surface-alt);
+
+    .vertical-tabs__menu-item-title {
+      color: var(--theme-text-color-primary);
+    }
+  }
+
+  a {
+    color: var(--theme-text-color-soft);
+
+    &:hover {
+      outline: none;
+    }
+  }
+}
+
+/* If there's only one item within the vertical tabs, don't show the tabs. */
+.vertical-tabs:has(.vertical-tabs__menu .vertical-tabs__menu-item:only-child) {
+  border-radius: var(--radius-md);
+  margin-inline-start: 0;
+
+  .vertical-tabs__menu {
+    display: none;
+  }
+
+  .details__wrapper {
+    margin: 0;
+  }
+}
+
+.vertical-tabs__menu-item-summary {
+  font-size: var(--body-s-size);
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+}

@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1b144545-7cc9-43ef-8270-e7b8025f5370
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Tools
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /resources/tools
+      langcode: en
+  body:
+    -
+      value: "<p>Access free tools from NeonByte including security scanners, compliance checkers, and productivity utilities to support your technology initiatives. These tools are available at no cost to help organizations improve their security posture.</p><h2>Available Tools</h2><ul><li><strong>Security Scanner</strong> — Quick vulnerability assessment for web applications</li><li><strong>Password Strength Checker</strong> — Evaluate password policies against best practices</li><li><strong>SSL Certificate Analyzer</strong> — Check certificate configuration and expiration</li><li><strong>Compliance Readiness Quiz</strong> — Assess your SOC 2 and HIPAA preparedness</li></ul><h2>Tool Comparison</h2><table><thead><tr><th>Tool</th><th>Use Case</th><th>Output</th></tr></thead><tbody><tr><td>Security Scanner</td><td>Web app assessment</td><td>Vulnerability report</td></tr><tr><td>Password Checker</td><td>Policy validation</td><td>Strength score</td></tr><tr><td>SSL Analyzer</td><td>Certificate audit</td><td>Configuration grade</td></tr><tr><td>Compliance Quiz</td><td>Readiness check</td><td>Gap analysis</td></tr></tbody></table><h2>How to Use</h2><ol><li>Select the tool you need from the list above</li><li>Enter the required information (URL, domain, or answers)</li><li>Review your results and recommendations</li><li>Download the report for your records</li></ol><p>For more comprehensive assessments, contact our team about NeonByte's professional security services and compliance consulting.</p>"
+      format: full_html
+      summary: ''

@@ -1,0 +1,24 @@
+{% set icon_set = ['baby-carriage', 'baby', 'backward-fast', 'backward-step', 'backward', 'bacon', 'bacteria', 'bacterium', 'bag-shopping', 'bahai', 'baht-sign', 'ban-smoking', 'ban', 'bandage', 'bandcamp', 'bangladeshi-taka-sign', 'barcode', 'bars-progress', 'bars-staggered', 'bars', 'baseball-bat-ball', 'baseball', 'basket-shopping', 'basketball', 'bath', 'battery-empty', 'battery-full', 'battery-half', 'battery-quarter', 'battery-three-quarters', 'battle-net', 'bed-pulse', 'bed', 'beer-mug-empty', 'behance', 'bell-concierge', 'bell-slash', 'bell', 'bezier-curve', 'bicycle', 'bilibili', 'bimobject', 'binoculars', 'biohazard', 'bitbucket', 'bitcoin-sign', 'bitcoin', 'bity', 'black-tie', 'blackberry', 'blender-phone', 'blender', 'blog', 'blogger-b', 'blogger', 'bluesky', 'bluetooth-b', 'bluetooth', 'bold', 'bolt-lightning', 'bolt', 'bomb', 'bone', 'bong', 'book-atlas', 'book-bible', 'book-bookmark', 'book-journal-whills', 'book-medical', 'book-open-reader', 'book-open', 'book-quran', 'book-skull', 'book-tanakh', 'book', 'bookmark', 'bootstrap', 'border-all', 'border-none', 'border-top-left', 'bore-hole', 'bots', 'bottle-droplet', 'bottle-water', 'bowl-food', 'bowl-rice', 'bowling-ball', 'box-archive', 'box-open', 'box-tissue', 'box', 'boxes-packing', 'boxes-stacked', 'braille', 'brain', 'brave-reverse', 'brave', 'brazilian-real-sign', 'bread-slice', 'bridge-circle-check', 'bridge-circle-exclamation', 'bridge-circle-xmark', 'bridge-lock', 'bridge-water', 'bridge', 'briefcase-medical', 'briefcase', 'broom-ball', 'broom', 'brush', 'btc', 'bucket', 'buffer', 'bug-slash', 'bug', 'bugs', 'building-circle-arrow-right', 'building-circle-check', 'building-circle-exclamation', 'building-circle-xmark', 'building-columns', 'building-flag', 'building-lock', 'building-ngo', 'building-shield', 'building-un', 'building-user', 'building-wheat', 'building', 'bullhorn', 'bullseye', 'burger', 'buromobelexperte', 'burst', 'bus-simple', 'bus', 'business-time', 'buy-n-large', 'buysellads', 'c', 'cable-car', 'cake-candles', 'calculator', 'calendar-check', 'calendar-day', 'calendar-days', 'calendar-minus', 'calendar-plus', 'calendar-week', 'calendar-xmark', 'calendar', 'camera-retro', 'camera-rotate', 'camera', 'campground', 'canadian-maple-leaf', 'candy-cane', 'cannabis', 'capsules', 'car-battery', 'car-burst', 'car-on', 'car-rear', 'car-side', 'car-tunnel', 'car', 'caravan', 'caret-down', 'caret-left', 'caret-right', 'caret-up', 'carrot', 'cart-arrow-down', 'cart-flatbed-suitcase', 'cart-flatbed', 'cart-plus', 'cart-shopping', 'cash-register', 'cat', 'cc-amazon-pay', 'cc-amex', 'cc-apple-pay', 'cc-diners-club'] %}
+{% set body_set = [
+  'Nisi assumenda sed corporis accusamus optio maxime, voluptas, architecto sequi ipsum fugit tempora illum, praesentium veniam.',
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perspiciatis.',
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium ipsam minus nobis rem alias.',
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+  ] %}
+{% set title_set = [
+  'Lorem ipsum',
+  'Lorem ipsum dolor sit amet.',
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+  ]%}
+
+{{ include('dripyard_base:icon-card', {
+    icon: random(icon_set),
+    title: random(title_set),
+    body: random(body_set),
+    layout: 'portrait',
+    no_background: false,
+    icon_size: 'small',
+    href: 'http://www.example.com',
+  },
+  with_context = false)
+}}

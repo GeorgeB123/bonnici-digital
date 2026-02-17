@@ -1,0 +1,42 @@
+# Licensed to: george@bonnici.co.nz (500d308b-71ad-4ac1-8f36-ef1ff234296c)
+name: neonbyte_subtheme
+type: theme
+'base theme': neonbyte
+description: ''
+core_version_requirement: ^11
+
+libraries:
+  - neonbyte_subtheme/base
+version: 1.0.0
+generator: 'neonbyte_subtheme:unknown-version'
+
+#
+# Libraries extend will add custom libraries to specified libraries
+# @see https://www.drupal.org/docs/develop/theming-drupal/adding-assets-css-js-to-a-drupal-theme-via-librariesyml
+#
+
+# libraries-extend:
+
+# In this, case we extend dripyard_base's user-login-form library with
+# our own of the same name.
+
+#   dripyard_base/user-login-form:
+#     - testtheme/user-login-form
+
+# Here we extend dripyard_base's status-message SDC library with our own.
+
+#  core/components.dripyard_base--status-messages:
+#    - testtheme/status-messages
+
+regions:
+  header_first: Header first (logo)
+  header_second: Header second (center)
+  header_third: Header third (right)
+  highlighted: Highlighted
+  content: Content
+  fixed_middle_right: Fixed middle right (local actions tabs)
+  fixed_bottom_right: Fixed bottom right (messages)
+  footer_top: Footer top
+  footer_left: Footer left
+  footer_right: Footer right
+  footer_bottom: Footer bottom

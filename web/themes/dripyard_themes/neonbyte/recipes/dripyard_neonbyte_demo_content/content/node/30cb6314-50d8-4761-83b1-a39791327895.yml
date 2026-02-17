@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 30cb6314-50d8-4761-83b1-a39791327895
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'About Us'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /about-us
+      langcode: en
+  body:
+    -
+      value: "<p>Founded in 2015 with a mission to make enterprise technology accessible, NeonByte has grown into a trusted partner for organizations seeking digital transformation. What started as a small team of security experts in Austin, Texas has evolved into a global company with offices across North America and Europe.</p><h2>Our Mission</h2><p>We believe that powerful technology should be accessible to every organization, regardless of size. Our team of 200+ experts brings decades of combined experience in cybersecurity, AI development, and enterprise software engineering.</p><h2>By the Numbers</h2><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>Years in Business</td><td>10+</td></tr><tr><td>Clients Served</td><td>500+</td></tr><tr><td>Team Members</td><td>200+</td></tr><tr><td>Countries</td><td>25+</td></tr><tr><td>Uptime SLA</td><td>99.99%</td></tr></tbody></table><h2>Core Values</h2><ul><li><strong>Security First</strong> — Every solution we build starts with security as a foundational principle</li><li><strong>Client Partnership</strong> — We succeed when our clients succeed</li><li><strong>Continuous Innovation</strong> — We invest heavily in R&amp;D to stay ahead of emerging threats</li><li><strong>Transparency</strong> — Open communication and honest assessments guide our relationships</li></ul><p>Whether you're a startup looking to establish secure foundations or an enterprise modernizing legacy systems, NeonByte has the expertise and dedication to help you achieve your technology goals.</p>"
+      format: full_html
+      summary: ''

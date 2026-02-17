@@ -1,0 +1,20 @@
+{% set in_layout_builder = elements['#in_preview'] %}
+
+{% if in_layout_builder %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+{% endif %}
+  {{ include('dripyard_base:card', {
+    directory,
+    title: props.dripyard_title|default(''),
+    image: content.dripyard_image_media,
+    href: props.dripyard_link[0].href|default('/'),
+    eyebrow_text: content.dripyard_eyebrow,
+    body: content.body,
+    theme: props.dripyard_component_theme|default('inherit'),
+    }, with_context = false) }}
+
+{% if in_layout_builder %}
+  </div>
+{% endif %}

@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Button bare variant.
+ */
+
+.button--bare:where(:not(:disabled)) {
+  color: var(--theme-link-color);
+  border: 0;
+  background-color: transparent;
+
+  &:hover {
+    color: var(--theme-link-color-hover);
+  }
+
+  &:active {
+    color: var(--theme-link-color-hover);
+  }
+
+  .button__prefix,
+  .button__suffix {
+    background: transparent;
+
+    svg {
+      &,
+      path {
+        fill: currentColor;
+        color: currentColor;
+      }
+    }
+  }
+}
+
+.button--bare:disabled {
+  color: color-mix(in oklch, var(--theme-button-text-color), transparent);
+}

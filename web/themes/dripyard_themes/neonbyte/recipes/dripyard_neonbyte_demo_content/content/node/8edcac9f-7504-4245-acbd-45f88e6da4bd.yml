@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8edcac9f-7504-4245-acbd-45f88e6da4bd
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Company
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /company
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte is a leading technology company specializing in cybersecurity, AI automation, and custom software development. Since 2015, we've partnered with businesses worldwide to deliver secure, scalable solutions that drive real results.</p><h2>What We Do</h2><ul><li><strong>Cybersecurity Solutions</strong> — End-to-end protection with zero-trust architecture and 24/7 monitoring</li><li><strong>AI &amp; Automation</strong> — Intelligent workflow automation that learns and adapts to your business</li><li><strong>Custom Software</strong> — Bespoke applications built for your unique requirements</li><li><strong>Compliance Services</strong> — Navigate SOC 2, ISO 27001, HIPAA, and GDPR with confidence</li></ul><h2>Why Organizations Choose NeonByte</h2><table><thead><tr><th>Capability</th><th>Our Approach</th></tr></thead><tbody><tr><td>Security</td><td>Zero-trust architecture with continuous threat detection</td></tr><tr><td>Scalability</td><td>Cloud-native solutions that grow with your business</td></tr><tr><td>Support</td><td>24/7 expert support with dedicated account managers</td></tr><tr><td>Innovation</td><td>Continuous R&amp;D investment in emerging technologies</td></tr></tbody></table><p>From Fortune 500 enterprises to government agencies and innovative startups, organizations trust NeonByte to safeguard their most critical systems and data.</p>"
+      format: full_html
+      summary: ''

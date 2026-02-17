@@ -1,0 +1,12 @@
+{
+  "name": "dripyard/dripyard_base",
+  "description": "A base theme for Dripyard themes",
+  "type": "drupal-theme",
+  "version": "1.0.0",
+  "require": { },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\dripyard_base\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+  module:
+    - file
+    - link
+    - media
+    - media_library
+  theme:
+    - dripyard_base
+active_version: bd0fcae14a6e8387
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        href:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+        image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟{src↝entity␜␜entity:media:image␝field_media_image␞␟src_with_alternate_widths,alt↝entity␜␜entity:media:image␝field_media_image␞␟alt,width↝entity␜␜entity:media:image␝field_media_image␞␟width,height↝entity␜␜entity:media:image␝field_media_image␞␟height}'
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Logo item'
+id: sdc.dripyard_base.logo-item-canvas
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:logo-item-canvas'
+category: 'Dripyard General'

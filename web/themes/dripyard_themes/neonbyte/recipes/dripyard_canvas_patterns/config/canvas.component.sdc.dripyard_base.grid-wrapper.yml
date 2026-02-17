@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - dripyard_base
+active_version: ba954a2accbc0f5c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        canvas_edit_mode:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+        additional_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        column_gutter:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: medium
+          expression: ℹ︎list_string␟value
+        row_gutter:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: medium
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        grid_cells:
+          title: 'Grid Cells'
+          description: 'Grid cells should be placed here'
+label: 'Grid Wrapper'
+id: sdc.dripyard_base.grid-wrapper
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:grid-wrapper'
+category: 'Dripyard Layout'

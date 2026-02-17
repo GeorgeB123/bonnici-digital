@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5752bb44-f80b-41e8-86a1-fa1d8d177f86
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Resources
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /resources
+      langcode: en
+  body:
+    -
+      value: "<p>Access NeonByte's comprehensive resource library. Find whitepapers, case studies, documentation, and guides to help you maximize your technology investments and stay ahead of industry trends.</p><h2>Resource Categories</h2><ul><li><strong>Whitepapers</strong> — In-depth analysis of security trends, AI applications, and compliance strategies</li><li><strong>Case Studies</strong> — Real-world examples of NeonByte solutions in action</li><li><strong>Documentation</strong> — Technical guides, API references, and implementation manuals</li><li><strong>Webinars</strong> — On-demand recordings of expert presentations</li></ul><h2>Featured Resources</h2><table><thead><tr><th>Resource</th><th>Type</th><th>Topic</th></tr></thead><tbody><tr><td>Zero Trust Architecture Guide</td><td>Whitepaper</td><td>Security</td></tr><tr><td>AI Automation Playbook</td><td>eBook</td><td>AI/ML</td></tr><tr><td>SOC 2 Compliance Checklist</td><td>Template</td><td>Compliance</td></tr><tr><td>Enterprise Security Assessment</td><td>Tool</td><td>Security</td></tr></tbody></table><h2>Stay Informed</h2><ol><li>Subscribe to our monthly newsletter for curated insights</li><li>Follow our blog for weekly technical articles</li><li>Join our community Slack for peer discussions</li><li>Attend our quarterly virtual events</li></ol><p>All resources are available free of charge. Create a NeonByte account to access premium content and personalized recommendations based on your interests.</p>"
+      format: full_html
+      summary: ''

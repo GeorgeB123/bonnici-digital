@@ -1,0 +1,30 @@
+/*
+ * @file
+ * Style helpers for Better Exposed Filters module.
+ * @see https://www.drupal.org/project/better_exposed_filters
+ */
+
+.bef-exposed-form.form--inline {
+  margin-top: 0;
+
+  .fieldset[class] {
+    display: inline-block;
+    margin-inline-end: var(--sp3);
+    padding: 0;
+    border: 0;
+
+    .fieldset__legend span {
+      display: block;
+    }
+  }
+
+  .form--inline {
+    > * {
+      display: inline-block;
+
+      &:not(:first-child) {
+        margin-inline-start: var(--sp2);
+      }
+    }
+  }
+}

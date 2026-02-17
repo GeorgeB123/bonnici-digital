@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 059cc1c6-d0b5-45ae-81a8-b2bc7307f10b
+  bundle: dripyard_tab_item
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Technology Strategy'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>The right technology strategy can transform your business. NeonByte helps you align your tools, processes, and roadmap with your long-term goals. Whether you need help choosing vendors, optimizing workflows, or planning for scalable growth, we offer expert insights that turn tech decisions into competitive advantages.</p>'
+      format: basic_html
+      summary: ''
+  dripyard_icon:
+    -
+      value: lightbulb
+  dripyard_title:
+    -
+      value: '<p>Technology</p>'
+      format: dripyard_superbasic

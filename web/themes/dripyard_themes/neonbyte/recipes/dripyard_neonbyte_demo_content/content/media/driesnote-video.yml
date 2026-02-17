@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 41bb3ec1-0193-4628-903d-665c8fd1f7b4
+  bundle: remote_video
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'DrupalCon Vienna 2025 Driesnote'
+  created:
+    -
+      value: 1745849520
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=lTBim0nMD5s'

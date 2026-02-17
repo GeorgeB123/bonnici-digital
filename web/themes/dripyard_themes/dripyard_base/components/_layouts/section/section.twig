@@ -1,0 +1,38 @@
+{% set classes = [
+  'dy-section',
+  additional_classes,
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class,
+  section_width == 'edge-to-edge' ? 'full-width dy-section--section-edge-to-edge' : 'container dy-section--section-max-width',
+  content_width == 'edge-to-edge' ? 'dy-section--content-edge-to-edge',
+  margin_top == 'zero' ? 'margin-top--0',
+  margin_top == 'small' ? 'margin-top--s',
+  margin_top == 'medium' ? 'margin-top--m',
+  margin_top == 'large' ? 'margin-top--l',
+  margin_bottom == 'zero' ? 'margin-bottom--0',
+  margin_bottom == 'small' ? 'margin-bottom--s',
+  margin_bottom == 'medium' ? 'margin-bottom--m',
+  margin_bottom == 'large' ? 'margin-bottom--l',
+  padding_top == 'zero' ? 'padding-top--0',
+  padding_top == 'small' ? 'padding-top--s',
+  padding_top == 'medium' ? 'padding-top--m',
+  padding_top == 'large' ? 'padding-top--l',
+  padding_bottom == 'zero' ? 'padding-bottom--0',
+  padding_bottom == 'small' ? 'padding-bottom--s',
+  padding_bottom == 'medium' ? 'padding-bottom--m',
+  padding_bottom == 'large' ? 'padding-bottom--l',
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="dy-section__container {{ section_width != 'max-width' and (content_width == 'narrow' or content_width == 'max-width') ? 'container' }}">
+    {% if header %}
+      <div class="dy-section__header {{ content_width == 'narrow' ? 'grid--content-narrow' : 'grid' }}">
+        {% block header %}{% endblock %}
+      </div>
+    {% endif %}
+    <div class="{{ content_width == 'narrow' ? 'grid--content-narrow' : 'grid' }}">
+      <div class="dy-section__content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

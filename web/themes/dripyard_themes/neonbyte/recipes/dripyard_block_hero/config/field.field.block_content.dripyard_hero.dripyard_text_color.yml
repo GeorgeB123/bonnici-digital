@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_text_color
+  module:
+    - options
+id: block_content.dripyard_hero.dripyard_text_color
+field_name: dripyard_text_color
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Text Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: inherit
+default_value_callback: ''
+settings: {  }
+field_type: list_string

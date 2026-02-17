@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Header Commerce Cart
+status: stable
+group: Dripyard Commerce
+noUi: true
+props:
+  type: object
+  properties:
+    url:
+      type: string
+      title: Cart URL
+    icon_url:
+      type: string
+      title: Cart Icon
+    count:
+      type: integer
+      title: Item Count
+    count_text:
+      type: string
+      title: Count Text
+    content:
+      type: string
+      title: Cart Content
+    links:
+      type: string
+      title: Cart Links
+    dropdown:
+      type: boolean
+      title: Dropdown Flag

@@ -1,0 +1,55 @@
+/*
+ * @file
+ * Styling for the horizontal line component.
+ */
+
+.horizontal-line {
+  border: none;
+  height: 1px;
+  background-color: var(--theme-border-color-soft);
+  margin-inline: auto;
+  width: 100%;
+}
+
+/* Color variations */
+.horizontal-line--color-soft {
+  background-color: var(--theme-border-color-soft);
+}
+
+.horizontal-line--color-medium {
+  background-color: var(--theme-border-color-medium);
+}
+
+.horizontal-line--color-loud {
+  background-color: var(--theme-border-color-loud);
+}
+
+.horizontal-line--color-primary {
+  background-color: var(--primary);
+}
+
+/* Width variations */
+.horizontal-line--width-small {
+  width: 40px;
+}
+
+.horizontal-line--width-medium {
+  width: 100px;
+}
+
+.horizontal-line--width-large {
+  width: 100%;
+}
+
+/* Alignment variations */
+.horizontal-line--align-start {
+  margin-inline: 0 auto;
+}
+
+.horizontal-line--align-center {
+  margin-inline: auto;
+}
+
+.horizontal-line--align-end {
+  margin-inline: auto 0;
+}

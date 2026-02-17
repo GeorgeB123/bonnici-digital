@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5920847d-c401-484d-8c05-6ebf6705e82a
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Insights
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /insights
+      langcode: en
+  body:
+    -
+      value: "<p>Explore thought leadership, analysis, and perspectives from NeonByte's experts on technology trends, cybersecurity, and digital transformation. Our insights help organizations make informed decisions about their technology investments.</p><h2>Insight Categories</h2><ul><li><strong>Clarity</strong> — Analytics and visibility into your technology landscape</li><li><strong>Alignment</strong> — Synchronizing technology with business objectives</li><li><strong>Reporting</strong> — Data-driven dashboards and stakeholder communication</li><li><strong>Identity Governance</strong> — Managing access rights and user identities</li><li><strong>Single Sign-On</strong> — Streamlined authentication across applications</li></ul><h2>Latest Research</h2><table><thead><tr><th>Topic</th><th>Focus Area</th><th>Key Finding</th></tr></thead><tbody><tr><td>AI Security Trends</td><td>Emerging Threats</td><td>65% increase in AI-powered attacks</td></tr><tr><td>Compliance Landscape</td><td>Regulations</td><td>New state privacy laws in 2025</td></tr><tr><td>Zero Trust Adoption</td><td>Architecture</td><td>78% of enterprises implementing</td></tr></tbody></table><h2>Expert Contributors</h2><ol><li>Security researchers with hands-on threat analysis experience</li><li>Compliance specialists tracking regulatory changes</li><li>Technology strategists advising Fortune 500 clients</li><li>AI engineers building next-generation solutions</li></ol><p>Subscribe to our insights newsletter to receive monthly analysis and recommendations directly in your inbox.</p>"
+      format: full_html
+      summary: ''

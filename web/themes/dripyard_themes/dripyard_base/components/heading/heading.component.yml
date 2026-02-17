@@ -1,0 +1,115 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Heading
+status: stable
+group: Dripyard Basic
+props:
+  type: object
+  required:
+    - text
+    - html_element
+    - style
+    - margin_top
+    - margin_bottom
+  properties:
+    text:
+      type: string
+      title: Heading text
+      examples:
+        - 'This is my heading'
+    html_element:
+      type: string
+      title: HTML element
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - p
+        - div
+        - span
+      examples: [ 'h2' ]
+    style:
+      type:
+        - string
+        - 'null'
+      title: Style
+      enum:
+        - title
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - body_l
+        - body_m
+        - body_s
+      examples: [ 'h2' ]
+    color:
+      type:
+        - string
+        - 'null'
+      title: Text color
+      enum:
+        - default
+        - 'soft'
+        - 'medium'
+        - 'loud'
+        - 'primary'
+      meta:enum:
+        default: Default
+        soft: Soft
+        medium: Medium
+        loud: Loud
+        primary: Primary
+    modifier_classes:
+      type: string
+      title: Modifier CSS classes
+    center:
+      type: boolean
+      title: Center text
+    text_max_width:
+      type: string
+      title: Text maximum width
+      enum:
+        - '400px'
+        - '600px'
+        - '800px'
+        - '1000px'
+        - '1200px'
+        - '1400px'
+    margin_top:
+      type: ['string']
+      title: Override top margin
+      description: Overrides the external spacing at the top of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ zero ]
+    margin_bottom:
+      type: ['string']
+      title: Override bottom margin
+      description: Overrides the external spacing at the bottom of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ zero ]
+libraryOverrides:
+  dependencies:
+    - dripyard_base/layout-utilities

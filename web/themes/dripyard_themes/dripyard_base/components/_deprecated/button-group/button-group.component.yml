@@ -1,0 +1,124 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Button Group
+status: deprecated
+noUi: true
+group: Dripyard Form Elements
+props:
+  type: object
+  required:
+    - align_x
+    - button_size
+    - button_1_href
+    - button_1_text
+  properties:
+    align_x:
+      title: Horizontal alignment
+      type: string
+      enum:
+        - start
+        - center
+        - end
+      examples:
+        - start
+    button_size:
+      title: Button size
+      description: Affects the size of all buttons in the group
+      type: string
+      enum:
+        - small
+        - medium
+        - large
+      examples:
+        - medium
+    #
+    # Button 1
+    #
+    button_1_href:
+      title: Button 1 Link
+      type: string
+      format: uri-reference
+      examples:
+        - https://drupal.org/drupal-cms
+    button_1_text:
+      title: Button 1 Text
+      type: string
+      examples:
+        - Try Drupal CMS
+    button_1_style:
+      title: Button 1 style
+      type: string
+      examples:
+        - primary
+      enum:
+        - default
+        - primary
+    button_1_icon_prefix:
+      title: Button 1 prefix icon
+      type: string
+    button_1_icon_suffix:
+      title: Button 1 suffix icon
+      type: string
+      examples:
+        - arrow-right
+    button_1_target:
+      title: Open link in new window
+      type:
+        - boolean
+    #
+    # Button 2
+    #
+    button_2_href:
+      title: Button 2 Link
+      type: string
+      format: uri-reference
+      examples:
+        - https://www.drupal.org/project/drupal
+    button_2_text:
+      title: Button 2 Text
+      type: string
+      examples:
+        - Try Drupal Core
+    button_2_style:
+      title: Button 2 style
+      type: string
+      examples:
+        - default
+      enum:
+        - default
+        - primary
+    button_2_icon_prefix:
+      title: Button 2 prefix icon
+      type: string
+    button_2_icon_suffix:
+      title: Button 2 suffix icon
+      type: string
+    button_2_target:
+      title: Open link in new window
+      type:
+        - boolean
+    #
+    # Button 3
+    #
+    button_3_href:
+      title: Button 3 Link
+      type: string
+      format: uri-reference
+    button_3_text:
+      title: Button 3 Text
+      type: string
+    button_3_style:
+      title: Button 3 style
+      type: string
+      enum:
+        - default
+        - primary
+    button_3_icon_prefix:
+      title: Button 3 prefix icon
+      type: string
+    button_3_icon_suffix:
+      title: Button 3 suffix icon
+      type: string
+    button_3_target:
+      title: Open link in new window
+      type:
+        - boolean

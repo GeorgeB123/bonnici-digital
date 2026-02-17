@@ -1,0 +1,6 @@
+{#
+  Drupal Canvas does not invoke block templates, therefore our template
+  suggestions (based on regions) so not work. To make sure the primary menu
+  displays properly in the header, we create this template suggestion.
+#}
+{{ include('neonbyte:primary-menu', { items }, with_context = false) }}

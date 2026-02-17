@@ -1,0 +1,13 @@
+{% set classes = [
+  'text',
+  'text-content',
+  modifier_classes,
+  center ? 'text--centered',
+  style|clean_class,
+  color ? 'color--' ~ color|clean_class,
+] %}
+{% set max_width_var = text_max_width ? '--text-max-width: ' ~ text_max_width ~ ';' : false %}
+
+<div{{ attributes.addClass(classes).setAttribute('style', max_width_var) }}>
+  {{ text }}
+</div>

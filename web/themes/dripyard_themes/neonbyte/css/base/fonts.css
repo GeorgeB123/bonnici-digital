@@ -1,0 +1,27 @@
+/*
+ * Fonts.
+ *
+ * ⚠️ Note when making changes here, be sure to change font preloading in
+ * `templates/includes/html-header.twig`
+ */
+
+@font-face {
+  font-display: block;
+  font-family: 'Instrument Sans';
+  font-weight: 400;
+  src: url('../../fonts/instrument-sans/instrument-sans-v1-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'Instrument Sans';
+  font-weight: 600;
+  src: url('../../fonts/instrument-sans/instrument-sans-v1-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'Instrument Sans';
+  font-weight: 700;
+  src: url('../../fonts/instrument-sans/instrument-sans-v1-latin-700.woff2') format('woff2');
+}

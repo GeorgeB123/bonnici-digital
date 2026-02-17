@@ -1,0 +1,36 @@
+dripyard_base.hero_xs:
+  label: Hero Extra-Small
+  mediaQuery: '(min-width: 0px)'
+  weight: 1
+  multipliers:
+    - 1x
+dripyard_base.hero_small:
+  label: Hero Small
+  mediaQuery: '(min-width: 600px)'
+  weight: 1
+  multipliers:
+    - 1x
+dripyard_base.hero_medium:
+  label: Hero Medium
+  mediaQuery: '(min-width: 1000px)'
+  weight: 2
+  multipliers:
+    - 1x
+dripyard_base.hero_l:
+  label: Hero Large
+  mediaQuery: '(min-width: 1400px)'
+  weight: 3
+  multipliers:
+    - 1x
+dripyard_base.hero_xl:
+  label: Hero Extra-Large
+  mediaQuery: '(min-width: 1800px)'
+  weight: 4
+  multipliers:
+    - 1x
+dripyard_base.hero_xxl:
+  label: Hero XX-Large
+  mediaQuery: '(min-width: 2200px)'
+  weight: 5
+  multipliers:
+    - 1x

@@ -1,0 +1,26 @@
+/*
+ * @file
+ * Styling for core's search result list.
+ */
+
+.search-results-list__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-column: 1 / 9;
+}
+
+/* .search-help-link isn't within this component, but gets loaded. */
+.search-help-link {
+  display: inline-block;
+  margin-block: var(--spacing-xs);
+}
+
+/* .search-form isn't within this component, but gets loaded. */
+.search-form {
+  margin-bottom: var(--spacing-l);
+}
+
+.search-results-list__empty {
+  grid-area: content;
+}

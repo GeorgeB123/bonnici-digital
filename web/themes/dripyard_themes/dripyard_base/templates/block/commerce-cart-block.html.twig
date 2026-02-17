@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme implementation of shopping card block.
+ *
+ * Available variables
+ * - attributes: block attributes, eg classes, ids etc.
+ * - url: url of shopping cart page.
+ * - icon: URL to icon of shopping cart.
+ * - count: number of items in the cart.
+ * - count_text: text indicating number of items in the cart: 'X items'.
+ * - content: rendered view of shopping carts.
+ * - links: array of links to card page.
+ * - dropdown: flag indicating whether content should be rendered and displayed in dropdown div.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ include('dripyard_base:header-commerce-cart', {
+  attributes,
+  url,
+  icon_url: '',
+  count,
+  content,
+  links,
+  dropdown,
+}, with_context = false) }}

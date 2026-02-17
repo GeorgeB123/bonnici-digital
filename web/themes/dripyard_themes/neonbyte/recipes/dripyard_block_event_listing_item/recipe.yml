@@ -1,0 +1,11 @@
+name: Dripyard Event Listing Item Block
+type: Dripyard
+description: 'Provides an event listing item block type with event details, date, time, and location.'
+install:
+  - datetime
+  - block_content
+config:
+  strict: false
+recipes:
+  - 'dripyard_fields_block'
+  - 'dripyard_text_format_superbasic'

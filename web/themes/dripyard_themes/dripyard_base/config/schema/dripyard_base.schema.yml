@@ -1,0 +1,174 @@
+layout.dripyard_layout_dynamic:
+  type: layout_plugin
+  label: 'Dripyard dynamic layout configuration'
+  mapping:
+    dripyard_theme:
+      type: string
+      label: 'Section theme'
+    dripyard_layout:
+      type: string
+      label: 'Section layout'
+    column_count:
+      type: integer
+      label: 'Column count'
+    row_count:
+      type: integer
+      label: 'Row count'
+    two_column_layout:
+      type: string
+      label: 'Two column layout'
+    three_column_layout:
+      type: string
+      label: 'Three column layout'
+    section_width:
+      type: string
+      label: 'Section width'
+    content_width:
+      type: string
+      label: 'Content width'
+    cell_align_x:
+      type: string
+      label: 'Cell horizontal alignment'
+    cell_align_y:
+      type: string
+      label: 'Cell vertical alignment'
+    margin_top:
+      type: string
+      label: 'Top margin'
+    margin_bottom:
+      type: string
+      label: 'Bottom margin'
+    padding_top:
+      type: string
+      label: 'Top padding'
+    padding_bottom:
+      type: string
+      label: 'Bottom padding'
+    column_gutter:
+      type: string
+      label: 'Column gutter'
+    row_gutter:
+      type: string
+      label: 'Row gutter'
+    additional_classes:
+      type: string
+      label: 'Additional CSS classes'
+
+dripyard_base.settings:
+  type: theme_settings
+  label: 'Dripyard base theme settings'
+  mapping:
+    theme_colors:
+      type: mapping
+      label: 'Theme colors'
+      mapping:
+        site_theme:
+          type: string
+          label: 'Site theme'
+        color_scheme:
+          type: string
+          label: 'Color scheme'
+        colors:
+          type: mapping
+          label: 'Colors'
+          mapping:
+            base_primary_color:
+              type: string
+              label: 'Base primary color'
+            base_primary_color_brightness:
+              type: string
+              label: 'Base primary color brightness'
+            base_secondary_color:
+              type: string
+              label: 'Base secondary color'
+            base_secondary_color_brightness:
+              type: string
+              label: 'Base secondary color brightness'
+    footer:
+      type: mapping
+      label: 'Footer settings'
+      mapping:
+        theme:
+          type: string
+          label: 'Footer theme'
+    layout_settings:
+      type: mapping
+      label: 'Layout settings'
+      mapping:
+        container_max_width:
+          type: string
+          label: 'Container max width'
+        border_radius_sm:
+          type: string
+          label: 'Small border radius'
+        border_radius_md:
+          type: string
+          label: 'Medium border radius'
+        border_radius_lg:
+          type: string
+          label: 'Large border radius'
+        border_radius_button:
+          type: string
+          label: 'Button border radius'
+    social_media_links:
+      type: mapping
+      label: 'Social media links'
+      mapping:
+        bluesky:
+          type: string
+          label: 'Bluesky URL'
+        discord:
+          type: string
+          label: 'Discord URL'
+        facebook:
+          type: string
+          label: 'Facebook URL'
+        github:
+          type: string
+          label: 'GitHub URL'
+        instagram:
+          type: string
+          label: 'Instagram URL'
+        linkedin:
+          type: string
+          label: 'LinkedIn URL'
+        mastodon:
+          type: string
+          label: 'Mastodon URL'
+        pinterest:
+          type: string
+          label: 'Pinterest URL'
+        reddit:
+          type: string
+          label: 'Reddit URL'
+        snapchat:
+          type: string
+          label: 'Snapchat URL'
+        telegram:
+          type: string
+          label: 'Telegram URL'
+        threads:
+          type: string
+          label: 'Threads URL'
+        tiktok:
+          type: string
+          label: 'TikTok URL'
+        twitch:
+          type: string
+          label: 'Twitch URL'
+        twitter:
+          type: string
+          label: 'Twitter URL'
+        whatsapp:
+          type: string
+          label: 'WhatsApp URL'
+        youtube:
+          type: string
+          label: 'YouTube URL'
+    apply_recipes:
+      type: mapping
+      label: 'Apply recipes'
+      mapping:
+        notice:
+          type: string
+          label: 'Notice'

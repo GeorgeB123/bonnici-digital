@@ -1,0 +1,195 @@
+/*
+ * @file
+ * Styles for the header search.
+ */
+
+.header-search {
+  --header-search-background: transparent;
+  --header-search-text-color: var(--theme-text-color-medium);
+  --header-search-padding-block: var(--spacing-xs) var(--spacing-s);
+  --header-search-font-size: 22px;
+
+  @media (width <= 1000px) {
+    flex-basis: 100%;
+  }
+
+  &.contextual-region {
+    position: static;
+  }
+}
+
+.header-search__trigger {
+  position: relative;
+  display: none;
+  width: 24px;
+  height: 44px;
+  padding: 0;
+  color: inherit;
+
+  &[aria-expanded="true"] {
+    background-color: var(--header-search-background);
+    color: var(--header-search-text-color);
+    box-shadow: 0 var(--header-padding-block) 0 var(--header-search-background);
+  }
+
+  @media (width > 1000px) {
+    display: block;
+  }
+}
+
+.header-search__search-icon {
+  display: flex;
+  justify-content: center;
+
+  .header-search__trigger[aria-expanded="true"] & {
+    display: none;
+  }
+}
+
+.header-search__close-icon {
+  --line-width: 3px;
+  --icon-size: 20px;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - var(--line-width) / 2);
+    left: calc(50% - var(--icon-size) / 2);
+    width: var(--icon-size);
+    height: 0;
+    border-top: solid var(--line-width) currentColor;
+    content: "";
+    transition: all 0.2s;
+  }
+
+  &::before {
+    rotate: -45deg;
+  }
+
+  &::after {
+    rotate: 45deg;
+  }
+
+  .header-search__trigger[aria-expanded="true"] & {
+    display: block;
+  }
+}
+
+.header-search__content {
+  order: 10;
+
+  @media (width > 1000px) {
+    --animation-duration: 0.2s;
+
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    inset-inline-start: 0;
+    z-index: 5;
+    order: revert;
+    overflow: clip;
+    width: 100%;
+    height: 0;
+    padding-block: 0;
+    padding-inline: calc(50% - var(--container-width) / 2);
+    background: var(--header-search-background);
+
+    /* This makes the search usable if JS is disabled. Not beautiful, but usable! */
+    @media (scripting: none) {
+      &:is(.header-search:focus-within *) {
+        visibility: visible;
+        height: auto;
+        padding-inline: var(--header-padding-inline);
+        padding-block: var(--header-search-padding-block);
+        background-color: var(--theme-surface);
+        border-radius: var(--header-border-radius);
+      }
+    }
+  }
+
+  &.is-active {
+    visibility: visible;
+    height: auto;
+    padding-inline: var(--header-padding-inline);
+    padding-block: var(--header-search-padding-block);
+  }
+
+  form {
+    display: flex;
+
+    .form-item,
+    .form-actions {
+      display: contents;
+    }
+
+    [type="text"],
+    [type="search"] {
+      flex-grow: 1;
+      padding: 4px 20px;
+      font-size: var(--header-search-font-size);
+      border: solid 1px var(--neutral-400);
+      border-radius: var(--radius-md);
+
+      &:focus {
+        outline: 1px solid var(--white);
+      }
+
+      @media (width < 1000px) {
+        background-color: var(--white);
+        color: var(--neutral-700);
+      }
+    }
+
+    [type="submit"],
+    button {
+      height: 100%;
+      aspect-ratio: 1;
+      margin-inline-start: 10px;
+      background-color: transparent;
+      background-image: url('images/search-white.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      text-indent: -999px;
+      overflow: clip;
+      outline-offset: -2px;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+
+      .theme--light &,
+      .theme--secondary & {
+        background-image: url('images/search-dark.svg');
+      }
+
+      .theme--dark & {
+        background-image: url('images/search-white.svg');
+      }
+
+      @media (width < 1000px) {
+        [class] & {
+          background-image: url('images/search-white.svg');
+        }
+      }
+
+      @media (forced-colors: active) {
+        background: none !important;
+        aspect-ratio: revert;
+        text-indent: revert;
+      }
+    }
+  }
+}
+
+/*
+ * Override for Drupal CMS's advanced search recipe.
+ */
+.search-api-autocomplete-search .ui-menu-item-wrapper.ui-state-active .search-api-autocomplete-suggestion[class] {
+  background: transparent;
+  color: inherit;
+}

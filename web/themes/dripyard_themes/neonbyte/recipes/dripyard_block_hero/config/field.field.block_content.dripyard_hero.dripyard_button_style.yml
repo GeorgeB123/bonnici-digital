@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_button_style
+  module:
+    - options
+id: block_content.dripyard_hero.dripyard_button_style
+field_name: dripyard_button_style
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Button Style'
+description: 'Style for the primary CTA button'
+required: false
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

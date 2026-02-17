@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a2f34f77-f97a-4a30-b4b3-9972208656db
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Contact
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /contact
+      langcode: en
+  body:
+    -
+      value: "<p>Get in touch with NeonByte. Whether you have questions about our solutions, want to discuss a custom project, or need support, our team is ready to help.</p><h2>Contact Options</h2><ul><li><strong>General Inquiries</strong> — info@neonbyte.com</li><li><strong>Sales</strong> — sales@neonbyte.com | 1-800-NEONBYTE</li><li><strong>Support</strong> — support@neonbyte.com | 24/7 hotline</li><li><strong>Partnerships</strong> — partners@neonbyte.com</li></ul><h2>Office Locations</h2><table><thead><tr><th>Office</th><th>Address</th><th>Phone</th></tr></thead><tbody><tr><td>Headquarters (Austin)</td><td>100 Congress Ave, Austin, TX 78701</td><td>+1 (512) 555-0100</td></tr><tr><td>New York</td><td>350 Fifth Ave, New York, NY 10118</td><td>+1 (212) 555-0200</td></tr><tr><td>London</td><td>1 Canada Square, London E14 5AB</td><td>+44 20 7946 0300</td></tr></tbody></table><h2>Response Times</h2><ol><li>General inquiries — Within 1 business day</li><li>Sales requests — Within 4 hours during business hours</li><li>Support tickets — Based on severity (critical: 15 min, high: 1 hr)</li><li>Partnership inquiries — Within 2 business days</li></ol><p>You can also schedule a meeting directly with our sales team using the Book a Demo link, or chat with us using the widget in the bottom right corner.</p>"
+      format: full_html
+      summary: ''

@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 98ff734e-0549-455c-ba69-c275fcc57579
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Data Security'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /data-security
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte's comprehensive data security services protect your organization from evolving threats. We implement multi-layered defenses that combine encryption, access control, monitoring, and incident response to keep your data safe.</p><h2>Security Services</h2><ul><li><strong>Threat Detection</strong> — 24/7 monitoring with ML-powered anomaly detection</li><li><strong>Vulnerability Management</strong> — Continuous scanning and prioritized remediation</li><li><strong>Identity Security</strong> — Multi-factor authentication and privileged access management</li><li><strong>Incident Response</strong> — Rapid containment and forensic investigation</li></ul><h2>Security Framework Coverage</h2><table><thead><tr><th>Framework</th><th>Controls</th><th>Assessment</th></tr></thead><tbody><tr><td>NIST CSF</td><td>Identify, Protect, Detect, Respond, Recover</td><td>Quarterly review</td></tr><tr><td>CIS Controls</td><td>18 critical security controls</td><td>Monthly scoring</td></tr><tr><td>MITRE ATT&amp;CK</td><td>Adversary tactics and techniques</td><td>Continuous mapping</td></tr></tbody></table><h2>Why Organizations Trust NeonByte</h2><ol><li>Zero-trust architecture as the foundation for all solutions</li><li>Security Operations Center with 24/7/365 coverage</li><li>Average incident response time under 15 minutes</li><li>Proactive threat hunting by experienced analysts</li><li>Regular penetration testing and red team exercises</li></ol><p>Our security experts work as an extension of your team, providing the expertise and tools needed to stay ahead of threats without the overhead of building an in-house security operation.</p>"
+      format: full_html
+      summary: ''

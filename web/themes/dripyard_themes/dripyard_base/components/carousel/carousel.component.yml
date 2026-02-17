@@ -1,0 +1,63 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Carousel
+status: stable
+group: Dripyard General
+required:
+  - label
+  - navigation_position
+props:
+  type: object
+  properties:
+    canvas_edit_mode:
+      title: Canvas edit mode
+      type: boolean
+    label:
+      title: Label (required by screen readers)
+      type: string
+      examples: [ 'Product features' ]
+    pager:
+      title: Enable pager
+      type: boolean
+      examples: [ true ]
+    navigation_position:
+      title: Navigation button position
+      type: string
+      enum:
+        - hidden
+        - inside
+        - outside
+      meta:enum:
+        hidden: Hidden
+        inside: Inside
+        outside: Outside
+      examples: ['hidden']
+    slides_per_view:
+      title: Maximum slides per view
+      type: number
+      minimum: 1
+      maximum: 6
+      examples: [ 1 ]
+      description: The carousel can support viewing of up to six items within one view. The amount visible depends on the carousel width.
+    rows:
+      title: Rows per view
+      type: number
+      minimum: 1
+      maximum: 3
+      examples: [ 1 ]
+      description: The carousel can support up to three rows of content.
+    autoplay:
+      title: Autoplay
+      type: boolean
+slots:
+  carousel_items:
+    title: Carousel items
+libraryOverrides:
+  css:
+    component:
+      carousel.css: {}
+  js:
+    carousel.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - dripyard_base/swiper

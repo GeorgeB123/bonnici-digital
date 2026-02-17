@@ -1,0 +1,19 @@
+{% set breadcrumb_heading_id = 'system-breadcrumb-' ~ random() %}
+{% if breadcrumb %}
+  <nav{{ attributes.addClass('breadcrumb', 'container').setAttribute(' aria-labelledby', breadcrumb_heading_id) }}>
+    <div class="breadcrumb__inner">
+      <h2 id="{{ breadcrumb_heading_id }}" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+      <ol class="breadcrumb__list">
+      {% for item in breadcrumb %}
+        <li class="breadcrumb__item">
+          {% if item.url %}
+            <a class="breadcrumb__link" href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ol>
+    </div>
+  </nav>
+{% endif %}

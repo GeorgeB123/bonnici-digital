@@ -1,0 +1,17 @@
+name: Details
+description: A details component for rendering a collapsible details element.
+group: Dripyard Form Elements
+status: stable
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      type: string
+      title: Details title
+      examples: [ 'Details title' ]
+slots:
+  details_content:
+    title: Details Content
+    description: Main content of the details element.

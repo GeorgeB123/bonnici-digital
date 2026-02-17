@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: d3d36435-77dc-4291-808a-4ff90de64f40
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    1b144545-7cc9-43ef-8270-e7b8025f5370: node
+    634d9d22-330a-4d05-9e5a-9d00f1c18739: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Tools
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 1b144545-7cc9-43ef-8270-e7b8025f5370
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:634d9d22-330a-4d05-9e5a-9d00f1c18739'
+  revision_translation_affected:
+    -
+      value: true

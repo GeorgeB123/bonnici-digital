@@ -1,0 +1,59 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Card
+status: stable
+noUi: true
+group: Dripyard Cards
+props:
+  type: object
+  required:
+    - title
+  properties:
+    image:
+      title: Image
+      type:
+        - object
+        - 'null'
+    eyebrow_text:
+      title: Pre-title
+      type: string
+      examples:
+        - Eyebrow text
+    title:
+      title: Title
+      type: string
+      examples:
+        - Card title
+    body:
+      title: Body text
+      type: string
+      pattern: '(.|\r?\n)*'
+      examples:
+        - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, amet.
+    href:
+      title: Link
+      type:
+       - string
+       - 'null'
+      format: uri-reference
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+    flip_layout:
+      title: Flip layout when in horizontal mode
+      type: boolean

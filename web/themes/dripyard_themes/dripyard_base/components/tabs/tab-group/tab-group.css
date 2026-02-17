@@ -1,0 +1,202 @@
+/*
+ * @file
+ * Styling for tabs.
+ *
+ * @see https://shoelace.style/components/tab-panel
+ * @see https://shoelace.style/components/tab
+ */
+.tabs {
+  --tab-inactive-text-color: var(--theme-text-color-soft);
+  --tab-inactive-icon-color: currentColor;
+  --tab-active-text-color: var(--theme-text-color-loud);
+  --tab-active-border-color: var(--theme-border-color-alt);
+  --tab-active-icon-color: var(--theme-border-color-alt);
+  --tab-panel-padding-block: var(--spacing-s);
+  --tab-panel-padding-inline: var(--spacing-s);
+  --tab-panel-border-color: transparent;
+  --tab-active-border-width: 5px;
+  --tab-track-width: 5px;
+  --tab-track-color: color-mix(in oklch, var(--theme-border-color) 50%, transparent);
+  --tab-font-size: var(--body-s-size);
+  --tab-font-weight: normal;
+  --tab-padding-block: var(--sp2);
+  --tab-padding-inline: var(--spacing-xs);
+  --tab-scroll-button-color: var(--theme-border-color-alt);
+
+  margin-block: 0;
+  background-color: var(--theme-surface);
+  color: var(--theme-text-color-medium);
+
+  [placement="start"] {
+    --tab-padding-inline: var(--spacing-xs) var(--spacing-s);
+  }
+
+  [placement="end"] {
+    --tab-padding-inline: var(--spacing-s) var(--spacing-xs);
+  }
+
+  &.tabs--centered {
+    text-align: center;
+  }
+}
+
+.tabs__content-above {
+  margin-bottom: var(--spacing-component-internal);
+}
+
+.sl-tab-group {
+  --track-color: var(--tab-track-color);
+  --track-width: var(--tab-track-width);
+  --indicator-color: var(--tab-active-border-color);
+
+  /* Add extra spacing around tab group to give users the ability
+  to select the tab group if in Canvas Edit Mode. */
+  .is-canvas-editor .canvas-edit-mode & {
+    padding: var(--spacing-xs);
+  }
+
+  /* The whole component. */
+  &::part(base) {
+    /* Intentionally empty. */
+  }
+
+  /* Outside container wraps the tabs */
+  &::part(nav) {
+    /* Intentionally empty. */
+  }
+
+  /* Inside container the tabs.  */
+  &::part(tabs) {
+    /* Intentionally empty. */
+  }
+
+  /* Active tab. */
+  &::part(active-tab-indicator) {
+    /* Intentionally empty. */
+  }
+
+  /* Scroll button wrapper. */
+  &::part(scroll-button) {
+    /* Intentionally empty. */
+  }
+
+  /* Scroll button. */
+  &::part(scroll-button__base) {
+    color: var(--tab-scroll-button-color);
+  }
+
+  /* Tab panel area. */
+  &::part(body) {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    text-align: start;
+    overflow: visible; /* Ensure no scrollbars when in vertical tab mode. */
+  }
+}
+
+.sl-tab {
+  --sl-focus-ring: solid 2px var(--theme-focus-ring-color);
+
+  outline-offset: -5px;
+
+  &::part(base) {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    padding-block: var(--tab-padding-block);
+    padding-inline: var(--tab-padding-inline);
+    font-family: inherit;
+    font-size: var(--tab-font-size);
+    font-weight: var(--tab-font-weight);
+    overflow: clip;
+    width: max-content;
+    text-align: start;
+
+    .sl-tab--icon-horizontal & {
+      justify-items: start;
+    }
+  }
+}
+
+.sl-tab__inner {
+  position: relative;
+  z-index: 2;
+  color: var(--tab-inactive-text-color);
+  display: grid;
+  place-items: center;
+  gap: 0.25lh 1em;
+  height: 100%;
+
+  svg {
+    color: var(--tab-inactive-icon-color);
+    height: 32px;
+
+    .tabs--icon-size-small & {
+      height: var(--sp2);
+    }
+  }
+
+  .tabs--icon-position-horizontal & {
+    justify-items: start;
+    grid-template-columns: 36px auto;
+
+    svg {
+      margin-inline: auto;
+    }
+  }
+
+  .tabs--icon-position-horizontal.tabs--icon-size-small & {
+    grid-template-columns: 20px auto;
+  }
+
+  .sl-tab[active] & {
+    color: var(--tab-active-text-color);
+
+    svg {
+      color: var(--tab-active-icon-color);
+    }
+  }
+}
+
+.sl-tab-panel {
+  display: contents;
+
+  /* Show tab panel contents when in Canvas Edit Mode. */
+  .is-canvas-editor .canvas-edit-mode & {
+    display: block;
+    visibility: revert;
+    padding: var(--spacing-xs);
+
+    > * {
+      margin-block: calc(-1 * var(--spacing-s)) var(--spacing-s);
+    }
+  }
+
+  &::part(base) {
+    grid-column: 1;
+    grid-row: 1;
+    padding-block: var(--tab-panel-padding-block) 0;
+    padding-inline: var(--tab-panel-padding-inline);
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sl-tab-group:is([placement="start"], [placement="end"]) .sl-tab-panel::part(base) {
+  padding-block: 0;
+}
+
+.sl-tab-group:is([placement="top"], [placement="bottom"]) .sl-tab-panel::part(base) {
+  padding-inline: 0;
+}
+
+.sl-tab-group:is([placement="bottom"]) .sl-tab-panel::part(base) {
+  padding-block: 0 var(--tab-panel-padding-block);
+}

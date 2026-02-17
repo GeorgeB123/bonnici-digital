@@ -1,0 +1,938 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b95c1c5c-8fc3-45fc-acc7-823588fefc2e
+  bundle: dripyard_landing_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'NeonByte Home Page'
+  created:
+    -
+      value: 1745325037
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /neonbyte-home-page
+      langcode: en
+  dripyard_hide_page_title:
+    -
+      value: true
+  layout_builder__layout:
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: edge-to-edge
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'Hero Section'
+          context_mapping: {  }
+        components:
+          cf5200d4-576f-42e0-9e76-800b6ad5dd37:
+            uuid: cf5200d4-576f-42e0-9e76-800b6ad5dd37
+            region: cell_1
+            configuration:
+              id: 'block_content:ccbdefba-8074-47a4-b974-29c639bf8bb7'
+              label: 'Home Page Hero'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: zero
+          margin_bottom: zero
+          padding_top: large
+          padding_bottom: medium
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'CTA Title 1'
+          context_mapping: {  }
+        components:
+          86b89ab5-2f4a-4c70-8d9b-4431975be4a4:
+            uuid: 86b89ab5-2f4a-4c70-8d9b-4431975be4a4
+            region: cell_1
+            configuration:
+              id: 'block_content:95ace7e0-b9dc-4c6f-8f25-5134b6b50dc4'
+              label: 'CTA Title 1'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: zero
+          margin_bottom: ''
+          padding_top: zero
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'Solutions Section'
+          context_mapping: {  }
+        components:
+          348426ab-87c8-42b5-990d-ec1c25567827:
+            uuid: 348426ab-87c8-42b5-990d-ec1c25567827
+            region: cell_1
+            configuration:
+              id: 'views_block:dripyard_article_cards-card_full_image'
+              label: ''
+              label_display: 0
+              provider: views
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 3
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: center
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: light
+          dripyard_layout: narrow
+          label: Stats
+          context_mapping: {  }
+        components:
+          6e433ba5-2802-423a-a940-8c480ac95a16:
+            uuid: 6e433ba5-2802-423a-a940-8c480ac95a16
+            region: cell_2
+            configuration:
+              id: 'block_content:403ebc4f-39a4-4769-a4ca-635269dd97d9'
+              label: 'First Stat'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          8e12fbd5-b3a9-44e7-916f-4b58bf19483f:
+            uuid: 8e12fbd5-b3a9-44e7-916f-4b58bf19483f
+            region: cell_3
+            configuration:
+              id: 'block_content:a5a13d05-5d76-417d-8d0b-29771d7326d0'
+              label: 'Second Stat'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          ee9692ec-f665-4155-b84e-917cf2b440ef:
+            uuid: ee9692ec-f665-4155-b84e-917cf2b440ef
+            region: cell_1
+            configuration:
+              id: 'block_content:591ac32b-686f-4d3d-8ce5-f7dc77eaa4ca'
+              label: 'Reliable. Global. Proven. (promo)'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 2
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: center
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: primary
+          dripyard_layout: default
+          label: Promo
+          dripyard_alignment: vertical
+          context_mapping: {  }
+        components:
+          348a6f17-4bf8-470d-a425-9f03d2114c23:
+            uuid: 348a6f17-4bf8-470d-a425-9f03d2114c23
+            region: cell_1
+            configuration:
+              id: 'block_content:88e5aa70-5bac-41b9-b802-78c0b72d7713'
+              label: Promo
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          1abd64fa-4ad5-4d24-b9e1-b3061cc8333d:
+            uuid: 1abd64fa-4ad5-4d24-b9e1-b3061cc8333d
+            region: cell_2
+            configuration:
+              id: 'block_content:d8de7eb8-1ef1-4074-b07f-143003a07564'
+              label: 'Engineering Team Lead'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: zero
+          padding_top: ''
+          padding_bottom: zero
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'Become a partner CTA'
+          context_mapping: {  }
+        components:
+          afebb5a7-704f-41d0-88c7-c153b853ffb7:
+            uuid: afebb5a7-704f-41d0-88c7-c153b853ffb7
+            region: cell_1
+            configuration:
+              id: 'block_content:3f979ca2-2471-4abd-a97f-261f041eac1e'
+              label: 'Become a partner CTA'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'Partner Section'
+          context_mapping: {  }
+        components:
+          fb051754-997c-4f68-9611-dda3c4c95115:
+            uuid: fb051754-997c-4f68-9611-dda3c4c95115
+            region: cell_1
+            configuration:
+              id: 'views_block:dripyard_logo_grid-block_1'
+              label: ''
+              label_display: 0
+              provider: views
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: zero
+          padding_top: ''
+          padding_bottom: zero
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: dark
+          dripyard_layout: default
+          label: 'Latest News Title'
+          context_mapping: {  }
+        components:
+          c1f452eb-397e-46c4-ac21-90b4029d2cd1:
+            uuid: c1f452eb-397e-46c4-ac21-90b4029d2cd1
+            region: cell_1
+            configuration:
+              id: 'block_content:ad8e5063-1a1f-41f8-bf82-0509ce02852f'
+              label: 'Latest News (title cta)'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: dark
+          dripyard_layout: default
+          label: 'Latest News'
+          context_mapping: {  }
+        components:
+          bcc6dde0-97d2-4681-b0b5-929f8454fa4a:
+            uuid: bcc6dde0-97d2-4681-b0b5-929f8454fa4a
+            region: cell_1
+            configuration:
+              id: 'views_block:dripyard_article_cards-card'
+              label: ''
+              label_display: 0
+              provider: views
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: zero
+          padding_top: ''
+          padding_bottom: zero
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: primary
+          dripyard_layout: default
+          label: 'Video Title'
+          context_mapping: {  }
+        components:
+          d89c11db-7eaf-4f52-b09d-f672d0d42736:
+            uuid: d89c11db-7eaf-4f52-b09d-f672d0d42736
+            region: cell_1
+            configuration:
+              id: 'block_content:3fdb1d99-25c4-4d72-a70d-f12b52229c71'
+              label: 'Inovating tech. Unbreakable Security.'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: primary
+          dripyard_layout: default
+          label: 'Video Example'
+          context_mapping: {  }
+        components:
+          362ffa27-f121-4904-a6bd-e093d0623df6:
+            uuid: 362ffa27-f121-4904-a6bd-e093d0623df6
+            region: cell_1
+            configuration:
+              id: 'block_content:02c7ce93-e5b8-4b9d-b8ee-8ac582fa83f0'
+              label: 'Demo Video'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: zero
+          padding_top: ''
+          padding_bottom: zero
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'Accordion Title'
+          context_mapping: {  }
+        components:
+          56f74572-9d62-4ce6-8071-0dc9f9604aca:
+            uuid: 56f74572-9d62-4ce6-8071-0dc9f9604aca
+            region: cell_1
+            configuration:
+              id: 'block_content:0ca2607f-3d8f-4c6a-b0ab-4f8ee4bc1540'
+              label: 'Accordion Title CTA'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'Accordion Content'
+          context_mapping: {  }
+        components:
+          964c2b00-af80-4c12-b7c0-c6cd5b87e454:
+            uuid: 964c2b00-af80-4c12-b7c0-c6cd5b87e454
+            region: cell_1
+            configuration:
+              id: 'block_content:4787f56d-b524-44e1-91a6-d466a69bdc05'
+              label: 'End-to-End Development'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 2
+            additional: {  }
+          a21a04ca-35fd-40e5-b461-a034a229196b:
+            uuid: a21a04ca-35fd-40e5-b461-a034a229196b
+            region: cell_1
+            configuration:
+              id: 'block_content:f10f968f-d28f-4451-bacb-eea3da879f98'
+              label: 'Scalable Infrastructure & DevOps'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 3
+            additional: {  }
+          401fc514-a875-42d3-83e3-0d0904759a22:
+            uuid: 401fc514-a875-42d3-83e3-0d0904759a22
+            region: cell_1
+            configuration:
+              id: 'block_content:5d694c5e-2e4d-459c-8866-b394cbb51540'
+              label: 'Strategic Consulting & Long-Term Support'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 4
+            additional: {  }
+          92fcabfe-4bad-4181-afe3-bad62d325d2c:
+            uuid: 92fcabfe-4bad-4181-afe3-bad62d325d2c
+            region: cell_1
+            configuration:
+              id: 'block_content:9f4cedf1-75a7-4067-b247-b29616d30d88'
+              label: 'Accordion Wrapper'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: zero
+          padding_top: ''
+          padding_bottom: zero
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: light
+          dripyard_layout: default
+          label: 'Tab Group Title'
+          context_mapping: {  }
+        components:
+          3f59ef02-3fd5-4a6e-868e-abb3b8de020a:
+            uuid: 3f59ef02-3fd5-4a6e-868e-abb3b8de020a
+            region: cell_1
+            configuration:
+              id: 'block_content:c8f4d912-3a7b-4c89-9d2e-8f1b6e5c3a42'
+              label: 'AI Innovation (title cta)'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: light
+          dripyard_layout: default
+          label: 'Horizontal Tabs'
+          context_mapping: {  }
+        components:
+          0db275fd-f287-4c8c-8fa8-4ebd1315700e:
+            uuid: 0db275fd-f287-4c8c-8fa8-4ebd1315700e
+            region: cell_1
+            configuration:
+              id: 'block_content:059cc1c6-d0b5-45ae-81a8-b2bc7307f10b'
+              label: 'Technology Strategy'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 3
+            additional: {  }
+          82b58227-1230-4130-9641-f7adbf5dd0f0:
+            uuid: 82b58227-1230-4130-9641-f7adbf5dd0f0
+            region: cell_1
+            configuration:
+              id: 'block_content:35ae9290-b767-41c0-9a53-c809a0dd5d44'
+              label: 'Compliance Certification'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 4
+            additional: {  }
+          519dbd33-a5d9-49fb-943b-acb69d2a72a0:
+            uuid: 519dbd33-a5d9-49fb-943b-acb69d2a72a0
+            region: cell_1
+            configuration:
+              id: 'block_content:b8c96915-86ab-4059-9c44-64696e0b4506'
+              label: 'Security and Risk Consulting'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 5
+            additional: {  }
+          9d997b6c-6c53-4483-94d6-2f260e0c0043:
+            uuid: 9d997b6c-6c53-4483-94d6-2f260e0c0043
+            region: cell_1
+            configuration:
+              id: 'block_content:656c6d97-a697-48e9-a4f1-fee8f868abbb'
+              label: 'Tab Wrapper'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: zero
+          padding_top: ''
+          padding_bottom: zero
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: black
+          dripyard_layout: default
+          label: 'Carousel Title'
+          context_mapping: {  }
+        components:
+          42d4cc31-1908-4d95-88ca-2295984cb7c7:
+            uuid: 42d4cc31-1908-4d95-88ca-2295984cb7c7
+            region: cell_1
+            configuration:
+              id: 'block_content:5e7a8b1d-4f2c-4856-a19f-3c9d8e7b2f41'
+              label: 'Cloud Transformation (title cta)'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: black
+          dripyard_layout: default
+          label: 'Icon Card Carousel'
+          context_mapping: {  }
+        components:
+          56826725-ca80-452f-9a1d-ee503e5b1362:
+            uuid: 56826725-ca80-452f-9a1d-ee503e5b1362
+            region: cell_1
+            configuration:
+              id: 'block_content:d78b70f5-cc61-4f40-ba79-7be0db820fc5'
+              label: 'Cloud Infrastructure'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 12
+            additional: {  }
+          4158eae6-a521-415f-abe0-3262f0a1984a:
+            uuid: 4158eae6-a521-415f-abe0-3262f0a1984a
+            region: cell_1
+            configuration:
+              id: 'block_content:bffd8826-0880-406e-8e5f-e675282ff707'
+              label: 'AI & Automation (icon card)'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 11
+            additional: {  }
+          23e09df8-7510-4f13-bf7f-b204e0091681:
+            uuid: 23e09df8-7510-4f13-bf7f-b204e0091681
+            region: cell_1
+            configuration:
+              id: 'block_content:a775b89d-ed62-485d-9847-9fe952700386'
+              label: 'Icon Card 1'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 5
+            additional: {  }
+          151eb13a-e5b7-4289-95a1-dd001237ba31:
+            uuid: 151eb13a-e5b7-4289-95a1-dd001237ba31
+            region: cell_1
+            configuration:
+              id: 'block_content:d78b70f5-cc61-4f40-ba79-7be0db820fc5'
+              label: 'Cloud Infrastructure'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 6
+            additional: {  }
+          9644b238-b0f6-442e-a6fe-b75d2c315775:
+            uuid: 9644b238-b0f6-442e-a6fe-b75d2c315775
+            region: cell_1
+            configuration:
+              id: 'block_content:bffd8826-0880-406e-8e5f-e675282ff707'
+              label: 'AI & Automation'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 8
+            additional: {  }
+          07ce12f1-7ef6-46d2-90c4-d012a7bf175c:
+            uuid: 07ce12f1-7ef6-46d2-90c4-d012a7bf175c
+            region: cell_1
+            configuration:
+              id: 'block_content:f72aee2f-9287-46cf-a704-ae8d6e7c33fe'
+              label: 'Security & Compliance'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 7
+            additional: {  }
+          f42c6179-fb24-4592-8559-0156d49ef8d7:
+            uuid: f42c6179-fb24-4592-8559-0156d49ef8d7
+            region: cell_1
+            configuration:
+              id: 'block_content:f72aee2f-9287-46cf-a704-ae8d6e7c33fe'
+              label: 'Security & Compliance (icon card)'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 10
+            additional: {  }
+          7a515df9-2d34-4037-b55d-e0d8465a1da9:
+            uuid: 7a515df9-2d34-4037-b55d-e0d8465a1da9
+            region: cell_1
+            configuration:
+              id: 'block_content:a775b89d-ed62-485d-9847-9fe952700386'
+              label: 'Modern Maintainable Software (icon card)'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 9
+            additional: {  }
+          53a6b5a5-db19-43e2-b0c6-660642048a49:
+            uuid: 53a6b5a5-db19-43e2-b0c6-660642048a49
+            region: cell_1
+            configuration:
+              id: 'block_content:53a6b5a5-db19-43e2-b0c6-660642048a49'
+              label: 'Carosuel Wrapper'
+              label_display: 0
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }

@@ -1,0 +1,39 @@
+/*
+ * @file
+ * Links styling. This is used by comment reply action link,
+ * and elsewhere in core.
+ */
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &.inline>* {
+    display: inline-block;
+
+    &::after {
+      content: "\0020";
+      white-space: pre;
+    }
+  }
+}
+
+.action-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xxxs);
+  margin-block: var(--spacing-xxs);
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

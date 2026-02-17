@@ -1,0 +1,100 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.accordion-group
+    - canvas.component.sdc.dripyard_base.accordion-item
+    - canvas.component.sdc.dripyard_base.text
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+id: accordiongroup
+label: 'Component - Accordion Group'
+component_tree:
+  0:
+    uuid: f96afa18-6031-49bc-9f4e-579f336ab08f
+    component_id: sdc.dripyard_base.accordion-group
+    component_version: 49bc5013723b2167
+    inputs:
+      variation: background-color
+  '0:accordion_group_content:0':
+    parent_uuid: f96afa18-6031-49bc-9f4e-579f336ab08f
+    slot: accordion_group_content
+    uuid: 63b71c9b-5b66-43fc-b90c-bf1d83ef8926
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:accordion_group_content:0:accordion_item_content:0':
+    parent_uuid: 63b71c9b-5b66-43fc-b90c-bf1d83ef8926
+    slot: accordion_item_content
+    uuid: e82b8a47-65a1-4b8d-8259-b7f26b932d76
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:accordion_group_content:1':
+    parent_uuid: f96afa18-6031-49bc-9f4e-579f336ab08f
+    slot: accordion_group_content
+    uuid: 842a07a0-7ec4-4246-b826-cfee1f831b71
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:accordion_group_content:1:accordion_item_content:0':
+    parent_uuid: 842a07a0-7ec4-4246-b826-cfee1f831b71
+    slot: accordion_item_content
+    uuid: c9cb7b02-fd50-49ba-81fa-d964159dd6ee
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:accordion_group_content:2':
+    parent_uuid: f96afa18-6031-49bc-9f4e-579f336ab08f
+    slot: accordion_group_content
+    uuid: 23d8b0a1-1481-4dc7-b0df-7b504af79f52
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:accordion_group_content:2:accordion_item_content:0':
+    parent_uuid: 23d8b0a1-1481-4dc7-b0df-7b504af79f52
+    slot: accordion_item_content
+    uuid: 74f15c5a-55cd-48cb-a461-99804d33c121
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:accordion_group_content:3':
+    parent_uuid: f96afa18-6031-49bc-9f4e-579f336ab08f
+    slot: accordion_group_content
+    uuid: c8401c13-5970-44cc-a4aa-b4c69295e74b
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:accordion_group_content:3:accordion_item_content:0':
+    parent_uuid: c8401c13-5970-44cc-a4aa-b4c69295e74b
+    slot: accordion_item_content
+    uuid: 950ae9b6-eb44-4524-a88e-f4bc9ab0d552
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium

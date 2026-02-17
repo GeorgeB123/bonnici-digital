@@ -1,0 +1,17 @@
+<div{{ attributes.addClass('stat') }}>
+  {% if href %}
+    <a href="{{ href }}" class="stat__link">
+  {% endif %}
+    <div class="stat__stat">
+      {{ statistic }}
+    </div>
+    {% if first_line %}
+      <div class="stat__first-line">{{ first_line }}</div>
+    {% endif %}
+    {% if second_line %}
+      <div class="stat__second-line">{{ second_line }}</div>
+    {% endif %}
+  {% if href %}
+    </a>
+  {% endif %}
+</div>

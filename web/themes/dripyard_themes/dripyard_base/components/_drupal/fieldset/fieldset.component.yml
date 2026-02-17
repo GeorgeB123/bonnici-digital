@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Fieldset
+status: stable
+group: Dripyard Form Elements
+props:
+  type: object
+  required:
+    - legend_title
+  properties:
+    legend_title:
+      type: [string, 'null']
+      title: Fieldset title
+      examples: [ 'Fieldset title' ]
+slots:
+  fieldset_content:
+    title: Fieldset content

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6b418cdc-eb85-4519-a8b9-b0ed46c07ca9
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: menu_card_3.jpg
+  uri:
+    -
+      value: 'public://menu-card/menu_card_3.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 2546970
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1744857542

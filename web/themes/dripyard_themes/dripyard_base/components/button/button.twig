@@ -1,0 +1,32 @@
+{% set classes = [
+  'button',
+  style ? 'button--' ~ style|default('default'),
+  size ? 'button--' ~ size,
+] %}
+
+{% set icon_size = size == 'large' ? 24 : 16 %}
+{% if href %}
+  <a{{ attributes
+    .addClass(classes)
+    .setAttribute('href', href)
+    .setAttribute('target', target ? '_blank')
+  }}>
+{% else %}
+  <button{{ attributes.addClass(classes) }}>
+{% endif %}
+  {%- if prefix_icon %}
+    <div class="button__prefix">
+      {{ include('dripyard_base:icon', { icon: prefix_icon, icon_size }, with_context = false) }}
+    </div>
+  {% endif %}
+  {{- text -}}
+  {% if suffix_icon %}
+    <div class="button__suffix">
+      {{ include('dripyard_base:icon', { icon: suffix_icon, icon_size }, with_context = false) }}
+    </div>
+  {% endif -%}
+{% if href %}
+  </a>
+{% else %}
+  </button>
+{% endif %}

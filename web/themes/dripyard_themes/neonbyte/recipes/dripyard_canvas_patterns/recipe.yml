@@ -1,0 +1,7 @@
+name: Dripyard Base Canvas Patterns
+type: Dripyard
+description: 'Provides component patterns for Drupal Canvas'
+install:
+  - canvas
+config:
+  strict: false

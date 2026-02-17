@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_card_full_image
+label: 'Card Full Image'
+revision: false
+description: 'Provides a card block type with full image, title, and link.'

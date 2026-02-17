@@ -1,0 +1,71 @@
+/*
+ * @file
+ * Styling for pills, which can be used by tags.
+ */
+
+.pill[class] {
+  --pill-padding-block: 8px;
+  --pill-padding-inline: var(--sp2);
+  --pill-background-color: var(--theme-text-color-loud);
+  --pill-background-color-hover: var(--theme-text-color-primary);
+  --pill-text-color: var(--theme-surface);
+  --pill-text-color-hover: var(--theme-surface);
+  --pill-border-radius: var(--radius-lg);
+  --pill-font-size: var(--body-m-size);
+  --theme-focus-ring-color: var(--pill-background-color);
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--pill-padding-block);
+  padding-inline: var(--pill-padding-inline);
+  border: solid 1px transparent;
+  border-radius: var(--pill-border-radius);
+  background-color: var(--pill-background-color);
+  color: var(--pill-text-color);
+  font-size: var(--pill-font-size);
+  line-height: var(--body-m-line-height);
+  letter-spacing: var(--body-m-letter-spacing);
+  transition: background-color 0.2s, color 0.2s;
+  text-box: trim-both cap alphabetic;
+
+  @supports not (text-box: trim-both cap alphabetic) {
+    --pill-padding-block: 4px;
+  }
+
+  &:has(+ .pill) {
+    margin-inline-end: var(--spacing-xxs);
+  }
+
+  &:has(:focus-visible) {
+    --theme-focus-ring-color: var(--pill-background-color);
+
+    outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+    outline-offset: 3px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    text-box: trim-both cap alphabetic;
+
+    &:focus-visible {
+      outline: 0;
+    }
+  }
+
+  .text {
+    &,
+    a {
+      background-image: revert;
+      background-clip: revert;
+      box-shadow: revert;
+    }
+  }
+}
+
+.pill[class]:hover:has(a) {
+  background-color: var(--pill-background-color-hover);
+  color: var(--pill-text-color-hover);
+}

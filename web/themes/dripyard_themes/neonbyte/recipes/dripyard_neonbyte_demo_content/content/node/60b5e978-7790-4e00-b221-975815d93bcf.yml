@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 60b5e978-7790-4e00-b221-975815d93bcf
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Solutions
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /solutions
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte delivers comprehensive technology solutions designed to transform your business. From AI-powered automation to enterprise security, our solutions help organizations operate smarter, faster, and more securely.</p><h2>Solution Categories</h2><ul><li><strong>Software Development</strong> — Custom applications, API integrations, and modernization services</li><li><strong>Data Protection</strong> — Encryption, backup, disaster recovery, and compliance management</li><li><strong>Consulting</strong> — Strategic technology guidance and implementation support</li><li><strong>Certifications</strong> — Audit preparation and compliance certification assistance</li></ul><h2>Solution Comparison</h2><table><thead><tr><th>Solution</th><th>Best For</th><th>Key Benefits</th></tr></thead><tbody><tr><td>Software</td><td>Custom workflows</td><td>Tailored functionality, seamless integration</td></tr><tr><td>Data Protection</td><td>Regulated industries</td><td>Compliance ready, zero data loss</td></tr><tr><td>Consulting</td><td>Strategic initiatives</td><td>Expert guidance, faster ROI</td></tr><tr><td>Certifications</td><td>Audit preparation</td><td>Streamlined process, audit-ready</td></tr></tbody></table><p>Every solution is backed by our commitment to security, reliability, and client success. Our team works alongside yours to ensure seamless implementation and long-term value.</p>"
+      format: full_html
+      summary: ''

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dripyard_hide_page_title
+    - node.type.dripyard_landing_page
+id: node.dripyard_landing_page.dripyard_hide_page_title
+field_name: dripyard_hide_page_title
+entity_type: node
+bundle: dripyard_landing_page
+label: 'Hide page title'
+description: 'Check this box to hide the page title when displaying this content.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Hidden'
+  off_label: 'Visible'
+field_type: boolean

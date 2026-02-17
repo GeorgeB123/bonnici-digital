@@ -1,0 +1,101 @@
+/*
+ * @file
+ * Grid cell component styles.
+ */
+
+.grid-cell {
+  --grid-cell-border-radius: 0;
+
+  /* Default to 6 columns on small screens */
+  grid-column: span var(--grid-cell-columns-small, 6);
+  grid-row: span var(--grid-cell-rows-small, 1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  border-radius: var(--grid-cell-border-radius);
+
+  .grid-wrapper__grid:has(.background-image) & {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:where(:has(.background-image)) {
+    position: relative;
+    overflow: clip;
+
+    > *:not(.background-image) {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &[class*="theme"] {
+    background: var(--theme-surface);
+    color: var(--theme-text-color-medium);
+  }
+
+  .is-canvas-editor & {
+    outline: dashed 1px var(--theme-text-color-soft);
+  }
+}
+
+.grid-cell--padding-zero {
+  padding: 0;
+
+  /* Minimum 5px padding, so editors can select the component within the UI. */
+  .is-canvas-editor & {
+    padding: 5px;
+  }
+}
+
+.grid-cell--padding-small {
+  padding: var(--spacing-xs);
+}
+
+.grid-cell--padding-medium {
+  padding: var(--spacing-s);
+}
+
+.grid-cell--padding-large {
+  padding: var(--spacing-m);
+}
+
+/* Horizontal alignment classes */
+.grid-cell--align-horizontal-start {
+  align-items: flex-start;
+}
+
+.grid-cell--align-horizontal-center {
+  align-items: center;
+}
+
+.grid-cell--align-horizontal-end {
+  align-items: flex-end;
+}
+
+/* Vertical alignment classes */
+.grid-cell--align-vertical-start {
+  justify-content: flex-start;
+}
+
+.grid-cell--align-vertical-center {
+  justify-content: center;
+}
+
+.grid-cell--align-vertical-end {
+  justify-content: flex-end;
+}
+
+@container (width > 600px) {
+  .grid-cell {
+    grid-column: span var(--grid-cell-columns-medium, var(--grid-cell-columns-small, 6));
+    grid-row: span var(--grid-cell-rows-medium, var(--grid-cell-rows-small, 1));
+  }
+}
+
+@container (width > 1200px) {
+  .grid-cell {
+    grid-column: span var(--grid-cell-columns-large, var(--grid-cell-columns-medium, var(--grid-cell-columns-small, 6)));
+    grid-row: span var(--grid-cell-rows-large, var(--grid-cell-rows-medium, var(--grid-cell-rows-small, 1)));
+  }
+}

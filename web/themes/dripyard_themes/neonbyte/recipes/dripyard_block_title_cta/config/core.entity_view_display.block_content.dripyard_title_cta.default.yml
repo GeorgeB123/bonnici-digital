@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_title_cta
+    - field.field.block_content.dripyard_title_cta.dripyard_button_style
+    - field.field.block_content.dripyard_title_cta.dripyard_component_layout
+    - field.field.block_content.dripyard_title_cta.dripyard_cta
+    - field.field.block_content.dripyard_title_cta.dripyard_title
+  module:
+    - link
+    - options
+    - text
+id: block_content.dripyard_title_cta.default
+targetEntityType: block_content
+bundle: dripyard_title_cta
+mode: default
+content:
+  dripyard_button_style:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  dripyard_component_layout:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  dripyard_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  dripyard_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

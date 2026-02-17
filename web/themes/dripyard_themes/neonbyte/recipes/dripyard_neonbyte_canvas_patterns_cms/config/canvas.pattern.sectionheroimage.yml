@@ -1,0 +1,151 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.button
+    - canvas.component.sdc.dripyard_base.canvas-image
+    - canvas.component.sdc.dripyard_base.flex-wrapper
+    - canvas.component.sdc.dripyard_base.heading
+    - canvas.component.sdc.dripyard_base.section
+    - canvas.component.sdc.dripyard_base.text
+    - canvas.component.sdc.neonbyte.hero
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - options
+    - text
+id: sectionheroimage
+label: 'Section - Hero with Image'
+component_tree:
+  0:
+    uuid: 09c6f73f-803d-4b0f-acfe-ddaba529ea34
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: dark
+      section_width: edge-to-edge
+      content_width: edge-to-edge
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: zero
+      padding_bottom: zero
+  '0:content:0':
+    parent_uuid: 09c6f73f-803d-4b0f-acfe-ddaba529ea34
+    slot: content
+    uuid: 2e83e66f-be80-43e9-acce-9bc90e78a597
+    component_id: sdc.neonbyte.hero
+    component_version: fd16917fc8f81fbc
+    inputs:
+      theme: inherit
+      height: full-screen
+      position_behind_against_screen_top: true
+      align_x: start
+      align_y: bottom
+      text_color: white
+  '0:content:0:hero_content:0':
+    parent_uuid: 2e83e66f-be80-43e9-acce-9bc90e78a597
+    slot: hero_content
+    uuid: 6f086e10-d545-4429-9663-52b29d5981c6
+    component_id: sdc.dripyard_base.heading
+    component_version: 69804e3c5ff45a2b
+    inputs:
+      text: 'This is my title. Watch it convert.'
+      html_element: h1
+      style: h1
+      center: false
+      margin_top: zero
+      margin_bottom: zero
+  '0:content:0:hero_content:1':
+    parent_uuid: 2e83e66f-be80-43e9-acce-9bc90e78a597
+    slot: hero_content
+    uuid: 1b17d669-d3be-4d93-98da-e76798da88bf
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_l
+      color: medium
+      center: false
+  '0:content:0:hero_content:2':
+    parent_uuid: 2e83e66f-be80-43e9-acce-9bc90e78a597
+    slot: hero_content
+    uuid: 0ebb908e-ddae-413d-87de-50ec3b3ee261
+    component_id: sdc.dripyard_base.flex-wrapper
+    component_version: 87963dbf47fd166e
+    inputs:
+      theme: inherit
+      wrap: true
+      align_x: start
+      align_y: center
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: zero
+      padding_bottom: zero
+      column_gutter: small
+      row_gutter: small
+  '0:content:0:hero_content:2:content:0':
+    parent_uuid: 0ebb908e-ddae-413d-87de-50ec3b3ee261
+    slot: content
+    uuid: 358e3c5c-3ccf-4e04-a461-34007e0012d2
+    component_id: sdc.dripyard_base.button
+    component_version: f0368947665f0cbf
+    inputs:
+      text: 'Learn more'
+      href:
+        uri: 'https://www.drupal.org'
+        options: {  }
+      target: false
+      size: large
+      style: primary
+      suffix_icon: arrow-right
+  '0:content:0:hero_content:2:content:1':
+    parent_uuid: 0ebb908e-ddae-413d-87de-50ec3b3ee261
+    slot: content
+    uuid: f7f80cdd-b168-4ddf-9371-cc6b0dabc55a
+    component_id: sdc.dripyard_base.button
+    component_version: f0368947665f0cbf
+    inputs:
+      text: 'Learn more'
+      href:
+        uri: 'https://www.drupal.org'
+        options: {  }
+      target: false
+      style: default
+      size: large
+  '0:content:0:hero_media:0':
+    parent_uuid: 2e83e66f-be80-43e9-acce-9bc90e78a597
+    slot: hero_media
+    uuid: ece603b2-29b7-4528-8a71-a5383cfc2db4
+    component_id: sdc.dripyard_base.canvas-image
+    component_version: 247f3ce34cd0f93c
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.canvas-image
+      width: 0
+      loading: eager

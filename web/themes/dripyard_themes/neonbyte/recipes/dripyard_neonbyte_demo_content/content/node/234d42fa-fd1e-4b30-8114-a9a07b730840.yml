@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 234d42fa-fd1e-4b30-8114-a9a07b730840
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Open Source'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /resources/open-source
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte is committed to open source. We believe that sharing knowledge strengthens the entire technology community. Explore our contributions and discover projects you can use in your own work.</p><h2>Our Open Source Projects</h2><ul><li><strong>NeonShield</strong> — Lightweight security scanning library for CI/CD pipelines</li><li><strong>ByteAuth</strong> — Multi-factor authentication middleware for Node.js</li><li><strong>ComplianceKit</strong> — Automated compliance evidence collection framework</li><li><strong>SecureConfig</strong> — Encrypted configuration management for cloud applications</li></ul><h2>Project Statistics</h2><table><thead><tr><th>Project</th><th>GitHub Stars</th><th>Contributors</th><th>License</th></tr></thead><tbody><tr><td>NeonShield</td><td>3,200+</td><td>45</td><td>Apache 2.0</td></tr><tr><td>ByteAuth</td><td>1,800+</td><td>28</td><td>MIT</td></tr><tr><td>ComplianceKit</td><td>950+</td><td>19</td><td>Apache 2.0</td></tr><tr><td>SecureConfig</td><td>720+</td><td>12</td><td>MIT</td></tr></tbody></table><h2>How to Contribute</h2><ol><li>Browse our repositories on GitHub at github.com/neonbyte</li><li>Check the issues labeled \"good first issue\" for contribution opportunities</li><li>Read our contribution guidelines and code of conduct</li><li>Submit pull requests — we review all contributions within 48 hours</li></ol><p>We also sponsor open source maintainers and contribute to projects we depend on. Open source makes us all stronger.</p>"
+      format: full_html
+      summary: ''

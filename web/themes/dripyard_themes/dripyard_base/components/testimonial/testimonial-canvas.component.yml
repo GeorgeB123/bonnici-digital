@@ -1,0 +1,56 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Testimonial
+status: stable
+group: Dripyard General
+required:
+  - image
+  - quote
+props:
+  type: object
+  properties:
+    image:
+      title: 'Image'
+      $ref: json-schema-definitions://canvas.module/image
+      type: object
+      examples:
+        - src: images/student1.jpg
+          alt: 'Placeholder'
+          width: 800
+          height: 800
+    quote:
+      title: Quote
+      type: string
+      pattern: '(.|\r?\n)*'
+      examples:
+        - I have made lifelong friendships that I would have never imagined before coming to Great Lake Institute. The university and the people here have helped shape me into the person I am now.
+    citation:
+      title: Citation
+      type: string
+      examples:
+        - Sophie, 19
+    reversed:
+      title: Reverse layout
+      type: boolean
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+      examples: [ inherit ]
+libraryOverrides:
+  dependencies:
+    - core/components.dripyard_base--testimonial

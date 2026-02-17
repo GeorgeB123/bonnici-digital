@@ -1,0 +1,88 @@
+/*
+ * @file
+ * Styles for Drupal's details element.
+ */
+
+.details {
+  --details-border-color: var(--theme-border-color-soft);
+  --details-border-radius: var(--radius-md);
+  --details-background-color: var(--theme-surface-alt);
+  --details-text-color: var(--theme-text-color-medium);
+  --details-legend-text-color: var(--theme-text-color-primary);
+  --details-padding-block: var(--spacing-xs);
+  --details-padding-inline: var(--spacing-xs);
+  --details-animation-duration: 200ms;
+
+  padding: var(--details-padding-block) var(--details-padding-inline);
+  border-radius: var(--details-border-radius);
+  background: var(--details-background-color);
+  border: solid 1px var(--details-border-color);
+  color: var(--text-on-surface-light-medium);
+  interpolate-size: allow-keywords;
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports selector(::details-content) {
+      &::details-content {
+        height: 0;
+        transition: height var(--details-animation-duration) linear;
+        content-visibility: auto !important;
+        overflow: clip;
+      }
+
+      &[open]::details-content {
+        height: auto;
+      }
+    }
+  }
+
+  &:where(:not(:last-child)) {
+    margin-bottom: var(--spacing-s);
+  }
+}
+
+.details__summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border-left: solid 2px var(--theme-border-color-alt);
+    border-bottom: solid 2px var(--theme-border-color-alt);
+    rotate: -45deg;
+    translate: 0 25%;
+    transition: all 0.2s;
+  }
+
+  .details[open] > &::after {
+    rotate: 135deg;
+    translate: 0 50%;
+  }
+}
+
+.details__description {
+  margin-block: var(--spacing-xs);
+  max-width: 60ch;
+  font-size: var(--body-s-size);
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+}
+
+.details__wrapper {
+  margin-block: var(--spacing-xs);
+
+  > *:not(:last-child) {
+    margin-bottom: var(--spacing-s);
+  }
+}

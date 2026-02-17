@@ -1,0 +1,61 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Tab group
+status: stable
+group: Dripyard General
+props:
+  type: object
+  properties:
+    canvas_edit_mode:
+      title: Canvas edit mode
+      type: boolean
+    centered:
+      title: Center title content
+      type: boolean
+    placement:
+      title: Tab position
+      type: string
+      enum:
+        - top
+        - start
+        - bottom
+        - end
+      meta:enum:
+        top: Top
+        start: Start
+        bottom: Bottom
+        end: End
+      examples: [ top ]
+    icon_size:
+      title: Icon size
+      type: string
+      enum:
+        - small
+        - large
+      meta:enum:
+        small: Small
+        large: Large
+      examples: [ small ]
+    icon_placement:
+      title: Placement of the icons
+      type: string
+      enum:
+        - vertical
+        - horizontal
+      meta:enum:
+        vertical: Vertical
+        horizontal: Horizontal
+      examples: [ vertical ]
+slots:
+  tabs:
+    title: Tab group content
+    description: Insert tabs here.
+libraryOverrides:
+  css:
+    component:
+      shoelace-tabs/wa-tab-group.css: {}
+  js:
+    shoelace-tabs/wa-tab-group.bundle.js: {}
+    tab-group.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

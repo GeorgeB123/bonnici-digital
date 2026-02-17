@@ -1,0 +1,55 @@
+/*
+ * @file
+ * Styling for search result teaser.
+ */
+
+.search-result-teaser {
+  --search-result-teaser-gap: var(--spacing-xs);
+
+  padding-block: var(--spacing-m);
+
+  > * {
+    margin-bottom: var(--search-result-teaser-gap);
+  }
+}
+
+.search-result-teaser__meta {
+  color: var(--theme-text-color-primary);
+}
+
+.search-result-teaser__title[class] {
+  margin-block: 0 var(--search-result-teaser-gap);
+}
+
+.search-result-teaser__snippet {
+  margin-block: 0 var(--search-result-teaser-gap);
+  color: var(--theme-text-color-loud);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.search-result-teaser__url[class] {
+  text-decoration: none;
+  color: var(--theme-text-color-soft);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--theme-text-color-loud);
+  }
+}
+
+.search-result-teaser__image {
+  float: inline-start;
+  margin-inline-end: var(--search-result-teaser-gap);
+  width: 150px;
+}
+
+.search-result-teaser__footer {
+  clear: both;
+}

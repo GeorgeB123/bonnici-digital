@@ -1,0 +1,44 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Icon
+status: stable
+group: Dripyard Basic
+noUi: true
+props:
+  type: object
+  required:
+    - icon
+  properties:
+    size:
+      title: Size
+      type: integer
+      examples: [ 32 ]
+    icon:
+      title: Icon
+      type: string
+      examples: [ 'drupal' ]
+    color:
+      type:
+        - string
+        - 'null'
+      title: Text color
+      enum:
+        - soft
+        - medium
+        - loud
+        - primary
+      meta:enum:
+        soft: Soft
+        medium: Medium
+        loud: Loud
+        primary: Primary
+    link_href:
+      title: Link
+      type: string
+      format: uri-reference
+    link_text:
+      title: Link text (for accessibility)
+      type: string
+      description: Not visible. Necessary to make the hyperlink accessible. Hyperlink will not appear without this.
+    open_new_window:
+      title: Open link in new window
+      type: boolean

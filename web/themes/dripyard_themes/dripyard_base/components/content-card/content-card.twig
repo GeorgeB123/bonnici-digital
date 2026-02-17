@@ -1,0 +1,37 @@
+{% set classes = [
+  'content-card',
+  background ? 'content-card--has-background',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="content-card__content">
+    {% if link_href %}
+      <h3 class="content-card__title h3">
+        <a href="{{ link_href }}" class="content-card__link">
+          {{ title }}
+        </a>
+      </h3>
+    {% else %}
+      <h3 class="content-card__title">{{ title }}</h3>
+    {% endif %}
+
+    {% if metadata %}
+      <div class="content-card__metadata">
+        {{ metadata }}
+      </div>
+    {% endif %}
+
+    {{ include('dripyard_base:horizontal-line', {
+      margin_top: 'zero',
+      margin_bottom: 'zero',
+      width: 'small',
+      color: 'primary',
+      alignment: 'start'
+    }, with_context = false) }}
+
+    <div class="content-card__body text-content body-m">
+      {{ body_text }}
+    </div>
+  </div>
+</article>

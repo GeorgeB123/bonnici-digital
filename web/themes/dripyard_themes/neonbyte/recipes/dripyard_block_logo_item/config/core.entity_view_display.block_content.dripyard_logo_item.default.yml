@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_logo_item
+    - field.field.block_content.dripyard_logo_item.dripyard_image_media
+    - field.field.block_content.dripyard_logo_item.dripyard_link
+  module:
+    - link
+id: block_content.dripyard_logo_item.default
+targetEntityType: block_content
+bundle: dripyard_logo_item
+mode: default
+content:
+  dripyard_image_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: dripyard_logo
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  dripyard_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

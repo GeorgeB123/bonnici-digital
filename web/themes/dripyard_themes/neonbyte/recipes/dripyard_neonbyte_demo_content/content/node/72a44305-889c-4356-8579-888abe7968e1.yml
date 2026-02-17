@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 72a44305-889c-4356-8579-888abe7968e1
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Case Studies'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /company/case-studies
+      langcode: en
+  body:
+    -
+      value: "<p>Real results from real clients. Explore how NeonByte has helped organizations across industries overcome challenges and achieve their technology goals. Each case study demonstrates our commitment to delivering measurable outcomes.</p><h2>Featured Case Studies</h2><ul><li><strong>Regional Bank</strong> — Achieved SOC 2 certification in 90 days while reducing manual compliance work by 60%</li><li><strong>Healthcare System</strong> — Deployed AI-powered document processing, cutting intake time from 4 hours to 15 minutes</li><li><strong>State Agency</strong> — Modernized legacy systems with zero downtime, serving 2M+ citizens</li><li><strong>SaaS Startup</strong> — Built security-first architecture that enabled enterprise sales</li></ul><h2>Results by Industry</h2><table><thead><tr><th>Industry</th><th>Challenge</th><th>Outcome</th></tr></thead><tbody><tr><td>Financial Services</td><td>Compliance gaps</td><td>100% audit pass rate</td></tr><tr><td>Healthcare</td><td>Manual processes</td><td>75% efficiency gain</td></tr><tr><td>Government</td><td>Legacy modernization</td><td>40% cost reduction</td></tr><tr><td>Technology</td><td>Security posture</td><td>Enterprise-ready in 60 days</td></tr></tbody></table><h2>How We Measure Success</h2><ol><li>Time to value — How quickly clients see results</li><li>ROI — Measurable return on technology investment</li><li>Risk reduction — Quantified security improvements</li><li>Client satisfaction — Ongoing feedback and NPS tracking</li></ol><p>Contact us to discuss your specific challenges and learn how NeonByte can help you achieve similar results.</p>"
+      format: full_html
+      summary: ''

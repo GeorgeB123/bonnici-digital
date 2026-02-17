@@ -1,0 +1,152 @@
+neonbyte_subtheme.settings:
+  type: theme_settings
+  label: 'Neonbyte settings'
+  mapping:
+    theme_colors:
+      type: mapping
+      label: 'Theme colors'
+      mapping:
+        site_theme:
+          type: string
+          label: 'Site theme'
+        color_scheme:
+          type: string
+          label: 'Color scheme'
+        colors:
+          type: mapping
+          label: 'Colors'
+          mapping:
+            base_primary_color:
+              type: string
+              label: 'Base primary color'
+            base_primary_color_brightness:
+              type: string
+              label: 'Base primary color brightness'
+            base_secondary_color:
+              type: string
+              label: 'Base secondary color'
+            base_secondary_color_brightness:
+              type: string
+              label: 'Base secondary color brightness'
+    footer:
+      type: mapping
+      label: 'Footer settings'
+      mapping:
+        theme:
+          type: string
+          label: 'Footer theme'
+    layout_settings:
+      type: mapping
+      label: 'Layout settings'
+      mapping:
+        container_max_width:
+          type: string
+          label: 'Container max width'
+        border_radius_sm:
+          type: string
+          label: 'Small border radius'
+        border_radius_md:
+          type: string
+          label: 'Medium border radius'
+        border_radius_lg:
+          type: string
+          label: 'Large border radius'
+        border_radius_button:
+          type: string
+          label: 'Button border radius'
+    header_settings:
+      type: mapping
+      label: 'Header settings'
+      mapping:
+        full_width:
+          type: integer
+          label: 'Full width'
+        remove_sticky:
+          type: integer
+          label: 'Remove sticky'
+        remove_transparency:
+          type: integer
+          label: 'Remove transparency'
+        theme:
+          type: string
+          label: 'Header theme'
+    social_media_links:
+      type: mapping
+      label: 'Social media links'
+      mapping:
+        bluesky:
+          type: string
+          label: 'Bluesky URL'
+        discord:
+          type: string
+          label: 'Discord URL'
+        facebook:
+          type: string
+          label: 'Facebook URL'
+        github:
+          type: string
+          label: 'GitHub URL'
+        instagram:
+          type: string
+          label: 'Instagram URL'
+        linkedin:
+          type: string
+          label: 'LinkedIn URL'
+        mastodon:
+          type: string
+          label: 'Mastodon URL'
+        pinterest:
+          type: string
+          label: 'Pinterest URL'
+        reddit:
+          type: string
+          label: 'Reddit URL'
+        snapchat:
+          type: string
+          label: 'Snapchat URL'
+        telegram:
+          type: string
+          label: 'Telegram URL'
+        threads:
+          type: string
+          label: 'Threads URL'
+        tiktok:
+          type: string
+          label: 'TikTok URL'
+        twitch:
+          type: string
+          label: 'Twitch URL'
+        twitter:
+          type: string
+          label: 'Twitter URL'
+        whatsapp:
+          type: string
+          label: 'WhatsApp URL'
+        youtube:
+          type: string
+          label: 'YouTube URL'
+    apply_recipes:
+      type: mapping
+      label: 'Apply recipes'
+      mapping:
+        dripyard_neonbyte_subtheme_blocks:
+          type: integer
+          label: 'Dripyard Neonbyte blocks'
+        dripyard_neonbyte_subtheme_nodes:
+          type: integer
+          label: 'Dripyard Neonbyte nodes'
+        dripyard_neonbyte_subtheme_demo_content:
+          type: integer
+          label: 'Dripyard Neonbyte demo content'
+        dripyard_neonbyte_subtheme_landing_pages:
+          type: integer
+          label: 'Dripyard Neonbyte landing pages'
+        dripyard_neonbyte_subtheme_layout_builder_demo:
+          type: integer
+          label: 'Dripyard Neonbyte layout builder demo'
+        dripyard_neonbyte_subtheme_canvas_demo:
+          type: integer
+          label: 'Dripyard Neonbyte Drupal Canvas demo'
+        notice:
+          type: string
+          label: 'Notice'

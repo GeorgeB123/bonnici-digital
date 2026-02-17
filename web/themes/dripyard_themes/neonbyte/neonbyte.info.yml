@@ -1,0 +1,24 @@
+# Licensed to: george@bonnici.co.nz (500d308b-71ad-4ac1-8f36-ef1ff234296c)
+name: Neonbyte
+type: theme
+base theme: dripyard_base
+description: A highly accessible, flexible, and beautiful theme from the friendly Drupal experts at <a href="https://www.dripyard.com" target="_blank">DripYard</a>.
+core_version_requirement: ^11.2
+libraries:
+  - neonbyte/global
+libraries-override:
+  dripyard_base/themes: neonbyte/themes
+  dripyard_base/variables: neonbyte/variables
+regions:
+  header_first: Header first (logo)
+  header_second: Header second (center)
+  header_third: Header third (right)
+  highlighted: Highlighted
+  content: Content
+  fixed_middle_right: Fixed middle right (local actions tabs)
+  fixed_bottom_right: Fixed bottom right (messages)
+  footer_top: Footer top
+  footer_left: Footer left
+  footer_right: Footer right
+  footer_bottom: Footer bottom
+dripyard_theme_level: primary

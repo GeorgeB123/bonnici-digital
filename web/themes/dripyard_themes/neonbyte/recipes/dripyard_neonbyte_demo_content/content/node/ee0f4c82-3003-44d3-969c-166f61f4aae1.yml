@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ee0f4c82-3003-44d3-969c-166f61f4aae1
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Data Protection'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /solutions/data-protection
+      langcode: en
+  body:
+    -
+      value: "<p>Protect your most valuable asset — your data. NeonByte's data protection solutions ensure your information remains secure, compliant, and accessible when you need it. We implement defense-in-depth strategies that safeguard data at rest, in transit, and in use.</p><h2>Data Protection Services</h2><ul><li><strong>Encryption</strong> — AES-256 encryption for data at rest and TLS 1.3 for data in transit</li><li><strong>Backup &amp; Recovery</strong> — Automated backups with tested disaster recovery procedures</li><li><strong>Access Control</strong> — Role-based permissions with multi-factor authentication</li><li><strong>Data Loss Prevention</strong> — Monitor and prevent unauthorized data exfiltration</li></ul><h2>Protection Coverage</h2><table><thead><tr><th>Data Type</th><th>Protection Method</th><th>Compliance</th></tr></thead><tbody><tr><td>Customer PII</td><td>Encryption + masking</td><td>GDPR, CCPA</td></tr><tr><td>Financial Data</td><td>Tokenization</td><td>PCI-DSS</td></tr><tr><td>Health Records</td><td>End-to-end encryption</td><td>HIPAA</td></tr><tr><td>Intellectual Property</td><td>DLP + access controls</td><td>Custom policies</td></tr></tbody></table><h2>Recovery Capabilities</h2><ol><li>Point-in-time recovery for databases and file systems</li><li>Geo-redundant backups across multiple regions</li><li>Recovery time objectives (RTO) as low as 15 minutes</li><li>Regular recovery testing and verification</li></ol><p>Our data protection solutions integrate with your existing infrastructure and provide centralized management through a single dashboard.</p>"
+      format: full_html
+      summary: ''

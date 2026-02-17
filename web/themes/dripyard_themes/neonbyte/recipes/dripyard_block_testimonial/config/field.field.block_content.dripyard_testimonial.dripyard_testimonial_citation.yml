@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_testimonial
+    - field.storage.block_content.dripyard_testimonial_citation
+id: block_content.dripyard_testimonial.dripyard_testimonial_citation
+field_name: dripyard_testimonial_citation
+entity_type: block_content
+bundle: dripyard_testimonial
+label: Citation
+description: 'The person being quoted (e.g., "John Doe, CEO").'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

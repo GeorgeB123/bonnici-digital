@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b91d380e-bca2-48ac-9b0e-11d7e0f4603a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'logo_3.png'
+  uri:
+    -
+      value: 'public://logo/logo_3.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 22084
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1745520609

@@ -1,0 +1,36 @@
+/*
+ * @file
+ * Skip link styling.
+ */
+
+.skip-link[class] {
+  --theme-focus-ring-color: var(--theme-text-color-loud);
+
+  position: absolute;
+  z-index: 200;
+  top: var(--drupal-displace-offset-top, 0);
+  inset-inline-start: var(--drupal-displace-offset-left, 0);
+  display: inline-block;
+  margin: var(--spacing-xs);
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  border: solid 1px transparent;
+  border-radius: var(--radius-lg);
+  background-color: var(--theme-text-color-loud);
+  color: var(--theme-surface);
+  text-decoration: none;
+  overflow: clip;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+
+  &:focus {
+    overflow: revert;
+    width: revert;
+    height: revert;
+    opacity: revert;
+  }
+
+  &:dir(rtl) {
+    inset-inline-start: var(--drupal-displace-offset-right, 0);
+  }
+}

@@ -1,0 +1,9 @@
+name: Dripyard Button Block
+type: Dripyard
+description: 'Provides a button block type with label, link, and styles.'
+install:
+  - block_content
+config:
+  strict: false
+recipes:
+    - 'dripyard_fields_block'

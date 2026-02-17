@@ -1,0 +1,44 @@
+{% set heading_id = ('pager-' ~ random()) %}
+{% if items.previous or items.next %}
+  <nav class="pager" aria-labelledby="{{ heading_id }}">
+    <{{ pagination_heading_level }} id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination'|t }}</{{ pagination_heading_level }}>
+    <ul class="pager__items js-pager__items">
+      {# Print previous item if we are not on the first page. #}
+      {% if items.previous %}
+        <li class="pager__item pager__item--control pager__item--previous">
+          <a
+            {{- items.previous.attributes
+              .addClass('pager__link')
+              .setAttribute('href', items.previous.href)
+              .setAttribute('rel', 'prev') -}}
+            >
+            <span class="visually-hidden">{{ 'Previous page'|t }}</span>
+            {{ source('/' ~ componentMetadata.path ~ '/images/pager-previous.svg') }}
+          </a>
+        </li>
+      {% endif %}
+
+      {# Print current active page. #}
+      {% if items.current %}
+        <li class="pager__item pager__item--active">
+          {{ items.current }}
+        </li>
+      {% endif %}
+
+      {# Print next item if we are not on the last page. #}
+      {% if items.next %}
+        <li class="pager__item pager__item--control pager__item--next">
+          <a
+            {{- items.next.attributes
+              .addClass('pager__link')
+              .setAttribute('href', items.next.href)
+              .setAttribute('rel', 'next') -}}
+            >
+            <span class="visually-hidden">{{ 'Next page'|t }}</span>
+            {{ source('/' ~ componentMetadata.path ~ '/images/pager-previous.svg') }}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

@@ -1,0 +1,39 @@
+{% set classes = [
+  'button-group',
+  align_x ? 'button-group--align-' ~ align_x,
+] %}
+<div{{ attributes.addClass(classes)}}>
+    {{ include('dripyard_base:button', {
+      href: button_1_href,
+      text: button_1_text,
+      style: button_1_style|default('primary'),
+      size: button_size|default('medium'),
+      prefix_icon: button_1_icon_prefix,
+      suffix_icon: button_1_icon_suffix,
+      target: button_1_target,
+    }, with_context = false) }}
+
+    {% if button_2_href and button_2_text %}
+      {{ include('dripyard_base:button', {
+        href: button_2_href,
+        text: button_2_text,
+        style: button_2_style|default('default'),
+        size: button_size|default('medium'),
+        prefix_icon: button_2_icon_prefix,
+        suffix_icon: button_2_icon_suffix,
+        target: button_2_target,
+      }, with_context = false) }}
+    {% endif %}
+
+    {% if button_3_href and button_3_text %}
+      {{ include('dripyard_base:button', {
+        href: button_3_href,
+        text: button_3_text,
+        style: button_3_style|default('default'),
+        size: button_size|default('medium'),
+        prefix_icon: button_3_icon_prefix,
+        suffix_icon: button_3_icon_suffix,
+        target: button_3_target,
+      }, with_context = false) }}
+    {% endif %}
+</div>

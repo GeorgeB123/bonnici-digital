@@ -1,0 +1,13 @@
+/*
+ * @file
+ * Styles for general headings.
+ */
+
+.heading {
+  max-width: var(--heading-max-width, none);
+}
+
+.heading--centered {
+  margin-inline: auto;
+  text-align: center;
+}

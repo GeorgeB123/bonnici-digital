@@ -1,0 +1,18 @@
+/*
+ * @file
+ * Button Group styles.
+ */
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.button-group--align-center {
+  justify-content: center;
+}
+
+.button-group--align-end {
+  justify-content: end;
+}

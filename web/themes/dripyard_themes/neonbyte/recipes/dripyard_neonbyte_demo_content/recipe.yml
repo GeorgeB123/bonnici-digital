@@ -1,0 +1,39 @@
+name: Dripyard NeonByte Demo Content
+type: Dripyard
+description: 'This recipe provides the demo content for Neonbyte use to build https://neonbyte.dripyard.com including article nodes, and block content.'
+recipes:
+  - 'dripyard_neonbyte_blocks'
+  - 'dripyard_neonbyte_nodes'
+config:
+  strict: false
+  actions:
+    neonbyte.settings:
+      simpleConfigUpdate:
+        social_media_links:
+          bluesky: 'https://bsky.app/profile/dripyard'
+          facebook: 'https://facebook.com/dripyard'
+          instagram: 'https://instagram.com/dripyard'
+          linkedin: 'https://linkedin.com/company/dripyard'
+          twitter: 'https://twitter.com/dripyard'
+    block.block.neonbyte_footeraddress:
+      placeBlockInDefaultTheme:
+        plugin: 'block_content:0ead4788-1baa-43da-bedc-31e3a4e27df5'
+        region: footer_right
+        weight: -6
+        settings:
+          label: 'Footer Address'
+          label_display: 0
+          status: true
+          info: ''
+          view_mode: full
+    block.block.dripyard_book_a_demo_block:
+      placeBlockInDefaultTheme:
+        plugin: 'block_content:7d0f606a-e73b-459f-a69e-4cdd4c6f1eaa'
+        region: header_third
+        weight: 10
+        settings:
+          label: 'Book a Demo Block'
+          label_display: 0
+          status: true
+          info: 'Dripyard Book a Demo Block'
+          view_mode: full

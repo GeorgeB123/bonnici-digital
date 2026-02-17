@@ -1,0 +1,26 @@
+{% set classes = [
+  'promo',
+  align_x ? 'promo--horizontal-align-' ~ align_x|clean_class,
+  align_y ? 'promo--vertical-align-' ~ align_y|clean_class,
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="promo__container">
+    <div class="promo__content">
+      {% if eyebrow %}
+        <div class="promo__eyebrow">{{ eyebrow }}</div>
+      {% endif %}
+      <h2 class="promo__title">{{ title }}</h2>
+      {% if body %}
+        <div class="promo__body">
+          {{ body|raw }}
+        </div>
+      {% endif %}
+      <div class="promo__block-content">
+        {% block promo_content %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

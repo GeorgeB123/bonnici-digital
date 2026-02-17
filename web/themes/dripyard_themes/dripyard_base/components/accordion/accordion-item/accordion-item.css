@@ -1,0 +1,122 @@
+/*
+ * @file
+ * Styles for accordion items.
+ */
+
+.accordion-item {
+  --accordion-item-border-color: transparent;
+  --accordion-item-border-radius: var(--radius-md);
+  --accordion-item-background-color: var(--theme-surface-alt);
+  --accordion-item-title-text-color: var(--theme-text-color-loud);
+  --accordion-item-text-color: var(--theme-text-color-medium);
+  --accordion-item-padding-block: var(--spacing-xs);
+  --accordion-item-padding-inline: var(--spacing-s);
+  --accordion-item-animation-duration: 0.2s;
+  --accordion-item-title-font-size: var(--body-l-size);
+
+  border-radius: var(--accordion-item-border-radius);
+  background: var(--accordion-item-background-color);
+  border: solid 1px var(--accordion-item-border-color);
+  color: var(--accordion-item-text-color);
+  interpolate-size: allow-keywords;
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports selector(::details-content) {
+      &::details-content {
+        height: 0;
+        transition: height var(--accordion-item-animation-duration) linear, visibility var(--accordion-item-animation-duration) linear;
+        content-visibility: auto !important;
+        overflow: clip;
+        visibility: hidden;
+      }
+
+      &[open]::details-content {
+        height: auto;
+        visibility: revert;
+      }
+    }
+  }
+
+  .is-canvas-editor &::details-content {
+    height: auto;
+    min-height: 100px;
+    visibility: revert;
+  }
+
+  &:has(+ .accordion-item) {
+    margin-bottom: 10px;
+  }
+
+  .accordion-group--variation-borders & {
+    --accordion-item-border-color: var(--theme-border-color-soft);
+    --accordion-item-border-radius: 0;
+    --accordion-item-background-color: transparent;
+    --accordion-item-padding-block: var(--sp1-5);
+    --accordion-item-padding-inline: 0px;
+
+    margin-bottom: 0;
+    border-inline: 0;
+    border-top: 0;
+
+    &:first-child {
+      margin-top: calc(-1 * var(--accordion-item-padding-block));
+    }
+  }
+}
+
+.accordion-item__summary {
+  display: flex;
+  gap: 20px;
+  padding: var(--accordion-item-padding-block) var(--accordion-item-padding-inline);
+  cursor: pointer;
+  appearance: none;
+  font-size: var(--accordion-item-title-font-size);
+  line-height: var(--body-l-line-height);
+  letter-spacing: var(--body-l-letter-spacing);
+  font-weight: 600;
+  color: var(--accordion-item-title-text-color);
+
+  &::-webkit-details-marker,
+  &::marker {
+    display: none;
+    content: "";
+  }
+
+  &:hover {
+    color: var(--theme-text-color-loud);
+  }
+
+  .accordion-group--variation-borders & {
+    font-weight: normal;
+  }
+
+  svg {
+    flex-basis: 24px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: calc(0.5lh - var(--accordion-item-title-font-size) / 2);
+    margin-inline: auto 0;
+    transition: rotate var(--accordion-item-animation-duration);
+
+    .accordion-item[open] & {
+      rotate: -180deg;
+    }
+  }
+}
+
+.accordion-item__title {
+  max-width: 80ch;
+  text-wrap: pretty;
+}
+
+.accordion-item__content {
+  padding: var(--accordion-item-padding-block) var(--accordion-item-padding-inline);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

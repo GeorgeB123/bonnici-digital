@@ -1,0 +1,304 @@
+/*
+ * @file
+ * Styles for the carousel container.
+ */
+
+.carousel {
+  --carousel-pagination-offset-vertical: 20px;
+  --carousel-gap: var(--gap);
+  --carousel-border-radius: 0;
+  --carousel-background-color: var(--theme-surface);
+  --carousel-pager-color: var(--theme-border-color);
+  --carousel-pager-color-active: var(--theme-text-color-primary);
+  --carousel-pager-size: 8px;
+
+  background-color: var(--carousel-background-color);
+
+  .carousel__inner {
+    position: relative; /* Anchor pager and navigation. */
+  }
+
+  .swiper {
+    width: 100%;
+    border-radius: var(--carousel-border-radius);
+  }
+
+  .swiper-pagination {
+    inset-inline-start: 50%;
+    top: calc(100% + var(--carousel-pagination-offset-vertical, 0px));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    max-width: 80%;
+    translate: -50% 0;
+
+    &:dir(rtl) {
+      translate: 50% 0;
+    }
+
+    @media (scripting: none) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    opacity: 1;
+
+    &:focus-visible {
+      outline-offset: -3px;
+    }
+
+    &::after {
+      display: block;
+      height: var(--carousel-pager-size);
+      width: var(--carousel-pager-size);
+      content: "";
+      background-color: var(--carousel-pager-color);
+      border-radius: 50%;
+
+      @media (forced-colors: active) {
+        background-color: canvasText;
+      }
+    }
+  }
+
+  .swiper-pagination-bullet-active::after {
+    background-color: var(--carousel-pager-color-active);
+    outline: solid 2px color-mix(in oklch, var(--carousel-pager-color-active) 40%, transparent);
+    outline-offset: 3px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    margin: 0;
+    padding: var(--spacing-s) var(--spacing-xxs);
+    border-radius: var(--radius-sm);
+    color: var(--theme-text-color-primary);
+
+    @media (scripting: none) {
+      display: none;
+    }
+
+    &:dir(rtl) {
+      scale: -1 1;
+    }
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: currentColor;
+      mask-image: url('icons/chevon-right.svg');
+      mask-size: 80%;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      content: "";
+
+      @media (forced-colors: active) {
+        background-color: buttonText;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    scale: -1 1;
+
+    &:dir(rtl) {
+      scale: 1;
+    }
+  }
+
+  &.carousel--navigation--outside {
+    .swiper-button-prev {
+      inset-inline-start: auto;
+      inset-inline-end: calc(var(--carousel-gap) + 100%);
+
+      @media (width < 1200px) {
+        inset-inline-start: var(--carousel-gap);
+        inset-inline-end: auto;
+      }
+    }
+
+    .swiper-button-next {
+      inset-inline-start: calc(var(--carousel-gap) + 100%);
+      inset-inline-end: auto;
+
+      @media (width < 1200px) {
+        inset-inline-start: auto;
+        inset-inline-end: var(--carousel-gap);
+      }
+    }
+  }
+
+  &.carousel--navigation--inside {
+    .swiper-button-prev {
+      inset-inline-start: var(--spacing-xxs);
+      inset-inline-end: auto;
+    }
+
+    .swiper-button-next {
+      inset-inline-start: auto;
+      inset-inline-end: 3%;
+
+      @container (width >= 650px) {
+        inset-inline-end: var(--spacing-xxs);
+      }
+    }
+  }
+
+  /* Swiper's CSS prevents clicks when disabled. This is problematic when
+      clicking multiple times, and then you accidentally click on the underlying
+      element. So we reset this. */
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    &:not(:focus-visible) {
+      pointer-events: revert;
+      opacity: 0;
+    }
+  }
+
+  /* Make sure everything within carousel is vertically aligned. */
+  .swiper-slide {
+    display: flex;
+    height: auto !important; /* Override SwiperJS' inline styles when grid rows > 1. */
+
+    > * {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.carousel__autoplay-toggle {
+  position: absolute;
+  inset-inline-start: 50%;
+  top: calc(100% + var(--carousel-pagination-offset-vertical, 0px));
+  translate: -50% 0;
+  z-index: 10;
+  height: 44px;
+  width: 44px;
+  border: solid 2px transparent;
+  color: var(--theme-text-color-loud);
+
+  .swiper-pagination:has(&) {
+    margin-inline-start: -10px;
+  }
+
+  .swiper-pagination & {
+    position: relative;
+    inset: revert;
+    translate: 0;
+    width: 24px;
+    height: 24px;
+    margin-inline-end: 10px;
+  }
+
+  &[aria-pressed="true"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    margin-left: 1px;
+    border-left: solid 15px currentColor;
+    border-top: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+  }
+
+  &[aria-pressed="false"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    border-left: solid 4px currentColor;
+    border-right: solid 4px currentColor;
+  }
+
+  &:dir(rtl) {
+    scale: -1;
+  }
+}
+
+/*
+ * Special styling for Canvas edit mode.
+ */
+
+/* When in editor and Carousel is in "Canvas editing mode", add some additional
+  padding, so the editor can select the carousel component within Canvas */
+.is-canvas-editor .carousel.canvas-edit-mode {
+  padding: var(--spacing-xs);
+
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  &[data-slides-per-view="2"] .swiper-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &[data-slides-per-view="3"] .swiper-wrapper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &[data-slides-per-view="4"] .swiper-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  &[data-slides-per-view="5"] .swiper-wrapper {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  &[data-slides-per-view="6"] .swiper-wrapper {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+/*
+ * To mitigate flash of unstyled content, we hide all slides that not in the
+ * swiper viewport, until the SwiperJS library is initialized.
+ */
+body:not(.is-canvas-editor) {
+  [data-slides-per-view="1"] .swiper-wrapper:not(.swiper-initialized *) > *:is(:nth-child(1) ~ *) {
+    display: none;
+  }
+
+  [data-slides-per-view="2"] .swiper-wrapper:not(.swiper-initialized *) > *:is(:nth-child(2) ~ *) {
+    display: none;
+  }
+
+  [data-slides-per-view="3"] .swiper-wrapper:not(.swiper-initialized *) > *:is(:nth-child(3) ~ *) {
+    display: none;
+  }
+
+  [data-slides-per-view="4"] .swiper-wrapper:not(.swiper-initialized *) > *:is(:nth-child(4) ~ *) {
+    display: none;
+  }
+
+  [data-slides-per-view="5"] .swiper-wrapper:not(.swiper-initialized *) > *:is(:nth-child(5) ~ *) {
+    display: none;
+  }
+
+  [data-slides-per-view="6"] .swiper-wrapper:not(.swiper-initialized *) > *:is(:nth-child(6) ~ *) {
+    display: none;
+  }
+}
+
+/* More work to mitigate FOUC. */
+.swiper-wrapper:not(.swiper-initialized *) {
+  gap: var(--carousel-gap);
+}

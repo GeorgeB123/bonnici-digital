@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_icon_card
+    - field.field.block_content.dripyard_icon_card.body
+    - field.field.block_content.dripyard_icon_card.dripyard_icon
+    - field.field.block_content.dripyard_icon_card.dripyard_icon_size
+    - field.field.block_content.dripyard_icon_card.dripyard_link
+    - field.field.block_content.dripyard_icon_card.dripyard_no_background
+    - field.field.block_content.dripyard_icon_card.dripyard_orientation
+    - field.field.block_content.dripyard_icon_card.dripyard_title
+  module:
+    - link
+    - options
+    - text
+id: block_content.dripyard_icon_card.default
+targetEntityType: block_content
+bundle: dripyard_icon_card
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  dripyard_icon:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  dripyard_icon_size:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  dripyard_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  dripyard_no_background:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  dripyard_orientation:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  dripyard_title:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,74 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Video
+status: stable
+group: Dripyard Basic
+noUi: true
+props:
+  type: object
+  properties:
+    aria_label:
+      title: Description of video for accessibility
+      type:
+        - string
+        - 'null'
+      examples:
+        - 'Grand canyon during the winter'
+    video:
+      title: Video file
+      type: object
+    poster:
+      title: 'Video placeholder image'
+      type: object
+    muted:
+      title: Mute video
+      type: boolean
+      examples: [ true ]
+    loop:
+      title: Loop video
+      type: boolean
+      examples: [ true ]
+    autoplay:
+      title: Autoplay video (if user preferences permit)
+      type: boolean
+      examples: [ false ]
+    button_align_x:
+      title: Horizontal alignment of play/pause button
+      type:
+        - string
+        - 'null'
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+      examples: [ end ]
+    button_align_y:
+      title: Vertical alignment of play/pause button
+      type:
+        - string
+        - 'null'
+      enum:
+        - top
+        - center
+        - bottom
+      meta:enum:
+        top: Top
+        center: Center
+        bottom: Bottom
+      examples: [ bottom ]
+    border_radius:
+      title: Border radius
+      type:
+        - string
+        - 'null'
+      enum:
+        - small
+        - medium
+        - large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large

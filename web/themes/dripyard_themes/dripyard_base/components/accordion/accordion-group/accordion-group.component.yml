@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Accordion group
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - variation
+  properties:
+    variation:
+      type: string
+      title: Visual variation
+      enum:
+        - background-color
+        - borders
+      meta:enum:
+        background-color: Background color
+        borders: Borders
+      examples: [ background-color ]
+slots:
+  accordion_group_content:
+    title: Accordion items

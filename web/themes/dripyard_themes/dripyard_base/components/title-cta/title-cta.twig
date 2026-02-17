@@ -1,0 +1,27 @@
+{% set classes = [
+  'title-cta',
+  layout ? 'title-cta--' ~ layout,
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="title-cta--container">
+    {{ include('dripyard_base:heading', {
+      text: title,
+      style: heading_style|default('h2'),
+      html_element: 'h2',
+      margin_top: 'zero',
+      margin_bottom: 'zero',
+    }, with_context = false) }}
+
+    {% if button_href and button_text %}
+      {{ include('dripyard_base:button', {
+        href: button_href,
+        text: button_text,
+        style: button_style|default('primary'),
+        size: button_size|default('large'),
+        suffix_icon: button_suffix_icon|default('arrow-right'),
+        target: button_target|default(false),
+      }, with_context = false) }}
+    {% endif %}
+  </div>
+</div>

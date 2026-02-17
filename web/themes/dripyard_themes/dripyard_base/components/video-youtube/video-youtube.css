@@ -1,0 +1,32 @@
+/*
+ * @file
+ * Styling for the Video Youtube component.
+ */
+
+.video-youtube {
+  --video-youtube-border-radius: 0;
+
+  border-radius: var(--video-youtube-border-radius); /* For focus state */
+
+  &:has(:focus-visible) {
+    outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+    outline-offset: 3px;
+  }
+}
+
+.video-youtube--radius-small {
+  --video-youtube-border-radius: var(--radius-sm);
+}
+
+.video-youtube--radius-medium {
+  --video-youtube-border-radius: var(--radius-md);
+}
+
+.video-youtube--radius-large {
+  --video-youtube-border-radius: var(--radius-lg);
+}
+
+lite-youtube {
+  max-width: none;
+  border-radius: var(--video-youtube-border-radius);
+}

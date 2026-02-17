@@ -1,0 +1,61 @@
+/*
+ * @file
+ * Statistic styling.
+ */
+
+.stat {
+  --stat-stat-text-color: var(--theme-text-color-loud);
+  --stat-stat-text-color-hover: var(--theme-text-color-primary);
+  --stat-first-line-font-size: var(--h3-size);
+  --stat-first-line-text-color: var(--theme-text-color-medium);
+  --stat-second-line-font-size: var(--body-l-size);
+  --stat-second-line-text-color: var(--theme-text-color-primary);
+
+  container-type: inline-size;
+  border-top: solid 2px var(--theme-border-color-alt);
+}
+
+.stat__link {
+  display: block;
+  text-decoration: none;
+}
+
+.stat__stat {
+  --stat-stat-font-size: 5.5rem; /* 88px */
+
+  @container (width < 300px) {
+    --stat-stat-font-size: 3.75rem; /* 60px */
+  }
+
+  margin-block: var(--sp4) var(--sp2-5);
+  font-size: var(--stat-stat-font-size);
+  letter-spacing: -0.025em;
+  font-weight: bold;
+  color: var(--stat-stat-text-color);
+  line-height: 1;
+  text-box: trim-both cap alphabetic;
+
+  .stat__link & {
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in oklch, currentColor 50%, transparent);
+    transition: text-decoration 0.2s, text-underline-offset 0.2s, text-decoration-color 0.2s, color 0.2s;
+    box-shadow: none;
+  }
+
+  .stat__link:hover & {
+    color: var(--stat-stat-text-color-hover);
+    text-decoration: underline;
+    text-underline-offset: 0.2ex;
+    text-decoration-color: currentColor;
+  }
+}
+
+.stat__first-line {
+  font-size: var(--stat-first-line-font-size);
+  color: var(--stat-first-line-text-color);
+}
+
+.stat__second-line {
+  font-size: var(--stat-second-line-font-size);
+  color: var(--stat-second-line-text-color);
+}

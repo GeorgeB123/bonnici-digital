@@ -1,0 +1,10 @@
+name: Dripyard Hero Base
+type: Dripyard
+description: 'A base recipe for config that all hero blocks share'
+install:
+  - responsive_image
+config:
+  strict: false
+recipes:
+  - 'dripyard_fields_block'
+  - 'dripyard_text_format_superbasic'

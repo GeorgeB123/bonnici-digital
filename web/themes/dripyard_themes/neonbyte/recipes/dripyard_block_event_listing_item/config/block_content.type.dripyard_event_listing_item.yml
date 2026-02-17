@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_event_listing_item
+label: 'Event Listing Item'
+revision: false
+description: 'Provides an event listing item block type with event details, date, time, and location.'

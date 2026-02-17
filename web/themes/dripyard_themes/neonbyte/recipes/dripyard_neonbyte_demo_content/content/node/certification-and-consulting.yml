@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 82fdffa4-9d48-4a99-9e61-786b8dbad2b6
+  bundle: article
+  default_langcode: en
+  depends:
+    0b2e377f-a967-4950-bc89-516a382bdd0c: file
+    4e689e66-025a-4660-8519-2e9e0cd7f4bc: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Certification & Consulting'
+  created:
+    -
+      value: 1745292007
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  body:
+    -
+      value: "<p>At NeonByte, we help you navigate the complex world of compliance, security frameworks, and technology strategy with confidence. Whether you're preparing for SOC 2, ISO 27001, HIPAA, or GDPR, our experts provide hands-on guidance, documentation support, and system audits to get you certified faster — without the guesswork. We don’t just check boxes — we build sustainable processes that keep you audit-ready year-round.</p><p>Beyond certifications, our consulting services align your technology stack with your business goals. From security architecture reviews to workflow optimization and vendor evaluation, we act as a strategic partner who understands the technical and operational sides of your business. With NeonByte, you're not just compliant — you're resilient, efficient, and ready for what's next.</p>"
+      format: full_html
+      summary: ''
+  field_image:
+    -
+      entity: 0b2e377f-a967-4950-bc89-516a382bdd0c
+      alt: 'Certification & Consulting'
+      title: ''
+      width: 6702
+      height: 4468
+  field_tags:
+    -
+      entity: 4e689e66-025a-4660-8519-2e9e0cd7f4bc

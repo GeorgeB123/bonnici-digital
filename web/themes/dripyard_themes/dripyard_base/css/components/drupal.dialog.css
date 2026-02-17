@@ -1,0 +1,197 @@
+/*
+ * @file
+ * Styling for UI Dialog and media library.
+ */
+
+.ui-dialog {
+  container-type: inline-size;
+  padding: 0;
+
+  .ui-widget-header {
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--theme-text-color-soft);
+    color: var(--theme-surface);
+
+    h1 {
+      color: inherit;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.ui-dialog-buttonpane {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+.ui-widget-overlay {
+  opacity: 0.5;
+  background-color: var(--black);
+}
+
+.js-media-library-menu {
+  --ui-tab-height: 50px;
+  --ui-tab-padding-inline: var(--sp3);
+  --ui-tab-active-border-size: 6px;
+  --ui-tab-highlight-color: var(--theme-border-color-alt);
+  --ui-tab-text-color: var(--theme-text-color-soft);
+  --ui-tab-text-color-active: var(--theme-text-color-loud);
+  --ui-tab-letter-spacing: revert;
+  --ui-tab-font-size: 16px;
+  --ui-tab-background-color: var(--theme-surface);
+  --ui-tab-background-color-hover: var(--theme-surface-alt);
+  --ui-tab-background-color-active: var(--theme-surface-alt);
+  --ui-tab-border-width: 1px;
+  --ui-tab-border-color: transparent;
+  --ui-tab-transition-duration: 0.2s;
+
+  display: flex;
+  list-style: none;
+  margin: var(--component-spacing-internal) 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    height: var(--ui-tab-height);
+    padding-block: 0;
+    padding-inline: var(--ui-tab-padding-inline);
+    transition: background-color var(--ui-tab-transition-duration);
+    text-decoration: none;
+    letter-spacing: var(--ui-tab-letter-spacing);
+    color: var(--ui-tab-text-color);
+    border: var(--ui-tab-border-width) solid var(--ui-tab-border-color);
+    background-color: var(--ui-tab-background-color);
+    font-size: var(--ui-tab-font-size);
+
+    &:hover {
+      color: var(--ui-tab-text-color-active);
+      background-color: var(--ui-tab-background-color-hover);
+    }
+
+    &:focus {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.active {
+      position: relative; /* Anchor :after pseudo-element. */
+      background-color: var(--ui-tab-background-color-active);
+      color: var(--ui-tab-text-color-active);
+      font-weight: 600;
+
+      /*
+      * We use :after pseudo-element in place of border so edges do not appear
+      * diagonally cut off due to other edges with transparent borders.
+      */
+      &::after {
+        position: absolute;
+        content: "";
+        inset-block: auto calc(-1 * var(--ui-tab-border-width));
+        inset-inline-start: calc(-1 * var(--ui-tab-border-width));
+        width: calc(100% + 2 * var(--ui-tab-border-width));
+        height: 0;
+        border-block-start: var(--ui-tab-active-border-size) solid var(--ui-tab-highlight-color);
+        border-inline-start: 0;
+      }
+    }
+  }
+}
+
+.view-media-library {
+  > * {
+    margin-block: 1rem;
+  }
+}
+
+.js-media-library-views-form:where(:not(:has(table))) {
+  --column-count: 2;
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+  gap: 0.5rem;
+
+  @container (width > 600px) {
+    --column-count: 3;
+  }
+
+  @container (width > 800px) {
+    --column-count: 4;
+  }
+
+  @container (width > 1000px) {
+    --column-count: 5;
+  }
+
+  @container (width > 1200px) {
+    --column-count: 6;
+  }
+}
+
+.media-library-item--table {
+  .views-field-media-library-select-form {
+    width: 40px;
+  }
+
+  img {
+    max-height: 100px;
+    width: auto;
+  }
+}
+
+#media-library-messages {
+  grid-column: 1 / -1;
+}
+
+.js-media-library-item:where(:not(.media-library-item--table)) {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  background-color: #eee;
+
+  &:hover {
+    outline: solid 4px var(--theme-border-color-soft);
+  }
+
+  &.checked {
+    outline: solid 4px var(--theme-border-color-alt);
+  }
+
+  &:has(:focus-visible) {
+    outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+    outline-offset: 3px;
+  }
+
+  .js-click-to-select-trigger,
+  img {
+    width: 100%;
+  }
+
+  .form-item {
+    margin: 0;
+  }
+}
+
+.js-click-to-select-checkbox {
+  position: absolute;
+  z-index: 1;
+  top: 0.5rem;
+  inset-inline-start: 0.5rem;
+}

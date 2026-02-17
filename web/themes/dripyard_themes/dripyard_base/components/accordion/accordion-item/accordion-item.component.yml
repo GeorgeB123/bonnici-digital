@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Accordion item
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      type: string
+      title: Title
+      examples: [ 'Accordion item title' ]
+    open:
+      type: boolean
+      title: Open
+slots:
+  accordion_item_content:
+    title: Content

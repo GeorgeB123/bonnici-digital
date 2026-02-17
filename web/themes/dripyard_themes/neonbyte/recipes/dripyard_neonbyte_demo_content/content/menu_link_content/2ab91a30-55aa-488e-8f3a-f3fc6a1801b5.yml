@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 2ab91a30-55aa-488e-8f3a-f3fc6a1801b5
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    31d2e993-0ccd-4190-bdc3-63ae768fe659: node
+    47ce6b8d-65f2-420b-a28b-d604dff43fb5: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Presskit
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 31d2e993-0ccd-4190-bdc3-63ae768fe659
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:47ce6b8d-65f2-420b-a28b-d604dff43fb5'
+  revision_translation_affected:
+    -
+      value: true

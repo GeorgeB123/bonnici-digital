@@ -1,0 +1,132 @@
+/*
+ * @file
+ * Styles for icon cards.
+ */
+
+.icon-card {
+  --icon-card-surface-color: var(--theme-surface-alt);
+  --icon-card-text-color: var(--theme-text-color-medium);
+  --icon-card-title-color: var(--theme-text-color-loud);
+  --icon-card-link-color: var(--theme-text-color-primary);
+  --icon-card-icon-color: var(--theme-border-color-alt);
+  --icon-card-border-radius: var(--radius-sm);
+  --icon-card-hover-box-shadow-color: color-mix(in oklch, var(--theme-border-color-alt) 10%, transparent);
+  --gap: 20px;
+
+  position: relative; /* Anchor link pseudo. */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: var(--gap);
+  padding: var(--spacing-xs);
+  background: var(--icon-card-surface-color);
+  border: solid 1px transparent;
+  border-radius: var(--icon-card-border-radius);
+  box-shadow: 0 0 40px transparent;
+  transition: box-shadow 0.2s;
+  text-align: start;
+
+  &.icon-card--no-background {
+    border: none;
+    padding: revert;
+    background: revert;
+  }
+
+  &:not(.icon-card--no-background):has(a:hover) {
+    box-shadow: 0 0 40px var(--icon-card-hover-box-shadow-color);
+  }
+}
+
+.icon-card--landscape {
+  flex-direction: row;
+  gap: 24px;
+}
+
+.icon-card__top {
+  .icon-card--icon-size-small & {
+    margin-bottom: 10px;
+  }
+
+  .icon-card--icon-size-large & {
+    margin-bottom: 2cm;
+  }
+
+  .icon-card--icon-size-large & {
+    margin-bottom: 40px;
+  }
+
+  .icon-card--landscape & {
+    margin-bottom: 0;
+  }
+
+  svg {
+    display: block;
+    color: var(--icon-card-icon-color);
+    fill: currentColor;
+
+    @media (forced-colors: active) {
+      color: canvasText;
+      fill: canvasText;
+    }
+  }
+}
+
+.icon-card__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  flex-grow: 1;
+
+  .icon-card--landscape &:not(:has(.icon-card__body)) {
+    justify-content: center;
+  }
+}
+
+.icon-card__title {
+  margin-block: 0;
+  color: var(--icon-card-title-color);
+  font-size: var(--body-m-size);
+  line-height: 1.5;
+  letter-spacing: var(--body-m-letter-spacing);
+  font-weight: 600;
+  text-box: trim-both cap alphabetic;
+}
+
+.icon-card__link {
+  text-decoration: none;
+  color: inherit;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+  }
+}
+
+.icon-card__body {
+  font-size: var(--body-m-size);
+  line-height: 1.5;
+  letter-spacing: var(--body-m-letter-spacing);
+  color: var(--icon-card-text-color);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  *,
+  .text-content,
+  .text-content * {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
+  ul,
+  ol {
+    margin-block: var(--spacing-xxs);
+  }
+}

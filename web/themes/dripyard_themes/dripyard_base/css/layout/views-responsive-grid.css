@@ -1,0 +1,21 @@
+/*
+ * Helper for Views responsive grid.
+ */
+
+.views-view-responsive-grid__item {
+  grid-column: revert;
+
+  &:has(.contextual) {
+    position: relative;
+  }
+}
+
+/*
+ * Divs and spans that are within a horizontal grid item should not affect the
+ * layout (letting cards go full height).
+ */
+@scope (.views-view-responsive-grid--horizontal .views-view-responsive-grid__item:has(.canvas-image, .card, .card-full-image, .icon-card)) to (:is(.canvas-image, .card, .card-full-image, .icon-card)) {
+  :is(div, span):not(.contextual) {
+    display: contents;
+  }
+}

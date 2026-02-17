@@ -1,0 +1,11 @@
+name: Dripyard Menu Card
+type: Dripyard
+description: 'Provides a menu card block type'
+install:
+  - menu_link_content
+  - views
+config:
+  strict: false
+recipes:
+  - 'dripyard_media'
+  - 'dripyard_fields_block'

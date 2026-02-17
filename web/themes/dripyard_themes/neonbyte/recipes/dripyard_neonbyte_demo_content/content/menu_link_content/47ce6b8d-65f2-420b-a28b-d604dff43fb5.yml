@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 47ce6b8d-65f2-420b-a28b-d604dff43fb5
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    5920847d-c401-484d-8c05-6ebf6705e82a: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Insights
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 5920847d-c401-484d-8c05-6ebf6705e82a
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -47
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

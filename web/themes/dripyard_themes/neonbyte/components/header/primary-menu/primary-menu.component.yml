@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Primary menu
+status: stable
+group: Drupal navigation
+props:
+  type: object
+  properties:
+    items:
+      type: object
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+  css:
+    component:
+      primary-menu-wide.css: {}
+      primary-menu-narrow.css: {}
+      primary-menu-wide.theme.css: {}
+      primary-menu-narrow.theme.css: {}

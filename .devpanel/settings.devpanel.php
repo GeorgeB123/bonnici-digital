@@ -12,3 +12,8 @@ $settings['config_sync_directory'] = '../config/sync';
 $settings['file_private_path'] = '../private';
 $settings['trusted_host_patterns'] = [getenv('DP_HOSTNAME') ?: '.*'];
 $settings['testing_package_manager'] = TRUE;
+$settings['trusted_host_patterns'] = [
+    '^new\.bonnici\.co\.nz$',
+    '^bonnici-digital\.ddev\.site$',
+    '^prod-1143e862-abfabe31-zi5x6k8t\.app\.devpanel\.com$',
+];

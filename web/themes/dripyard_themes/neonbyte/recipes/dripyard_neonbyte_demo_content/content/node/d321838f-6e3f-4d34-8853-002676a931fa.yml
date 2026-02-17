@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d321838f-6e3f-4d34-8853-002676a931fa
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: News
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /news
+      langcode: en
+  body:
+    -
+      value: "<p>Stay updated with the latest news from NeonByte. Read about our product launches, industry insights, company announcements, and thought leadership articles from our team of experts.</p><h2>News Categories</h2><ul><li><strong>Product Updates</strong> — New features, releases, and improvements</li><li><strong>Company News</strong> — Announcements, partnerships, and milestones</li><li><strong>Industry Analysis</strong> — Trends, regulations, and market insights</li><li><strong>Thought Leadership</strong> — Expert perspectives on technology and security</li></ul><h2>Recent Highlights</h2><table><thead><tr><th>Date</th><th>Category</th><th>Headline</th></tr></thead><tbody><tr><td>Jan 2025</td><td>Product</td><td>AiByte 3.0 launches with enhanced ML capabilities</td></tr><tr><td>Dec 2024</td><td>Company</td><td>NeonByte named to Cybersecurity 500 list</td></tr><tr><td>Nov 2024</td><td>Partnership</td><td>Strategic alliance with major cloud provider</td></tr><tr><td>Oct 2024</td><td>Industry</td><td>Analysis: Zero Trust adoption accelerates</td></tr></tbody></table><h2>Stay Connected</h2><ol><li>Subscribe to our newsletter for monthly news digest</li><li>Follow us on LinkedIn for real-time updates</li><li>Join our press list for media releases</li><li>RSS feed available for news aggregators</li></ol><p>For media inquiries, please contact press@neonbyte.com or visit our presskit page for official resources.</p>"
+      format: full_html
+      summary: ''

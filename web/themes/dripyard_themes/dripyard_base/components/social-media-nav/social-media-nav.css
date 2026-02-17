@@ -1,0 +1,47 @@
+/*
+ * @file
+ * Social media navigation.
+ */
+
+.social-media-nav {
+  margin-block: var(--spacing-s);
+}
+
+.social-media-nav__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap, 16px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .social-media-nav--align-start & {
+    justify-content: flex-start;
+    margin-inline-end: auto;
+  }
+
+  .social-media-nav--align-center & {
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .social-media-nav--align-end & {
+    justify-content: flex-end;
+    margin-inline-start: auto;
+  }
+}
+
+.social-media-nav__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-media-nav__link {
+  display: block;
+
+  svg {
+    display: block;
+  }
+}

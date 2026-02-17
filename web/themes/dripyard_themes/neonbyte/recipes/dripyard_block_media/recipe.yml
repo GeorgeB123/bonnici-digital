@@ -1,0 +1,10 @@
+name: Dripyard Media Block
+type: Dripyard
+description: 'Provides a block type for embedding media/'
+install:
+  - block_content
+config:
+  strict: false
+recipes:
+  - 'dripyard_media'
+  - 'dripyard_fields_block'

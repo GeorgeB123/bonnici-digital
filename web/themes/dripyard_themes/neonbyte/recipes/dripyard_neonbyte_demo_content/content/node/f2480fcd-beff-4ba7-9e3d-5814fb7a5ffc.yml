@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f2480fcd-beff-4ba7-9e3d-5814fb7a5ffc
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Partners
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /partners
+      langcode: en
+  body:
+    -
+      value: "<p>Join the NeonByte partner ecosystem. We collaborate with technology providers, consultants, and resellers to deliver comprehensive solutions that address our clients' most complex challenges.</p><h2>Partner Program Tiers</h2><ul><li><strong>Registered Partner</strong> — Access to deal registration and basic training</li><li><strong>Silver Partner</strong> — Co-marketing opportunities and dedicated support</li><li><strong>Gold Partner</strong> — Priority leads, advanced certifications, and joint go-to-market</li><li><strong>Platinum Partner</strong> — Strategic alignment with executive sponsorship</li></ul><h2>Partner Benefits by Tier</h2><table><thead><tr><th>Benefit</th><th>Registered</th><th>Silver</th><th>Gold</th><th>Platinum</th></tr></thead><tbody><tr><td>Deal Registration</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Partner Portal</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Sales Training</td><td>Basic</td><td>Advanced</td><td>Advanced</td><td>Custom</td></tr><tr><td>Marketing Funds</td><td>—</td><td>$5K</td><td>$25K</td><td>$100K+</td></tr><tr><td>Dedicated Manager</td><td>—</td><td>—</td><td>Yes</td><td>Yes</td></tr></tbody></table><h2>Partner Types</h2><ol><li><strong>Technology Partners</strong> — Integrate your products with NeonByte solutions</li><li><strong>Solution Partners</strong> — Deliver implementation and consulting services</li><li><strong>Reseller Partners</strong> — Sell NeonByte products to your customer base</li><li><strong>Referral Partners</strong> — Earn commissions for qualified introductions</li></ol><p>Apply today to become a NeonByte partner and unlock new revenue opportunities while delivering exceptional value to your clients.</p>"
+      format: full_html
+      summary: ''

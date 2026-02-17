@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.dripyard_superbasic
+  module:
+    - ckeditor5
+format: dripyard_superbasic
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - link
+  plugins: {  }
+image_upload:
+  status: false

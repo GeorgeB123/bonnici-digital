@@ -1,0 +1,61 @@
+/*
+ * @file
+ * Styling for regions.
+ */
+
+ .region-header-second {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+
+  @media (width > 1000px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.region-header-third {
+  display: contents;
+}
+
+.region--fixed-middle-right {
+  position: fixed;
+  top: 50%;
+  inset-inline-end: var(--drupal-displace-offset-right, 0);
+  z-index: 20;
+  transform: rotate(-90deg) translate(50%, 0%);
+  transform-origin: bottom right;
+
+  &:dir(rtl) {
+    inset-inline-end: var(--drupal-displace-offset-left, 0);
+    transform: rotate(90deg) translate(-50%, 0%);
+    transform-origin: bottom left;
+  }
+}
+
+/*
+ * Special treatment for highlighted region.
+ */
+.region-highlighted {
+  --background: var(--theme-surface-alt);
+
+  background: var(--background);
+
+  /* This is some crazy 💩 that works great since the IE days! */
+  border-image: linear-gradient(var(--background), var(--background)) fill 0 / / 100vh 0 0 0;
+  padding-bottom: var(--spacing-m);
+  margin-bottom: var(--spacing-component-internal);
+
+  @media (forced-colors: active) {
+    border-image: none;
+    border-bottom: solid 1px transparent;
+  }
+
+  .page-node-type-dripyard-landing-page & {
+    margin-bottom: 0;
+  }
+
+  .page-title {
+    margin-bottom: var(--spacing-m);
+  }
+}

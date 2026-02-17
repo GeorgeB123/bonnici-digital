@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Icon list item
+status: stable
+group: Dripyard Lists
+props:
+  type: object
+  required:
+    - icon
+    - text
+  properties:
+    icon:
+      title: Icon
+      type: string
+      examples: [ 'check' ]
+    text:
+      title: Text
+      type: string
+      examples: ['All of our themes are built to WCAG 2.2 AA standards.']
+    href:
+      type:
+        - string
+        - 'null'
+      title: Link
+      format: uri-reference

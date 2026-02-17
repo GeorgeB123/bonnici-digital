@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Button small variant.
+ */
+
+.button--small {
+  --button-font-size: 12px;
+  --button-font-weight: 400;
+  --button-height: 35px;
+  --button-padding-block: 10px;
+  --button-padding-inline: var(--sp2);
+  --theme-button-background-color-icon: transparent;
+
+  &:has(.button__prefix) {
+    padding-inline-start: 8px;
+  }
+
+  &:has(.button__suffix) {
+    padding-inline-end: 8px;
+  }
+
+  .button__prefix,
+  .button__suffix {
+    padding: 0;
+  }
+}

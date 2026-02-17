@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+    - field.storage.block_content.dripyard_link
+id: block_content.dripyard_statistic.dripyard_link
+field_name: dripyard_link
+entity_type: block_content
+bundle: dripyard_statistic
+label: 'Link'
+description: 'Optional link for the statistic'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

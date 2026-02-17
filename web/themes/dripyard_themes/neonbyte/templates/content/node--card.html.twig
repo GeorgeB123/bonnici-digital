@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Implementation to display a node card.
+ *
+ * @todo This markup is largely duplicated from the card component. Once we can
+ * either get the src and alt from the image to pass to the component, or
+ * populate a slot with an image in XB, we can consolidate.
+ */
+#}
+{# Drupal CMS uses `field_featured_image`. Standard profile uses `field_image`.  #}
+{% set image = content.field_featured_image ?: content.field_image %}
+
+{{ include('dripyard_base:card', {
+  directory,
+  title: label,
+  image: image|add_suggestion('bare'),
+  eyebrow_text: date,
+  body: content|without('field_featured_image', 'field_image', 'links'),
+  href: url,
+  }, with_context = false) }}

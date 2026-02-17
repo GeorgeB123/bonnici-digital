@@ -1,0 +1,59 @@
+/*
+ * @file
+ * Teaser styling.
+ */
+
+.teaser {
+  position: relative; /* Anchor after pseudo-element. */
+  padding-block: var(--spacing-l);
+
+  &::after {
+    position: absolute;
+    inset-block-end: 0;
+    width: var(--spacing-l);
+    height: 0;
+    content: "";
+    border-top: solid 2px var(--theme-border-color-soft);
+  }
+}
+
+.teaser__image {
+  display: block;
+  flex: 0 0 150px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.teaser__content,
+.teaser__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.teaser__meta {
+  font-size: var(--body-s-size);
+
+  .text-content {
+    font-size: inherit;
+  }
+}
+
+.teaser__title {
+  margin: 0;
+  font-weight: 600;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.teaser__content {
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

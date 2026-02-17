@@ -1,0 +1,7 @@
+name: Dripyard Base Canvas Patterns (CMS)
+type: Dripyard
+description: 'Provides component patterns for Drupal Canvas (CMS variant with SVG support)'
+install:
+  - canvas
+config:
+  strict: false

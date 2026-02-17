@@ -1,0 +1,67 @@
+/*
+ * @file
+ * Styling for the Canvas image component.
+ */
+
+.canvas-image {
+  --canvas-image-border-radius: 0;
+  --canvas-image-aspect-ratio: auto;
+
+  display: contents;
+
+  /* Works around a Canvas bug, where after placing a pattern, the images do not show. */
+  &:not(:has(img)) {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    outline: dotted 1px var(--theme-border-color-soft);
+    background-color: color-mix(in oklch, var(--theme-text-color-loud) 5%, transparent);
+  }
+
+  img {
+    border-radius: var(--canvas-image-border-radius);
+  }
+}
+
+.canvas-image--radius-small {
+  --canvas-image-border-radius: var(--radius-sm);
+}
+
+.canvas-image--radius-medium {
+  --canvas-image-border-radius:var(--radius-md);
+}
+
+.canvas-image--radius-large {
+  --canvas-image-border-radius: var(--radius-lg);
+}
+
+.canvas-image__link {
+  display: block;
+  width: fit-content;
+}
+
+/* Aspect ratio styles */
+.canvas-image[class*="--aspect-"] img {
+  object-fit: cover;
+  aspect-ratio: var(--canvas-image-aspect-ratio);
+}
+
+.canvas-image--aspect-square {
+  --canvas-image-aspect-ratio: 1 / 1;
+}
+
+.canvas-image--aspect-landscape {
+  --canvas-image-aspect-ratio: 4 / 3;
+}
+
+.canvas-image--aspect-portrait {
+  --canvas-image-aspect-ratio: 3 / 4;
+}
+
+.canvas-image--aspect-wide {
+  --canvas-image-aspect-ratio: 16 / 9;
+}
+
+.canvas-image--aspect-tall {
+  --canvas-image-aspect-ratio: 9 / 16;
+}

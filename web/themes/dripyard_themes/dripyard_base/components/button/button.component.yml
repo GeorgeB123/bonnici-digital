@@ -1,0 +1,86 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Button
+status: stable
+group: Dripyard Form Elements
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      title: Button text
+      type: string
+      examples:
+        - Learn more
+    href:
+      title: Hyperlink
+      type: string
+      format: uri-reference
+      description: Optional. If omitted, a <button> element will render.
+      examples:
+        - 'https://www.drupal.org'
+    style:
+      title: Button style
+      type:
+        - string
+      enum:
+        - default
+        - primary
+        - secondary
+        - light
+        - dark
+        - outline
+        - bare
+      meta:enum:
+        default: Default
+        primary: Primary
+        secondary: Secondary
+        light: Light
+        dark: Dark
+        outline: Outline
+        bare: Bare
+      examples: [ 'primary' ]
+    size:
+      title: Button size
+      type: string
+      enum:
+        - xs
+        - small
+        - medium
+        - large
+      meta:enum:
+        xs: XS
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ 'medium' ]
+    target:
+      title: Open link in new window
+      type:
+        - boolean
+        - 'null'
+    prefix_icon:
+      title: Prefix icon
+      type:
+       - string
+       - 'null'
+    suffix_icon:
+      title: Suffix icon
+      type:
+       - string
+       - 'null'
+libraryOverrides:
+  css:
+    component:
+      css/button.css: {}
+      css/button-default.css: {}
+      css/button-primary.css: {}
+      css/button-secondary.css: {}
+      css/button-light.css: {}
+      css/button-dark.css: {}
+      css/button-outline.css: {}
+      css/button-bare.css: {}
+      css/button-danger.css: {}
+      css/button-xs.css: {}
+      css/button-small.css: {}
+      css/button-large.css: {}

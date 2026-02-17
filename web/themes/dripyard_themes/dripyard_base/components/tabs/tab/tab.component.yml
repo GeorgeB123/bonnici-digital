@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Tab
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      title: Title
+      type: string
+      examples: [ 'Tab' ]
+    icon:
+      title: Optional icon
+      type: string
+
+slots:
+  tab_panel_content:
+    title: Tab content

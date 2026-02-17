@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 07cf807b-cef5-452b-bb74-ebf0094c1b10
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Single Sign On'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /insights/single-sign-on
+      langcode: en
+  body:
+    -
+      value: "<p>Simplify user access with enterprise single sign-on solutions from NeonByte. Enhance security while improving user experience — employees authenticate once and gain seamless access to all authorized applications.</p><h2>SSO Capabilities</h2><ul><li><strong>Universal Access</strong> — One login for all cloud and on-premise applications</li><li><strong>Multi-Factor Authentication</strong> — Strengthen security with additional verification</li><li><strong>Adaptive Authentication</strong> — Risk-based access controls based on context</li><li><strong>Self-Service Portal</strong> — Users manage their own passwords and preferences</li></ul><h2>Supported Protocols</h2><table><thead><tr><th>Protocol</th><th>Use Case</th><th>Applications</th></tr></thead><tbody><tr><td>SAML 2.0</td><td>Enterprise apps</td><td>Salesforce, Workday, ServiceNow</td></tr><tr><td>OAuth 2.0</td><td>API access</td><td>Custom apps, microservices</td></tr><tr><td>OpenID Connect</td><td>Modern apps</td><td>SPA, mobile applications</td></tr><tr><td>LDAP/Kerberos</td><td>Legacy apps</td><td>On-premise systems</td></tr></tbody></table><h2>Business Benefits</h2><ol><li>Reduce password fatigue — users remember one credential</li><li>Decrease help desk tickets for password resets by 50%+</li><li>Improve security with centralized authentication policies</li><li>Enable faster onboarding with instant application access</li><li>Support remote work with secure access from any device</li></ol><p>Our SSO solution includes pre-built connectors for 5,000+ applications, making integration fast and straightforward.</p>"
+      format: full_html
+      summary: ''

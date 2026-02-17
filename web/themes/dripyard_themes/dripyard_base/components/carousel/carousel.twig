@@ -1,0 +1,51 @@
+{% set swiperId = 'swiper-id-' ~ random() %}
+{% set classes = [
+  'carousel',
+  canvas_edit_mode ? 'canvas-edit-mode',
+  'carousel--navigation--' ~ navigation_position|clean_class,
+  'grid',
+  ]
+%}
+
+{% set carousel_label = 'carousel-label'|clean_unique_id %}
+
+<div{{ attributes
+  .addClass(classes)
+  .setAttribute('data-slides-per-view', slides_per_view|default(1))
+  .setAttribute('data-pager-enabled', pager ? 'true' : 'false')
+  .setAttribute('data-autoplay', autoplay ? 'true' : 'false')
+  .setAttribute('data-rows', rows|default(1))
+  .setAttribute('role', 'group')
+  .setAttribute('aria-labelledby', carousel_label)
+  .setAttribute('aria-roledescription', 'Carousel'|t)
+  .setAttribute('data-swiper-id', swiperId)
+  -}}
+>
+  <div class="carousel__inner">
+    <h3 id="{{ carousel_label }}" class="visually-hidden">{{ label }}</h3>
+    {% if navigation_position != 'hidden' %}
+      <button class="swiper-button-prev swiper-button-prev--{{ swiperId }}">
+        <span class="visually-hidden">{{ 'Previous'|t }}</span>
+      </button>
+      <button class="swiper-button-next swiper-button-next--{{ swiperId }}">
+        <span class="visually-hidden">{{ 'Next'|t }}</span>
+      </button>
+    {% endif %}
+
+    {% if autoplay %}
+      <button class="carousel__autoplay-toggle carousel__autoplay-toggle--{{ swiperId }}" aria-pressed="false" type="button" data-playing="true">
+        <span class="visually-hidden">{{ 'Pause'|t }}</span>
+      </button>
+    {% endif %}
+
+    {% if pager %}
+      <div class="swiper-pagination swiper-pagination--{{ swiperId }}" role="group" aria-label="{{ 'Choose slide to display'|t }}"></div>
+    {% endif %}
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% block carousel_items %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

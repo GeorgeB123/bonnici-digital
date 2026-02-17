@@ -1,0 +1,23 @@
+{{ include('dripyard_base:promo', {
+  eyebrow: 'Looka mee! I\'m an eyebrow',
+  title: 'Premium component based Drupal themes',
+  body: 'Take your Drupal site to the next level with the worlds most accessible, performant, and proven themes created by the people who build Drupal.',
+  theme: 'inherit',
+  align_y: 'center',
+  align_x: 'start',
+  ctas: [
+    {
+      href: 'http://herchel.com',
+      text: 'Try now',
+      size: 'large',
+      suffix_icon: 'arrow-right',
+    },
+    {
+      href: '/',
+      text: 'Learn more',
+      target: true,
+      size: 'large',
+      suffix_icon: 'arrow-right',
+    },
+  ],
+}, with_context = false) }}

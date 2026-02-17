@@ -1,0 +1,28 @@
+{#
+  @todo see
+    - https://drupal.slack.com/archives/C072JMEPUS1/p1759435412275339
+    - https://www.drupal.org/project/canvas/issues/3520487#comment-16290233
+ #}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+{# @see https://www.lullabot.com/articles/level-your-twiggery#checking-field-is-empty #}
+{% set rendered_content %}{{ content|render }}{% endset %}
+
+{% if is_canvas or rendered_content|striptags('<drupal-render-placeholder><a><img><hr><br><iframe><video><svg>')|trim %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ rendered_content }}
+    {% endblock %}
+  </div>
+{% endif %}

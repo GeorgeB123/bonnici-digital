@@ -1,0 +1,16 @@
+{% if link_href and link_text %}
+  <a href="{{ link_href }}" {{ open_new_window ? 'target="_blank"' }}>
+  <span class="visually-hidden">{{ link_text }}</span>
+{% endif %}
+
+  {# Check if the field type comes from UI icons OR is rendered SVG. #}
+  {% if icon['#field_type'] == 'ui_icon' or '<svg' in icon|render|striptags('<svg>')|trim %}
+    {{ icon }}
+  {# Otherwise, we assume a simple string and pass it to the Icon API. #}
+  {% else %}
+    {{ icon('neonbyte_font_awesome', icon|lower, {'size': size}) }}
+  {% endif %}
+
+{% if link_href and link_text %}
+  </a>
+{% endif %}

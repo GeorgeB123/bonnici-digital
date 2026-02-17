@@ -1,0 +1,53 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Icon list
+status: stable
+group: Dripyard Lists
+props:
+  type: object
+  required:
+    - size
+    - icon_color
+    - column_width
+  properties:
+    size:
+      title: List size
+      type: string
+      description: Controls icon and font size
+      enum:
+        - small
+        - medium
+        - large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ 'medium' ]
+    icon_color:
+      title: Icon color
+      type: string
+      enum:
+        - primary
+        - secondary
+        - normal
+      meta:enum:
+        primary: Primary
+        secondary: Secondary
+        normal: Normal
+      examples: [ 'primary' ]
+    column_width:
+      title: Column width
+      type: string
+      enum:
+        - small
+        - medium
+        - large
+        - full-width
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+        full-width: Full width
+      examples: [ 'full-width' ]
+slots:
+  content:
+    title: Icon list items

@@ -1,0 +1,35 @@
+.unpublished-badge {
+  border-bottom: solid 2px var(--theme-color-warning);
+
+  &[class] {
+    margin: 0 0 var(--spacing-xs);
+  }
+}
+
+.unpublished-badge__inner {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp0-5);
+  padding: var(--spacing-xxs) var(--sp);
+  padding-inline-end: var(--sp1-5);
+  background-color: var(--theme-color-warning);
+  border-start-start-radius: var(--radius-sm);
+  border-start-end-radius: var(--radius-sm);
+  border: solid 1px transparent;
+  color: var(--theme-surface);
+  line-height: 1.1;
+  text-box: trim-both cap alphabetic;
+  font-weight: 600;
+  font-size: var(--body-l-size);
+
+  &:before {
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    mask-image: url('images/warning.svg');
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: var(--theme-surface);
+  }
+}

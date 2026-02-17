@@ -1,0 +1,137 @@
+/*
+ * @file
+ * Theming variables and stylistic rules for the primary menu at wide widths.
+ */
+
+@media (width > 1000px) {
+  @property --link-text-cover-percent {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+  }
+
+  .primary-menu {
+    --top-level-link-border-radius: 0;
+    --top-level-link-color: var(--theme-text-color-loud);
+    --top-level-link-font-size: var(--body-m-size);
+    --top-level-link-font-weight: normal;
+    --top-level-link-background: transparent;
+    --top-level-link-background-hover: transparent;
+    --top-level-link-color-hover: var(--theme-text-color-primary);
+
+    /* Dropdown. */
+    --dropdown-background: transparent;
+    --dropdown-border-radius: 0px;
+    --dropdown-border-width: 0px;
+    --dropdown-border-color: transparent;
+    --dropdown-padding: 1rem 0 1rem 1rem;
+    --dropdown-drop-shadow: none;
+
+    /* Dropdown links. */
+    --dropdown-link-color: var(--theme-text-color-loud);
+    --dropdown-link-color-hover: var(--theme-text-color-primary);
+    --dropdown-link-background-hover: transparent;
+    --dropdown-link-border-radius: var(--radius-sm);
+    --dropdown-link-padding: 4px 0;
+    --dropdown-link-heading-font-size: var(--body-m-size);
+    --dropdown-link-font-size: var(--body-m-size);
+
+    @media (width < 1100px) {
+      --top-level-link-font-size: 14px;
+    }
+  }
+
+  .primary-menu__list-item--level-1 {
+    transition: opacity 0.2s;
+
+    &.primary-menu__list-item--has-children:hover {
+      background-color: var(--top-level-link-background-hover);
+      color: var(--top-level-link-color-hover);
+    }
+  }
+
+  .primary-menu__link--level-1 {
+    border-radius: var(--top-level-link-border-radius);
+    background: var(--top-level-link-background);
+    text-decoration: none;
+    color: var(--top-level-link-color);
+    font-weight: var(--top-level-link-font-weight);
+  }
+
+  /* Lower opacity on all other menu items when a menu item is being hovered over. */
+  :where(.primary-menu__list--level-1:has(.primary-menu__list-item--level-1:hover)) .primary-menu__list-item--level-1:not(:hover) {
+    opacity: 0.5;
+  }
+
+  .primary-menu__link--level-1[class] {
+    border-radius: var(--top-level-link-border-radius);
+    background: var(--top-level-link-background);
+    text-decoration: none;
+    color: var(--top-level-link-color);
+    font-size: var(--top-level-link-font-size);
+    font-weight: var(--top-level-link-font-weight);
+  }
+
+  /* Dropdown <ul> element. */
+  .primary-menu__list--level-2 {
+    background: var(--dropdown-background);
+    padding: var(--dropdown-padding);
+    border-radius: var(--dropdown-border-radius);
+    border: solid var(--dropdown-border-width) var(--dropdown-border-color);
+    filter: drop-shadow(var(--dropdown-drop-shadow));
+  }
+
+  .primary-menu__link--level-2[class],
+  .primary-menu__link--level-3[class] {
+    --link-text-cover-percent: 0%;
+    --theme-focus-ring-color: var(--dropdown-link-color);
+
+    position: relative; /* Anchor ::before */
+    display: inline-block;
+    margin-block: 4px;
+    padding: var(--dropdown-link-padding);
+    border-radius: var(--dropdown-link-border-radius);
+    color: transparent; /* color is provided by background. */
+    background-image: linear-gradient(to right, var(--dropdown-link-color-hover) var(--link-text-cover-percent), var(--dropdown-link-color) var(--link-text-cover-percent));
+    background-clip: text;
+    transition: --link-text-cover-percent 0.3s, color 0.3s !important;
+
+    &:dir(rtl) {
+      background-image: linear-gradient(to left, var(--dropdown-link-color-hover) var(--link-text-cover-percent), var(--dropdown-link-color) var(--link-text-cover-percent));
+      background-position: right bottom;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      inset-inline-start: 0;
+      content: "";
+      width: 100%;
+      height: 0;
+      border-top: solid 2px var(--dropdown-link-background-hover);
+      scale: 0 1;
+      transform-origin: left;
+      transition: scale 0.3s;
+
+      &:dir(rtl) {
+        transform-origin: right;
+      }
+    }
+
+    &:hover {
+      --link-text-cover-percent: 100%;
+
+      &::before {
+        scale: 1;
+      }
+    }
+  }
+
+  .primary-menu__link--level-2 {
+    font-size: var(--dropdown-link-heading-font-size);
+  }
+
+  .primary-menu__link--level-3 {
+    font-size: var(--dropdown-link-font-size);
+  }
+}

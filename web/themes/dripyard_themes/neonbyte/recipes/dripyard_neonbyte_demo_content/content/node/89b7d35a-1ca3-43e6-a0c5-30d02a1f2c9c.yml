@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 89b7d35a-1ca3-43e6-a0c5-30d02a1f2c9c
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Neony
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /products/neony
+      langcode: en
+  body:
+    -
+      value: "<p>Neony is NeonByte's flagship enterprise software suite, designed from the ground up for modern organizations. Streamline your processes with integrated tools, intuitive interfaces, and powerful automation capabilities.</p><h2>Core Modules</h2><ul><li><strong>Neony Core</strong> — Central management dashboard and user administration</li><li><strong>Neony Flow</strong> — Visual workflow builder with drag-and-drop automation</li><li><strong>Neony Vault</strong> — Secure document management and collaboration</li><li><strong>Neony Connect</strong> — API gateway and third-party integrations</li></ul><h2>Feature Highlights</h2><table><thead><tr><th>Feature</th><th>Description</th></tr></thead><tbody><tr><td>Real-time Sync</td><td>Changes propagate instantly across all connected users</td></tr><tr><td>Role-based Access</td><td>Granular permissions with audit logging</td></tr><tr><td>Custom Dashboards</td><td>Build personalized views for any team or role</td></tr><tr><td>Mobile Ready</td><td>Full functionality on iOS and Android devices</td></tr></tbody></table><h2>Deployment Options</h2><ol><li><strong>Cloud Hosted</strong> — Fully managed SaaS with automatic updates</li><li><strong>Private Cloud</strong> — Dedicated instance in your preferred cloud provider</li><li><strong>On-Premise</strong> — Full control within your own infrastructure</li></ol><p>Neony integrates seamlessly with existing enterprise systems including Salesforce, SAP, Microsoft 365, and hundreds of other platforms via our connector library.</p>"
+      format: full_html
+      summary: ''

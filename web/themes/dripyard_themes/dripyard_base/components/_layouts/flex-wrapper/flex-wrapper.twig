@@ -1,0 +1,52 @@
+{% set layout_attributes = create_attribute() %}
+{% set classes = [
+  'flex-wrapper',
+  additional_classes,
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class,
+  margin_top == 'zero' ? 'margin-top--0',
+  margin_top == 'small' ? 'margin-top--s',
+  margin_top == 'medium' ? 'margin-top--m',
+  margin_top == 'large' ? 'margin-top--l',
+  margin_bottom == 'zero' ? 'margin-bottom--0',
+  margin_bottom == 'small' ? 'margin-bottom--s',
+  margin_bottom == 'medium' ? 'margin-bottom--m',
+  margin_bottom == 'large' ? 'margin-bottom--l',
+  padding_top == 'zero' ? 'padding-top--0',
+  padding_top == 'small' ? 'padding-top--s',
+  padding_top == 'medium' ? 'padding-top--m',
+  padding_top == 'large' ? 'padding-top--l',
+  padding_bottom == 'zero' ? 'padding-bottom--0',
+  padding_bottom == 'small' ? 'padding-bottom--s',
+  padding_bottom == 'medium' ? 'padding-bottom--m',
+  padding_bottom == 'large' ? 'padding-bottom--l',
+  align_x == 'start' ? 'flex-wrapper__align-x-start',
+  align_x == 'center' ? 'flex-wrapper__align-x-center',
+  align_x == 'end' ? 'flex-wrapper__align-x-end',
+  align_x == 'space-between' ? 'flex-wrapper__align-x-space-between',
+  align_x == 'space-around' ? 'flex-wrapper__align-x-space-around',
+  align_y == 'top' ? 'flex-wrapper__align-y-top',
+  align_y == 'center' ? 'flex-wrapper__align-y-center',
+  align_y == 'bottom' ? 'flex-wrapper__align-y-bottom',
+  align_y == 'stretch' ? 'flex-wrapper__align-y-stretch',
+  wrap or wrap is same as(null) ? 'flex-wrapper__wrap',
+] %}
+
+{% set layout_classes = [
+  'flex-wrapper__layout',
+  column_gutter == 'zero' ? 'gutter-column--0',
+  column_gutter == 'small' ? 'gutter-column--s',
+  column_gutter == 'medium' ? 'gutter-column--m',
+  column_gutter == 'large' ? 'gutter-column--l',
+  row_gutter == 'zero' ? 'gutter-row--0',
+  row_gutter == 'small' ? 'gutter-row--s',
+  row_gutter == 'medium' ? 'gutter-row--m',
+  row_gutter == 'large' ? 'gutter-row--l',
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="flex-wrapper__container">
+    <div{{ layout_attributes.addClass(layout_classes) }}>
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</div>

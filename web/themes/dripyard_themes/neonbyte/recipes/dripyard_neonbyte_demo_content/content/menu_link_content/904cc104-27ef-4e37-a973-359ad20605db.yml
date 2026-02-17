@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 904cc104-27ef-4e37-a973-359ad20605db
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    723ff8b4-014e-4979-a9a0-9d0ff08c1d1b: node
+    7feaba5a-0a9a-4fe6-b183-9c96eebb64b9: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Identity Governance'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 723ff8b4-014e-4979-a9a0-9d0ff08c1d1b
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:7feaba5a-0a9a-4fe6-b183-9c96eebb64b9'
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 567c4692-3c41-4c23-9a1b-93ddbec4243c
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    b0a03235-0539-4793-b3e0-4b40e7d89531: node
+    a1ec1bce-9b32-4ded-8b9a-d26c6a073fb1: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Analytics and Reports'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: b0a03235-0539-4793-b3e0-4b40e7d89531
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:a1ec1bce-9b32-4ded-8b9a-d26c6a073fb1'
+  revision_translation_affected:
+    -
+      value: true

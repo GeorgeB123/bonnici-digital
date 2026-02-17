@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_testimonial
+label: 'Testimonial'
+revision: false
+description: 'Provides a testimonial block type with quote, citation, and image.'

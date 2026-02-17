@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Button danger variant.
+ */
+
+.button--danger:where(:not(:disabled)) {
+  background-color: var(--color-error-dark);
+  color: var(--white);
+
+  &:hover {
+    background-color: color-mix(in oklch, var(--color-error-dark) 80%, transparent);
+    color: var(--white);
+
+    .button__prefix,
+    .button__suffix {
+      background-color: transparent;
+
+      svg {
+        &,
+        path {
+          fill: currentColor;
+          color: currentColor;
+        }
+      }
+    }
+  }
+
+  .button__prefix,
+  .button__suffix {
+    background-color: transparent;
+
+    svg {
+      &,
+      path {
+        fill: currentColor;
+        color: currentColor;
+      }
+    }
+  }
+}

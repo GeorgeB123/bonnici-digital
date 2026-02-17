@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_card
+    - field.storage.block_content.dripyard_title
+    - filter.format.plain_text
+  module:
+    - text
+id: block_content.dripyard_card.dripyard_title
+field_name: dripyard_title
+entity_type: block_content
+bundle: dripyard_card
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

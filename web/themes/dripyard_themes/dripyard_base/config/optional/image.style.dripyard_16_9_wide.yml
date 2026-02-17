@@ -1,0 +1,23 @@
+uuid: a7190b7d-d0e5-486a-9767-37b8ac2febc1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ch9LN57G_3ML9hlfvY5faPuUNtSlHq-q2hG-PAMHUoI
+name: dripyard_16_9_wide
+label: 'Dripyard 16:9 Wide'
+effects:
+  ec653c11-cf08-41d2-a5c6-56ec99463ff5:
+    uuid: ec653c11-cf08-41d2-a5c6-56ec99463ff5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1300
+      height: 731
+      anchor: center-center
+  e102300e-024e-471d-9908-6135a198dec4:
+    uuid: e102300e-024e-471d-9908-6135a198dec4
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

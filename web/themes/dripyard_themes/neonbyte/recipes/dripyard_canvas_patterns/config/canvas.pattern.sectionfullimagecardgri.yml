@@ -1,0 +1,223 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.card-full-image-canvas
+    - canvas.component.sdc.dripyard_base.grid-cell
+    - canvas.component.sdc.dripyard_base.grid-wrapper
+    - canvas.component.sdc.dripyard_base.heading
+    - canvas.component.sdc.dripyard_base.section
+  module:
+    - link
+    - options
+id: sectionfullimagecardgri
+label: 'Section - Full Image Card Grid'
+component_tree:
+  0:
+    uuid: 0e2b00a1-33fe-4ebf-b48f-62ccb7fb9b13
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: inherit
+      section_width: edge-to-edge
+      content_width: narrow
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: large
+      padding_bottom: large
+  '0:content:0':
+    parent_uuid: 0e2b00a1-33fe-4ebf-b48f-62ccb7fb9b13
+    slot: content
+    uuid: f25e60a6-da7e-4dee-8a07-bffe8d15452d
+    component_id: sdc.dripyard_base.grid-wrapper
+    component_version: ba954a2accbc0f5c
+    inputs:
+      canvas_edit_mode: true
+      column_gutter: medium
+      row_gutter: medium
+  '0:content:0:grid_cells:0':
+    parent_uuid: f25e60a6-da7e-4dee-8a07-bffe8d15452d
+    slot: grid_cells
+    uuid: d2699b29-9e67-4e07-932a-92addfb981a6
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 4
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:0:content:0':
+    parent_uuid: d2699b29-9e67-4e07-932a-92addfb981a6
+    slot: content
+    uuid: d9b99987-46d6-403c-b181-28da5cdfad5b
+    component_id: sdc.dripyard_base.card-full-image-canvas
+    component_version: b323f1457274c1c1
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.card-full-image-canvas
+      title: 'Card title'
+      byline: 'Learn more'
+      href:
+        uri: 'http://www.drupal.org'
+        options: {  }
+      overlay: full
+      overlay_color: dark
+      layout_vertical: bottom
+      title_align: start
+      byline_align: start
+  '0:content:0:grid_cells:1':
+    parent_uuid: f25e60a6-da7e-4dee-8a07-bffe8d15452d
+    slot: grid_cells
+    uuid: da7c4001-c6f0-4748-bfc2-a33bb691c7c4
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 4
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:1:content:0':
+    parent_uuid: da7c4001-c6f0-4748-bfc2-a33bb691c7c4
+    slot: content
+    uuid: 12a33b0d-4783-4110-8263-18599816eec6
+    component_id: sdc.dripyard_base.card-full-image-canvas
+    component_version: b323f1457274c1c1
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.card-full-image-canvas
+      title: 'Card title'
+      byline: 'Learn more'
+      href:
+        uri: 'http://www.drupal.org'
+        options: {  }
+      overlay: full
+      overlay_color: dark
+      layout_vertical: bottom
+      title_align: start
+      byline_align: start
+  '0:content:0:grid_cells:2':
+    parent_uuid: f25e60a6-da7e-4dee-8a07-bffe8d15452d
+    slot: grid_cells
+    uuid: f775157b-e12b-409b-8205-19e51d2d9ec6
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 4
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:2:content:0':
+    parent_uuid: f775157b-e12b-409b-8205-19e51d2d9ec6
+    slot: content
+    uuid: 4f5364ec-9ff5-4ba9-b4c5-ed3fc150f8b4
+    component_id: sdc.dripyard_base.card-full-image-canvas
+    component_version: b323f1457274c1c1
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.card-full-image-canvas
+      title: 'Card title'
+      byline: 'Learn more'
+      href:
+        uri: 'http://www.drupal.org'
+        options: {  }
+      overlay: full
+      overlay_color: dark
+      layout_vertical: bottom
+      title_align: start
+      byline_align: start
+  '0:header:0':
+    parent_uuid: 0e2b00a1-33fe-4ebf-b48f-62ccb7fb9b13
+    slot: header
+    uuid: db277935-5169-4949-b5e2-3906ebc94340
+    component_id: sdc.dripyard_base.heading
+    component_version: 69804e3c5ff45a2b
+    inputs:
+      text: 'This is my heading'
+      html_element: h2
+      style: h2
+      margin_top: zero
+      margin_bottom: zero

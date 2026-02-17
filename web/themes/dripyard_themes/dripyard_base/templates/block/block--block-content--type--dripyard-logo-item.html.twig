@@ -1,0 +1,9 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {{ include('dripyard_base:logo-item', {
+      image: content.dripyard_image_media,
+      href: props.dripyard_link[0].href,
+    }, with_context = false) }}
+</div>

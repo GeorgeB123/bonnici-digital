@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 35ae9290-b767-41c0-9a53-c809a0dd5d44
+  bundle: dripyard_tab_item
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Compliance Certification'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>At NeonByte, we make certification simple. Whether you’re targeting SOC 2, ISO 27001, HIPAA, or GDPR, we guide you through every requirement with clear, actionable steps. Our team helps you build the necessary policies, configure your systems securely, and prepare for audits with confidence. Achieve certification faster — and stay compliant without disrupting your business operations.</p>'
+      format: basic_html
+      summary: ''
+  dripyard_icon:
+    -
+      value: file-shield
+  dripyard_title:
+    -
+      value: '<p>Compliance</p>'
+      format: dripyard_superbasic

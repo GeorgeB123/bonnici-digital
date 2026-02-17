@@ -1,0 +1,7 @@
+{# @todo contextual links #}
+{{ include('dripyard_base:menu-card', {
+    attributes,
+    title_suffix,
+    image: content.dripyard_image_media,
+    link: content.dripyard_link|add_suggestion('bare'),
+  }, with_context = false) }}

@@ -1,0 +1,10 @@
+name: Dripyard Development
+type: Dripyard
+description: 'Provides config and modules for development of Dripyard themes'
+install:
+  - config_devel
+  - default_content
+  - field_ui
+config:
+  strict: false
+recipes: {}

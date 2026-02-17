@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bb709c48-7166-4221-ab3a-68bedcfadb24
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Products
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /products
+      langcode: en
+  body:
+    -
+      value: "<p>Discover NeonByte's innovative product lineup designed to revolutionize your business operations. Our products combine cutting-edge technology with intuitive design, backed by enterprise-grade security and support.</p><h2>Our Product Suite</h2><ul><li><strong>Neony</strong> — Next-generation enterprise software suite for modern businesses</li><li><strong>AiByte</strong> — AI-powered automation platform for intelligent workflows</li><li><strong>Certificates</strong> — Digital certificate management and identity verification</li></ul><h2>Product Comparison</h2><table><thead><tr><th>Product</th><th>Primary Use</th><th>Deployment</th></tr></thead><tbody><tr><td>Neony</td><td>Enterprise operations</td><td>Cloud or On-premise</td></tr><tr><td>AiByte</td><td>Workflow automation</td><td>Cloud-native</td></tr><tr><td>Certificates</td><td>Identity management</td><td>Hybrid</td></tr></tbody></table><h2>Why Choose NeonByte Products</h2><ol><li>Enterprise-grade security built into every feature</li><li>Seamless integration with existing systems</li><li>Dedicated support and continuous updates</li><li>Flexible licensing and deployment options</li></ol><p>All products come with comprehensive documentation, onboarding support, and access to our expert customer success team.</p>"
+      format: full_html
+      summary: ''

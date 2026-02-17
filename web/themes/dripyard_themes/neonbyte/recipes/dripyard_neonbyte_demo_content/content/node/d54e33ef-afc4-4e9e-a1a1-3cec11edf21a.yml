@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d54e33ef-afc4-4e9e-a1a1-3cec11edf21a
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Clarity
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /insights/clarity
+      langcode: en
+  body:
+    -
+      value: "<p>Gain visibility into your technology landscape with Clarity, NeonByte's analytics and monitoring platform. Our tools provide the insights you need to make informed decisions, optimize performance, and identify issues before they impact your business.</p><h2>Clarity Capabilities</h2><ul><li><strong>Infrastructure Monitoring</strong> — Real-time visibility across cloud and on-premise systems</li><li><strong>Application Performance</strong> — Track response times, errors, and user experience</li><li><strong>Security Analytics</strong> — Detect anomalies and suspicious patterns</li><li><strong>Cost Optimization</strong> — Identify waste and rightsizing opportunities</li></ul><h2>Dashboard Metrics</h2><table><thead><tr><th>Metric Category</th><th>Examples</th><th>Update Frequency</th></tr></thead><tbody><tr><td>Availability</td><td>Uptime, latency, error rates</td><td>Real-time</td></tr><tr><td>Security</td><td>Threats detected, vulnerabilities</td><td>Every 5 minutes</td></tr><tr><td>Performance</td><td>Response time, throughput</td><td>Real-time</td></tr><tr><td>Cost</td><td>Spend by service, forecasts</td><td>Daily</td></tr></tbody></table><h2>Integration Points</h2><ol><li>Cloud providers: AWS, Azure, Google Cloud</li><li>Monitoring tools: Datadog, New Relic, Splunk</li><li>Ticketing systems: ServiceNow, Jira, PagerDuty</li><li>Communication: Slack, Microsoft Teams, email</li></ol><p>Clarity gives you a single pane of glass across your entire technology environment, reducing tool sprawl and enabling faster decision-making.</p>"
+      format: full_html
+      summary: ''

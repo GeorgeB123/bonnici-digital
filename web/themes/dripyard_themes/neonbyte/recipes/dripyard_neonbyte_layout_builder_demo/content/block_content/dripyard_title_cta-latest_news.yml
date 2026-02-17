@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: ad8e5063-1a1f-41f8-bf82-0509ce02852f
+  bundle: dripyard_title_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Latest News (title cta)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_component_layout:
+    -
+      value: default
+  dripyard_cta:
+    -
+      uri: 'internal:/'
+      title: 'See all news'
+      options: {  }
+  dripyard_title:
+    -
+      value: '<p>Latest News</p>'
+      format: dripyard_superbasic

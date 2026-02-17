@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_accordion_item
+label: 'Accordion Item'
+revision: false
+description: 'Provides an accordion item for displaying content in accordion groups. '

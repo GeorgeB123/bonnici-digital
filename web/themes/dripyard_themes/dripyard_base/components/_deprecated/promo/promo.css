@@ -1,0 +1,85 @@
+/*
+ * @file
+ * Styling for promo component.
+ */
+
+.promo {
+  --promo-surface: var(--theme-surface);
+  --promo-text-color-soft: var(--theme-text-color-soft);
+  --promo-text-color-medium: var(--theme-text-color-medium);
+
+  color: var(--promo-text-color-medium);
+
+  &[class*="theme"] {
+    background-color: var(--promo-surface);
+  }
+}
+
+.layout-region__horizontal-align--center .promo,
+.promo--horizontal-align-center {
+  align-items: center;
+  text-align: center;
+
+  .button-group {
+    justify-content: center;
+  }
+}
+
+.layout-region__horizontal-align--end .promo,
+.promo--horizontal-align-end {
+  align-items: end;
+  text-align: end;
+
+  .button-group {
+    justify-content: end;
+  }
+}
+
+.layout-vertical-align--center .promo,
+.promo--vertical-align-center {
+  margin-block: auto;
+}
+
+.layout-vertical-align--bottom .promo,
+.promo--vertical-align-bottom {
+  margin-block: auto 0;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--sp5);
+}
+
+.promo__eyebrow {
+  font-size: var(--body-s-size);
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+  color: var(--promo-text-color-soft);
+}
+
+.promo__title {
+  margin: -0.2lh 0;
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-spacing);
+}
+
+.promo__body {
+  font-size: var(--body-m-size);
+  line-height: var(--body-m-line-height);
+  letter-spacing: var(--body-m-letter-spacing);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.promo__block-content:empty {
+  display: none;
+}

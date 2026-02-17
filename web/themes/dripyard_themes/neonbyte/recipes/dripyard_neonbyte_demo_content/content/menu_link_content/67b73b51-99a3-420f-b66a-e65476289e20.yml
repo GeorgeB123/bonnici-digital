@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 67b73b51-99a3-420f-b66a-e65476289e20
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    87e39878-b51b-44f3-9a1b-3aca213a73b9: node
+    885efcb9-d8a2-45a6-b1a4-2aa5403c4b2b: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Meet the Team'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 87e39878-b51b-44f3-9a1b-3aca213a73b9
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:885efcb9-d8a2-45a6-b1a4-2aa5403c4b2b'
+  revision_translation_affected:
+    -
+      value: true

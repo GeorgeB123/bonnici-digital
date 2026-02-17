@@ -1,0 +1,82 @@
+.icon-list-item {
+  --icon-list-font-size: var(--body-m-size);
+  --icon-list-icon-size: var(--sp3);
+  --icon-list-gap: var(--sp2-5);
+  --icon-list-icon-color: var(--theme-text-color-primary);
+
+  display: flex;
+  gap: var(--icon-list-gap);
+  padding-block: calc(var(--icon-list-row-gap)/2);
+  font-size: var(--icon-list-font-size);
+  break-inside: avoid;
+  border: solid 0.001px transparent; /* Safari hack. */
+
+  @media (forced-colors: active) {
+    border: none;
+  }
+
+  .icon-list--size-medium & {
+    --icon-list-font-size: var(--body-l-size);
+    --icon-list-icon-size: var(--sp3);
+    --icon-list-gap: var(--sp3);
+  }
+
+  .icon-list--size-large & {
+    --icon-list-font-size: var(--h4-size);
+    --icon-list-icon-size: var(--sp6);
+    --icon-list-gap: var(--sp3);
+  }
+
+  .icon-list--icon-color-primary & {
+    --icon-list-icon-color: var(--theme-text-color-primary);
+  }
+
+  .icon-list--icon-color-secondary & {
+    --icon-list-icon-color: var(--theme-text-color-secondary);
+  }
+
+  .icon-list--icon-color-normal & {
+    --icon-list-icon-color: var(--theme-text-color-medium);
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: var(--icon-list-icon-size);
+    height: var(--icon-list-icon-size);
+    margin-top: -0.25lh;
+    color: var(--icon-list-icon-color);
+
+    @media (forced-colors: active) {
+      color: canvasText;
+    }
+  }
+}
+
+.icon-list-item__content {
+  text-box: trim-start cap alphabetic;
+
+  @supports not (text-box: trim-start cap alphabetic) {
+    margin-top: -0.3lh;
+
+    .icon-list--size-medium & {
+      margin-top: -0.35lh;
+    }
+
+    .icon-list--size-large & {
+      margin-top: -0.2lh;
+    }
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: inherit;
+    text-box: inherit;
+  }
+}

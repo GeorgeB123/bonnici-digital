@@ -1,0 +1,39 @@
+/**
+ * @file
+ * Drupal progress bar.
+ */
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xxs);
+  width: 100%;
+  margin-block: var(--spacing-s);
+}
+
+.progress__track {
+  flex-grow: 1;
+  overflow: clip;
+  height: var(--spacing-xs);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--theme-surface-alt);
+}
+
+.progress__bar {
+  height: var(--spacing-xs);
+  background-color: var(--theme-text-color-primary);
+
+  @media (forced-colors: active) {
+    background-color: linkText;
+  }
+}
+
+.progress__percentage {
+  margin-inline-start: 1rem;
+}
+
+.progress__label,
+.progress__description {
+  flex-basis: 100%;
+}

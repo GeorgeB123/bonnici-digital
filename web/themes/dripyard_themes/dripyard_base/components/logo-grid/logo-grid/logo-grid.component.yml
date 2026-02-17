@@ -1,0 +1,69 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Logo grid
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - layout
+    - logo_size
+    - logo_background
+  properties:
+    logo_size:
+      title: Logo size
+      type: string
+      enum:
+        - small
+        - medium
+        - large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ medium ]
+    layout:
+      title: Layout
+      type: string
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+      examples: [ start ]
+    logo_background:
+      title: Logo background color
+      type: string
+      enum:
+        - auto
+        - transparent
+        - white
+        - black
+        - primary
+      meta:enum:
+        auto: Auto
+        transparent: Transparent
+        white: White
+        black: Black
+        primary: Primary
+      examples: [ auto ]
+    logo_border_radius:
+      title: Logo border radius
+      type: string
+      enum:
+        - small
+        - medium
+        - large
+        - extra large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+        extra large: Extra Large
+      examples: [ extra large ]
+slots:
+  logo_grid_content:
+    title: Logo items
+    description: Logos from the logo-item component

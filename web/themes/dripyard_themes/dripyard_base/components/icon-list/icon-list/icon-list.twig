@@ -1,0 +1,12 @@
+{% set classes = [
+  'icon-list',
+  size ? 'icon-list--size-' ~ size|clean_class,
+  icon_color ? 'icon-list--icon-color-' ~ icon_color|clean_class,
+  column_width ? 'icon-list--column-width-' ~ column_width|clean_class,
+ ] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <ul class="icon-list__list">
+    {% block content %}{% endblock %}
+  </ul>
+</div>

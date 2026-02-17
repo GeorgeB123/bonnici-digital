@@ -1,0 +1,10 @@
+{% set classes = [
+  'background-image',
+] %}
+<div
+  {{- attributes.addClass(classes).setAttribute('style',
+    '--background-image-opacity: ' ~ (background_image_opacity / 100) ~ ';' ~ '--background-image-position-x: ' ~ position_x ~ '%;' ~ '--background-image-position-y: ' ~ position_y ~ '%;'
+  )
+-}}>
+  {{ include('dripyard_base:image-or-media', { image, loading }, with_context = false) }}
+</div>

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_card
+label: 'Card'
+revision: false
+description: 'Provides a card block type with title, link, and media.'

@@ -1,0 +1,10 @@
+name: Dripyard Tab Item
+type: Dripyard
+description: 'Provides a tab item block type'
+install:
+  - views
+config:
+  strict: false
+recipes:
+  - 'dripyard_fields_block'
+  - 'dripyard_text_format_superbasic'

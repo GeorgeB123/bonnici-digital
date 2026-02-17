@@ -1,0 +1,11 @@
+name: Dripyard Landing Pages Recipe
+type: Dripyard
+description: 'Provides a landing page content type and config.'
+install:
+  - layout_builder
+  - layout_discovery
+  - menu_ui
+config:
+  strict: false
+recipes:
+  - dripyard_fields_node

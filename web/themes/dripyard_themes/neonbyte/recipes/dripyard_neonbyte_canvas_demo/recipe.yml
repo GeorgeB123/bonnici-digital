@@ -1,0 +1,30 @@
+name: Dripyard NeonByte Drupal Canvas Demo
+type: Dripyard
+description: 'This recipe provides a Drupal Canvas based install of https://neonbyte.dripyard.com. It includes a canvas page with various components and configurations.'
+recipes:
+  - 'dripyard_neonbyte_demo_content'
+install:
+  - canvas
+  - canvas_stark
+config:
+  strict: false
+  actions:
+    system.site:
+      simpleConfigUpdate:
+        page:
+          front: '/neonbyte-home-page'
+    core.menu.static_menu_link_overrides:
+      simpleConfigUpdate:
+        definitions.standard__front_page:
+          menu_name: main
+          enabled: false
+          expanded: false
+          parent: false
+          weight: -50
+    block.block.neonbyte_page_title:
+      simpleConfigUpdate:
+        visibility:
+          request_path:
+            id: request_path
+            negate: true
+            pages: "<front>\r\n/canvas*"

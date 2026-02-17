@@ -1,0 +1,9 @@
+name: 'Dripyard Media'
+description: 'Provides Media configuraiton for Dripyard themes.'
+type: 'Media Configuration'
+config:
+  strict: false
+recipes:
+  - core/recipes/image_media_type
+  - core/recipes/local_video_media_type
+  - core/recipes/remote_video_media_type

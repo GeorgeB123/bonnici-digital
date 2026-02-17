@@ -1,0 +1,171 @@
+/*
+ * @file
+ * Styling for text-content class, which gets applied to all formatted text.
+ */
+
+@property --glimmer-progress {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+.text-content {
+  /* Override --wide-item-indentation to allow embedded media to overflow margins. */
+  --wide-item-indentation: 0px;
+  --container-break-negative-margin: calc(-1 * min(var(--wide-item-indentation), calc(50cqw - var(--container-max-percentage)/2)));
+
+  font-size: var(--body-l-size);
+  line-height: var(--body-l-line-height);
+  letter-spacing: var(--body-l-letter-spacing);
+  color: inherit;
+
+  @container (width < 600px) {
+    --container-break-negative-margin: 0px;
+  }
+
+  > :first-child {
+    margin-top: 0;
+    text-box: trim-start cap alphabetic;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    font-size: 1.125rem;
+
+    &:where(:not(:last-child)) {
+      margin-bottom: var(--spacing-xxxs);
+    }
+  }
+
+  table {
+    margin-block: var(--spacing-xl);
+    margin-inline: var(--container-break-negative-margin);
+    width: calc(100% + -2 * var(--container-break-negative-margin))
+  }
+
+  .align-left {
+    margin-left: var(--container-break-negative-margin);
+  }
+
+  .align-right {
+    margin-right: var(--container-break-negative-margin);
+  }
+
+  .media:where(:not(:is(.align-left, .align-right, .align-left *, .align-right *, figure *))) {
+    margin-block: var(--spacing-xl);
+    margin-inline: var(--container-break-negative-margin);
+
+    video {
+      width: 100%;
+    }
+  }
+
+  figure:where(:not(:is(.align-left, .align-right))),
+  img:where(:not(:is(figure *, .align-left, .align-right, .align-left *, .align-right *))) {
+    margin-block: var(--spacing-xl);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  code {
+    background-color: color-mix(in oklch, var(--theme-border-color) 10%, transparent);
+
+    pre & {
+      display: block;
+      max-width: var(--container-max-percentage);
+      overflow: auto;
+      margin-inline: var(--container-break-negative-margin);
+      margin-block: var(--spacing-xl);
+      padding: var(--spacing-xs);
+      color: var(--theme-text-color-medium);
+      font-size: var(--body-m-size);
+    }
+  }
+
+  blockquote {
+    --margin-block: var(--spacing-xxl);
+
+    position: relative;
+    margin-block: var(--margin-block);
+    margin-inline-start: 0;
+    padding-inline-start: var(--spacing-m);
+    color: var(--theme-text-color-soft);
+    font-style: italic;
+
+    &::before {
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-start: calc(-1 * var(--margin-block) / 3);
+      width: 0;
+      height: calc(100% + var(--margin-block) * 0.66);
+      content: "";
+      opacity: 0.1;
+      pointer-events: none;
+      border-inline-start: solid 5px var(--theme-border-color-alt);
+
+      @media (forced-colors: active) {
+        background-color: linkText;
+      }
+    }
+
+    &:dir(rtl)::before {
+      scale: -1 1;
+    }
+  }
+
+  .button svg {
+    width: auto;
+    height: 1lh;
+    margin-inline-end: -1ch;
+  }
+
+  /* Super fancy 'glimmer' effect that I'm really proud of! */
+  a:where(:not(.button)) {
+    --glimmer-progress: -50%;
+    --starting-color: var(--theme-link-color);
+    --ending-color: var(--theme-link-color-hover);
+    --glimmer-width: 5px;
+    --glimmer-color: color-mix(in oklch, var(--theme-link-color-hover) 30%, transparent);
+    --duration: 0.3s;
+    --direction: to bottom right in oklch;
+    --theme-focus-ring-color: var(--theme-link-color);
+
+    text-decoration: none; /* Chromium and FF will not show the underline. Safari will. */
+    color: transparent;
+    background-image:
+      linear-gradient(var(--direction),
+      var(--ending-color) calc(var(--glimmer-progress) - var(--glimmer-width)),
+      var(--glimmer-color) calc(var(--glimmer-progress) - var(--glimmer-width)) calc(var(--glimmer-progress) + var(--glimmer-width)),
+      var(--starting-color) calc(var(--glimmer-progress) + var(--glimmer-width)) 100%
+    );
+    background-clip: text;
+    box-shadow: inset 0 -0.0625em 0 0 var(--theme-link-color);
+    font-weight: 600;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        --glimmer-progress var(--duration),
+        color var(--duration),
+        text-underline-offset var(--duration),
+        text-decoration-color var(--duration);
+      transition-timing-function: linear;
+    }
+
+    @media (forced-colors: active) {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      --glimmer-progress: 110%;
+    }
+
+    &:dir(rtl) {
+      --direction: to bottom left;
+    }
+  }
+}

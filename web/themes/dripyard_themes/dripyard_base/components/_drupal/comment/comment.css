@@ -1,0 +1,124 @@
+/*
+ * @file
+ * Styles for Drupal comments.
+ */
+
+/* .comment-wrapper is located in the comment field template, it loads the library for this component. */
+.comment-wrapper {
+  grid-area: content;
+  grid-row: auto;
+}
+
+.comments__title {
+  display: flex;
+  align-items: center;
+  margin-block-start: 0;
+}
+
+.comment-form {
+  padding-block-end: var(--sp2);
+}
+
+.add-comment__form {
+  padding-inline-start: 0;
+}
+
+.comment {
+  position: relative;
+  padding: var(--spacing-s);
+
+  @container (width > 500px) {
+    padding: var(--spacing-m);
+  }
+
+  &:nth-child(2n + 1 of .comment:not(.indented *)) {
+    &,
+    + .indented {
+      background-color: var(--theme-surface-alt);
+    }
+  }
+}
+
+.comment__title {
+  font-weight: 600;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.comment__text-content {
+  font-size: var(--body-m-size);
+  line-height: var(--body-m-line-height);
+  letter-spacing: var(--body-m-letter-spacing);
+
+  &:not(:last-child) {
+    margin-block-end: 0;
+  }
+}
+
+.comment__links {
+  margin-block: var(--sp) 0;
+}
+
+.comment__links-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--body-s-size);
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.comment__meta * {
+  display: inline;
+}
+
+.comment__new {
+  display: inline-block;
+  margin-bottom: var(--spacing-xs);
+  background-color: var(--theme-text-color-primary);
+  color: var(--theme-surface);
+  border-radius: var(--radius-lg);
+  padding: 5px 10px;
+  text-transform: capitalize;
+
+  @container (width > 700px) {
+    position: absolute;
+    top: 0;
+    inset-inline-end: calc(100% + 20px);
+    translate: 0 100%;
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+.comment__author {
+  margin-inline-end: var(--sp);
+  font-weight: 600;
+}
+
+.comment__time {
+  margin: 0;
+  color: var(--theme-text-color-soft);
+  font-size: var(--body-s-size);
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+}
+
+.indented {
+  padding-inline-start: var(--sp2);
+
+  @container (width > 700px) {
+    padding-inline-start: var(--sp4);
+  }
+}

@@ -1,0 +1,24 @@
+# Global styles and scripts.
+base:
+  css:
+    theme:
+      css/base.css: {}
+
+# Example library definition (used in testtheme.info.yml). Note the CSS file
+# will need to be created.
+# @see https://www.drupal.org/docs/develop/theming-drupal/adding-assets-css-js-to-a-drupal-theme-via-librariesyml
+
+# user-login-form:
+#   css:
+#     component:
+#       css/user-login-form.css: {}
+
+# Another Example library definition (used in testtheme.info.yml). Note the
+# CSS file will need to be created.
+
+# status-messages:
+#   css:
+#     component:
+#       css/status-messages.css: {}
+#   js:
+#     js/status-messages.js: {}

@@ -1,0 +1,21 @@
+/*
+ * @file
+ * Page title styling.
+ */
+
+.page-title {
+  margin-bottom: var(--spacing-component);
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  line-height: var(--title-line-height);
+  letter-spacing: var(--title-letter-spacing);
+  font-family: var(--title-font-family);
+}
+
+.shortcut-wrapper:has(.page-title) {
+  margin-block: var(--spacing-s) var(--spacing-xs);
+}
+
+.shortcut-wrapper .page-title {
+  display: inline;
+}

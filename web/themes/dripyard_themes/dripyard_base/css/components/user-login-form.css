@@ -1,0 +1,16 @@
+/*
+ * @file
+ * User login form.
+ */
+
+.user-login-form {
+  max-width: fit-content;
+
+  .button {
+    width: 100%;
+  }
+}
+
+.user-login-form__pass-link {
+  margin-top: var(--spacing-xxs);
+}

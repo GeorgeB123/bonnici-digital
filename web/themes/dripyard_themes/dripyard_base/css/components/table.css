@@ -1,0 +1,223 @@
+/*
+ * @file
+ * Tables - adapted from Claro's styles.
+ */
+
+table {
+  --table-cell-padding-inline: var(--sp2);
+  --table-cell-padding-block: var(--sp1-5);
+  --table-cell-min-height: var(--spacing-s);
+
+  width: 100%;
+  margin-block: var(--spacing-xs);
+  border-collapse: collapse;
+
+  &:has(+ table) {
+    margin-bottom: var(--spacing-component-internal);
+  }
+}
+
+.sticky-header {
+  min-width: 0;
+}
+
+caption {
+  margin-bottom: var(--spacing-xs);
+  padding-inline: var(--table-cell-padding-inline);
+  text-align: start;
+  font-weight: 600;
+}
+
+th {
+  --active-text-color: var(--theme-text-color-primary);
+
+  position: relative;
+  min-height: var(--table-cell-min-height);
+  padding: var(--table-cell-padding-block) var(--table-cell-padding-inline);
+  text-align: start;
+  color: var(--theme-text-color-loud);
+  background: var(--theme-surface-alt);
+  font-weight: 600;
+
+  &.is-active {
+    border-bottom: solid 4px var(--active-text-color);
+  }
+
+  > a[href*="sort"] {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp0-5);
+    text-decoration: none;
+    color: inherit;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    /* Inactive sort. */
+    &::after {
+      display: inline-block;
+      width: 0.875rem;
+      height: 1rem;
+      margin-inline-start: var(--spacing-xxs);
+      content: "";
+      opacity: 0.5;
+      background: url('../../images/sort--inactive.svg') no-repeat 50% 50%;
+      background-size: contain;
+
+      &:dir(rtl) {
+        transform: scaleX(-1);
+      }
+
+      @media (forced-colors: active) {
+        opacity: 1;
+        background: linkText;
+        mask: url('../../images/sort--inactive.svg') no-repeat 50% 50%;
+      }
+    }
+  }
+
+  &.is-active > a {
+    color: var(--active-text-color);
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+tr {
+  border-bottom: 0.0625rem solid var(--color-gray-200);
+
+  &:hover,
+  &:focus-within {
+    color: var(--theme-text-color-medium);
+    background: var(--theme-surface-alt);
+  }
+
+  &.color-warning:hover,
+  &.color-warning:focus {
+    color: var(--theme-text-color-medium);
+    background: #fdf8ed;
+  }
+
+  &.color-error:hover,
+  &.color-error:focus {
+    color: var(--theme-text-color-medium);
+    background: #fcf4f2;
+  }
+}
+
+tr,
+.draggable-table.tabledrag-disabled tr {
+  color: var(--theme-text-color-medium);
+  background: var(--color-white);
+  border-bottom: solid 1px var(--theme-border-color-soft);
+}
+
+thead tr {
+  border: 0;
+}
+
+td {
+  min-height: var(--table-cell-min-height);
+  padding: var(--table-cell-padding-block) var(--table-cell-padding-inline);
+  text-align: start;
+
+  & .item-list ul {
+    margin: 0;
+  }
+
+  &.is-active {
+    background: none;
+  }
+
+  /**
+   * Target every .form-element input that parent is a form-item of a table cell.
+   * This ignores the filter format select of the textarea editor.
+   */
+  > .form-item>.form-element,
+  > .ajax-new-content>.form-item>.form-element,
+  > .form-item>.claro-autocomplete,
+  > .form-item>.claro-autocomplete>.form-element,
+  > .ajax-new-content>.form-item>.claro-autocomplete,
+  > .ajax-new-content>.form-item>.claro-autocomplete>.form-element {
+    width: 100%;
+  }
+
+  > .form-item>.form-element--type-select,
+  > .ajax-new-content>.form-item>.form-element--type-select {
+    width: max-content;
+    min-width: 100%;
+  }
+}
+
+/* Win over table-file-multiple-widget. */
+th.is-disabled.is-disabled {
+  color: var(--form-text-color);
+}
+
+/* Force browsers to calculate the width of a 'select all' <th> element. */
+th.select-all {
+  width: 1px;
+}
+
+/**
+ * Captions.
+ */
+.caption {
+  margin-block-end: 1.25rem;
+}
+
+tfoot {
+  font-weight: bold;
+
+  & tr {
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:first-child td {
+      border-top: 0.0625rem solid var(--color-gray-500);
+    }
+  }
+}
+
+/**
+ * Responsive table cells.
+ */
+th.priority-low,
+th.priority-medium,
+td.priority-low,
+td.priority-medium {
+  display: none;
+}
+
+@container (width > 38em) {
+  th.priority-medium,
+  td.priority-medium {
+    display: table-cell;
+  }
+}
+
+@container (width > 60em) {
+  th.priority-low,
+  td.priority-low {
+    display: table-cell;
+  }
+}
+
+.tabledrag-toggle-weight-wrapper {
+  margin-block-start: var(--spacing-xs);
+  line-height: calc(28rem / 16);
+
+  + table,
+  + .tableresponsive-toggle-columns+table {
+    margin-block-start: 0;
+  }
+}

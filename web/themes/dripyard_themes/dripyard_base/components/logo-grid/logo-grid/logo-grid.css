@@ -1,0 +1,79 @@
+/*
+ * @file
+ * Styling for logo grid.
+ */
+
+.logo-grid {
+  --logo-grid-text-color-light: var(--theme-text-color-soft);
+  --logo-grid-text-color: var(--theme-text-color-medium);
+  --logo-grid-logo-size: 110px;
+  --logo-grid-logo-background: var(--theme-surface-alt);
+  --logo-grid-logo-radius: 0px;
+  --logo-grid-gap: 20px;
+
+  color: var(--logo-grid-text-color);
+
+  &.logo-grid--size-small {
+    --logo-grid-logo-size: 60px;
+  }
+
+  &.logo-grid--size-medium {
+    --logo-grid-logo-size: 110px;
+  }
+
+  &.logo-grid--size-large {
+    --logo-grid-logo-size: 140px;
+  }
+}
+
+/* Backgrounds. */
+.logo-grid--logo-background-transparent {
+  --logo-grid-logo-background: transparent;
+}
+
+.logo-grid--logo-background-white {
+  --logo-grid-logo-background: var(--white);
+}
+
+.logo-grid--logo-background-black {
+  --logo-grid-logo-background: var(--black);
+}
+
+.logo-grid--logo-background-primary {
+  --logo-grid-logo-background: var(--primary);
+}
+
+/* Border radiuses (radii?) */
+.logo-grid--logo-radius-small {
+  --logo-grid-logo-radius: var(--radius-sm);
+}
+
+.logo-grid--logo-radius-medium {
+  --logo-grid-logo-radius: var(--radius-md);
+}
+
+.logo-grid--logo-radius-large {
+  --logo-grid-logo-radius: var(--radius-lg);
+}
+
+.logo-grid--logo-radius-extra-large {
+  --logo-grid-logo-radius: 200px;
+}
+
+.logo-grid__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--logo-grid-gap);
+  justify-content: start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .logo-grid--layout-center & {
+    justify-content: center;
+  }
+
+  .logo-grid--layout-end & {
+    justify-content: end;
+  }
+}

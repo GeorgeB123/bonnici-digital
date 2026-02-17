@@ -1,0 +1,44 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+{% set block_content = content['#block_content'] %}
+  {% embed  'dripyard_base:promo' with {
+      eyebrow: content.dripyard_eyebrow,
+      title: props.dripyard_title|default(''),
+      body: content.body,
+      button_group: props.dripyard_cta|default({}),
+      align_x: block_content.dripyard_align_x|first.value|default('start'),
+      align_y: block_content.dripyard_align_y|first.value|default('center'),
+    } only %}
+      {% block promo_content %}
+        {% if button_group %}
+
+          {% embed 'dripyard_base:flex-wrapper' with {
+            button_group,
+            margin_top: 'zero',
+            margin_bottom: 'zero',
+            padding_top: 'zero',
+            padding_bottom: 'zero',
+            column_gutter: 'small',
+            row_gutter: 'small',
+            align_x: 'start',
+            align_y: 'center',
+            wrap: true,
+          } only %}
+            {% block content %}
+              {% for button in button_group %}
+                {{ include('dripyard_base:button', {
+                    href: button.href|default('/'),
+                    text: button.text|default(''),
+                    style: button.style|default('default'),
+                    suffix_icon: button.suffix_icon,
+                    size: button.size|default('medium'),
+                }, with_context = false) }}
+              {% endfor %}
+            {% endblock %}
+          {% endembed %}
+
+        {% endif %}
+      {% endblock promo_content %}
+    {% endembed %}
+</div>

@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e6c0debc-0bbb-4d99-b44b-ab808927a3f9
+  bundle: article
+  default_langcode: en
+  depends:
+    fc28980f-94a5-46d5-a68e-8b7e19504e42: file
+    4e689e66-025a-4660-8519-2e9e0cd7f4bc: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Custom Software Development'
+  created:
+    -
+      value: 1745291747
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  body:
+    -
+      value: "<p>At NeonByte, we don’t just build software — we craft scalable, future-ready solutions tailored to your business. Whether you're launching a new product, modernizing legacy systems, or automating complex workflows, our team partners with you from concept to deployment. We blend agile development with deep technical expertise to deliver clean, maintainable code that solves real problems and adapts as you grow.</p><p>Every line we write is driven by your goals — not a one-size-fits-all template. From frontend UX to backend architecture, we design for performance, usability, and long-term success. With NeonByte, you get more than just custom software — you get a strategic partner focused on building tools that empower your team and elevate your business.</p>"
+      format: full_html
+      summary: ''
+  field_image:
+    -
+      entity: fc28980f-94a5-46d5-a68e-8b7e19504e42
+      alt: 'Custom Software Development'
+      title: ''
+      width: 3304
+      height: 4130
+  field_tags:
+    -
+      entity: 4e689e66-025a-4660-8519-2e9e0cd7f4bc

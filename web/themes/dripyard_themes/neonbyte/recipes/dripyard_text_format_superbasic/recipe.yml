@@ -1,0 +1,10 @@
+name: 'Dripyard SuperBasic editor and formatter'
+description: 'Provides SuperBasic editor and formatter for Dripyard themes.'
+type: 'Text format editor'
+install:
+  - ckeditor5
+config:
+  strict: false
+  actions:
+    user.role.authenticated:
+      grantPermission: 'use text format dripyard_superbasic'

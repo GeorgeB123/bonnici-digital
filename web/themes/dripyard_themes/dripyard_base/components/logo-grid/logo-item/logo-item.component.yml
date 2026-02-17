@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Logo item
+status: stable
+group: Dripyard General
+noUi: true
+props:
+  type: object
+  properties:
+    href:
+      title: Link
+      type:
+        - string
+        - 'null'
+      format: uri-reference
+    image:
+      title: Image
+      type: object

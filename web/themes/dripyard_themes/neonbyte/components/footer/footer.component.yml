@@ -1,0 +1,37 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Footer
+status: stable
+group: Site
+noUi: true
+props:
+  type: object
+  properties:
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+      examples: [ inherit ]
+slots:
+  footer_top_content:
+    title: Footer top
+  footer_left_content:
+    title: Footer left
+  footer_right_content:
+    title: Footer right
+  footer_bottom_content:
+    title: Footer bottom

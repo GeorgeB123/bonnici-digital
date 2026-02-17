@@ -1,0 +1,69 @@
+{
+    "_hash": "29d5c343c6995999c93da5896509c7521ef999ee0ab64ef1a887432bc370c14d",
+    "patches": {
+        "drupal/core": [
+            {
+                "package": "drupal/core",
+                "description": "#3495988: Add redirect for incomplete install",
+                "url": "https://git.drupalcode.org/project/drupal/-/merge_requests/10680.diff",
+                "sha256": "109a01820bda44c7035bc29041dc46da9f780564d0d9438337a2d8fdb4381617",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:patches.json"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "#3499225: Fix recipe command ignoring dependencies",
+                "url": "https://git.drupalcode.org/project/drupal/-/commit/12031d11461bd2fddcb9052659af947be0a9defe.patch",
+                "sha256": "9f9afc554e83d7d1ad55f602b897fdc13a5c0aca0ca9c566f764dc4f2ddddb1d",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:patches.json"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "#3510966: Fix extra slash in redirect for install profiles that define finish_url",
+                "url": "https://git.drupalcode.org/project/drupal/-/commit/28168adfe415de9f7bc349a9d1aa67f0610cb2fb.patch",
+                "sha256": "b129943463cf12055c7c86640962aafc7cc2a7d3029f12c97c851726d422c639",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:patches.json"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "#3570467: Listing strict recipe that differs from active config throws exception",
+                "url": "https://git.drupalcode.org/issue/drupal-3570467/-/commit/eb16536187389ffa1ddb3d5871b52fba17a29bbd.patch",
+                "sha256": "3d5d61511d5b34418dab84a74fce62ea067a7bdbde33fa4af82ff3a4a74986f6",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:patches.json"
+                }
+            }
+        ],
+        "drupal/recipe_installer_kit": [
+            {
+                "package": "drupal/recipe_installer_kit",
+                "description": "#3497485: Fix remaining duplication of batch jobs",
+                "url": "patches/drupal/recipe_installer_kit/4.patch",
+                "sha256": "49730743968f9d3b660e64383d312bf83d05559efbe12affbd81a2d3612a1ccf",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:patches.json"
+                }
+            },
+            {
+                "package": "drupal/recipe_installer_kit",
+                "description": "#3570467: Listing strict recipe that differs from active config throws exception",
+                "url": "patches/drupal/recipe_installer_kit/drupal-3570467.patch",
+                "sha256": "255c093ff0eec69bf53f45ba2b66fabcec82e42e1d7508ec04c114a710dcde53",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:patches.json"
+                }
+            }
+        ]
+    }
+}

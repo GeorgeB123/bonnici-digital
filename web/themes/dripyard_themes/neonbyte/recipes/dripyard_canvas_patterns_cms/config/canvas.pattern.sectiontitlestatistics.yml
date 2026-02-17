@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.heading
+    - canvas.component.sdc.dripyard_base.section
+    - canvas.component.sdc.dripyard_base.statistic
+  module:
+    - options
+id: sectiontitlestatistics
+label: 'Section - Title with Statistics'
+component_tree:
+  0:
+    uuid: c7034d09-bb20-4b92-9482-622855ec85c6
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: primary
+      section_width: edge-to-edge
+      content_width: max-width
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: large
+      padding_bottom: large
+  '0:header:0':
+    parent_uuid: c7034d09-bb20-4b92-9482-622855ec85c6
+    slot: header
+    uuid: 5d7a42b0-5746-4fee-a78a-89ad2c23cad9
+    component_id: sdc.dripyard_base.heading
+    component_version: 69804e3c5ff45a2b
+    inputs:
+      text: 'This is my heading'
+      html_element: h2
+      style: h1
+      center: false
+      margin_top: small
+      margin_bottom: zero
+  '0:content:0':
+    parent_uuid: c7034d09-bb20-4b92-9482-622855ec85c6
+    slot: content
+    uuid: 62475925-3401-48d5-9797-d03535c36630
+    component_id: sdc.dripyard_base.statistic
+    component_version: 9743427112a0a222
+    inputs:
+      statistic: '$2,400'
+      first_line: Students
+      second_line: 'Enrolled students from 45 countries'
+      href: 'http://www.drupal.org'
+  '0:content:1':
+    parent_uuid: c7034d09-bb20-4b92-9482-622855ec85c6
+    slot: content
+    uuid: 2fbabe40-8b4f-4cce-88fd-62a68ef0eb98
+    component_id: sdc.dripyard_base.statistic
+    component_version: 9743427112a0a222
+    inputs:
+      statistic: '$2,400'
+      first_line: Students
+      second_line: 'Enrolled students from 45 countries'
+      href: 'http://www.drupal.org'

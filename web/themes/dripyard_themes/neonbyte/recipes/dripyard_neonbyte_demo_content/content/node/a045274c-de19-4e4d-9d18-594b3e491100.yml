@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a045274c-de19-4e4d-9d18-594b3e491100
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Alignment
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /insights/alignment
+      langcode: en
+  body:
+    -
+      value: "<p>Strategic alignment services help organizations synchronize their technology investments with business objectives for maximum impact. NeonByte works with leadership teams to ensure every technology decision supports your broader organizational goals.</p><h2>Alignment Services</h2><ul><li><strong>Strategy Assessment</strong> — Evaluate current technology portfolio against business priorities</li><li><strong>Roadmap Development</strong> — Create multi-year technology investment plans</li><li><strong>Governance Design</strong> — Establish decision-making frameworks and policies</li><li><strong>Value Measurement</strong> — Define and track technology ROI metrics</li></ul><h2>Alignment Framework</h2><table><thead><tr><th>Dimension</th><th>Assessment</th><th>Outcome</th></tr></thead><tbody><tr><td>Business Strategy</td><td>Goals and priorities review</td><td>Aligned technology vision</td></tr><tr><td>Current State</td><td>Technology portfolio audit</td><td>Gap identification</td></tr><tr><td>Future State</td><td>Target architecture design</td><td>Transformation roadmap</td></tr><tr><td>Execution</td><td>Implementation planning</td><td>Sequenced initiatives</td></tr></tbody></table><h2>Common Alignment Challenges We Solve</h2><ol><li>Technology investments that don't deliver expected business value</li><li>Siloed systems that create inefficiencies and data quality issues</li><li>Lack of visibility into technology costs and performance</li><li>Difficulty prioritizing competing technology initiatives</li></ol><p>Our alignment engagements typically run 4-8 weeks and result in actionable recommendations that your team can implement immediately.</p>"
+      format: full_html
+      summary: ''

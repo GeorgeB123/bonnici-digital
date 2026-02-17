@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_tab_item
+    - field.storage.block_content.dripyard_icon
+  module:
+    - options
+id: block_content.dripyard_tab_item.dripyard_icon
+field_name: dripyard_icon
+entity_type: block_content
+bundle: dripyard_tab_item
+label: 'Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

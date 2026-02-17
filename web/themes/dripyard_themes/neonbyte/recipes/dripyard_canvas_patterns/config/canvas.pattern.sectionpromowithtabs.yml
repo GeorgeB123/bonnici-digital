@@ -1,0 +1,234 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.button
+    - canvas.component.sdc.dripyard_base.canvas-image
+    - canvas.component.sdc.dripyard_base.flex-wrapper
+    - canvas.component.sdc.dripyard_base.grid-cell
+    - canvas.component.sdc.dripyard_base.grid-wrapper
+    - canvas.component.sdc.dripyard_base.heading
+    - canvas.component.sdc.dripyard_base.section
+    - canvas.component.sdc.dripyard_base.tab
+    - canvas.component.sdc.dripyard_base.tab-group
+    - canvas.component.sdc.dripyard_base.text
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - options
+    - text
+id: sectionpromowithtabs
+label: 'Section - Promo with Tabs'
+component_tree:
+  0:
+    uuid: 04a3df7e-5159-4242-bfe0-4cb0699b2a12
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: light
+      section_width: edge-to-edge
+      content_width: max-width
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: large
+      padding_bottom: large
+  '0:content:0':
+    parent_uuid: 04a3df7e-5159-4242-bfe0-4cb0699b2a12
+    slot: content
+    uuid: 4a6759c7-cbd8-47d4-ba8a-8283ce69e184
+    component_id: sdc.dripyard_base.grid-wrapper
+    component_version: ba954a2accbc0f5c
+    inputs:
+      column_gutter: large
+      row_gutter: medium
+  '0:content:0:grid_cells:0':
+    parent_uuid: 4a6759c7-cbd8-47d4-ba8a-8283ce69e184
+    slot: grid_cells
+    uuid: 93e85bd6-839f-417d-a391-ed32e585e539
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 6
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+      vertical_alignment: center
+  '0:content:0:grid_cells:0:content:0':
+    parent_uuid: 93e85bd6-839f-417d-a391-ed32e585e539
+    slot: content
+    uuid: 53ce366a-806d-49c0-a4c3-ee461eebbac0
+    component_id: sdc.dripyard_base.heading
+    component_version: 69804e3c5ff45a2b
+    inputs:
+      text: 'This is my pretitle'
+      html_element: div
+      style: body_s
+      center: false
+      margin_top: zero
+      margin_bottom: zero
+  '0:content:0:grid_cells:0:content:1':
+    parent_uuid: 93e85bd6-839f-417d-a391-ed32e585e539
+    slot: content
+    uuid: 99eb0363-d3dd-4e9a-bc58-c9e20252d56e
+    component_id: sdc.dripyard_base.heading
+    component_version: 69804e3c5ff45a2b
+    inputs:
+      text: 'This is my heading'
+      html_element: h2
+      style: h2
+      margin_top: zero
+      margin_bottom: zero
+  '0:content:0:grid_cells:0:content:2':
+    parent_uuid: 93e85bd6-839f-417d-a391-ed32e585e539
+    slot: content
+    uuid: ba6645e3-e0ee-4a64-8005-3b1e5f6f36c5
+    component_id: sdc.dripyard_base.tab-group
+    component_version: 912d35db4fbdbf16
+    inputs:
+      placement: top
+      icon_size: small
+      icon_placement: vertical
+  '0:content:0:grid_cells:0:content:2:tabs:0':
+    parent_uuid: ba6645e3-e0ee-4a64-8005-3b1e5f6f36c5
+    slot: tabs
+    uuid: 5a9cc99a-90d6-4196-aa2a-2558014b78c0
+    component_id: sdc.dripyard_base.tab
+    component_version: db84e92a77f252cb
+    inputs:
+      title: Tab
+      icon: drupal
+  '0:content:0:grid_cells:0:content:2:tabs:0:tab_panel_content:0':
+    parent_uuid: 5a9cc99a-90d6-4196-aa2a-2558014b78c0
+    slot: tab_panel_content
+    uuid: b73b6531-c0c5-45d0-804b-071200f01233
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:content:0:grid_cells:0:content:2:tabs:1':
+    parent_uuid: ba6645e3-e0ee-4a64-8005-3b1e5f6f36c5
+    slot: tabs
+    uuid: 67ebabf2-bc23-430b-9b1f-ef1f4f542c9a
+    component_id: sdc.dripyard_base.tab
+    component_version: db84e92a77f252cb
+    inputs:
+      title: 'Tab 2'
+      icon: wordpress
+  '0:content:0:grid_cells:0:content:2:tabs:1:tab_panel_content:0':
+    parent_uuid: 67ebabf2-bc23-430b-9b1f-ef1f4f542c9a
+    slot: tab_panel_content
+    uuid: b12c4fa5-307d-4fb6-a338-4dd3fd6eb94e
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: '<p>Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.</p>'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+      center: false
+  '0:content:0:grid_cells:0:content:3':
+    parent_uuid: 93e85bd6-839f-417d-a391-ed32e585e539
+    slot: content
+    uuid: 29a40fa2-8a2c-4d8a-b0ad-1139db8d68b6
+    component_id: sdc.dripyard_base.flex-wrapper
+    component_version: 87963dbf47fd166e
+    inputs:
+      theme: inherit
+      wrap: true
+      align_x: start
+      align_y: center
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: zero
+      padding_bottom: zero
+      column_gutter: small
+      row_gutter: small
+  '0:content:0:grid_cells:0:content:3:content:0':
+    parent_uuid: 29a40fa2-8a2c-4d8a-b0ad-1139db8d68b6
+    slot: content
+    uuid: 3bc9147d-20cb-4cd3-abb4-7bb19ded9b68
+    component_id: sdc.dripyard_base.button
+    component_version: f0368947665f0cbf
+    inputs:
+      text: 'Learn more'
+      href:
+        uri: 'https://www.drupal.org'
+        options: {  }
+      style: primary
+      size: medium
+      target: false
+      suffix_icon: arrow-right
+  '0:content:0:grid_cells:0:content:3:content:1':
+    parent_uuid: 29a40fa2-8a2c-4d8a-b0ad-1139db8d68b6
+    slot: content
+    uuid: 6783dd0d-6b8c-4000-8db4-5f5636c7d601
+    component_id: sdc.dripyard_base.button
+    component_version: f0368947665f0cbf
+    inputs:
+      text: 'Learn more'
+      href:
+        uri: 'https://www.drupal.org'
+        options: {  }
+      style: default
+      size: medium
+      target: false
+      suffix_icon: arrow-right
+  '0:content:0:grid_cells:1':
+    parent_uuid: 4a6759c7-cbd8-47d4-ba8a-8283ce69e184
+    slot: grid_cells
+    uuid: c194499d-5699-4a86-841f-ab6d6f23ae30
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 6
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+      vertical_alignment: center
+  '0:content:0:grid_cells:1:content:0':
+    parent_uuid: c194499d-5699-4a86-841f-ab6d6f23ae30
+    slot: content
+    uuid: a80b9a55-04bf-453e-a823-a089a79eb786
+    component_id: sdc.dripyard_base.canvas-image
+    component_version: 21d723e26fe8bfcc
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.canvas-image
+      width: 800
+      loading: lazy
+      border_radius: large

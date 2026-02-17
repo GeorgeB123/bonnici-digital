@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: bffd8826-0880-406e-8e5f-e675282ff707
+  bundle: dripyard_icon_card
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'AI & Automation (icon card)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_icon:
+    -
+      value: robot
+  dripyard_link:
+    -
+      uri: 'internal:/'
+      title: ''
+      options: {  }
+  dripyard_title:
+    -
+      value: 'AI & Automation'
+      format: plain_text
+  body:
+    -
+      value: "Eliminate repetitive tasks and supercharge productivity."
+      format: plain_text

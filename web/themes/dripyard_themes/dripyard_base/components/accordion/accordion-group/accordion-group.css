@@ -1,0 +1,30 @@
+/*
+ * @file
+ * Styles for accordion group.
+ */
+
+.accordion-group {
+  color: var(--theme-text-color-medium);
+
+  &[class*="theme"] {
+    background-color: var(--theme-surface);
+  }
+
+  .is-canvas-editor & {
+    padding-block: var(--spacing-xs);
+  }
+}
+
+.accordion-group__content {
+  display: grid;
+  grid-template-columns: auto;
+  gap: var(--sp1-5);
+
+  .accordion-group--variation-borders & {
+    gap: 0;
+  }
+}
+
+.accordion-item {
+  align-self: start;
+}

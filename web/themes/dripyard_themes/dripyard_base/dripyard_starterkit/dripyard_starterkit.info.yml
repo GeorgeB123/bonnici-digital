@@ -1,0 +1,9 @@
+name: Dripyard StarterKit
+type: theme
+'base theme': dripyard_base
+description: A generic starterkit for creating sub-themes based on any Dripyard theme.
+core_version_requirement: ^10.3 || ^11
+starterkit: true
+hidden: true
+libraries:
+  - dripyard_starterkit/base

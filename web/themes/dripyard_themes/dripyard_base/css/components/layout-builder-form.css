@@ -1,0 +1,323 @@
+/*
+ * @file
+ * Style helpers for Layout Builder form.
+ */
+
+.layout-builder {
+  --layout-builder-padding-inline: 0px;
+  --layout-builder-padding-block: 1.5em 0.5em;
+  --layout-builder-section-padding-block: 20px;
+  --layout-builder-section-padding-inline: 20px;
+
+  margin-bottom: var(--spacing-component);
+  padding-block: var(--layout-builder-padding-block);
+  padding-inline: var(--layout-builder-padding-inline);
+  border-color: transparent;
+  background: transparent;
+}
+
+.layout-builder-form .form-actions {
+  --edge-offset: var(--spacing-s);
+
+  /* If there's room (next to status messages), we fix the form actions to the
+     bottom of the viewport. */
+  @container (width > 1550px) {
+    position: fixed;
+    z-index: 10;
+    bottom: calc(var(--edge-offset) + var(--drupal-displace-offset-bottom, 0px));
+    inset-inline-start: calc(var(--drupal-displace-offset-left, 0px) + var(--edge-offset));
+    width: fit-content;
+    max-width: 94cqw;
+    margin: 0;
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    border: solid 1px transparent;
+    border-radius: var(--radius-md);
+    background-color: var(--theme-surface);
+    box-shadow: 4px 4px 20px #0003;
+
+    &:dir(rtl) {
+      inset-inline-start: calc(var(--drupal-displace-offset-right, 0px) + var(--edge-offset));
+    }
+
+    &:is(body.safari-not-doing-position-fixed-properly-because-it-sucks *) {
+      position: unset;
+      width: unset;
+      max-width: unset;
+    }
+  }
+}
+
+.layout-builder__message--overrides .messages {
+  background-image: unset;
+}
+
+.layout-builder__region {
+  border: solid 1px transparent; /* Keep margins from overflowing. */
+  overflow: clip;
+}
+
+.layout-builder__region,
+.layout-builder__add-block {
+  width: 100%;
+}
+
+.layout-builder__section {
+  --stripe-color: #eff6fc;
+
+  padding-block: var(--layout-builder-section-padding-block);
+  padding-inline: var(--layout-builder-section-padding-inline);
+  border: solid 2px #d7e8f7;
+  border-radius: 10px;
+  background: repeating-linear-gradient(135deg,
+    transparent,
+    transparent 10px,
+    var(--stripe-color) 10px,
+    var(--stripe-color) 20px);
+  overflow: clip;
+
+  .container {
+    width: calc(var(--container-width) - var(--layout-builder-padding-inline) * 2 - var(--layout-builder-section-padding-inline) * 2);
+  }
+
+  .theme--dark &,
+  .theme--black & {
+    --stripe-color: #333a;
+  }
+}
+
+.layout-builder__layout {
+  [class*="__content-above"] {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .layout-1-col,
+  .layout-2-col,
+  .layout-3-col,
+  .layout-4-col {
+    padding-block: var(--spacing-xs);
+  }
+}
+
+.layout-builder__add-section {
+  padding-block: 10px;
+  background: transparent;
+  outline: none;
+}
+
+.layout-builder__add-block {
+  width: calc(100% - 20px);
+  padding-block: var(--spacing-m);
+  border: solid 1px #bdd7eb;
+  border-radius: 4px;
+
+  [class*="__content-above"] & {
+    padding-block: var(--spacing-xxs);
+  }
+
+  /* Override LB layout styles. */
+  &[class] {
+    margin: 10px;
+  }
+}
+
+.layout-builder__link--remove {
+  margin-bottom: 10px;
+}
+
+.layout-builder-block {
+  background: transparent;
+}
+
+.layout-builder__link {
+  color: blue;
+
+  :where(.theme--dark, .theme--black) & {
+    color: white;
+  }
+
+  .layout-builder__add-block & {
+    color: blue;
+  }
+}
+
+.layout-builder__helper-message {
+  color: #666; /* LB has its own background styles, so we hard code link colors to ensure contrast. */
+}
+
+/*
+ * Tab group specific fixes.
+ */
+.layout-builder { /* stylelint-disable-line */
+  .sl-tab-panel {
+    visibility: visible;
+  }
+
+  .sl-tab-group::part(tabs) {
+    border: 0;
+  }
+
+  .sl-tab-group[placement="top"],
+  .sl-tab-group[placement="bottom"] {
+    > .layout-builder__region {
+      display: flex;
+      flex-direction: row;
+
+      > .layout-builder-block,
+      > .layout-builder__add-block {
+        flex: 1;
+      }
+    }
+  }
+
+  .sl-tab-group[placement="top"] {
+    > .layout-builder__region {
+      .layout-builder__add-block {
+        min-height: 300px;
+        margin-bottom: auto;
+      }
+
+      .layout-builder-block ~ .layout-builder__add-block {
+        margin-top: 160px;
+      }
+    }
+  }
+
+  .sl-tab-group[placement="bottom"] {
+    > .layout-builder__region {
+      .layout-builder__add-block { /* stylelint-disable-line */
+        min-height: 300px;
+      }
+
+      .layout-builder-block ~ .layout-builder__add-block {
+        margin-bottom: 160px;
+      }
+
+      > .layout-builder-block {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .sl-tab-group[placement="start"],
+  .sl-tab-group[placement="end"] {
+    > .layout-builder__region {
+      flex-direction: column;
+
+      > .layout-builder-block {
+        display: flex;
+        align-items: start;
+      }
+    }
+  }
+
+  .sl-tab-group[placement="end"] {
+    > .layout-builder__region {
+      > .layout-builder-block {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+/*
+ * Accordion group specific fixes.
+ */
+.layout-builder { /* stylelint-disable-line */
+  .accordion-group__content .layout-builder__add-block {
+    padding-block: var(--spacing-m);
+  }
+}
+
+/*
+ * Carousel fixes.
+ */
+.layout-builder {
+  .carousel {
+    .layout-builder__region {
+      display: flex;
+      width: 100vw;
+    }
+
+    .layout-builder__add-block {
+      width: 200px;
+      flex-shrink: 0;
+    }
+  }
+
+  .swiper-wrapper {
+    padding-block: 20px;
+    overflow: auto;
+  }
+}
+
+/*
+ * Fixes for UI Icons icon picker in off-canvas.
+ */
+#drupal-off-canvas-wrapper {
+  .ui-icons-result {
+    display: grid;
+    grid-template-columns: 24px auto;
+    grid-auto-rows: auto;
+    gap: 8px;
+  }
+
+  .icon-preview {
+    max-width: 24px;
+    grid-column: 1;
+    grid-row: span 2;
+  }
+
+  .ui-icons-result-icon-name,
+  .ui-icons-result-collection {
+    grid-column: 2;
+  }
+}
+
+/*
+ * Layout Builder Wrapper form styling.
+ */
+.block-dripyard-wrapper:where(.layout-builder-block) {
+  background: var(--theme-surface-primary);
+  color: var(--theme-text-color-medium);
+
+  .layout-builder__region:has(&) {
+    --outline-width: 10px;
+
+    outline: solid var(--outline-width) var(--theme-surface-primary);
+    outline-offset: calc(-1 * var(--outline-width));
+  }
+}
+
+.dripyard-wrapper-warning {
+  display: grid;
+  gap: var(--sp);
+  margin-block: var(--sp3);
+  padding: var(--sp3);
+  background: darkred;
+  color: white;
+  text-align: center;
+  border-radius: var(--radius-md);
+
+  .layout-dynamic & {
+    display: none;
+  }
+
+  >* {
+    margin: 0;
+    color: inherit;
+  }
+}
+
+/*
+ * Ensure color is visible in offcanvas CKEditor.
+ */
+#drupal-off-canvas-wrapper {
+  color-scheme: light;
+}
+
+/* Ensure that LB message wrapper doesn't block click events on offcanvas. */
+.layout-builder__message:not(:has(.messages__wrapper > *)) {
+  display: none;
+}

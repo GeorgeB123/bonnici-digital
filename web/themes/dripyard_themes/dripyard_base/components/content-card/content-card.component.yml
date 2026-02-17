@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Content Card
+status: stable
+group: Dripyard Cards
+props:
+  type: object
+  required:
+    - title
+    - link_href
+    - body_text
+  properties:
+    title:
+      title: Title
+      type: string
+      examples:
+        - Content Card Title
+    link_href:
+      title: Link
+      type: string
+      format: uri-reference
+      examples: [ '/' ]
+    metadata:
+      title: Metadata
+      type: string
+      examples: [ '20 March 2027' ]
+    body_text:
+      title: Body text
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples: [ 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis.' ]
+    background:
+      type: boolean
+      title: Background color
+      description: Gives the card a background color

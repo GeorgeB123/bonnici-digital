@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 5cf974a3-7817-44f9-afc3-8963d2cec05e
+  bundle: dripyard_menu_card
+  default_langcode: en
+  depends:
+    6c7a548e-edde-46d6-8b3a-32fae4ed49d8: media
+    be64539c-9ef0-4b7d-a5a8-01e3019511cc: menu_link_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Data Security'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_image_media:
+    -
+      entity: 6c7a548e-edde-46d6-8b3a-32fae4ed49d8
+  dripyard_link:
+    -
+      uri: 'internal:/'
+      title: 'Data Security'
+      options: {  }
+  dripyard_menu_item_reference:
+    -
+      entity: be64539c-9ef0-4b7d-a5a8-01e3019511cc

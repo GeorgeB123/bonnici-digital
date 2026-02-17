@@ -1,0 +1,250 @@
+/**
+ * @file
+ * Form item styles.
+ */
+
+/**
+ * General form item.
+ */
+.form-item {
+  margin-block: var(--spacing-xs);
+}
+
+/**
+ * When a table row or a container-inline has a single form item, prevent it
+ * from adding unnecessary extra spacing.
+ * If it has multiple form items, allow spacing between them, overriding core.
+ */
+tr .form-item,
+.container-inline .form-item {
+  margin-block: var(--spacing-xxs);
+}
+
+/**
+ * Form element label.
+ */
+.form-item__label {
+  display: block;
+  margin-block: var(--spacing-xxs);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.container-inline .form-item__label {
+  margin-inline-end: 1em;
+}
+
+.form-item__label--multiple-value-form {
+  margin-block: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.form-item__label[for] {
+  cursor: pointer;
+}
+
+.form-item__label.option {
+  display: inline;
+  font-weight: normal;
+}
+
+/* Label states. */
+.form-item__label.is-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Form required star icon */
+.form-item__label.form-required::after,
+.fieldset__label.form-required::after,
+.required-mark::after {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-inline: 0.3em;
+  content: "";
+  vertical-align: text-top;
+
+  /* Use a mask image to prevent screen readers from announcing the text. */
+  mask-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 7.562 1.114-3.438c2.565.906 4.43 1.688 5.59 2.35-.306-2.921-.467-4.93-.484-6.027h3.511c-.05 1.597-.234 3.6-.558 6.003 1.664-.838 3.566-1.613 5.714-2.325l1.113 3.437c-2.05.678-4.06 1.131-6.028 1.356.984.856 2.372 2.381 4.166 4.575l-2.906 2.059c-.935-1.274-2.041-3.009-3.316-5.206-1.194 2.275-2.244 4.013-3.147 5.206l-2.856-2.059c1.872-2.307 3.211-3.832 4.017-4.575-2.081-.402-4.058-.856-5.93-1.356' fill='%232494DB'/%3E%3C/svg%3E%0A");
+  mask-repeat: no-repeat;
+  mask-size: 0.5rem 0.5rem;
+  background-color: currentColor;
+}
+
+/**
+ * Form item description.
+ */
+.form-item__description,
+.description {
+  margin-block: var(--spacing-xxs);
+  max-width: 60ch;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.field-multiple-table+.form-item__description {
+  margin-block-start: 0;
+}
+
+/**
+ * Error message (Inline form errors).
+ */
+.form-item--error-message {
+  display: flex;
+  align-items: center;
+  margin-block: var(--spacing-xxs);
+  color: var(--theme-color-error);
+  font-size: var(--body-s-size);
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+
+  &::before {
+    display: inline-block;
+    width: var(--spacing-xs);
+    aspect-ratio: 1;
+    margin-inline-end: var(--spacing-xxs);
+    content: "";
+    mask-image: url('../../images/exclamation.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--theme-color-error);
+
+    @media (forced-colors: active) {
+      background-color: canvasText;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+}
+
+/**
+ * Form actions.
+ */
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  margin-block: var(--spacing-xxs);
+
+  .button,
+  .action-link {
+    margin-block: var(--spacing-xxs);
+  }
+
+  > .form-wrapper {
+    margin-inline-end: var(--spacing-xs);
+  }
+
+  .ajax-progress--throbber {
+    align-self: center;
+  }
+}
+
+
+/**
+ * Custom label placement for editor filter format select.
+ */
+.form-item--editor-format {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+
+  .form-item__label,
+  .form-item__prefix,
+  .form-item__suffix,
+  .form-element--editor-format {
+    min-width: 1px;
+  }
+
+  .form-item__label,
+  .form-item__prefix,
+  .form-item__suffix {
+    margin-inline-end: var(--spacing-xxs);
+  }
+
+  .form-item__description,
+  .form-item--error-message {
+    flex: 0 1 100%;
+    min-width: 1px;
+  }
+}
+
+/**
+ * Inline forms.
+ */
+.form--inline {
+  > * {
+    display: inline-block;
+    margin-block: var(--spacing-xxs) 0;
+    vertical-align: top; /* Ensure proper alignment if description is present. */
+
+    &:not(:last-child) {
+      margin-inline-end: var(--spacing-xxs);
+    }
+  }
+
+  select,
+  input:where([type="text"], [type="search"]) {
+    width: 100%;
+  }
+
+  .form-actions {
+    margin-top: 0;
+  }
+}
+
+.form-type-password:has(.password-strength) {
+  width: fit-content;
+}
+
+.password-strength__indicator {
+  background-color: var(--form-accent);
+}
+
+.layout-builder-form {
+  & .form-actions {
+    align-items: center;
+  }
+}
+
+.container-inline {
+  > div:not(:last-child) {
+    margin-inline-end: var(--spacing-xxs);
+  }
+}
+
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--spacing-xxs);
+  padding: var(--sp2);
+  background-color: var(--theme-surface-alt);
+  border-radius: var(--radius-md);
+
+  .form-item {
+    margin: 0;
+  }
+
+  .filter-guidelines {
+    flex-basis: 100%;
+  }
+}
+
+.field-suffix {
+  margin-inline-start: var(--spacing-xxxs);
+}
+
+.webform-tooltip-element {
+  width: fit-content;
+}

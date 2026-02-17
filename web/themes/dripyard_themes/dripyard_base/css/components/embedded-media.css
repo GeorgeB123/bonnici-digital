@@ -1,0 +1,98 @@
+/**
+ * @file
+ * Embedded Media.
+ */
+
+figure {
+  width: fit-content;
+  margin: var(--spacing-l) 0;
+  background-color: var(--theme-surface-alt);
+}
+
+figcaption {
+  contain: inline-size;
+  padding: var(--sp1-5);
+  color: var(--theme-text-color-soft);
+  background: var(--theme-surface-alt);
+  font-size: var(--body-s-size);
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+
+  @media (width > 700px) {
+    padding: var(--sp2);
+  }
+}
+
+.align-right {
+  float: none;
+  max-width: 100%;
+
+  /* Intentionally not using CSS logical properties on code block below. This
+     class is added by the editor, and editor should respect their input. */
+  @container (width > 1000px) {
+    float: right;
+    max-width: 50%;
+    margin-block: 0;
+    margin-left: var(--spacing-xs);
+  }
+}
+
+.align-left {
+  float: none;
+  max-width: 100%;
+
+  /* Intentionally not using CSS logical properties on code block below. This
+     class is added by the editor, and editor should respect their input. */
+  @container (width > 1000px) {
+    float: left;
+    max-width: 50%;
+    margin-block: 0;
+    margin-right: var(--spacing-xs);
+  }
+}
+
+/*
+ * Ensure that right and left aligned media uses the same exact top margin
+ * as the next element, so they will appear horizontally even.
+ */
+:is(.align-left, .align-right):not(:is(h2, h3, h4, .h2, .h3, .h4) + *) {
+  @container (width > 1000px) {
+    &:has(+ :is(p, .body-l)) {
+      margin-block: var(--body-l-margin-block);
+      margin-bottom: 0;
+    }
+
+    &:has(+ :is(h2, .h2)) {
+      margin-block: var(--h2-margin-block);
+      margin-bottom: 0;
+    }
+
+    &:has(+ :is(h3, .h3)) {
+      margin-block: var(--h3-margin-block);
+      margin-bottom: 0;
+    }
+
+    &:has(+ :is(h4, .h4)) {
+      margin-block: var(--h4-margin-block);
+      margin-bottom: 0;
+    }
+  }
+}
+
+p > :is(.align-left, .align-right) {
+  margin-block: 0.3lh;
+}
+
+.align-center {
+  img,
+  video,
+  audio {
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+.media-oembed-content {
+  display: block;
+  max-width: 100%;
+}

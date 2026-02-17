@@ -1,0 +1,118 @@
+/*
+ * @file
+ * Miscellaneous styling that doesn't fit elsewhere.
+ */
+
+/* Gin's toolbar at mobile width does not work properly with displace, and
+   obscures primary nav, so we hide it. */
+.gin-secondary-toolbar--frontend {
+  @media (width <= 1024px) {
+    display: none;
+  }
+}
+
+/* Extra specificity needed for focus styles. */
+.dropbutton-widget[class] {
+  background: var(--theme-surface) !important; /* Override a lot of specificity that webform module introduces. */
+  border: solid 1px var(--theme-border-color-soft);
+  border-radius: var(--radius-sm);
+
+  &:not(:has(.dropbutton)) {
+    display: none;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    padding: var(--spacing-xxxs) var(--spacing-xxs);
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--theme-surface-alt);
+    }
+  }
+
+  a,
+  button {
+    &:focus-visible {
+      outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+      outline-offset: calc(-1 * var(--focus-ring-width));
+    }
+  }
+}
+
+.dropbutton-multiple {
+  .dropbutton .secondary-action {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    overflow: clip;
+  }
+
+  &.open .dropbutton .secondary-action {
+    visibility: unset;
+    height: unset;
+    overflow: unset;
+  }
+}
+
+/* Webform module provides its own close button. So do we, so we hide theirs. */
+html.js[class] :is(.webform-message--close, .webform-message__link) {
+  display: none;
+}
+
+/* Ensure proper alignment with entity moderation form. */
+.entity-moderation-form__item[class] {
+  margin-bottom: 0;
+}
+
+.toolbar-oriented .toolbar-bar[class] {
+  position: fixed;
+}
+
+/* Styling helpers for Select2, which is frequently included in Webform. */
+.select2-container--default {
+  .select2-selection--single {
+    height: var(--form-height);
+    border: var(--form-border);
+    border-radius: var(--form-border-radius);
+
+    .select2-selection__rendered[class] {
+      padding-inline-start: var(--form-padding-inline);
+      line-height: var(--form-height);
+    }
+
+    .select2-selection__arrow[class] {
+      height: var(--form-height);
+      inset-inline-end: 10px;
+    }
+  }
+
+  .select2-selection--multiple {
+    border: var(--form-border);
+
+    .select2-selection__rendered li {
+      display: inline-flex;
+      align-items: center;
+      height: calc(var(--form-height) - 10px);
+      padding: var(--spacing-xxs);
+    }
+  }
+}
+
+/* Helpers for webform scale options. */
+.webform-scale-options input+label,
+.webform-scale-options input+label.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-box: trim-both cap alphabetic;
+  border: var(--form-border);
+}
+
+.media--type-remote-video {
+  border-radius: var(--radius-md);
+  overflow: clip;
+}

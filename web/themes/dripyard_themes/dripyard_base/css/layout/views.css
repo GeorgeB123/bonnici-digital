@@ -1,0 +1,42 @@
+/*
+ * @file
+ * Generic view styling.
+ */
+
+.view {
+  > *:where(:not(:last-child)) {
+    margin-bottom: var(--spacing-component-internal);
+  }
+}
+
+.view-table > .view-content {
+  max-width: 100%;
+  overflow: auto;
+}
+
+/*
+ * Custom CSS grid treatment applied to several Drupal CMS views.
+ */
+.views--card-grid .view-content {
+  --column-count: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+  gap: calc(var(--gap) * 2) var(--gap);
+
+  @container (width > 600px) {
+    &:has(> *:where(:nth-child(2):not(:nth-child(3):last-child))) {
+      --column-count: 2;
+    }
+
+    &:has(> *:where(:nth-child(3):last-child, :nth-child(6))) {
+      --column-count: 3;
+    }
+  }
+
+  @container (width > 1000px) {
+    &:has(> *:where(:nth-child(3))) {
+      --column-count: 3;
+    }
+  }
+}

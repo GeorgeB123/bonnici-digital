@@ -1,0 +1,9 @@
+{{ include('dripyard_base:card', {
+  directory,
+  title: node.label,
+  image: content.field_image,
+  href: url('entity.node.canonical', {'node': node.id}),
+  byline: 'Learn more',
+  eyebrow_text: node.created.value|date('y.m.d') ~ ' Article',
+  body: content.body,
+  }, with_context = false) }}

@@ -1,0 +1,51 @@
+/*
+ * @file
+ * Layout variables.
+ */
+
+:root {
+  --container-max-percentage: 92cqw;
+  --container-max-pixel: var(--theme-setting-container-max-pixel, 1440px);
+  --container-width: min(var(--container-max-percentage), var(--container-max-pixel));
+  --space-for-fixed-header: 160px;
+
+  .site-header-no-sticky.site-header-full-width {
+    --space-for-fixed-header: 64px;
+  }
+
+  /* Semantic layout variables. */
+  --spacing-xxxs: var(--sp0-5);         /* 4px */
+  --spacing-xxs: var(--sp);             /* 8px */
+  --spacing-xs: var(--sp2-5);           /* 20px */
+  --spacing-s: var(--sp4);              /* 32px */
+  --spacing-m: var(--sp5);              /* 40px */
+  --spacing-l: var(--sp7);              /* 56px */
+  --spacing-xl: var(--sp8);             /* 64px */
+  --spacing-xxl: var(--sp10);           /* 80px */
+  --spacing-xxxl: calc(15 * var(--sp)); /* 120px */
+  --spacing-component: var(--spacing-xxl);
+  --spacing-component-internal: var(--spacing-xl);
+  --gap: 1.25rem; /* 20px */
+  --gap-large: var(--sp5);
+
+  @media (width > 700px) {
+    --spacing-component: var(--spacing-xxxl);
+    --spacing-component-internal: var(--spacing-xxl);
+  }
+
+  /* Primitive layout variables. */
+  --sp: 0.5rem;                     /* 8px */
+  --sp0-5: calc(0.5 * var(--sp));   /* 4px */
+  --sp1: var(--sp);                 /* 8px */
+  --sp1-5: calc(1.5 * var(--sp));   /* 12px */
+  --sp2: calc(2 * var(--sp));       /* 16px */
+  --sp2-5: calc(2.5 * var(--sp));   /* 20px */
+  --sp3: calc(3 * var(--sp));       /* 24px */
+  --sp4: calc(4 * var(--sp));       /* 32px */
+  --sp5: calc(5 * var(--sp));       /* 40px */
+  --sp6: calc(6 * var(--sp));       /* 48px */
+  --sp7: calc(7 * var(--sp));       /* 56px */
+  --sp8: calc(8 * var(--sp));       /* 64px */
+  --sp9: calc(9 * var(--sp));       /* 72px */
+  --sp10: calc(10 * var(--sp));     /* 80px */
+}

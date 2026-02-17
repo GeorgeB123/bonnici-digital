@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1c5a6a0b-3bbb-4e57-b03f-5cfe9e78c8e4
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Software
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /solutions/software
+      langcode: en
+  body:
+    -
+      value: "<p>Custom software solutions built for your unique business needs. From web applications to enterprise systems, NeonByte delivers quality code that scales with your organization and adapts as your requirements evolve.</p><h2>Development Services</h2><ul><li><strong>Web Applications</strong> — Modern, responsive applications built with the latest frameworks</li><li><strong>Mobile Development</strong> — Native and cross-platform apps for iOS and Android</li><li><strong>API Development</strong> — RESTful and GraphQL APIs for seamless integrations</li><li><strong>Legacy Modernization</strong> — Transform outdated systems into modern architectures</li></ul><h2>Our Development Process</h2><table><thead><tr><th>Phase</th><th>Activities</th><th>Deliverables</th></tr></thead><tbody><tr><td>Discovery</td><td>Requirements gathering, stakeholder interviews</td><td>Technical specification</td></tr><tr><td>Design</td><td>Architecture planning, UI/UX design</td><td>System design documents</td></tr><tr><td>Development</td><td>Agile sprints, code reviews</td><td>Working software increments</td></tr><tr><td>Testing</td><td>QA, security testing, UAT</td><td>Test reports, bug fixes</td></tr><tr><td>Deployment</td><td>CI/CD setup, go-live support</td><td>Production-ready system</td></tr></tbody></table><h2>Technology Stack</h2><p>We work with modern technologies including:</p><ol><li>Frontend: React, Vue.js, Angular, Next.js</li><li>Backend: Node.js, Python, Go, .NET</li><li>Cloud: AWS, Azure, Google Cloud</li><li>Databases: PostgreSQL, MongoDB, Redis</li></ol><p>Every project includes comprehensive documentation, knowledge transfer, and ongoing support options.</p>"
+      format: full_html
+      summary: ''

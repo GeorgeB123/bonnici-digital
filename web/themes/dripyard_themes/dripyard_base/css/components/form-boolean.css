@@ -1,0 +1,21 @@
+/*
+ * @file
+ * Styling for radio buttons and checkboxes.
+ */
+
+[type="radio"],
+[type="checkbox"] {
+  width: 24px;
+  height: 24px; /* Can't use aspect-ratio here because of Safari. */
+  margin-block: 0;
+  margin-inline: var(--spacing-xxxs);
+  vertical-align: top;
+  color: inherit; /* Necessary so currentColor focus-ring-color works. */
+  color-scheme: var(--form-color-scheme);
+}
+
+.form-type-checkbox {
+  td & {
+    margin: 0;
+  }
+}

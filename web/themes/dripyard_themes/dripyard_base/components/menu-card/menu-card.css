@@ -1,0 +1,46 @@
+/*
+ * @file
+ * Styling for menu cards (that can appear in dropdowns).
+ */
+
+.menu-card {
+  --theme-focus-ring-color: var(--theme-text-color-loud);
+
+  position: relative;
+  width: 250px;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: clip;
+  background-color: var(--black);
+
+  &:has(:focus-visible) {
+    outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+    outline-offset: 3px;
+  }
+}
+
+.menu-card__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  .menu-card:hover & {
+    opacity: 1;
+  }
+}
+
+.menu-card__link a {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-xxs);
+  color: var(--white);
+  font-size: var(--body-m-size);
+  text-decoration: none;
+}

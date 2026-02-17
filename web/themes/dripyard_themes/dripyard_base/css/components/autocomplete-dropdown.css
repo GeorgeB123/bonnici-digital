@@ -1,0 +1,29 @@
+/*
+ * @file
+ * Styles for the Drupal autocomplete dropdown.
+ */
+
+/* This is the <ul> */
+.ui-widget.ui-widget-content {
+  border-color: var(--theme-border-color-soft);
+}
+
+/* This is the <li> */
+.ui-menu .ui-menu-item {
+  a {
+    display: block;
+    padding: var(--form-padding-inline) var(--spacing-xxs);
+    color: var(--theme-text-color-primary);
+    font-weight: 600;
+
+    &.ui-state-active {
+      background-color: var(--theme-text-color-primary);
+      color: var(--theme-surface);
+
+      @media (forced-colors: active) {
+        outline: solid 4px transparent;
+        outline-offset: -4px;
+      }
+    }
+  }
+}

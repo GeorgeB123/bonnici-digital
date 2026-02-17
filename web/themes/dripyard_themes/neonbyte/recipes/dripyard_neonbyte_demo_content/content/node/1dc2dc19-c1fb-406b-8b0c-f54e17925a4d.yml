@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1dc2dc19-c1fb-406b-8b0c-f54e17925a4d
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Book a Demo'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /book-demo
+      langcode: en
+  body:
+    -
+      value: "<p>See NeonByte solutions in action. Schedule a personalized demo with our team to discover how we can help transform your business and address your specific technology challenges.</p><h2>What to Expect</h2><ul><li><strong>Discovery Call</strong> — 15-minute conversation to understand your needs</li><li><strong>Live Demo</strong> — 45-minute walkthrough of relevant solutions</li><li><strong>Q&amp;A Session</strong> — Technical deep-dive with our engineers</li><li><strong>Custom Proposal</strong> — Tailored recommendations and pricing</li></ul><h2>Demo Options</h2><table><thead><tr><th>Product</th><th>Duration</th><th>Topics Covered</th></tr></thead><tbody><tr><td>Neony Platform</td><td>45 min</td><td>Core modules, integrations, deployment</td></tr><tr><td>AiByte AI</td><td>30 min</td><td>Automation workflows, ML capabilities</td></tr><tr><td>Security Suite</td><td>60 min</td><td>Threat detection, compliance, monitoring</td></tr><tr><td>Full Portfolio</td><td>90 min</td><td>Complete solution overview</td></tr></tbody></table><h2>Prepare for Your Demo</h2><ol><li>Identify key stakeholders who should attend</li><li>List your current technology challenges and goals</li><li>Gather questions about security, compliance, and integration</li><li>Consider your timeline and budget parameters</li></ol><p>After your demo, you'll receive a recording, summary of discussed solutions, and next steps for moving forward. No obligation, no pressure — just information to help you make the right decision.</p>"
+      format: full_html
+      summary: ''

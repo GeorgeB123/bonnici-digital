@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: ccbdefba-8074-47a4-b974-29c639bf8bb7
+  bundle: dripyard_hero
+  default_langcode: en
+  depends:
+    60c88a02-6f6a-437a-9068-f5bf21e0b923: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Home Page Hero'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_align_x:
+    -
+      value: start
+  dripyard_align_y:
+    -
+      value: bottom
+  dripyard_ctas:
+    -
+      uri: 'internal:/'
+      title: 'Book a Demo'
+      options: {  }
+  dripyard_hero_height:
+    -
+      value: full-screen
+  dripyard_hero_position_top:
+    -
+      value: true
+  dripyard_image_media:
+    -
+      entity: 60c88a02-6f6a-437a-9068-f5bf21e0b923
+  dripyard_text_color:
+    -
+      value: white
+  dripyard_component_theme:
+    -
+      value: dark
+  dripyard_title:
+    -
+      value: '<p>Securing Tomorrow.&nbsp;<br>One Byte at a Time.</p>'
+      format: dripyard_superbasic

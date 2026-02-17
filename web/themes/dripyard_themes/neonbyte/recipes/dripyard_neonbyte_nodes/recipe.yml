@@ -1,0 +1,8 @@
+name: Dripyard NeonByte Nodes
+type: Dripyard
+description: 'Provides the node type configuration for Dripyard NeonByte'
+recipes:
+  - 'dripyard_node_article_cards'
+  - 'dripyard_text_format_full_html'
+config:
+  strict: false

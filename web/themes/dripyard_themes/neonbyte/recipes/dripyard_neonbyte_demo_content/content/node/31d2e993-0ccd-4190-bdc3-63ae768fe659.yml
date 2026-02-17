@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 31d2e993-0ccd-4190-bdc3-63ae768fe659
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Presskit
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /presskit
+      langcode: en
+  body:
+    -
+      value: "<p>Media resources for journalists and publications. Download logos, company facts, executive bios, and other press materials for your stories about NeonByte.</p><h2>Brand Assets</h2><ul><li><strong>Logo Package</strong> — Primary logo, wordmark, and icon in various formats</li><li><strong>Brand Guidelines</strong> — Colors, typography, and usage requirements</li><li><strong>Product Screenshots</strong> — Approved images of our software interfaces</li><li><strong>Photography</strong> — Office, team, and event photos</li></ul><h2>Company Facts</h2><table><thead><tr><th>Detail</th><th>Information</th></tr></thead><tbody><tr><td>Founded</td><td>2015</td></tr><tr><td>Headquarters</td><td>Austin, Texas</td></tr><tr><td>Employees</td><td>200+</td></tr><tr><td>Clients</td><td>500+ organizations</td></tr><tr><td>Offices</td><td>Austin, New York, London</td></tr></tbody></table><h2>Executive Bios</h2><ol><li>Sarah Chen, CEO — Downloadable bio and headshot</li><li>Marcus Williams, CTO — Downloadable bio and headshot</li><li>Dr. Elena Rodriguez, CISO — Downloadable bio and headshot</li><li>James O'Connor, COO — Downloadable bio and headshot</li></ol><p>For interview requests or additional materials, contact our communications team at press@neonbyte.com. We typically respond within 24 hours.</p>"
+      format: full_html
+      summary: ''

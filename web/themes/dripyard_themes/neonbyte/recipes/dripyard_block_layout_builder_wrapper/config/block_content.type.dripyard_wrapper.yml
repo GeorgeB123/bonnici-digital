@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_wrapper
+label: 'Layout Builder Wrapper'
+revision: false
+description: 'Provides a wrapper (accordion, carousel, tab group) placeholder for use in Layout Builder to wrap other blocks automatically.'

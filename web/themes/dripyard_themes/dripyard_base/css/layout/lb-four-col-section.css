@@ -1,0 +1,22 @@
+/*
+ * @file
+ * Override styles for core's four-column layout section.
+ */
+
+.layout--fourcol-section {
+  display: grid;
+  gap: calc(var(--gap) * 2) var(--gap);
+  grid-template-columns: var(--grid-template, auto);
+}
+
+@container (width > 600px) {
+  .layout--fourcol-section {
+    --grid-template: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container (width > 1200px) {
+  .layout--fourcol-section {
+    --grid-template: repeat(4, minmax(0, 1fr));
+  }
+}

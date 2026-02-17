@@ -1,0 +1,12 @@
+<details {{ attributes.addClass('accordion-item') }} {{ open ? 'open' }}>
+  <summary class="accordion-item__summary">
+    <span class="accordion-item__title">{{ title }}</span>
+    {{ include('dripyard_base:icon', {
+      icon: 'chevron-down',
+      size: 16,
+    }, with_context = false) }}
+  </summary>
+  <div class="accordion-item__content">
+    {% block accordion_item_content %}{% endblock %}
+  </div>
+</details>

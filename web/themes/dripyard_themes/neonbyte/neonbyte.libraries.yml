@@ -1,0 +1,31 @@
+global:
+  css:
+    base:
+      css/base/fonts.css: {}
+    layout:
+      css/layout/layout.css: {}
+      css/layout/grid.css: {}
+      css/layout/region.css: {}
+themes:
+  css:
+    base:
+      css/themes/theme-white.css: {}
+      css/themes/theme-light.css: {}
+      css/themes/theme-dark.css: {}
+      css/themes/theme-black.css: {}
+      css/themes/theme-primary.css: {}
+      css/themes/theme-secondary.css: {}
+variables:
+  css:
+    base:
+      css/_variables/variables-colors-semantic.css: {}
+      css/_variables/variables-forms.css: {}
+      css/_variables/variables-layout.css: {}
+      css/_variables/variables-misc.css: {}
+      css/_variables/variables-typography.css: {}
+
+# Component libraries
+article-full:
+  css:
+    component:
+      css/components/article-full.css: {}

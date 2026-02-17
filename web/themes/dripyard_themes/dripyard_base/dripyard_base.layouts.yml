@@ -1,0 +1,45 @@
+dripyard_layout_dynamic:
+  label: 'Dripyard Dynamic Layout'
+  path: templates/layouts
+  class: '\Drupal\dripyard_base\Layout\LayoutDynamic'
+  template: layout--dynamic
+  category: 'Dripyard'
+  default_region: cell_1
+  icon_map:
+    - [cell_1, cell_2, cell_3, cell_4]
+    - [cell_5, cell_6, cell_7, cell_8]
+    - [cell_9, cell_10, cell_11, cell_12]
+    - [cell_13, cell_14, cell_15, cell_16]
+  regions:
+    cell_1:
+      label: Cell 1
+    cell_2:
+      label: Cell 2
+    cell_3:
+      label: Cell 3
+    cell_4:
+      label: Cell 4
+    cell_5:
+      label: Cell 5
+    cell_6:
+      label: Cell 6
+    cell_7:
+      label: Cell 7
+    cell_8:
+      label: Cell 8
+    cell_9:
+      label: Cell 9
+    cell_10:
+      label: Cell 10
+    cell_11:
+      label: Cell 11
+    cell_12:
+      label: Cell 12
+    cell_13:
+      label: Cell 13
+    cell_14:
+      label: Cell 14
+    cell_15:
+      label: Cell 15
+    cell_16:
+      label: Cell 16

@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b0a03235-0539-4793-b3e0-4b40e7d89531
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Analytics and Reports'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /insights/analytics-reports
+      langcode: en
+  body:
+    -
+      value: "<p>Transform data into actionable insights with NeonByte's analytics and reporting solutions. Make data-driven decisions with confidence using visualizations, automated reports, and predictive analytics.</p><h2>Analytics Capabilities</h2><ul><li><strong>Data Visualization</strong> — Interactive charts, graphs, and dashboards</li><li><strong>Trend Analysis</strong> — Identify patterns and anomalies over time</li><li><strong>Predictive Modeling</strong> — Forecast future outcomes with machine learning</li><li><strong>Ad-Hoc Queries</strong> — Self-service exploration without IT involvement</li></ul><h2>Analytics Use Cases</h2><table><thead><tr><th>Domain</th><th>Analysis Type</th><th>Business Value</th></tr></thead><tbody><tr><td>Security</td><td>Threat intelligence</td><td>Faster incident detection</td></tr><tr><td>Operations</td><td>Performance metrics</td><td>Improved efficiency</td></tr><tr><td>Finance</td><td>Cost analysis</td><td>Budget optimization</td></tr><tr><td>Sales</td><td>Pipeline analytics</td><td>Revenue forecasting</td></tr></tbody></table><h2>Platform Features</h2><ol><li>Connect to 50+ data sources including databases, APIs, and cloud services</li><li>Drag-and-drop dashboard builder for non-technical users</li><li>Scheduled report delivery via email, Slack, or Teams</li><li>Role-based access controls for sensitive data</li><li>Mobile-optimized views for on-the-go access</li></ol><p>Our analytics platform scales from small team deployments to enterprise-wide implementations with thousands of users.</p>"
+      format: full_html
+      summary: ''

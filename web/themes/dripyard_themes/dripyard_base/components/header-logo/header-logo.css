@@ -1,0 +1,14 @@
+/*
+ * @file
+ * Styles for the header logo.
+ */
+
+.header-logo__link {
+  --header-logo-max-height: 44px;
+
+  display: block;
+
+  img {
+    max-height: var(--header-logo-max-height);
+  }
+}

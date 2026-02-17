@@ -1,0 +1,27 @@
+/*
+ * @file
+ * Styling for logo grid item.
+ */
+
+.logo-item {
+  --logo-item-height: var(--logo-grid-logo-size);
+  --logo-item-padding-block: var(--sp2);
+  --logo-item-padding-inline: var(--sp4);
+  --logo-item-background-border-radius: var(--logo-grid-logo-radius, 40px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: var(--logo-item-padding-block) var(--logo-item-padding-inline);
+  background-color: var(--logo-grid-logo-background);
+  border-radius: var(--logo-item-background-border-radius);
+  height: var(--logo-item-height);
+  overflow: clip;
+
+  img {
+    width: auto;
+    height: calc(var(--logo-grid-logo-size) - var(--logo-item-padding-block) * 2);
+  }
+}

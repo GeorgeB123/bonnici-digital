@@ -1,0 +1,30 @@
+{% set classes = [
+  'hero',
+  'has-background-image',
+  position_behind_against_screen_top ? 'full-height hero--position-against-screen-top',
+  height ? 'hero--height-' ~ height|clean_class,
+  align_x ? 'hero--align-x-' ~ align_x|clean_class,
+  align_y ? 'hero--align-y-' ~ align_y|clean_class,
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class,
+  text_color ? 'hero--text-color-' ~ text_color|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="hero__media">
+    {% block hero_media %}{% endblock %}
+  </div>
+  <div class="hero__container container">
+    <div class="hero__content">
+      {# The `title` prop is deprecated and doesn't appear in the component.yml
+      but is kept here for backwards compatibility. #}
+      {% if title %}
+        <h1 class="hero__title heading-title">{{ title }}</h1>
+      {% endif %}
+
+      <div class="hero__block-content">
+        {% block hero_content %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

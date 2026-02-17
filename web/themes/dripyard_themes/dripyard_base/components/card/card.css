@@ -1,0 +1,207 @@
+/*
+ * @file
+ * Styles for cards.
+ */
+
+.card {
+  --card-border-radius: var(--radius-md);
+  --card-background: var(--theme-surface);
+  --card-text-color: var(--theme-text-color-loud);
+  --card-heading-color: var(--theme-text-color-loud);
+  --card-body-color: var(--theme-text-color-soft);
+  --card-bottom-gap: var(--spacing-xs);
+  --card-layout-gap: var(--gap);
+
+  position: relative; /* Anchor hyperlink pseudo-element. */
+  display: flex;
+  container-type: inline-size;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  color: var(--card-text-color);
+  text-align: start;
+
+  @container (width > 600px) {
+    --card-layout-gap: var(--gap-large);
+  }
+
+  &[class*="theme"] {
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    overflow: clip;
+  }
+}
+
+.card__layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-layout-gap);
+  width: 100%;
+
+  @container (width > 600px) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .card[class*="theme"] & {
+      padding-inline: 0 var(--card-layout-gap);
+    }
+
+    .card[class*="theme"].card--layout-flipped & {
+      padding-inline: var(--card-layout-gap) 0;
+    }
+  }
+}
+
+.card__top {
+  border-radius: var(--card-border-radius);
+  overflow: clip;
+
+  @container (width > 600px) {
+    .card--layout-flipped & {
+      order: 2;
+    }
+  }
+
+  .card[class*="theme"] & {
+    border-radius: 0 ;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+    @container (600px < width < 900px ) {
+      aspect-ratio: 1;
+    }
+  }
+}
+
+.card__bottom {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-bottom-gap);
+  color: var(--card-body-color);
+
+  @container (width <= 600px) {
+    .card[class*="theme"] & {
+      padding: 0 var(--gap) var(--gap) var(--gap);
+    }
+  }
+
+  @container (width > 600px) {
+    justify-content: center;
+  }
+}
+
+.card__eyebrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.card__eyebrow-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp3);
+  font-size: var(--body-m-size);
+  line-height: var(--body-m-line-height);
+  letter-spacing: var(--body-m-letter-spacing);
+  color: var(--theme-text-color-loud);
+}
+
+.card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: start;
+  width: var(--sp4);
+  aspect-ratio: 1;
+  background-color: color-mix(in oklch, var(--card-text-color) 25%, transparent);
+  transition: background-color 0.2s;
+
+  @container (width > 600px) {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+  }
+
+  .card:hover & {
+    background-color: color-mix(in oklch, var(--theme-text-color-primary) 50%, transparent);
+  }
+
+  &:dir(rtl) {
+    scale: -1 1;
+  }
+}
+
+.card__title {
+  margin: 0;
+  font-size: var(--h4-size);
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
+  color: var(--card-heading-color);
+
+  @container (width > 600px) {
+    font-size: var(--h3-size);
+    line-height: var(--h3-line-height);
+    letter-spacing: var(--h3-letter-spacing);
+  }
+}
+
+.card__link {
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+  }
+}
+
+.card__body {
+  font-size: var(--body-m-size);
+  line-height: 1.5;
+  letter-spacing: var(--body-m-letter-spacing);
+
+  /* If card width is between 600px and 800px, clamp count of body lines to 3. */
+  @container (600px < width < 800px) {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  @container (width > 800px) {
+    font-size: var(--body-l-size);
+    letter-spacing: var(--body-l-letter-spacing);
+  }
+
+  &:has(> div) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+
+  * {
+    font-size: inherit;
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  .text-content {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+}

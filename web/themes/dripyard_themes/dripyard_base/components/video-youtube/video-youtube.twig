@@ -1,0 +1,20 @@
+{% set classes = [
+  'video-youtube',
+  border_radius ? 'video-youtube--radius-' ~ border_radius,
+] %}
+
+{% set title = title ? 'Play '|t ~ title : 'Play YouTube video'|t %}
+
+{% if 'youtu.be/' in url %}
+  {% set youtube_id = url|split('youtu.be/')|last|split('?')[0]|split('&')[0] %}
+{% elseif 'v=' in url %}
+  {% set youtube_id = url|split('v=')|last|split('&')[0] %}
+{% elseif '/embed/' in url %}
+  {% set youtube_id = url|split('/embed/')|last|split('?')[0] %}
+{% elseif '/v/' in url %}
+  {% set youtube_id = url|split('/v/')|last|split('?')[0] %}
+{% endif %}
+
+<div{{ attributes.addClass(classes).setAttribute('data-youtube-url', url) }}>
+  <lite-youtube videoid="{{ youtube_id }}" playlabel="{{ title }}"></lite-youtube>
+</div>

@@ -1,0 +1,13 @@
+{% set classes = [
+  'accordion-group',
+  variation ? 'accordion-group--variation-' ~ variation,
+  ]
+%}
+
+<section {{ attributes.addClass(classes).setAttribute('role', 'group') }}>
+  <div class="accordion-group__container">
+    <div class="accordion-group__content">
+      {% block accordion_group_content %}{% endblock %}
+    </div>
+  </div>
+</section>

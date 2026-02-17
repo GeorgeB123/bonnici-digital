@@ -1,0 +1,51 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Full pager
+status: stable
+noUi: true
+props:
+  type: object
+  required:
+    - items
+    - pagination_heading_level
+  properties:
+    pagination_heading_level:
+      type: string
+    items:
+      type: [object, 'null']
+      properties:
+        first:
+          type: object
+          properties:
+            href:
+              type: string
+        previous:
+          type: object
+          properties:
+            href:
+              type: string
+        next:
+          type: object
+          properties:
+            href:
+              type: string
+        last:
+          type: object
+          properties:
+            href:
+              type: string
+        pages:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              href:
+                type: string
+    current:
+      type: [integer, 'null']
+    ellipses:
+      type: [object, 'null']
+      properties:
+        previous:
+          type: boolean
+        next:
+          type: boolean

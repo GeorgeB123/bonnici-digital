@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c411be7e-fcd8-4375-a01a-c3f1ba387607
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    bb709c48-7166-4221-ab3a-68bedcfadb24: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Products
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: bb709c48-7166-4221-ab3a-68bedcfadb24
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

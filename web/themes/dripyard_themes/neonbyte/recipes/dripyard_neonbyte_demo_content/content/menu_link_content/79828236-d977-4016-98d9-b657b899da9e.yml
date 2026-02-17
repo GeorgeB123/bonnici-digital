@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 79828236-d977-4016-98d9-b657b899da9e
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    234d42fa-fd1e-4b30-8114-a9a07b730840: node
+    634d9d22-330a-4d05-9e5a-9d00f1c18739: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Open Source'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 234d42fa-fd1e-4b30-8114-a9a07b730840
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:634d9d22-330a-4d05-9e5a-9d00f1c18739'
+  revision_translation_affected:
+    -
+      value: true

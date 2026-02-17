@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Button outline variant.
+ */
+
+.button--outline:where(:not(:disabled)) {
+  color: var(--theme-link-color);
+  border: solid 1px var(--theme-border-color-alt);
+  background-color: transparent;
+
+  &:hover {
+    color: var(--theme-link-color-hover);
+  }
+
+  &:active {
+    color: var(--theme-link-color-hover);
+  }
+
+  .button__prefix,
+  .button__suffix {
+    background: transparent;
+
+    svg {
+
+      &,
+      path {
+        fill: currentColor;
+        color: currentColor;
+      }
+    }
+  }
+}
+
+.button--outline:disabled {
+  color: color-mix(in oklch, var(--theme-button-text-color), transparent);
+}

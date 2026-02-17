@@ -1,0 +1,146 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Basic Section
+description: A flexible section component with header and content areas, supporting themes and responsive layouts.
+status: stable
+group: Dripyard Layout
+props:
+  type: object
+  required:
+    - section_width
+    - content_width
+    - margin_top
+    - margin_bottom
+    - padding_top
+    - padding_bottom
+  properties:
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+      examples: [ inherit ]
+    additional_classes:
+      title: Additional CSS classes
+      type: string
+      description: Additional CSS classes that will be added to the wrapper of the section layout (separated by spaces).
+
+    #
+    # Layout definitions.
+    #
+    section_width:
+      type: string
+      title: Section width
+      description: Controls whether the layout will span the full width of the screen, or be constrained to the max-width.
+      enum:
+        - 'edge-to-edge'
+        - 'max-width'
+      meta:enum:
+        edge-to-edge: Edge to edge
+        max-width: Max width
+      examples: ['edge-to-edge']
+    content_width:
+      type: string
+      title: Content width
+      description: Controls whether the width of the content.
+      enum:
+        - 'edge-to-edge'
+        - 'max-width'
+        - 'narrow'
+      meta:enum:
+        edge-to-edge: Edge to edge
+        max-width: Max width
+        narrow: Narrow
+      examples: ['max-width']
+
+    #
+    # Spacing definitions.
+    #
+    margin_top:
+      type: string
+      title: Override top margin
+      description: Overrides the external spacing at the top of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ zero ]
+
+    margin_bottom:
+      type: string
+      title: Override bottom margin
+      description: Overrides the external spacing at the bottom of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ zero ]
+
+    padding_top:
+      type: string
+      title: Override top padding
+      description: Overrides the internal spacing at the top of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ large ]
+
+    padding_bottom:
+      type: string
+      title: Override bottom padding
+      description: Overrides the internal spacing at the bottom of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ large ]
+
+slots:
+  header:
+    title: Header content
+    description: Optional header content for the section
+  content:
+    title: Section content
+    description: Main content area of the section
+
+libraryOverrides:
+  dependencies:
+    - dripyard_base/layout-utilities

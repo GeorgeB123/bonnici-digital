@@ -1,0 +1,28 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: f10f968f-d28f-4451-bacb-eea3da879f98
+  bundle: dripyard_accordion_item
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Scalable Infrastructure & DevOps'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Your application is only as strong as the infrastructure beneath it. That’s why NeonByte builds scalable, cloud-native environments that are secure, automated, and performance-optimized from day one. We use modern DevOps practices to design and implement infrastructure-as-code, set up CI/CD pipelines, containerize applications, and monitor system health in real time. This allows your team to deploy confidently, recover quickly, and scale effortlessly as your product grows.</p><p>Our DevOps team collaborates closely with developers and stakeholders to ensure seamless integration between infrastructure and code. Whether you’re running on AWS, Azure, GCP, or a self-hosted stack, we optimize your environment for reliability and cost-efficiency. We also provide proactive monitoring, alerting, and patch management — so you can focus on building features, not firefighting downtime. With NeonByte, operational excellence is built in from the start.</p>'
+      format: basic_html
+      summary: ''
+  dripyard_title:
+    -
+      value: 'Scalable Infrastructure & DevOps'
+      format: plain_text

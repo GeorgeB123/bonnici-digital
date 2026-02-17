@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_promo
+label: 'Promo'
+revision: false
+description: 'Used to create promo blocks that contain an eyebrow, title, and call(s) to action.'

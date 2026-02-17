@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.dripyard_hero_extra_large
+    - image.style.dripyard_hero_extra_small
+    - image.style.dripyard_hero_large
+    - image.style.dripyard_hero_medium
+    - image.style.dripyard_hero_small
+    - image.style.dripyard_hero_xx_large
+  theme:
+    - neonbyte
+id: dripyard_hero
+label: 'Dripyard Hero'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: dripyard_hero_xx_large
+    breakpoint_id: neonbyte.hero_xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: dripyard_hero_extra_large
+    breakpoint_id: neonbyte.hero_xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: dripyard_hero_large
+    breakpoint_id: neonbyte.hero_l
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: dripyard_hero_medium
+    breakpoint_id: neonbyte.hero_medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: dripyard_hero_small
+    breakpoint_id: neonbyte.hero_small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: dripyard_hero_extra_small
+    breakpoint_id: neonbyte.hero_xs
+    multiplier: 1x
+breakpoint_group: neonbyte
+fallback_image_style: dripyard_hero_extra_large

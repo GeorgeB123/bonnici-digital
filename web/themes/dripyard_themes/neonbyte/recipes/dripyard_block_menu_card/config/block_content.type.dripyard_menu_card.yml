@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_menu_card
+label: 'Menu Card'
+revision: false
+description: 'A Dripyard menu card is a component that will be added to the main menu as an image and link. '

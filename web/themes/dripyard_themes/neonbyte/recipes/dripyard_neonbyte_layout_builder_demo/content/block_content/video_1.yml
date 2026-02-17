@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 02c7ce93-e5b8-4b9d-b8ee-8ac582fa83f0
+  bundle: dripyard_media
+  default_langcode: en
+  depends:
+    41bb3ec1-0193-4628-903d-665c8fd1f7b4: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Dripyard Demo Video'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_media:
+    -
+      entity: 41bb3ec1-0193-4628-903d-665c8fd1f7b4

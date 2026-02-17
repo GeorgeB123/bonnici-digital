@@ -1,0 +1,10 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: HTML header
+noUi: true
+props:
+  type: object
+  properties:
+    primary_theme_path:
+      title: Path to primary theme
+      type: string
+      description: Full path to the primary theme (e.g. Neonbyte, Great Lakes)

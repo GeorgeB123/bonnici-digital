@@ -1,0 +1,107 @@
+/*
+ * @file
+ * Styles for Drupal's local actions (aka tabs).
+ */
+
+.local-actions {
+  --local-actions-height: 44px;
+  --local-actions-padding-inline: var(--sp2);
+  --local-actions-active-border-size: 6px;
+  --local-actions-highlight-color: var(--theme-border-color-alt);
+  --local-actions-text-color: var(--theme-text-color-soft);
+  --local-actions-text-color-active: var(--theme-text-color-loud);
+  --local-actions-letter-spacing: revert;
+  --local-actions-font-size: 14px;
+  --local-actions-background-color: var(--theme-surface);
+  --local-actions-background-color-hover: var(--theme-surface-alt);
+  --local-actions-background-color-active: var(--theme-surface-alt);
+  --local-actions-border-width: 1px;
+  --local-actions-border-color: transparent;
+  --local-actions-transition-duration: 0.2s;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 var(--spacing-m);
+  padding: 0;
+  list-style: none;
+
+  .region--fixed-middle-right & {
+    flex-direction: row-reverse;
+    margin: 0;
+  }
+}
+
+.local-actions__tab {
+  display: flex;
+  margin-block-end: 0;
+  margin-inline-start: calc(-1 * var(--local-actions-border-width));
+
+  a {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    height: var(--local-actions-height);
+    padding-block: 0;
+    padding-inline: var(--local-actions-padding-inline);
+    transition: background-color var(--local-actions-transition-duration);
+    text-decoration: none;
+    letter-spacing: var(--local-actions-letter-spacing);
+    color: var(--local-actions-text-color);
+    border: var(--local-actions-border-width) solid var(--local-actions-border-color);
+    background-color: var(--local-actions-background-color);
+    font-size: var(--local-actions-font-size);
+
+    &:hover {
+      color: var(--local-actions-text-color-active);
+      background-color: var(--local-actions-background-color-hover);
+    }
+
+    &:focus {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.is-active {
+      position: relative; /* Anchor :after pseudo-element. */
+      background-color: var(--local-actions-background-color-active);
+      color: var(--local-actions-text-color-active);
+      font-weight: 600;
+
+      /*
+      * We use :after pseudo-element in place of border so edges do not appear
+      * diagonally cut off due to other edges with transparent borders.
+      */
+      &::after {
+        position: absolute;
+        content: "";
+        inset-block: auto calc(-1 * var(--local-actions-border-width));
+        inset-inline-start: calc(-1 * var(--local-actions-border-width));
+        width: calc(100% + 2 * var(--local-actions-border-width));
+        height: 0;
+        border-block-start: var(--local-actions-active-border-size) solid var(--local-actions-highlight-color);
+        border-inline-start: 0;
+      }
+    }
+
+    /* No regular borders or background color for secondary tab links. */
+    .local-actions--secondary & {
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
+}
+
+.local-actions-wrapper--secondary {
+  margin-top: 24px; /* @todo */
+}
+
+
+.local-actions-wrapper--tertiary::after {
+  display: block;
+  width: fit-content;
+  height: 0;
+  align-self: center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px'%3e%3cpath fill='%23bebebe' id='055q853o-26nq-9np6-3s81-rs6ss789741p'd='M0.656,9.023c0,0.274,0.224,0.5,0.499,0.5l4.853,0.001c0.274-0.001,0.501,0.226,0.5,0.5l0.001,4.853 c-0.001,0.273,0.227,0.5,0.501,0.5l1.995-0.009c0.273-0.003,0.497-0.229,0.5-0.503l0.002-4.806c0-0.272,0.228-0.5,0.499-0.502 l4.831-0.021c0.271-0.005,0.497-0.23,0.501-0.502l0.008-1.998c0-0.276-0.225-0.5-0.499-0.5l-4.852,0c-0.275,0-0.502-0.228-0.501-0.5 L9.493,1.184c0-0.275-0.225-0.499-0.5-0.499L6.997,0.693C6.722,0.694,6.496,0.92,6.495,1.195L6.476,6.026 c-0.001,0.274-0.227,0.5-0.501,0.5L1.167,6.525C0.892,6.526,0.665,6.752,0.665,7.026L0.656,9.023z'/%3e%3c/svg%3e");
+  border-block-start: var(--local-actions-active-border-size) solid var(--local-actions-highlight-color);
+}

@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 723ff8b4-014e-4979-a9a0-9d0ff08c1d1b
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Identity Governance'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /insights/identity-governance
+      langcode: en
+  body:
+    -
+      value: "<p>Take control of user identities and access rights with NeonByte's identity governance solutions. Ensure compliance, reduce risk, and maintain visibility into who has access to what across your organization.</p><h2>Identity Governance Features</h2><ul><li><strong>Access Certification</strong> — Periodic reviews to verify appropriate access levels</li><li><strong>Lifecycle Management</strong> — Automated provisioning and deprovisioning</li><li><strong>Role Management</strong> — Define and maintain role-based access models</li><li><strong>Segregation of Duties</strong> — Prevent toxic access combinations</li></ul><h2>Governance Workflows</h2><table><thead><tr><th>Process</th><th>Trigger</th><th>Automation Level</th></tr></thead><tbody><tr><td>New Hire Provisioning</td><td>HR system event</td><td>Fully automated</td></tr><tr><td>Access Request</td><td>User self-service</td><td>Approval workflow</td></tr><tr><td>Role Change</td><td>Job transfer</td><td>Manager review</td></tr><tr><td>Termination</td><td>HR system event</td><td>Immediate revocation</td></tr><tr><td>Access Review</td><td>Scheduled</td><td>Manager certification</td></tr></tbody></table><h2>Compliance Benefits</h2><ol><li>Demonstrate access controls for SOC 2, HIPAA, and PCI-DSS audits</li><li>Reduce risk of unauthorized access and insider threats</li><li>Eliminate orphan accounts and excessive privileges</li><li>Maintain audit trails for all access changes</li></ol><p>NeonByte's identity governance solutions integrate with your HR systems, directories, and applications to provide comprehensive identity management.</p>"
+      format: full_html
+      summary: ''

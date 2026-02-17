@@ -1,0 +1,23 @@
+.date-block {
+  --date-block-padding-inline: 26px;
+  --date-block-border-radius: var(--radius-md);
+  --date-block-background-color: var(--theme-text-color-primary);
+  --date-block-text-color: var(--theme-surface);
+  --date-block-font-size: var(--h3-size);
+  --date-block-width: 100px;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--date-block-width);
+  height: var(--date-block-width);
+  padding-inline: var(--date-block-padding-inline);
+  border: solid 1px transparent;
+  border-radius: var(--date-block-border-radius);
+  background-color: var(--date-block-background-color);
+  color: var(--date-block-text-color);
+  font-size: var(--date-block-font-size);
+  font-weight: 600;
+  line-height: 1.1;
+}

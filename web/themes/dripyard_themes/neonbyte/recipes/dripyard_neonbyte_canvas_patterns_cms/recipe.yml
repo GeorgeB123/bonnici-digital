@@ -1,0 +1,9 @@
+name: Dripyard Neonbyte Canvas Patterns (CMS)
+type: Dripyard
+description: 'Provides component patterns for Drupal Canvas using Neonbyte theme (CMS variant with SVG support)'
+install:
+  - canvas
+config:
+  strict: false
+recipes:
+  - 'dripyard_canvas_patterns_cms'

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - dripyard_base
+active_version: 49bc5013723b2167
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        variation:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: background-color
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        accordion_group_content:
+          title: 'Accordion items'
+label: 'Accordion group'
+id: sdc.dripyard_base.accordion-group
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:accordion-group'
+category: 'Dripyard General'

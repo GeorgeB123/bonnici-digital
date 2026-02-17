@@ -1,0 +1,68 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Promo
+status: deprecated
+group: Dripyard Cards
+props:
+  type: object
+  required:
+    - title
+  properties:
+    align_x:
+      title: Horizontal alignment
+      type: string
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+      examples: [ start ]
+    align_y:
+      title: Vertical alignment
+      type: string
+      enum:
+        - top
+        - center
+        - bottom
+      meta:enum:
+        top: Top
+        center: Center
+        bottom: Bottom
+      examples: [ center ]
+    title:
+      title: Title
+      type: string
+      examples: [ 'Promo title' ]
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+      examples: [ inherit ]
+    eyebrow:
+      title: Pre-title text
+      type: string
+    body:
+      title: Body text
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+slots:
+  promo_content:
+    title: Promo content

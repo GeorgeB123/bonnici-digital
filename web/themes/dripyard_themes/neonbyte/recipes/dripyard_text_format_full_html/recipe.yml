@@ -1,0 +1,29 @@
+name: 'Dripyard Full HTML editor and formatter'
+description: 'Provides Full HTML editor with media support for Dripyard themes.'
+type: 'Text format editor'
+install:
+  - media
+recipes:
+  - core/recipes/full_html_format_editor
+config:
+  strict: false
+  actions:
+    filter.format.full_html:
+      setFilterConfig:
+        instance_id: media_embed
+        configuration:
+          id: media_embed
+          provider: media
+          status: true
+          weight: 100
+          settings:
+            default_view_mode: default
+            allowed_view_modes: {  }
+            allowed_media_types: {  }
+    editor.editor.full_html:
+      simpleConfigUpdate:
+        settings.plugins.media_media:
+          allow_view_mode_override: false
+      addItemToToolbar:
+        item_name: drupalMedia
+        position: 16

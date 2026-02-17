@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.dripyard_wrapper
+field_name: dripyard_wrapper
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'dripyard_base:accordion-group'
+      label: 'Accordion Group'
+    -
+      value: 'dripyard_base:carousel'
+      label: Carousel
+    -
+      value: 'dripyard_base:tab-group'
+      label: 'Tab Group'
+    -
+      value: 'dripyard_base:logo-grid'
+      label: 'Logo Grid'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

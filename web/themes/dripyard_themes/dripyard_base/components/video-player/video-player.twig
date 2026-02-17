@@ -1,0 +1,27 @@
+{% set classes = [
+  'video-player',
+  'video-player--button-align-x-' ~ button_align_x|default('end'),
+  'video-player--button-align-y-' ~ button_align_y|default('bottom'),
+  border_radius ? 'video-player--radius-' ~ border_radius,
+  ]
+%}
+
+{% set video_attributes = video_attributes|default(create_attribute()) %}
+
+<div{{ attributes.addClass(classes)}}>
+  <div class="video-player__container">
+    <button class="video-player__play-pause" type="button" aria-pressed="false">{{ 'Pause'|t }}</button>
+    <video
+      {{ video_attributes
+        .setAttribute('poster', poster ? poster)
+        .setAttribute('muted', muted is not same as(null) ? muted : true)
+        .setAttribute('playsinline', true)
+        .setAttribute('loop', loop is not same as(null) ? loop : true)
+        .setAttribute('autoplay', autoplay is not same as(null) ? autoplay : false)
+        .setAttribute('aria-label', aria_label ?: false)
+      -}}
+    >
+      <source src="{{ video.src }}" type="{{ type|default('video/mp4')}}">
+    </video>
+  </div>
+</div>

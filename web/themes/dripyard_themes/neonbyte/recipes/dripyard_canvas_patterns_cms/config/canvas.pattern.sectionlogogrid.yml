@@ -1,0 +1,217 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.logo-grid
+    - canvas.component.sdc.dripyard_base.logo-item-canvas
+    - canvas.component.sdc.dripyard_base.section
+    - canvas.component.sdc.dripyard_base.title-cta
+  module:
+    - link
+    - options
+id: sectionlogogrid
+label: 'Section - Logo Grid'
+component_tree:
+  0:
+    uuid: b1fda197-469d-4948-8c6d-44b90c64447d
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: dark
+      section_width: edge-to-edge
+      content_width: max-width
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: large
+      padding_bottom: large
+  '0:header:0':
+    parent_uuid: b1fda197-469d-4948-8c6d-44b90c64447d
+    slot: header
+    uuid: 5398ba8a-a1e9-4784-bf7c-20f01de80cd4
+    component_id: sdc.dripyard_base.title-cta
+    component_version: fd6bbffa9b05aa5a
+    inputs:
+      layout: default
+      title: 'This is title text that is paired with a CTA'
+      heading_style: h2
+      button_text: 'Learn more'
+      button_href:
+        uri: 'https://www.drupal.org'
+        options: {  }
+      button_style: default
+  '0:content:0':
+    parent_uuid: b1fda197-469d-4948-8c6d-44b90c64447d
+    slot: content
+    uuid: 4b12e0c4-9298-452e-a0bb-97f0e5aa0e24
+    component_id: sdc.dripyard_base.logo-grid
+    component_version: 49b6e2cd3274be14
+    inputs:
+      logo_size: medium
+      layout: center
+      logo_background: transparent
+      logo_border_radius: 'extra large'
+  '0:content:0:logo_grid_content:0':
+    parent_uuid: 4b12e0c4-9298-452e-a0bb-97f0e5aa0e24
+    slot: logo_grid_content
+    uuid: 9377c32d-81c1-424e-a4fb-59737f4219c4
+    component_id: sdc.dripyard_base.logo-item-canvas
+    component_version: 320de8576850cf41
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/logoipsum-330.svg
+          alt: 'Boring placeholder'
+          width: 187
+          height: 40
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.logo-item-canvas
+  '0:content:0:logo_grid_content:1':
+    parent_uuid: 4b12e0c4-9298-452e-a0bb-97f0e5aa0e24
+    slot: logo_grid_content
+    uuid: 000c56c0-e98b-4d1b-b610-321fc5dedd25
+    component_id: sdc.dripyard_base.logo-item-canvas
+    component_version: 320de8576850cf41
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/logoipsum-330.svg
+          alt: 'Boring placeholder'
+          width: 187
+          height: 40
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.logo-item-canvas
+  '0:content:0:logo_grid_content:2':
+    parent_uuid: 4b12e0c4-9298-452e-a0bb-97f0e5aa0e24
+    slot: logo_grid_content
+    uuid: f99d3c4c-a1ce-45b5-9fb3-0c3dbdf0ce94
+    component_id: sdc.dripyard_base.logo-item-canvas
+    component_version: 320de8576850cf41
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/logoipsum-330.svg
+          alt: 'Boring placeholder'
+          width: 187
+          height: 40
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.logo-item-canvas
+  '0:content:0:logo_grid_content:3':
+    parent_uuid: 4b12e0c4-9298-452e-a0bb-97f0e5aa0e24
+    slot: logo_grid_content
+    uuid: 5647d085-d175-4507-8270-74ac98cecd8c
+    component_id: sdc.dripyard_base.logo-item-canvas
+    component_version: 320de8576850cf41
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/logoipsum-330.svg
+          alt: 'Boring placeholder'
+          width: 187
+          height: 40
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.logo-item-canvas
+  '0:content:0:logo_grid_content:4':
+    parent_uuid: 4b12e0c4-9298-452e-a0bb-97f0e5aa0e24
+    slot: logo_grid_content
+    uuid: b3b51c2d-de73-406e-b1cd-a3efc5d376ab
+    component_id: sdc.dripyard_base.logo-item-canvas
+    component_version: 320de8576850cf41
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/logoipsum-330.svg
+          alt: 'Boring placeholder'
+          width: 187
+          height: 40
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.logo-item-canvas

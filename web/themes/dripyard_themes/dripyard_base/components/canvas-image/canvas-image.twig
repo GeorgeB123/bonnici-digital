@@ -1,0 +1,23 @@
+{% set classes = [
+  'canvas-image',
+  border_radius ? 'canvas-image--radius-' ~ border_radius,
+  aspect_ratio ? 'canvas-image--aspect-' ~ aspect_ratio|clean_class,
+] %}
+<div{{ attributes.addClass(classes) }}>
+
+  {% if image_link %}
+    <a class="canvas-image__link" href="{{ image_link }}">
+  {% endif %}
+
+  {{ include('dripyard_base:image-or-media', {
+    image,
+    width,
+    loading,
+    alt,
+    }, with_context = false) }}
+
+  {% if image_link %}
+    </a>
+  {% endif %}
+
+</div>

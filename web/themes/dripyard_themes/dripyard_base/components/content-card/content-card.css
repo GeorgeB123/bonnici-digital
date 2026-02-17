@@ -1,0 +1,49 @@
+/*
+ * @file
+ * Styles for content cards.
+ */
+
+.content-card {
+  --content-card-border-radius: var(--radius-sm);
+  --content-card-background: var(--theme-surface);
+  --content-card-heading-color: var(--theme-text-color-loud);
+  --content-card-body-color: var(--theme-text-color-soft);
+  --content-card-padding: 0;
+
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: var(--content-card-padding);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--content-card-border-radius);
+  background-color: var(--content-card-background);
+
+  &.content-card--has-background {
+    --content-card-background: var(--theme-surface-alt);
+    --content-card-padding: var(--spacing-xs);
+  }
+}
+
+.content-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.content-card__title[class] {
+  margin: 0;
+}
+
+.content-card__link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--theme-link-color)
+  }
+}
+
+.content-card__metadata {
+  text-box: trim-both cap alphabetic;
+}

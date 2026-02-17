@@ -1,0 +1,62 @@
+/*
+ * @file
+ * Primary theme.
+ */
+
+/* stylelint-disable comment-empty-line-before */
+.theme--primary {
+  /* Surfaces. */
+  --theme-surface: var(--primary);
+  --theme-surface-alt: var(--color-primary-surface-alt);
+  --theme-surface-primary: var(--primary);
+
+  /* Normal. Always minimum 4.5:1 contrast ratio over all surface colors. */
+  --theme-text-color-soft: var(--color-primary-text-color);
+  --theme-text-color-medium: var(--color-primary-text-color);
+  --theme-text-color-loud: var(--color-primary-text-color);
+  --theme-text-color-primary: var(--color-primary-text-color);
+
+  /* Borders and icon colors. Always minimum 3:1 contrast ratio against surface colors. */
+  --theme-border-color: var(--primary-200);
+  --theme-border-color-alt: var(--primary-200);
+  --theme-border-color-soft: color-mix(in oklch, var(--primary-200), transparent); /* No min contrast. */
+
+  /* Misc. */
+  --theme-link-color: var(--color-primary-text-color);
+  --theme-link-color-hover: var(--color-primary-text-color);
+  --theme-focus-ring-color: var(--color-primary-text-color);
+
+  /* Status colors. */
+  --theme-color-error: var(--color-error-light);
+  --theme-color-warning: var(--color-warning-light);
+  --theme-color-success: var(--color-success-light);
+  --theme-color-info: var(--color-info-light);
+
+  /*
+   * Button colors.
+   */
+  /* Background. */
+  --theme-button-background-color: var(--color-primary-surface-alt);
+  --theme-button-background-color-hover: var(--color-primary-surface-alt);
+  --theme-button-background-color-active: var(--color-primary-surface-alt);
+
+  /* Text colors. */
+  --theme-button-text-color: var(--color-text-color-loud);
+  --theme-button-text-color-hover: var(--color-text-color-loud);
+  --theme-button-text-color-active: var(--color-text-color-loud);
+
+  /* Icons. */
+  --theme-button-icon-fill: var(--color-primary-text-color);
+  --theme-button-icon-fill-hover: var(--color-primary-text-color);
+  --theme-button-icon-fill-active: var(--color-primary-text-color);
+  --theme-button-icon-background-color: var(--color-primary-surface-alt-2);
+  --theme-button-icon-background-color-hover: var(--color-primary-surface-alt-2);
+  --theme-button-icon-background-color-active: var(--color-primary-surface-alt-2);
+
+  /* Borders. */
+  --theme-button-border-color: transparent;
+  --theme-button-border-color-hover: transparent;
+  --theme-button-border-color-active: transparent;
+
+  color-scheme: dark;
+}

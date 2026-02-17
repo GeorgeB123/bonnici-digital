@@ -1,0 +1,44 @@
+{% set classes = [
+  'card',
+  flip_layout ? 'card--layout-flipped',
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="card__layout">
+    {% if image %}
+      <div class="card__top">
+        {{ include('dripyard_base:image-or-media', { image, width: 700 }, with_context = false) }}
+      </div>
+    {% endif %}
+    <div class="card__bottom">
+      {% if eyebrow_text|render %}
+        <div class="card__eyebrow">
+          <div class="card__eyebrow-text">
+            {{ eyebrow_text }}
+          </div>
+          {% if href %}
+            <div class="card__icon">
+              {{ source(componentMetadata.path ~ '/images/arrow-top-right.svg') }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if href %}
+        <a href="{{ href }}" class="card__link">
+          <h3 class="card__title">{{ title }}</h3>
+        </a>
+      {% else %}
+        <h3 class="card__title">{{ title }}</h3>
+      {% endif %}
+      {% block card_body %}
+        {% if body %}
+          <div class="card__body">
+            {{ body|render|striptags('<strong><p><br><em>')|raw }}
+          </div>
+        {% endif %}
+      {% endblock %}
+    </div>
+  </div>
+</article>

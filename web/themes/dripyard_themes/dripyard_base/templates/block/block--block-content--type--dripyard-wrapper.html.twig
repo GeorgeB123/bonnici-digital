@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Custom template for a dripyard wrapper block.
+ *
+ * The logic for rendering this wrapper and child content is in
+ * themes/dripyard_base/src/Layout/ComponentWrapperTrait.php. This
+ * template should only rendered by layout builder for setting the layout.
+ * If it's rendered elsewhere, we render an empty template, but that should
+ * never happen.
+ */
+#}
+
+{% if in_preview %}
+{% set wrapper_type = content.dripyard_wrapper[0]['#markup'] %}
+
+<div{{ attributes.addClass('block', 'block-dripyard-wrapper') }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {# Warning is hidden by CSS when nested within Dynamic Layout. #}
+  <div class="dripyard-wrapper-warning">
+    <div class="dripyard-wrapper-warning__emojis">⚠️⚠️⚠️</div>
+    <h3 class="dripyard-wrapper-warning__text">{{ 'Wrapper blocks must be placed inside a <strong>Dripyard Dynamic Layout</strong> section to function correctly.' }}</h3>
+    <p>{{ 'This warning will disappear once the block is nested within a <strong>Dripyard Dynamic Layout</strong>' }}.</p>
+    <div class="dripyard-wrapper-warning__emojis">⚠️⚠️⚠️</div>
+  </div>
+
+  <div class="dripyard-wrapper-indicator">
+    <p>
+      <strong>{{ 'Display Wrapper:'|t }} {{ wrapper_type }}</strong><br>
+      <em>{{ 'All items in this cell will be wrapped by the "%type" display component.<br /> Edit this block to set the properties of the display wrapper.'|t({'%type': wrapper_type}) }}</em>
+    </p>
+  </div>
+</div>
+{% endif %}

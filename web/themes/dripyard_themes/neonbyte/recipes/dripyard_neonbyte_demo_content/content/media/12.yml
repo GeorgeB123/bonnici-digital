@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 2e5e1d4e-ec3a-4965-a266-bc6b13b3b501
+  bundle: image
+  default_langcode: en
+  depends:
+    8aac8711-ae16-47d5-b367-9d39d32fe1cf: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Video.png
+  created:
+    -
+      value: 1746071740
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 8aac8711-ae16-47d5-b367-9d39d32fe1cf
+      alt: 'NeonByte Engineering Team Lead'
+      title: ''
+      width: 1802
+      height: 1096

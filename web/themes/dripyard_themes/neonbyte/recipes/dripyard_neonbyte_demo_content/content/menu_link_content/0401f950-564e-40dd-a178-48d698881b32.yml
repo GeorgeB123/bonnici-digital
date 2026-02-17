@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 0401f950-564e-40dd-a178-48d698881b32
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    ee0f4c82-3003-44d3-969c-166f61f4aae1: node
+    28a54b28-3c7b-4707-9f1f-12fc6fa9d0be: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Data Protection'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: ee0f4c82-3003-44d3-969c-166f61f4aae1
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -47
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:28a54b28-3c7b-4707-9f1f-12fc6fa9d0be'
+  revision_translation_affected:
+    -
+      value: true

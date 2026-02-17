@@ -1,0 +1,33 @@
+/*
+ * @file
+ * Styling for the Background image component.
+ */
+
+.background-image {
+  display: contents;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--background-image-position-x, 50%) var(--background-image-position-y, 50%);
+    opacity: var(--background-image-opacity, 1);
+  }
+
+  /*
+   * When in Canvas edit mode, provide extra space around the background image
+   * so that the human can select the section.
+   */
+  .is-canvas-editor & {
+    --offset: 5px;
+
+    img {
+      inset-block: var(--offset) auto;
+      inset-inline: var(--offset) auto;
+      width: calc(100% - var(--offset)*2);
+      height: calc(100% - var(--offset)*2);
+    }
+  }
+}

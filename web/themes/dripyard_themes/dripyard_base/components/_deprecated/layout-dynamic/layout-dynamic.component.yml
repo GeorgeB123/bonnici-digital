@@ -1,0 +1,237 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Dynamic Section
+description: Enables the creation of dynamic 1, 2, 3, and 4 column layouts.
+status: deprecated
+group: Dripyard Layout
+props:
+  type: object
+  required:
+    - section_width
+    - content_width
+    - column_count
+    - cell_align_x
+    - cell_align_y
+    - margin_top
+    - margin_bottom
+    - padding_top
+    - padding_bottom
+    - row_count
+    - row_gutter
+    - column_gutter
+  properties:
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      examples: [ inherit ]
+    additional_classes:
+      title: Additional CSS classes
+      type: string
+      description: Additional CSS classes that will be added to the wrapper of the section layout (separated by spaces).
+
+    #
+    # Layout definitions.
+    #
+    column_count:
+      type: ['number']
+      title: Column count
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+      examples: [ 1 ]
+    row_count:
+      type: ['number']
+      title: Row count
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+      examples: [ 1 ]
+
+    # Only exposed to the user form when user selects a column_count of 2
+    two_column_layout:
+      type: string
+      title: Two column layout options
+      enum:
+        - '50% / 50%'
+        - '25% / 75%'
+        - '33% / 67%'
+        - '75% / 25%'
+        - '67% / 33%'
+      examples: [ '50% / 50%' ]
+
+    # Only exposed to the user form when user selects a column_count of 3
+    three_column_layout:
+      type: string
+      title: Three column layout options
+      enum:
+        - '33% / 33% / 33%'
+        - '50% / 25% / 25%'
+        - '25% / 50% / 25%'
+        - '25% / 25% / 50%'
+      examples: [ '33% / 33% / 33%' ]
+
+    cell_align_x:
+      title: Cell horizontal alignment
+      type:
+        - string
+      description: Sets horizontal alignment within all grid cells.
+      enum:
+        - default
+        - start
+        - center
+        - end
+      examples: [ default ]
+    cell_align_y:
+      title: Cell vertical alignment
+      type:
+        - string
+      description: Sets vertical alignment within all grid cells.
+      enum:
+        - default
+        - top
+        - center
+        - bottom
+      examples: [ default ]
+
+    #
+    # Spacing definitions.
+    #
+    section_width:
+      type: string
+      title: Section width
+      description: Controls whether the layout will span the full width of the screen, or be constrained to the max-width.
+      enum:
+        - 'edge-to-edge'
+        - 'max-width'
+      examples: ['edge-to-edge']
+    content_width:
+      type: string
+      title: Content width
+      description: Controls whether the width of the content.
+      enum:
+        - 'edge-to-edge'
+        - 'max-width'
+        - 'narrow'
+      examples: ['max-width']
+    margin_top:
+      type:
+        - string
+      title: Override top margin
+      description: Overrides the external spacing at the top of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      examples: [ zero ]
+
+    margin_bottom:
+      type:
+        - string
+      title: Override bottom margin
+      description: Overrides the external spacing at the bottom of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      examples: [ zero ]
+
+    padding_top:
+      type:
+        - string
+      title: Override top padding
+      description: Overrides the internal spacing at the top of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      examples: [ large ]
+
+    padding_bottom:
+      type:
+        - string
+      title: Override bottom padding
+      description: Overrides the internal spacing at the bottom of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      examples: [ large ]
+
+    column_gutter:
+      type:
+        - string
+      title: Override column gutter width
+      enum:
+        - default
+        - zero
+        - small
+        - medium
+        - large
+      examples: [ default ]
+
+    row_gutter:
+      type:
+        - string
+      title: Override row gutter width
+      enum:
+        - default
+        - zero
+        - small
+        - medium
+        - large
+      examples: [ default ]
+
+slots:
+  header:
+    title: Header
+  cell_1:
+    title: Cell 1
+  cell_2:
+    title: Cell 2
+  cell_3:
+    title: Cell 3
+  cell_4:
+    title: Cell 4
+  cell_5:
+    title: Cell 5
+  cell_6:
+    title: Cell 6
+  cell_7:
+    title: Cell 7
+  cell_8:
+    title: Cell 8
+  cell_9:
+    title: Cell 9
+  cell_10:
+    title: Cell 10
+  cell_11:
+    title: Cell 11
+  cell_12:
+    title: Cell 12
+  cell_13:
+    title: Cell 13
+  cell_14:
+    title: Cell 14
+  cell_15:
+    title: Cell 15
+  cell_16:
+    title: Cell 16
+
+libraryOverrides:
+  dependencies:
+    - dripyard_base/layout-utilities

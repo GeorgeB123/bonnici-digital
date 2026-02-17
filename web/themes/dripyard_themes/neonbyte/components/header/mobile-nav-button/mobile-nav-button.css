@@ -1,0 +1,74 @@
+/*
+ * @file
+ * The mobile navigation button is complicated enough to have its own stylesheet.
+ */
+
+.mobile-nav-button {
+  --mobile-nav-button-line-color: var(--theme-text-color-loud);
+
+  position: relative;
+  z-index: 11; /* Appear over the expanded mobile menu. */
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  margin-inline-start: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  appearance: none;
+
+  @media (width > 1000px) {
+    display: none;
+  }
+}
+
+.mobile-nav-button__icon {
+  --line-width: 3px;
+  --icon-size: 80%;
+
+  position: absolute;
+  top: calc(50% - var(--line-width) / 2);
+  left: calc((100% - var(--icon-size)) / 2);
+  width: var(--icon-size);
+  height: 0;
+  transition: border-top-color 0.2s;
+  border-top: solid var(--line-width) var(--mobile-nav-button-line-color);
+
+  [aria-expanded="true"] & {
+    border-top-color: transparent;
+
+    @media (forced-colors: active) {
+      border-top: 0;
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    content: "";
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -13px;
+    border-top: solid var(--line-width) var(--mobile-nav-button-line-color);
+  }
+
+  [aria-expanded="true"] &::before {
+    top: calc(50% - var(--line-width) / 2);
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    top: 7px;
+    border-bottom: solid var(--line-width) var(--mobile-nav-button-line-color);
+  }
+
+  [aria-expanded="true"] &::after {
+    top: calc(50% - var(--line-width) / 2);
+    transform: rotate(45deg);
+  }
+}

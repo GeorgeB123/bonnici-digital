@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dripyard_landing_page.dripyard_hide_page_title
+    - field.field.node.dripyard_landing_page.layout_builder__layout
+    - node.type.dripyard_landing_page
+  module:
+    - layout_builder
+    - user
+  theme:
+    - dripyard_base
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: dripyard_layout_dynamic
+        layout_settings:
+          column_count: 1
+          row_count: 1
+          two_column_layout: '50% / 50%'
+          three_column_layout: '33% / 33% / 33%'
+          section_width: edge-to-edge
+          content_width: max-width
+          cell_align_x: ''
+          cell_align_y: ''
+          margin_top: ''
+          margin_bottom: ''
+          padding_top: ''
+          padding_bottom: ''
+          column_gutter: ''
+          row_gutter: ''
+          additional_classes: ''
+          dripyard_theme: inherit
+          dripyard_layout: default
+          label: 'Main Section'
+          context_mapping: {  }
+        components: {  }
+        third_party_settings: {  }
+id: node.dripyard_landing_page.default
+targetEntityType: node
+bundle: dripyard_landing_page
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  dripyard_hide_page_title: true
+  layout_builder__layout: true

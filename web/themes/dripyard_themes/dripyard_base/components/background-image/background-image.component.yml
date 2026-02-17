@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Background image
+status: stable
+group: Dripyard Basic
+props:
+  type: object
+  properties:
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+    background_image_opacity:
+      type: integer
+      title: Background image opacity (percentage)
+      minimum: 1
+      maximum: 100
+      examples: [ 100 ]
+    loading:
+      title: Image loading
+      description: 'Keep this set to "lazy" unless you are absolutely sure this will always appear "Above the fold" on page load.'
+      type: string
+      enum:
+        - eager
+        - lazy
+      meta:enum:
+        eager: Eager
+        lazy: Lazy (recommended)
+      examples: [ lazy ]
+    position_x:
+      type: integer
+      title: Horizontal focal point (%)
+      description: Adjust to center the focal point when screen size is smaller, and image crops.
+      minimum: 1
+      maximum: 100
+      examples: [ 50 ]
+    position_y:
+      type: integer
+      title: Vertical focal point (%)
+      description: Adjust to center the focal point when screen size is smaller, and image crops.
+      minimum: 1
+      maximum: 100
+      examples: [ 50 ]

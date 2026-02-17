@@ -1,0 +1,12 @@
+{{ include('dripyard_base:card-full-image', {
+  directory,
+  title: node.label,
+  image: content.field_image,
+  href: url('entity.node.canonical', {'node': node.id}),
+  byline: 'Learn more',
+  layout_vertical: 'bottom',
+  title_align: 'start',
+  byline_align: 'start',
+  overlay: 'full',
+  overlay_color: 'dark',
+  }, with_context = false) }}

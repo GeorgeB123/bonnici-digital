@@ -1,0 +1,4 @@
+<time{{ attributes.addClass('date-block').setAttribute('datetime', date_time_stamp|date('c')) }}>
+  <div class="date-block__month">{{ date_time_stamp|date('M') }}</div>
+  <div class="date-block__day">{{ date_time_stamp|date('j') }}</div>
+</time>

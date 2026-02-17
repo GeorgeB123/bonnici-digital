@@ -1,0 +1,21 @@
+{% set heading_id = 'heading' ~ configuration.label|clean_class ~ '-' ~ random() %}
+{% set classes = [
+    'menu-block',
+    theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class,
+  ] %}
+
+{% set title_attributes = title_attributes ?: create_attribute() %}
+
+<nav{{ attributes.addClass(classes).setAttribute('aria-labelledby', heading_id) }}>
+  {{ title_suffix }}
+  {% if not show_title %}
+    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+  {% endif %}
+  <h2{{ title_attributes.addClass('h3 menu-block__title').setAttribute('id', heading_id) }}>
+    {{ title }}
+  </h2>
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</nav>

@@ -1,0 +1,90 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - neonbyte
+label: Hero
+id: sdc.neonbyte.hero
+source: sdc
+source_local_id: 'neonbyte:hero'
+provider: neonbyte
+active_version: fd16917fc8f81fbc
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        theme:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: inherit
+          expression: ℹ︎list_string␟value
+        height:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: full-screen
+          expression: ℹ︎list_string␟value
+        position_behind_against_screen_top:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+        align_x:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: start
+          expression: ℹ︎list_string␟value
+        align_y:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: bottom
+          expression: ℹ︎list_string␟value
+        text_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: inherit
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        hero_media:
+          title: 'Image or video'
+          description: 'Accepts either background-image or video components to be used as background media. For Drupal Canvas, use background-image, and video-player-canvas components.'
+        hero_content:
+          title: 'Hero content'
+          description: 'Accepts any component including text, and flex-wrappers with nested buttons.'

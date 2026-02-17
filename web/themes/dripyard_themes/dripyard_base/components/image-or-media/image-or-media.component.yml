@@ -1,0 +1,59 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Image or media
+description: Can accept image from Drupal Canvas or an image/media-image from regular Drupal view modes.
+status: stable
+group: Dripyard Basic
+noUi: true
+props:
+  type: object
+  required:
+    - image
+  properties:
+    image:
+      title: Image
+      type:
+        - object
+        - 'null'
+    width:
+      title: Image width
+      type: number
+      examples: [ 800 ]
+    alt:
+      title: Override alt text
+      type:
+        - string
+        - 'null'
+    class:
+      title: CSS classes
+      type: string
+    loading:
+      title: Loading
+      type: string
+      enum:
+        - eager
+        - lazy
+      meta:enum:
+        eager: Eager
+        lazy: Lazy
+      examples: [ lazy ]
+    fetchpriority:
+      title: Fetch priority
+      type: string
+      enum:
+        - auto
+        - high
+        - low
+      meta:enum:
+        auto: Auto
+        high: High
+        low: Low
+      examples: [ auto ]
+    srcset:
+      title: srcset attribute
+      type: string
+    sizes:
+      title: sizes attribute
+      type: string
+    image_attributes:
+      title: Image attributes object
+      type: Drupal\Core\Template\Attribute

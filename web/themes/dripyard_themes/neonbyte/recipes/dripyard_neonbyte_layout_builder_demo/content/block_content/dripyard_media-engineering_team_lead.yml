@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: d8de7eb8-1ef1-4074-b07f-143003a07564
+  bundle: dripyard_media
+  default_langcode: en
+  depends:
+    2e5e1d4e-ec3a-4965-a266-bc6b13b3b501: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Engineering Team Lead'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_media:
+    -
+      entity: 2e5e1d4e-ec3a-4965-a266-bc6b13b3b501

@@ -1,0 +1,7 @@
+name: Dripyard Icon Card
+type: Dripyard
+description: 'Provides a block type for icon card component'
+config:
+  strict: false
+recipes:
+  - 'dripyard_fields_block'

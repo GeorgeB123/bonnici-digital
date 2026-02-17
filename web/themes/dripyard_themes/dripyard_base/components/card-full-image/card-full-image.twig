@@ -1,0 +1,25 @@
+{% set classes = [
+    'card-full-image',
+    'theme--' ~ overlay_color|default('dark'),
+    'card-full-image--align-y-' ~ layout_vertical|default('bottom'),
+    'card-full-image--title-align-' ~ title_align|default('start'),
+    'card-full-image--byline-align-' ~ byline_align|default('start'),
+    overlay ? 'card-full-image--overlay-' ~ overlay|clean_class,
+  ] %}
+<article{{ attributes.addClass(classes) }}>
+  <div class="card-full-image__inner">
+    <a class="card-full-image__link" href="{{ href }}">
+      {{ include('dripyard_base:image-or-media', {
+        image,
+        width: 800,
+      }, with_context = false) }}
+      <div class="card-full-image__overlay"></div>
+      <div class="card-full-image__content">
+        <h3 class="card-full-image__title">{{ title }}</h3>
+        {% if byline %}
+          <p class="card-full-image__byline">{{ byline }}</p>
+        {% endif %}
+      </div>
+    </a>
+  </div>
+</article>

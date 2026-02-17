@@ -1,0 +1,91 @@
+/*
+ * @file
+ * General region styling.
+ */
+
+/* Bottom spacing ONLY if not a Canvas or landing page. */
+:where(body:not(:is(.page-node-type-dripyard-landing-page, .canvas-page, .is-canvas))) .region-content {
+  margin-bottom: var(--spacing-component);
+}
+
+/* Region containers sometimes have a `<drupal-render-placeholder>` that gets
+discarded. Unfortunately, this causes the underlying element containers to
+render (along with their respective margins). This ruleset fixes this issue. */
+.region:has(> .region-container):not(:has(> .region-container *)) {
+  display: none;
+}
+
+.layout-builder__message,
+.region--fixed-bottom-right {
+  --edge-offset: var(--spacing-s);
+
+  position: fixed;
+  z-index: 510;
+
+  /* Appear above sticky table header. */
+  inset-inline: auto var(--drupal-displace-offset-right, 0);
+  bottom: 0;
+  width: min(100%, 760px);
+  margin-block: 0 var(--edge-offset);
+  margin-inline-end: var(--edge-offset);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  filter: drop-shadow(0 0 40px color-mix(in oklch, var(--white), transparent));
+  overflow: auto;
+  max-height: calc(100vh - var(--drupal-displace-offset-top, 0px) - var(--drupal-displace-offset-bottom, 0px) - 2 * var(--edge-offset));
+
+  @media (width < 600px) {
+    --edge-offset: var(--spacing-xxs);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation-name: toast-in;
+    animation-fill-mode: both;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+  }
+
+  &:dir(rtl) {
+    inset-inline-end: var(--drupal-displace-offset-left, 0);
+  }
+
+  /* If a message is animating out, temporarily hide the scrollbar from overflow: auto. */
+  /* stylelint-disable-next-line selector-class-pattern */
+  &:has(.messages.messages--👋) {
+    scrollbar-width: none;
+  }
+}
+
+/*
+ * Hide fixed bottom right if it is empty. We have a double negative here
+ * because it's possible to have both an empty and a filled direct descendent.
+ */
+.region--fixed-bottom-right:not(:has(> *:not(:empty))) {
+  display: none;
+}
+
+/* Unset positioning on .layout-builder__message only if Safari not supporting
+   `position: fixed;` underneath query containers.  Note we don't have to do
+   this on Drupal's messages, because that's in a region that's not under
+   a query container. */
+body.safari-not-doing-position-fixed-properly-because-it-sucks .layout-builder__message {
+  position: unset;
+  width: unset;
+  max-width: unset;
+  margin-inline: 0;
+  animation: none;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    translate: 0 100%;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

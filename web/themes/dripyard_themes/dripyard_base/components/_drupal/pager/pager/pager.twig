@@ -1,0 +1,88 @@
+{% set heading_id = ('pager-' ~ random()) %}
+{% if items %}
+  <nav class="pager layout--content-medium" aria-labelledby="{{ heading_id }}">
+    <{{ pagination_heading_level }} id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination'|t }}</{{ pagination_heading_level }}>
+    <ul class="pager__items js-pager__items">
+      {# Print first item if we are not on the first page. #}
+      {% if items.first %}
+        <li class="pager__item pager__item--control pager__item--first">
+          <a{{ items.first.attributes.addClass('pager__link').setAttribute('href', items.first.href) }}>
+            <span class="visually-hidden">{{ 'First page'|t }}</span>
+            {{ source('/' ~ componentMetadata.path ~ '/images/pager-first.svg') }}
+          </a>
+        </li>
+      {% endif %}
+
+      {# Print previous item if we are not on the first page. #}
+      {% if items.previous %}
+        <li class="pager__item pager__item--control pager__item--previous">
+          <a
+            {{- items.previous.attributes
+              .addClass('pager__link')
+              .setAttribute('href', items.previous.href)
+              .setAttribute('rel', 'prev') -}}
+            >
+            <span class="visually-hidden">{{ 'Previous page'|t }}</span>
+            {{ source('/' ~ componentMetadata.path ~ '/images/pager-previous.svg') }}
+          </a>
+        </li>
+      {% endif %}
+
+      {# Add an ellipsis if there are further previous pages. #}
+      {% if ellipses.previous %}
+        <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+      {% endif %}
+
+      {# Now generate the actual pager piece. #}
+      {% for key, item in items.pages %}
+        <li class="pager__item{{ current == key ? ' pager__item--active' : '' }} pager__item--number">
+          {% if current == key %}
+            {% set title = 'Current page'|t %}
+          {% else %}
+            {% set title = 'Go to page @key'|t({'@key': key}) %}
+          {% endif %}
+          {% if current != key %}
+            <a{{ item.attributes.addClass('pager__link', current == key ? ' is-active').setAttribute('href', item.href) }}>
+          {% endif %}
+          <span class="visually-hidden">
+            {{ 'Page'|t }}
+          </span>
+          {{ key }}
+          {% if current != key %}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
+
+      {# Add an ellipsis if there are further next pages. #}
+      {% if ellipses.next %}
+        <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+      {% endif %}
+
+      {# Print next item if we are not on the last page. #}
+      {% if items.next %}
+        <li class="pager__item pager__item--control pager__item--next">
+          <a
+            {{- items.next.attributes
+              .addClass('pager__link')
+              .setAttribute('href', items.next.href)
+              .setAttribute('rel', 'next') -}}
+            >
+            <span class="visually-hidden">{{ 'Next page'|t }}</span>
+            {{ source('/' ~ componentMetadata.path ~ '/images/pager-previous.svg') }}
+          </a>
+        </li>
+      {% endif %}
+
+      {# Print last item if we are not on the last page. #}
+      {% if items.last %}
+        <li class="pager__item pager__item--control pager__item--last">
+          <a{{ items.last.attributes.addClass('pager__link').setAttribute('href', items.last.href) }}>
+            <span class="visually-hidden">{{ 'Last page'|t }}</span>
+            {{ source('/' ~ componentMetadata.path ~ '/images/pager-first.svg') }}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

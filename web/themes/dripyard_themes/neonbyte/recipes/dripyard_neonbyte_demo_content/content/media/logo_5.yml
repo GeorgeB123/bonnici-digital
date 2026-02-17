@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 7411a841-fc49-4a4b-8504-eae3ae1d53dc
+  bundle: image
+  default_langcode: en
+  depends:
+    d7f90a7d-73b5-4d6f-98c7-3945e9d12425: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Logo 1'
+  created:
+    -
+      value: 1745520609
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: d7f90a7d-73b5-4d6f-98c7-3945e9d12425
+      alt: 'Logo 1'
+      title: ''
+      width: 622
+      height: 204

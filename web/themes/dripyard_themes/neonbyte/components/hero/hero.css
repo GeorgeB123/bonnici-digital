@@ -1,0 +1,202 @@
+/*
+ * @file
+ * Styles for our primary hero.
+ */
+
+.hero {
+  --hero-background: transparent;
+  --hero-text-color-light: var(--theme-text-color-soft);
+  --hero-text-color: var(--theme-text-color-medium);
+  --hero-link-color: var(--theme-text-color-primary);
+  --hero-text-shadow-color: transparent;
+  --hero-text-shadow: 0 0 10px var(--hero-text-shadow-color);
+
+  position: relative; /* Anchor image. */
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--spacing-xs);
+  padding-inline: var(--spacing-xs);
+  background-color: var(--hero-background);
+  color: var(--hero-text-color);
+
+  @container (width > 700px) {
+    padding-inline: var(--spacing-component-internal);
+    padding-block: var(--spacing-component-internal);
+
+    .full-width & {
+      padding-inline: 0;
+    }
+  }
+
+  .full-width & {
+    width: 100cqw;
+    margin-inline-start: calc(-50cqw + 50%);
+  }
+
+  &.hero--position-against-screen-top {
+    padding-top: var(--space-for-fixed-header);
+
+    /* Apply any negative margin to the parent dynamic layout. */
+    :is(.dy-section, .layout-dynamic):has(&) {
+      margin-top: calc(-1 * var(--space-for-fixed-header));
+      overflow: revert;
+    }
+  }
+
+  &.hero--height-small {
+    min-height: 400px;
+  }
+
+  &.hero--height-medium {
+    min-height: 800px;
+  }
+
+  &.hero--height-large {
+    height: max(700px, calc(90dvh - var(--drupal-displace-offset-top, 0px) - var(--drupal-displace-offset-bottom, 0px)));
+
+    /* Drupal Canvas editor can be weird with dvh units in an iframe. */
+    .is-canvas & {
+      max-height: 1000px;
+    }
+  }
+
+  &.hero--height-full-screen {
+    height: max(700px, calc(100dvh - var(--drupal-displace-offset-top, 0px) - var(--drupal-displace-offset-bottom, 0px)));
+
+    /* Drupal Canvas editor can be weird with dvh units in an iframe. */
+    .is-canvas & {
+      max-height: 1200px;
+    }
+  }
+
+  &.theme--dark {
+    --theme-text-color-medium: var(--white);
+  }
+
+  &.theme--light {
+    --theme-text-color-medium: var(--black);
+  }
+
+  .layout-builder & {
+    margin-top: 0;
+  }
+}
+
+.hero--text-color-white {
+  --hero-text-color-light: var(--white);
+  --hero-text-color: var(--white);
+  --hero-text-shadow-color: var(--black);
+}
+
+.hero--text-color-black {
+  --hero-text-color-light: var(--black);
+  --hero-text-color: var(--black);
+  --hero-text-shadow-color: var(--white);
+}
+
+.hero--text-color-primary {
+  --hero-text-color-light: var(--theme-text-color-primary);
+  --hero-text-color: var(--theme-text-color-primary);
+}
+
+.hero__container {
+  display: flex;
+  height: 100%;
+
+  .layout-dynamic.container & {
+    width: revert;
+    margin-inline: revert;
+  }
+}
+
+.hero__title {
+  color: inherit;
+  text-shadow: var(--hero-text-shadow);
+}
+
+.hero__media {
+  display: contents;
+
+  .video-player,
+  .video-player__container {
+    display: contents;
+  }
+
+  img,
+  video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-inline: auto;
+  }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+
+  > *, [class] {
+    margin-block: 0;
+  }
+
+  .hero--align-x-start & {
+    justify-self: start;
+  }
+
+  .hero--align-x-center & {
+    justify-self: center;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero--align-x-end & {
+    margin-inline: auto 0;
+    justify-self: end;
+    text-align: end;
+  }
+
+  .hero--align-y-top & {
+    align-self: start;
+  }
+
+  .hero--align-y-center & {
+    align-self: center;
+  }
+
+  .hero--align-y-bottom & {
+    align-self: end;
+  }
+
+  .heading:where(:not([class*="color--"])),
+  .text-content {
+    color: inherit;
+    text-shadow: var(--hero-text-shadow);
+  }
+}
+
+.hero__block-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-large);
+  width: 100%;
+
+  &:empty {
+    display: none;
+  }
+}
+
+/* Hide the header slot within dynamic layout & basic sections if hero is
+   present and set to appear behind the header. This is important for Canvas
+   editing mode. */
+.dy-section__container:has(.dy-section__content .hero--position-against-screen-top) .dy-section__header,
+.layout-dynamic:has(.layout-dynamic__cell .hero--position-against-screen-top) .layout-dynamic__header {
+  display: none;
+}

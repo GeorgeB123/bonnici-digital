@@ -1,0 +1,16 @@
+{% set date_time_stamp_begin = '2024-07-15T14:30:00Z' %}
+{% set date_time_stamp_end = '2024-07-15T14:30:00Z' %}
+{% set formatted_time %}
+  {{ date_time_stamp_begin|date('g') }}:{{ date_time_stamp_begin|date('i') }}{{ date_time_stamp_begin|date('a') }}
+  -
+  {{ date_time_stamp_end|date('g') }}:{{ date_time_stamp_end|date('i') }}{{ date_time_stamp_end|date('a') }}
+{% endset %}
+
+{{ include('dripyard_base:event-listing-item', {
+  date_time_stamp_begin,
+  url: 'https://www.drupal.org',
+  title: 'Undergraduate Research Symposium',
+  description: 'Real-time threat detection, and secure network management into one seamless solution.',
+  formatted_time,
+  location: 'Conference room',
+}, with_context = false) }}

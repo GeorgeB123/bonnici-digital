@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - dripyard_base
+active_version: 49b6e2cd3274be14
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        logo_size:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: medium
+          expression: ℹ︎list_string␟value
+        layout:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: start
+          expression: ℹ︎list_string␟value
+        logo_background:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: auto
+          expression: ℹ︎list_string␟value
+        logo_border_radius:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: 'extra large'
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        logo_grid_content:
+          title: 'Logo items'
+          description: 'Logos from the logo-item component'
+label: 'Logo grid'
+id: sdc.dripyard_base.logo-grid
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:logo-grid'
+category: 'Dripyard General'

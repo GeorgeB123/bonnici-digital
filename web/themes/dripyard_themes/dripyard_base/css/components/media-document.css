@@ -1,0 +1,78 @@
+/*
+ * @file
+ * Styles for document media.
+ */
+
+.media--type-document {
+  width: fit-content;
+  padding: var(--spacing-xs);
+  background-color: var(--theme-surface-alt);
+  border-radius: var(--radius-sm);
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+    text-decoration: none;
+    box-shadow: none;
+
+    &::before {
+      content: "";
+      height: 1lh;
+      width: 1lh;
+      mask-image: url('../../images/document-icons/file.svg');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background-color: var(--theme-link-color);
+    }
+
+    @media (forced-colors: active) {
+      background-color: linkText;
+    }
+  }
+
+  /* PDF files */
+  a[href*=".pdf"]::before {
+    mask-image: url('../../images/document-icons/file-pdf.svg');
+  }
+
+  /* Word processing files */
+  a[href*=".doc"]::before,
+  a[href*=".docx"]::before,
+  a[href*=".odt"]::before,
+  a[href*=".fodt"]::before,
+  a[href*=".pages"]::before {
+    mask-image: url('../../images/document-icons/file-word.svg');
+  }
+
+  /* Spreadsheet files */
+  a[href*=".xls"]::before,
+  a[href*=".xlsx"]::before,
+  a[href*=".ods"]::before,
+  a[href*=".fods"]::before,
+  a[href*=".numbers"]::before {
+    mask-image: url('../../images/document-icons/file-excel.svg');
+  }
+
+  /* Presentation files */
+  a[href*=".ppt"]::before,
+  a[href*=".pptx"]::before,
+  a[href*=".odp"]::before,
+  a[href*=".fodp"]::before,
+  a[href*=".key"]::before {
+    mask-image: url('../../images/document-icons/file-powerpoint.svg');
+  }
+
+  /* Text files */
+  a[href*=".txt"]::before,
+  a[href*=".rtf"]::before {
+    mask-image: url('../../images/document-icons/file-lines.svg');
+  }
+
+  /* Generic document files */
+  a[href*=".odg"]::before,
+  a[href*=".fodg"]::before,
+  a[href*=".odf"]::before {
+    mask-image: url('../../images/document-icons/file.svg');
+  }
+}

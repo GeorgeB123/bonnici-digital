@@ -1,0 +1,33 @@
+/*
+ * @file
+ * Styles for the article header.
+ */
+
+.header-article[class] {
+  --header-article-spacing: var(--spacing-xl);
+
+  margin-bottom: var(--header-article-spacing);
+  padding-top: 0;
+  padding-bottom: var(--header-article-spacing);
+  background: linear-gradient(to bottom in oklch, transparent, var(--neutral-300));
+
+  &:has(+ .header-article__image) {
+    padding-top: var(--spacing-xxl);
+    padding-bottom: calc(2 * var(--spacing-xxxl));
+    margin-bottom: 0;
+  }
+}
+
+.header-article__title {
+  margin-block: var(--spacing-m);
+}
+
+.header-article__image[class] {
+  margin-bottom: var(--spacing-component-internal);
+  padding: 0;
+
+  img {
+    width: 100%;
+    margin-top: -150px;
+  }
+}

@@ -1,0 +1,13 @@
+{% if content %}
+  {% if content['#theme'] %}
+    {{ content|add_suggestion('bare') }}
+  {% else %}
+    {% for item in content %}
+       {% if item['#theme'] %}
+          {{ item|add_suggestion('bare') }}
+        {% else %}
+          {{ item }}
+        {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}

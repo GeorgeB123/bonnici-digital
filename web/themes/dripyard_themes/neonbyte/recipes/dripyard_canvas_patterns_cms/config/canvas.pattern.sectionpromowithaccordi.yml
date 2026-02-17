@@ -1,0 +1,216 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.accordion-group
+    - canvas.component.sdc.dripyard_base.accordion-item
+    - canvas.component.sdc.dripyard_base.canvas-image
+    - canvas.component.sdc.dripyard_base.grid-cell
+    - canvas.component.sdc.dripyard_base.grid-wrapper
+    - canvas.component.sdc.dripyard_base.heading
+    - canvas.component.sdc.dripyard_base.section
+    - canvas.component.sdc.dripyard_base.text
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+id: sectionpromowithaccordi
+label: 'Section - Promo with Accordion'
+component_tree:
+  0:
+    uuid: 04a3df7e-5159-4242-bfe0-4cb0699b2a12
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: light
+      section_width: edge-to-edge
+      content_width: max-width
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: large
+      padding_bottom: large
+  '0:content:0':
+    parent_uuid: 04a3df7e-5159-4242-bfe0-4cb0699b2a12
+    slot: content
+    uuid: c4f31a3e-853b-490d-a152-8eacfa5b8eb6
+    component_id: sdc.dripyard_base.grid-wrapper
+    component_version: ba954a2accbc0f5c
+    inputs:
+      column_gutter: large
+      row_gutter: medium
+  '0:content:0:grid_cells:0':
+    parent_uuid: c4f31a3e-853b-490d-a152-8eacfa5b8eb6
+    slot: grid_cells
+    uuid: 6cafa460-9843-4991-b2e8-5a48b2652bef
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 6
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:0:content:0':
+    parent_uuid: 6cafa460-9843-4991-b2e8-5a48b2652bef
+    slot: content
+    uuid: feefa500-8a2e-4164-8705-db5030fa5387
+    component_id: sdc.dripyard_base.heading
+    component_version: 69804e3c5ff45a2b
+    inputs:
+      text: 'This is my heading'
+      html_element: h2
+      style: h2
+      margin_top: zero
+      margin_bottom: zero
+  '0:content:0:grid_cells:0:content:1':
+    parent_uuid: 6cafa460-9843-4991-b2e8-5a48b2652bef
+    slot: content
+    uuid: 21fbb7fc-b4f4-4190-8a3b-fdfa88324fc2
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:content:0:grid_cells:0:content:2':
+    parent_uuid: 6cafa460-9843-4991-b2e8-5a48b2652bef
+    slot: content
+    uuid: 24c7dd9b-1c14-4d15-98ad-0f1945d570e7
+    component_id: sdc.dripyard_base.accordion-group
+    component_version: 49bc5013723b2167
+    inputs:
+      variation: borders
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:0':
+    parent_uuid: 24c7dd9b-1c14-4d15-98ad-0f1945d570e7
+    slot: accordion_group_content
+    uuid: 0d8e6999-307d-43ef-ac36-1d0414bbfefa
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:0:accordion_item_content:0':
+    parent_uuid: 0d8e6999-307d-43ef-ac36-1d0414bbfefa
+    slot: accordion_item_content
+    uuid: 5c98867f-3bfd-455b-aead-a8bbd1299f97
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:1':
+    parent_uuid: 24c7dd9b-1c14-4d15-98ad-0f1945d570e7
+    slot: accordion_group_content
+    uuid: 57cb3cc7-fc18-4057-9a13-d267e0e900a6
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:1:accordion_item_content:0':
+    parent_uuid: 57cb3cc7-fc18-4057-9a13-d267e0e900a6
+    slot: accordion_item_content
+    uuid: ca0a5d41-2d1c-44ab-9bdd-21e6777fb0b4
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:2':
+    parent_uuid: 24c7dd9b-1c14-4d15-98ad-0f1945d570e7
+    slot: accordion_group_content
+    uuid: 19e071d4-6267-4224-a228-fe230e456b34
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:2:accordion_item_content:0':
+    parent_uuid: 19e071d4-6267-4224-a228-fe230e456b34
+    slot: accordion_item_content
+    uuid: 65eafc4a-f095-4201-aed4-4f8ba7bb214d
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:3':
+    parent_uuid: 24c7dd9b-1c14-4d15-98ad-0f1945d570e7
+    slot: accordion_group_content
+    uuid: d267a116-eb4f-4ed4-b4f1-51c19ff83c27
+    component_id: sdc.dripyard_base.accordion-item
+    component_version: bf19381a421e6f8c
+    inputs:
+      title: 'Accordion item title'
+  '0:content:0:grid_cells:0:content:2:accordion_group_content:3:accordion_item_content:0':
+    parent_uuid: d267a116-eb4f-4ed4-b4f1-51c19ff83c27
+    slot: accordion_item_content
+    uuid: d55f6ee1-b086-4260-ba48-ac10c38ce4c7
+    component_id: sdc.dripyard_base.text
+    component_version: 05732cb45a35eac6
+    inputs:
+      text:
+        value: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+        format: canvas_html_block
+      style: body_m
+      color: medium
+  '0:content:0:grid_cells:1':
+    parent_uuid: c4f31a3e-853b-490d-a152-8eacfa5b8eb6
+    slot: grid_cells
+    uuid: b63b0628-73a0-4459-a220-81e6610d434e
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 6
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:1:content:0':
+    parent_uuid: b63b0628-73a0-4459-a220-81e6610d434e
+    slot: content
+    uuid: a80b9a55-04bf-453e-a823-a089a79eb786
+    component_id: sdc.dripyard_base.canvas-image
+    component_version: 247f3ce34cd0f93c
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.canvas-image
+      width: 800
+      loading: lazy
+      border_radius: large

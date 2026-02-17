@@ -1,0 +1,57 @@
+/*
+ * @file
+ * Styling for the Dripyard specific section at the top of the
+ * theme settings admin page.
+ */
+.dripyard-theme-settings {
+  border: var(--card-border-size) solid var(--card-border-color);
+  padding: var(--space-m);
+  box-shadow: var(--card-box-shadow);
+  margin-top: var(--space-xs);
+}
+
+.dripyard-theme-settings__header {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: var(--space-s);
+
+  @media (width > 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dripyard-theme-settings__logo {
+  max-width: min(90%, 350px);
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.dripyard-theme-settings__title {
+  margin: 0;
+}
+
+.dripyard-theme-settings__subtitle {
+  margin-top: 4px;
+}
+
+.dripyard-theme-settings__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.dripyard-theme-settings__card {
+  border: var(--card-border-size) solid var(--card-border-color);
+  padding: var(--space-s);
+  border: var(--card-border-size) solid var(--card-border-color);
+  border-radius: var(--card-border-radius-size);
+  background: var(--color-gray-050);
+  box-shadow: var(--card-box-shadow);
+}
+
+.dripyard-theme-settings__card-title {
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+}

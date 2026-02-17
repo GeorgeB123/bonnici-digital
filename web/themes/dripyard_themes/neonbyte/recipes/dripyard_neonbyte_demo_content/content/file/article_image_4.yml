@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0b2e377f-a967-4950-bc89-516a382bdd0c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: article_image_4.jpg
+  uri:
+    -
+      value: 'public://article/article_image_4.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 4174969
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1745292019

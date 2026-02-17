@@ -1,0 +1,31 @@
+/*
+ * @file
+ * Style helpers for Coffee module.
+ * @see https://www.drupal.org/project/coffee
+ */
+
+.coffee-form-wrapper {
+  --backdrop-color: #000a;
+
+  border-image: linear-gradient(var(--backdrop-color), var(--backdrop-color)) fill 0 // 100vh 100vw 100vh 100vw;
+}
+
+#coffee-form {
+  max-width: 700px;
+  border: solid 1px transparent;
+  background: none;
+}
+
+#coffee-q {
+  padding: 10px 30px;
+  height: unset;
+}
+
+#coffee-results a {
+  &.ui-state-active {
+    @media (forced-colors: active) {
+      outline: solid 4px transparent;
+      outline-offset: -4px;
+    }
+  }
+}

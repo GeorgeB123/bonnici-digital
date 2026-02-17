@@ -1,0 +1,193 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Flex Wrapper
+description: Uses flexbox to create a wrapper
+status: stable
+group: Dripyard Layout
+props:
+  type: object
+  required:
+    - margin_top
+    - margin_bottom
+    - padding_top
+    - padding_bottom
+    - column_gutter
+    - row_gutter
+    - align_x
+    - align_y
+  properties:
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+      examples: [ inherit ]
+    additional_classes:
+      title: Additional CSS classes
+      type: string
+      description: Additional CSS classes that will be added to the wrapper of the section layout (separated by spaces).
+
+    #
+    # Layout definitions.
+    #
+    wrap:
+      title: Allow items to wrap
+      type:
+        - boolean
+      examples: [ true ]
+    align_x:
+      title: Horizontal alignment
+      type:
+        - string
+      enum:
+        - start
+        - center
+        - end
+        - space-between
+        - space-around
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+        space-between: Space Between
+        space-around: Space Around
+      examples:
+        - start
+    align_y:
+      title: Vertical alignment
+      type:
+        - string
+      enum:
+        - top
+        - center
+        - bottom
+        - stretch
+      meta:enum:
+        top: Top
+        center: Center
+        bottom: Bottom
+        stretch: Stretch
+      examples:
+        - center
+    #
+    # Spacing definitions.
+    #
+    margin_top:
+      type:
+        - string
+      title: Top margin
+      description: External spacing at the top of the component.
+      enum:
+        - 'zero'
+        - 'small'
+        - 'medium'
+        - 'large'
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples:
+        - 'zero'
+    margin_bottom:
+      type:
+        - string
+      title: Bottom margin
+      description: External spacing at the bottom of the component.
+      enum:
+        - 'zero'
+        - 'small'
+        - 'medium'
+        - 'large'
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples:
+        - 'zero'
+    padding_top:
+      type:
+        - string
+      title: Top padding
+      description: Internal spacing at the top of the component.
+      enum:
+        - 'zero'
+        - 'small'
+        - 'medium'
+        - 'large'
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples:
+        - 'zero'
+    padding_bottom:
+      type:
+        - string
+      title: Bottom padding
+      description: Internal spacing at the bottom of the component.
+      enum:
+        - 'zero'
+        - 'small'
+        - 'medium'
+        - 'large'
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples:
+        - 'zero'
+    column_gutter:
+      type:
+        - string
+      title: Column gutter width
+      enum:
+        - 'zero'
+        - 'small'
+        - 'medium'
+        - 'large'
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples:
+        - 'small'
+    row_gutter:
+      type:
+        - string
+      title: Row gutter width
+      enum:
+        - 'zero'
+        - 'small'
+        - 'medium'
+        - 'large'
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples:
+        - 'small'
+slots:
+  content:
+    title: Content
+libraryOverrides:
+  dependencies:
+    - dripyard_base/layout-utilities

@@ -1,0 +1,7 @@
+name: Dripyard Promo
+type: Dripyard
+description: 'Provides a promo block type'
+config:
+  strict: false
+recipes:
+  - 'dripyard_fields_block'

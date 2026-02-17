@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Logo item
+status: stable
+group: Dripyard General
+props:
+  type: object
+  properties:
+    href:
+      title: Link
+      type:
+        - string
+        - 'null'
+      format: uri-reference
+    image:
+      title: Image
+      $ref: json-schema-definitions://canvas.module/image
+      type: object
+      examples:
+        - src: images/logoipsum-330.svg
+          alt: 'Boring placeholder'
+          width: 187
+          height: 40
+libraryOverrides:
+  dependencies:
+    - core/components.dripyard_base--logo-item

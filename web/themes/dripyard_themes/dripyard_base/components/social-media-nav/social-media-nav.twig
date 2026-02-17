@@ -1,0 +1,36 @@
+{% set size = size ?: 'medium' %}
+
+{% if size == 'small' %}
+  {% set icon_size = 16 %}
+{% elseif size == 'medium' %}
+  {% set icon_size = 32 %}
+{% elseif size == 'large' %}
+  {% set icon_size = 48 %}
+{% endif %}
+
+{% set gap = (icon_size * 0.75) ~ 'px' %}
+
+{% set classes = [
+  'social-media-nav',
+  'social-media-nav--align-' ~ align_x|default('start')|clean_class,
+] %}
+
+{% set social_media_title_id = 'social-media-nav'|clean_unique_id %}
+{% if items.0.url %}
+  <nav {{ attributes.addClass(classes).setAttribute('aria-labelledby', social_media_title_id) }}>
+    <h2 id="{{ social_media_title_id }}" class="social-media-nav__title visually-hidden">{{ 'Social media'|t }}</h2>
+    <ul class="social-media-nav__list" style="--gap: {{ gap }}">
+      {% for social_media_item in items %}
+        <li class="social-media-nav__item">
+          <a target="_blank" href="{{ social_media_item.url }}" class="social-media-nav__link">
+            <span class="visually-hidden">{{ social_media_item.title }}</span>
+            {{ include('dripyard_base:icon', {
+              icon: social_media_item.icon,
+              size: icon_size|default(32),
+            }, with_context = false) }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

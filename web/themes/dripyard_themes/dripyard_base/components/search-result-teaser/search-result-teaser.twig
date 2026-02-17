@@ -1,0 +1,32 @@
+{% set title_attributes = title_attributes ? create_attribute() %}
+{% set content_attributes = content_attributes ? create_attribute() %}
+
+<article{{ attributes.addClass('search-result-teaser') }}>
+   <div class="search-result-teaser__meta">
+    <span class="search-result-teaser__type">{{ content_type }}</span>
+    {% if author %}
+      <span class="search-result-teaser__author">
+        {{ 'by'|t }} <span class="search-result-teaser__author-name">{{ author }}</span>,
+      </span>
+      {% else %}
+      -
+    {% endif %}
+    <span class="search-result-teaser__date">{{ date }}</span>
+  </div>
+  {{ title_prefix }}
+  <h3{{ title_attributes.addClass('search-result-teaser__title', 'h4') }}>
+    <a href="{{ href }}">{{ title }}</a>
+  </h3>
+  {{ title_suffix }}
+  {% if image %}
+    <div class="search-result-teaser__image">
+      {{ include('dripyard_base:image-or-media', { image }, with_context = false) }}
+    </div>
+  {% endif %}
+  {% if snippet %}
+    <p{{ content_attributes.addClass('search-result-teaser__snippet') }}>{{ snippet }}</p>
+  {% endif %}
+  <div class="search-result-teaser__footer">
+    <a class="search-result-teaser__url" href="{{ href }}">{{ href }}</a>
+  </div>
+</article>

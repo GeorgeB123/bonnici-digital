@@ -1,0 +1,47 @@
+{% set classes = [
+  'header-commerce-cart',
+  dropdown ? 'header-commerce-cart--has-dropdown',
+] %}
+{% set icon = icon_url ?: 'images/shopping-cart.svg' %}
+
+<div{{ attributes.addClass(classes) }}>
+  <a href="{{ url }}" class="header-commerce-cart__link">
+    <span class="header-commerce-cart__icon-wrapper">
+      <span style="--icon: url('{{ icon }}');" class="header-commerce-cart__icon"></span>
+      {% if count %}
+        <span class="header-commerce-cart__count">
+          {{ count }}
+          <span class="visually-hidden">{{ 'items'|t }}</span>
+        </span>
+      {% endif %}
+    </span>
+    <span class="header-commerce-cart__link-text">{{ 'Shopping cart'|t }}</span>
+  </a>
+
+  {% if dropdown %}
+    {% set dropdown_id = 'header-commerce-cart__dropdown-' ~ random() %}
+    <button class="header-commerce-cart__link" type="button" aria-expanded="false" aria-controls={{ dropdown_id }}>
+      <span class="header-commerce-cart__icon-wrapper">
+        <span style="--icon: url('{{ icon }}');" class="header-commerce-cart__icon"></span>
+        {% if count %}
+          <span class="header-commerce-cart__count">
+            {{ count }}
+            <span class="visually-hidden">{{ 'items'|t }}</span>
+          </span>
+        {% endif %}
+      </span>
+      <span class="header-commerce-cart__link-text">{{ 'Shopping cart'|t }}</span>
+    </button>
+    <div id={{ dropdown_id }} class="header-commerce-cart__dropdown">
+      {% if content.0 %}
+        <div class="header-commerce-cart__items">
+          {{ content }}
+        </div>
+      {% endif %}
+      <div class="header-commerce-cart__links">
+        {{ links }}
+      </div>
+    </div>
+  {% endif %}
+
+</div>

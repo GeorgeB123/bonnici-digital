@@ -1,0 +1,41 @@
+{% if icon_size == 'small' %}
+  {% set icon_size_px = 32 %}
+{% elseif icon_size == 'large' %}
+  {% set icon_size_px = 64 %}
+{% else %}
+  {% set icon_size_px = 48 %}
+{% endif %}
+
+{% set classes = [
+  'icon-card',
+  'icon-card--icon-size-' ~ icon_size|clean_class,
+  no_background ? 'icon-card--no-background',
+  layout ? 'icon-card--' ~ layout,
+] %}
+
+<article{{ attributes.addClass(classes)}}>
+  <div class="icon-card__top">
+    {% block icon_content %}
+      {{ include('dripyard_base:icon', {
+        icon,
+        size: icon_size_px,
+      }, with_context = false) }}
+    {% endblock %}
+  </div>
+  <div class="icon-card__bottom">
+    <h3 class="icon-card__title">
+      {% if href %}
+        <a class="icon-card__link" href="{{ href }}">
+      {% endif %}
+        {{ title }}
+      {% if href %}
+        </a>
+      {% endif %}
+    </h3>
+    {% if body %}
+      <div class="icon-card__body">
+        {{ body|render|striptags('<strong><p><br><em><ul><ol><li><u>')|raw }}
+      </div>
+    {% endif %}
+  </div>
+</article>

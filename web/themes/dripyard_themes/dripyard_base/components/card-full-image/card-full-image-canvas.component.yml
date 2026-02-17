@@ -1,0 +1,90 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Full image card
+status: stable
+group: Dripyard Cards
+props:
+  type: object
+  required:
+    - title
+    - image
+    - href
+    - overlay_color
+  properties:
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+    title:
+      title: Title
+      type: string
+      examples:
+        - Card title
+    byline:
+      title: Byline
+      type: string
+      examples:
+        - 'Learn more'
+    href:
+      title: Link
+      type: string
+      format: uri-reference
+      examples: [ 'http://www.drupal.org' ]
+    overlay:
+      title: Overlay
+      type: string
+      enum:
+        - full
+        - from bottom
+      meta:enum:
+        full: Full
+        from bottom: From bottom
+      examples:
+        - full
+    overlay_color:
+      title: Overlay Color
+      type: string
+      enum:
+        - light
+        - dark
+      meta:enum:
+        light: Light
+        dark: Dark
+      examples: [ 'dark' ]
+    layout_vertical:
+      title: Vertical layout
+      type: string
+      enum:
+        - center
+        - bottom
+      meta:enum:
+        center: Center
+        bottom: Bottom
+      examples: [ bottom ]
+    title_align:
+      title: Title alignment
+      type: string
+      enum:
+        - start
+        - center
+      meta:enum:
+        start: Start
+        center: Center
+      examples: [ start ]
+    byline_align:
+      title: Byline alignment
+      type: string
+      enum:
+        - start
+        - end
+      meta:enum:
+        start: Start
+        end: End
+      examples: [ start ]
+libraryOverrides:
+  dependencies:
+    - core/components.dripyard_base--card-full-image

@@ -1,0 +1,17 @@
+{% embed 'dripyard_base:logo-grid' with {
+  layout: 'center',
+  logo_size: 'medium',
+  logo_background: 'auto',
+  logo_border_radius: 'extra large',
+  rows,
+} only %}
+  {% block logo_grid_content %}
+    {% for row in rows %}
+      {{ include('@dripyard_base/block/block--block-content--type--dripyard-logo-item.html.twig', {
+        content: row.content,
+        attributes: row.attributes,
+        props: row.props
+      }, with_context = false) }}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}

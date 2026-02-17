@@ -1,0 +1,20 @@
+{% set panel_id = title|clean_class ~ '-' ~ random() %}
+
+{% set classes = [
+  'sl-tab',
+] %}
+
+<sl-tab {{ attributes.addClass(classes).setAttribute('slot', 'nav').setAttribute('panel', panel_id) }}>
+  <div class="sl-tab__inner">
+    {% if icon %}
+      {{ include('dripyard_base:icon', {
+        icon,
+        size: 32,
+      }, with_context = false) }}
+    {% endif %}
+    {{ title }}
+  </div>
+</sl-tab>
+<sl-tab-panel class="sl-tab-panel" name="{{ panel_id }}">
+  {% block tab_panel_content %}{% endblock %}
+</sl-tab-panel>

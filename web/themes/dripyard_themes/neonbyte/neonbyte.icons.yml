@@ -1,0 +1,41 @@
+neonbyte_font_awesome:
+  enabled: true
+  label: "Font Awesome SVG"
+  description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
+  links:
+    - https://fontawesome.com/icons
+    - https://docs.fontawesome.com/web/add-icons/svg-bare
+  version: 6.7.2
+  license:
+    name: Font Awesome Free License
+    url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - icons/fontawesome/svgs/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >-
+    <svg
+      {{ attributes
+        .addClass('icon')
+        .setAttribute('viewBox', attributes.viewBox|default('0 0 50 50'))
+        .setAttribute('height', size|default('32'))
+        .setAttribute('fill', color|default('currentColor'))
+        .setAttribute('aria-hidden', 'true')
+      }}
+    >
+      {{ content }}
+    </svg>

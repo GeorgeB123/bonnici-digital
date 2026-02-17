@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 29dc7fae-7e14-4dc1-88a4-c875dc1631e0
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Clients
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /clients
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte serves clients across industries, from innovative startups to Fortune 500 enterprises and government agencies. Discover how organizations around the world trust us with their most critical technology needs.</p><h2>Industries We Serve</h2><ul><li><strong>Financial Services</strong> — Banks, insurance companies, and fintech innovators</li><li><strong>Healthcare</strong> — Hospitals, health systems, and life sciences organizations</li><li><strong>Government</strong> — Federal, state, and local agencies</li><li><strong>Technology</strong> — SaaS providers, software companies, and startups</li><li><strong>Manufacturing</strong> — Industrial automation and supply chain optimization</li></ul><h2>Client Success Metrics</h2><table><thead><tr><th>Metric</th><th>Result</th></tr></thead><tbody><tr><td>Client Retention Rate</td><td>96%</td></tr><tr><td>Average Engagement Length</td><td>4.5 years</td></tr><tr><td>Net Promoter Score</td><td>72</td></tr><tr><td>Projects Delivered On-Time</td><td>94%</td></tr></tbody></table><h2>What Our Clients Say</h2><p>Organizations choose NeonByte because we:</p><ol><li>Understand their unique industry requirements and regulations</li><li>Deliver solutions that work from day one</li><li>Provide responsive support when it matters most</li><li>Become true partners invested in their success</li></ol><p>Explore our case studies to see how we've helped organizations like yours overcome challenges and achieve their technology goals.</p>"
+      format: full_html
+      summary: ''

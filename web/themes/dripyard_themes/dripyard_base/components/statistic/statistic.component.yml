@@ -1,0 +1,40 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Statistic
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - statistic
+  properties:
+    statistic:
+      title: Statistic
+      type: string
+      description: Number with optional prefix and/or suffix
+      examples:
+        - $2,400
+        - 98%
+        - 5000+
+    first_line:
+      title: First line of text
+      type: string
+      examples:
+        - Students
+    second_line:
+      title: Second line of text
+      type: string
+      examples:
+        - 'Enrolled students from 45 countries'
+    href:
+      title: Link
+      type:
+        - string
+        - 'null'
+      examples: [ 'http://www.drupal.org' ]
+libraryOverrides:
+  js:
+    countup/countUp.umd.js: { minified: true }
+    statistic.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

@@ -1,0 +1,62 @@
+social_media_links:
+  bluesky: ''
+  discord: ''
+  facebook: ''
+  github: ''
+  instagram: ''
+  linkedin: ''
+  mastodon: ''
+  pinterest: ''
+  reddit: ''
+  snapchat: ''
+  telegram: ''
+  threads: ''
+  tiktok: ''
+  twitch: ''
+  twitter: ''
+  whatsapp: ''
+  youtube: ''
+theme_colors:
+  color_scheme: default
+  colors:
+    base_primary_color: '#0000d9'
+    base_primary_color_brightness: 'dark'
+    base_secondary_color: '#ea8b1f'
+    base_secondary_color_brightness: 'dark'
+  site_theme: 'white'
+footer:
+  theme: primary
+favicon:
+  use_default: false
+  path: ''
+features:
+  comment_user_picture: false
+  comment_user_verification: true
+  favicon: false
+  node_user_picture: false
+logo:
+  use_default: true
+third_party_settings:
+  shortcut:
+    module_link: true
+apply_recipes:
+  dripyard_neonbyte_blocks: 0
+  dripyard_neonbyte_nodes: 0
+  dripyard_neonbyte_demo_content: 0
+  dripyard_neonbyte_landing_pages: 0
+  dripyard_neonbyte_layout_builder_demo: 0
+  notice: ''
+layout_settings:
+  container_max_width: '1440'
+  border_radius_sm: '4'
+  border_radius_md: '8'
+  border_radius_lg: '16'
+  border_radius_button: '40'
+header_settings:
+  full_width: 0
+  remove_sticky: 0
+  remove_transparency: 0
+  theme: 'light'
+
+license_uuid: '500d308b-71ad-4ac1-8f36-ef1ff234296c'
+dripyard_uid: 51

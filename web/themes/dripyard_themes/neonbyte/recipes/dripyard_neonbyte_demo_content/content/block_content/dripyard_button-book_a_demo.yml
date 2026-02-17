@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 7d0f606a-e73b-459f-a69e-4cdd4c6f1eaa
+  bundle: dripyard_button
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Book a Demo'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_button_size:
+    -
+      value: small
+  dripyard_button_style:
+    -
+      value: primary
+  dripyard_link:
+    -
+      uri: 'internal:/'
+      title: 'Book a Demo'
+      options: {  }

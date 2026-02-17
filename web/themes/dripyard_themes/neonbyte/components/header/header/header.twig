@@ -1,0 +1,31 @@
+{% set classes = [
+  'site-header',
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class,
+  ]
+%}
+<header{{ attributes.addClass(classes)}}>
+
+  {# Has frosted background color. Needs to be separate and parent of main header content. #}
+  <div class="site-header__shadow">
+    <div class="site-header__container">
+      {# Main header content wrapper with layout styles. #}
+      <div class="site-header__content">
+        {{ header_first }}
+        {{ include('neonbyte:mobile-nav-button', with_context = false) }}
+        {# This is the element that the mobile navigation button controls.  #}
+        <div id="{{ 'header-navigation-wrapper'|clean_unique_id }}" class="header-navigation-wrapper" data-drupal-selector="header-navigation-wrapper">
+          <div class="header-navigation-wrapper__scrollable">
+            {{ header_second }}
+            {% if block('header_third') is defined %}
+              <div class="header-navigation-wrapper__third">
+                {% block header_third %}
+                  {{ header_third }}
+                {% endblock %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

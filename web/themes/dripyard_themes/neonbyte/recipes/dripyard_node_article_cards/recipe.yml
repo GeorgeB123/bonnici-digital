@@ -1,0 +1,11 @@
+name: Dripyard Article Cards
+type: Dripyard
+description: 'Provides the config to create article cards'
+install:
+  - node
+  - views
+config:
+  strict: false
+recipes:
+  - core/recipes/article_tags
+  - core/recipes/basic_html_format_editor

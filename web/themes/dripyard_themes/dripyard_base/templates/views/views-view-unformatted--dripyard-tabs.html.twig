@@ -1,0 +1,20 @@
+{% embed 'dripyard_base:tab-group' with {
+  placement: 'top',
+  icon_size: 'large',
+  theme: 'inherit',
+  layout: 'center',
+  centered: false,
+  rows,
+} only %}
+  {% block tabs %}
+    {% for row in rows %}
+      {{ include('@dripyard_base/block/block--block-content--type--dripyard-tab-item.html.twig', {
+        icon_size,
+        icon_placement,
+        content: row.content,
+        attributes: row.attributes,
+        props: row.props
+      }, with_context = false) }}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,11 @@
+name: Dripyard Title CTA
+type: Dripyard
+description: 'Provides a title CTA component'
+install:
+  - block_content
+config:
+  strict: false
+recipes:
+  - 'dripyard_fields_block'
+  - 'dripyard_text_format_superbasic'
+  - 'dripyard_block_button'

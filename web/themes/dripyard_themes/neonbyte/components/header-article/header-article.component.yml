@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Header Article
+status: stable
+noUi: true
+props:
+  type: object
+  properties: {}
+slots:
+  meta_content:
+    title: Author and date metadata
+  image_content:
+    title: Featured image content

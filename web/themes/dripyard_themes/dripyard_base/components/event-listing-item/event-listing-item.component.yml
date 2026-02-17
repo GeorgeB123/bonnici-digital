@@ -1,0 +1,49 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Event Listing Item
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - title
+    - url
+    - date_time_stamp_begin
+  properties:
+    title:
+      title: Event title
+      type: string
+      examples:
+        - Summer Music Festival
+        - Workshop: Introduction to Design
+    url:
+      title: Event URL
+      type:
+        - string
+        - 'null'
+      format: uri-reference
+      examples:
+        - '/events/summer-festival'
+        - 'https://example.com/workshop'
+    date_time_stamp_begin:
+      title: Event date/time
+      type: string
+      format: date-time
+      examples:
+        - '2024-07-15T14:30:00Z'
+    description:
+      title: Event description
+      type: string
+      examples:
+        - Join us for an amazing outdoor music experience
+    formatted_time:
+      title: Formatted time display
+      type: string
+      examples:
+        - '2:30 PM - 5:00 PM'
+        - '10:00 AM'
+    location:
+      title: Event location
+      type: string
+      examples:
+        - Central Park Amphitheater
+        - Conference Room A

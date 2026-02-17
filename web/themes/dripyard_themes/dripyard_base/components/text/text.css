@@ -1,0 +1,30 @@
+/*
+ * @file
+ * Styles for text component.
+ */
+
+.text {
+  max-width: var(--text-max-width, none);
+  text-box: inherit;
+
+  p {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-family: inherit;
+    color: inherit;
+  }
+}
+
+.text--centered {
+  margin-inline: auto;
+  text-align: center;
+
+  ul,
+  ol,
+  li {
+    width: fit-content;
+    margin-inline: auto;
+  }
+}

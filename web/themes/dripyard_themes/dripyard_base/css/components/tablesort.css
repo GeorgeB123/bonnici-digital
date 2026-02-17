@@ -1,0 +1,31 @@
+/*
+ * @file
+ * Table sort.
+ */
+
+.tablesort {
+  display: inline-flex;
+  align-items: center;
+  width: var(--sp2);
+  aspect-ratio: 1;
+  margin-inline-start: var(--spacing-xxxs);
+
+  &::after {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    content: "";
+    background-color: currentColor;
+    mask-image: url('../../images/arrow-up.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    @media (forced-colors: active) {
+      background-color: buttonText;
+    }
+  }
+}
+
+.tablesort--desc::after {
+  scale: -1;
+}

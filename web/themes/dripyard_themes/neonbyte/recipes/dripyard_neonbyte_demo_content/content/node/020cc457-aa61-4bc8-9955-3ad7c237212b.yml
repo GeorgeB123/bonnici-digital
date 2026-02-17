@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 020cc457-aa61-4bc8-9955-3ad7c237212b
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Careers
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /careers
+      langcode: en
+  body:
+    -
+      value: "<p>Join the NeonByte team. We're always looking for talented individuals passionate about technology, security, and innovation. Explore current openings and grow your career with a company that's shaping the future of enterprise technology.</p><h2>Why Work at NeonByte</h2><ul><li><strong>Meaningful Work</strong> — Protect organizations and their data from real threats</li><li><strong>Growth Opportunities</strong> — Clear career paths with mentorship and training</li><li><strong>Competitive Compensation</strong> — Salary, equity, and comprehensive benefits</li><li><strong>Work-Life Balance</strong> — Flexible schedules and unlimited PTO</li></ul><h2>Benefits Package</h2><table><thead><tr><th>Category</th><th>What We Offer</th></tr></thead><tbody><tr><td>Health</td><td>Medical, dental, vision — 100% premium covered</td></tr><tr><td>Financial</td><td>401(k) with 4% match, equity grants</td></tr><tr><td>Learning</td><td>$3,000 annual education stipend</td></tr><tr><td>Wellness</td><td>$500 home office budget, gym membership</td></tr><tr><td>Time Off</td><td>Unlimited PTO, 12 paid holidays</td></tr></tbody></table><h2>Open Positions</h2><ol><li>Senior Security Engineer — Remote</li><li>AI/ML Platform Developer — Austin, TX</li><li>Solutions Architect — New York, NY</li><li>Customer Success Manager — Remote</li><li>Technical Writer — Remote</li></ol><p>Don't see a role that fits? Send your resume to careers@neonbyte.com — we're always interested in meeting talented people.</p>"
+      format: full_html
+      summary: ''

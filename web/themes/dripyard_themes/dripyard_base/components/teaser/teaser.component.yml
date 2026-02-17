@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Teaser
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - title
+    - href
+  properties:
+    title:
+      title: Title
+      type: string
+      examples: ['This is the teaser title']
+    href:
+      title: Link
+      type: string
+      format: uri-reference
+      examples: ['http://www.example.com']
+slots:
+  teaser_content:
+    title: Content
+  meta:
+    title: Meta
+    description: Teaser meta

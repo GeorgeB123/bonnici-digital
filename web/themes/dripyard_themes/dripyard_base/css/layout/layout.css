@@ -1,0 +1,40 @@
+/*
+ * @file
+ * Various layout utility classes essential to the layout of the site.
+ */
+
+.layout-container {
+  margin: 0;
+}
+
+/*
+ * The .query-container is an ancestor of .region-container. It sets the
+ * inline-size, which is queried by descendants using CQW units.
+ *
+ * @todo Refactor away class and bring this rule to .layout-container when
+ * Safari (tested 18.3) can support fixed elements under `container: inline-size`.
+ */
+.query-container {
+  container-type: inline-size;
+}
+
+/*
+ * Container classes to constrain the content width.
+ *  - .region-container is used to wrap all non-fixed region containers.
+ *  - .container is used within components, and can be nested without breaking.
+ */
+.region-container,
+.container {
+  width: var(--container-width);
+  margin-inline: auto;
+}
+
+/*
+ * Break components out of their container. the CQW units within this
+ * ruleset reference the ancestor .query-container element within the region
+ * template. Does not apply if nested under .container or .full-width.
+ */
+.full-width {
+  width: 100cqw;
+  margin-inline-start: calc(-50cqw + 50%);
+}

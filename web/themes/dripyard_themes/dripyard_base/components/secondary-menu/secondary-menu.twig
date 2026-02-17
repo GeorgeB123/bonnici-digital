@@ -1,0 +1,10 @@
+<div class="secondary-menu">
+  <ul{{ attributes.addClass('secondary-menu__list') }}>
+    {# Secondary menu intentionally does not support nested submenus. #}
+    {% for item in items %}
+      <li{{ item.attributes.addClass('secondary-menu__item') }}>
+        {{ link(item.title, item.url, { 'class': 'secondary-menu__link' }) }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

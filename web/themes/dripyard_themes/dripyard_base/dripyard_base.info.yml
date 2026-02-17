@@ -1,0 +1,51 @@
+name: Dripyard base theme
+type: theme
+base theme: false
+description: Contains common components and code shared between all Dripyard themes.
+core_version_requirement: ^11.2
+libraries:
+  - dripyard_base/global
+  - dripyard_base/variables
+  - dripyard_base/themes
+libraries-extend:
+  node/drupal.node.preview:
+    - dripyard_base/node-preview
+  core/drupal.dialog:
+    - dripyard_base/drupal.dialog
+  core/drupal.message:
+    - dripyard_base/drupal.message
+  core/drupal.autocomplete:
+    - dripyard_base/drupal.autocomplete
+  layout_builder/drupal.layout_builder:
+    - dripyard_base/drupal.layout_builder
+  core/drupal.tabledrag:
+    - dripyard_base/drupal.tabledrag
+  core/drupal.vertical-tabs:
+    - dripyard_base/drupal.vertical-tabs
+  core/drupal.progress:
+    - dripyard_base/drupal.progress
+  layout_discovery/onecol:
+    - dripyard_base/layout_builder_layout
+  layout_discovery/twocol_bricks:
+    - dripyard_base/layout_builder_layout
+  klaro/klaro:
+    - dripyard_base/klaro
+  better_exposed_filters/general:
+    - dripyard_base/better-exposed-filters
+  coffee/drupal.coffee:
+    - dripyard_base/drupal.coffee
+  field_group/element.horizontal_tabs:
+    - dripyard_base/element.horizontal_tabs
+  views/views.responsive-grid:
+    - dripyard_base/views.responsive-grid
+  webform/webform.progress.tracker:
+    - dripyard_base/webform.progress.tracker
+libraries-override:
+  layout_builder/twocol_section: dripyard_base/layout_builder_two-col_section
+  layout_builder/threecol_section: dripyard_base/layout_builder_three-col_section
+  layout_builder/fourcol_section: dripyard_base/layout_builder_four-col_section
+  core/drupal.tablesort: dripyard_base/drupal.tablesort
+  commerce_cart/cart_block: false
+ckeditor5-stylesheets:
+  - css/utilities/typography-utilities.css
+dripyard_theme_level: base

@@ -1,0 +1,19 @@
+{% set block_content = content['#block_content'] %}
+{% set in_layout_builder = elements['#in_preview'] %}
+
+{% if in_layout_builder %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+{% endif %}
+  {{ include('dripyard_base:testimonial', {
+    quote: content.body,
+    citation: block_content.dripyard_testimonial_citation[0].value|default(''),
+    image: content.dripyard_image_media,
+    reversed: block_content.dripyard_testimonial_reversed[0].value|default(false) ? true : false,
+    theme: 'inherit',
+    }, with_context = false) }}
+
+{% if in_layout_builder %}
+  </div>
+{% endif %}

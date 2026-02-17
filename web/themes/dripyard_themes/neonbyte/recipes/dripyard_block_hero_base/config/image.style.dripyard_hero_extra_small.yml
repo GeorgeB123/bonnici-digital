@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dripyard_hero_extra_small
+label: 'Hero Extra-Small'
+effects:
+  3c5bf049-8dfe-425d-a3c2-ba0f1c548b19:
+    uuid: 3c5bf049-8dfe-425d-a3c2-ba0f1c548b19
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      anchor: center-center
+  0e23423a-b113-4468-9238-139459800746:
+    uuid: 0e23423a-b113-4468-9238-139459800746
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

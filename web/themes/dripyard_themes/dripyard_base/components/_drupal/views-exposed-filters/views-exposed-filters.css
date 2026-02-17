@@ -1,0 +1,23 @@
+/*
+ * @file
+ * Basic styling for exposed filters.
+ */
+
+.views-exposed-filters {
+  --views-exposed-filters-background-color: var(--theme-surface-alt);
+  --views-exposed-filters-text-color: var(--gray-10); /* @todo */
+  --views-exposed-filters-padding-block: var(--spacing-xs);
+  --views-exposed-filters-padding-inline: var(--spacing-s);
+  --views-exposed-filters-border-radius: var(--radius-md);
+
+  padding: var(--views-exposed-filters-padding-block) var(--views-exposed-filters-padding-inline);
+  border: solid 1px transparent;
+  border-radius: var(--views-exposed-filters-border-radius);
+  background-color: var(--views-exposed-filters-background-color);
+  color: var(--views-exposed-filters-text-color);
+
+  &.form--inline > *,
+  .form--inline > * {
+      margin-top: 0;
+  }
+}

@@ -1,0 +1,152 @@
+/*
+ * @file
+ * Grid wrapper component styles.
+ */
+
+.grid-wrapper {
+  container-type: inline-size;
+}
+
+.grid-wrapper__grid {
+  --grid-visualization-color: magenta;
+  --grid-visualization-column-opacity: 10%;
+  --grid-visualization-gutter-opacity: 0%;
+
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  position: relative;
+
+  @container (width > 600px) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+
+  /* Grid visualization overlay will not show unless in Canvas editor and in Canvas edit mode. */
+  &::before {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      to right,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc(100% / 6 - 1px),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 6 - 1px),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 6)
+    );
+
+    @container (width > 600px) {
+      background-image: repeating-linear-gradient(
+        to right,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc(100% / 12 - 1px),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 12 - 1px),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 12)
+      );
+    }
+  }
+
+  .is-canvas-editor & {
+    padding-block: 5px;
+  }
+
+  /* Show enhanced grid lines when in canvas edit mode. */
+  .is-canvas-editor .canvas-edit-mode & {
+    min-height: 10px;
+
+    &::before {
+      content: "";
+    }
+  }
+
+  /* Adjust visualization based on column gutter. */
+  &.gutter-column--0::before {
+    background-image: repeating-linear-gradient(
+      to right,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc(100% / 6 - 2px),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 6 - 2px),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 6)
+    );
+
+    @container (width > 600px) {
+      background-image: repeating-linear-gradient(
+        to right,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc(100% / 12 - 2px),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 12 - 2px),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc(100% / 12)
+      );
+    }
+  }
+
+  &.gutter-column--s::before {
+    background-image: repeating-linear-gradient(
+      to right,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc((100% - 5 * var(--spacing-xs)) / 6),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 5 * var(--spacing-xs)) / 6),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 5 * var(--spacing-xs)) / 6 + var(--spacing-xs))
+    );
+
+    @container (width > 600px) {
+      background-image: repeating-linear-gradient(
+        to right,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc((100% - 11 * var(--spacing-xs)) / 12),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 11 * var(--spacing-xs)) / 12),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 11 * var(--spacing-xs)) / 12 + var(--spacing-xs))
+      );
+    }
+  }
+
+  &.gutter-column--m::before {
+    background-image: repeating-linear-gradient(
+      to right,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc((100% - 5 * var(--spacing-m)) / 6),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 5 * var(--spacing-m)) / 6),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 5 * var(--spacing-m)) / 6 + var(--spacing-m))
+    );
+
+    @container (width > 600px) {
+      background-image: repeating-linear-gradient(
+        to right,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc((100% - 11 * var(--spacing-m)) / 12),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 11 * var(--spacing-m)) / 12),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 11 * var(--spacing-m)) / 12 + var(--spacing-m))
+      );
+    }
+  }
+
+  &.gutter-column--l::before {
+    background-image: repeating-linear-gradient(
+      to right,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc((100% - 5 * var(--spacing-xl)) / 6),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 5 * var(--spacing-xl)) / 6),
+      color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 5 * var(--spacing-xl)) / 6 + var(--spacing-xl))
+    );
+
+    @container (width > 600px) {
+      background-image: repeating-linear-gradient(
+        to right,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) 0%,
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-column-opacity), transparent) calc((100% - 11 * var(--spacing-xl)) / 12),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 11 * var(--spacing-xl)) / 12),
+        color-mix(in oklch, var(--grid-visualization-color) var(--grid-visualization-gutter-opacity), transparent) calc((100% - 11 * var(--spacing-xl)) / 12 + var(--spacing-xl))
+      );
+    }
+  }
+
+  .grid-wrapper__grid {
+    --grid-visualization-color: aquamarine;
+    --grid-visualization-column-opacity: 20%;
+    --grid-visualization-gutter-opacity: 0%;
+
+    .grid-wrapper__grid {
+      --grid-visualization-color: lime;
+    }
+  }
+}

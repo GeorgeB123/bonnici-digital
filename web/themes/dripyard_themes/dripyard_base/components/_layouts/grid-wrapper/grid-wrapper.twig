@@ -1,0 +1,23 @@
+{% set classes = [
+  'grid-wrapper',
+  canvas_edit_mode ? 'canvas-edit-mode',
+  additional_classes,
+] %}
+
+{% set grid_classes = [
+  'grid-wrapper__grid',
+  column_gutter == 'zero' ? 'gutter-column--0',
+  column_gutter == 'small' ? 'gutter-column--s',
+  column_gutter == 'medium' ? 'gutter-column--m',
+  column_gutter == 'large' ? 'gutter-column--l',
+  row_gutter == 'zero' ? 'gutter-row--0',
+  row_gutter == 'small' ? 'gutter-row--s',
+  row_gutter == 'medium' ? 'gutter-row--m',
+  row_gutter == 'large' ? 'gutter-row--l',
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="{{ grid_classes|join(' ') }}">
+    {% block grid_cells %}{% endblock %}
+  </div>
+</div>

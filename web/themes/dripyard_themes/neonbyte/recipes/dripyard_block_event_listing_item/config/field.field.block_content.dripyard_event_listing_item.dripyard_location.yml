@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_event_listing_item
+    - field.storage.block_content.dripyard_location
+  module:
+    - text
+id: block_content.dripyard_event_listing_item.dripyard_location
+field_name: dripyard_location
+entity_type: block_content
+bundle: dripyard_event_listing_item
+label: 'Event Location'
+description: 'The venue or location where the event takes place'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

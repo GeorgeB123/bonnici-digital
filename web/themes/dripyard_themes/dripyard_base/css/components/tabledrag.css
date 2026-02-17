@@ -1,0 +1,332 @@
+/**
+ * @file
+ * Replacement styles for table drag.
+ *
+ * Adapted from Claro's styles.
+ */
+
+body.drag {
+  cursor: move;
+}
+
+body.drag-y {
+  cursor: row-resize;
+}
+
+table:has(.draggable) {
+  --table-row-dragging-bg-color: #fe7;
+  --table-row-dragging-text-color: #444;
+  --table-row-last-dragged-bg-color: #ffb;
+  --table-row-last-dragged-text-color: #444;
+  --tabledrag-handle-icon-size: 17px;
+
+  /**
+  * Reduce the spacing of draggable table cells.
+  */
+  & td:first-child ~ td,
+  & th:first-child ~ th {
+    padding-inline-start: 0;
+  }
+}
+
+/* The block region's title row in table. */
+.region-title {
+  font-weight: bold;
+}
+
+/* Empty region message row in table. */
+.region-message.region-populated {
+  /* If the region is populated, we shouldn't display the empty message. */
+  display: none;
+}
+
+/**
+ * Remove border-bottom from abbr element.
+ */
+.tabledrag-changed[class] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.tabledrag-changed {
+  /* Don't display the abbreviation of 'add-new' table rows. */
+  .add-new & {
+    display: none;
+  }
+
+  .draggable & {
+    margin-inline-start: var(--spacing-xxxs);
+  }
+
+  .tabledrag-cell--only-drag & {
+    width: var(--sp3);
+    min-width: var(--sp3);
+  }
+}
+
+/**
+ * Draggable row state colors.
+ */
+.draggable.drag,
+.draggable.drag:focus {
+  background-color: var(--table-row-dragging-bg-color);
+  color: var(--table-row-dragging-text-color);
+}
+
+.draggable.drag-previous {
+  background-color: var(--table-row-last-dragged-bg-color);
+  color: var(--table-row-last-dragged-text-color);
+}
+
+/* Auto width for weight selects and number inputs. */
+.draggable td .form-element--type-select[name$="][_weight]"], /* Multiple field */
+.draggable td .term-weight, /* Taxonomy term list */
+.draggable td .field-weight /* Field UI table */ {
+  width: auto;
+}
+
+/**
+ * Handle styles.
+ */
+
+.draggable a.tabledrag-handle {
+  display: inline-block;
+  float: revert;
+  height: revert;
+  margin-inline-end: var(--spacing-xxs);
+
+  ~ div {
+    display: inline-block;
+  }
+}
+
+.tabledrag-handle {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  cursor: move;
+  text-align: center;
+  vertical-align: text-top;
+  color: inherit;
+
+  .handle {
+    display: none;
+  }
+
+  &::after {
+    display: inline-block;
+    width: var(--tabledrag-handle-icon-size);
+    height: var(--tabledrag-handle-icon-size);
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    content: "";
+    transition: transform 0.1s ease-in-out 0s;
+    mask: url("../../images/tabledrag-handle.svg") no-repeat center;
+    background-color: currentColor;
+
+    @media (forced-colors: active) {
+      background: linktext;
+    }
+  }
+}
+
+/* Change icon and cursor if only vertical drag is allowed. */
+.tabledrag-handle.tabledrag-handle-y {
+  cursor: row-resize;
+}
+
+.tabledrag-handle.tabledrag-handle-y::after {
+  mask-image: url("../../images/tabledrag-handle-y.svg");
+  mask-size: 16px 16px;
+}
+
+.tabledrag-handle::after,
+.tabledrag-disabled .tabledrag-handle.tabledrag-handle.tabledrag-handle::after {
+  transform: scale(1);
+}
+
+.tabledrag-handle:is(:hover, :focus)::after,
+.draggable.drag .tabledrag-handle::after {
+  transform: scale(1.25);
+}
+
+/* Disabled tabledrag handle. */
+.tabledrag-disabled {
+  & .tabledrag-handle {
+    cursor: default;
+    opacity: 0.4;
+
+    &.tabledrag-handle::before {
+      content: none;
+    }
+  }
+}
+
+/**
+ * Enhancements for touch-capable screens.
+ */
+
+/**
+ * Increase handle size.
+ */
+.touchevents {
+  & .tabledrag-handle::after {
+    padding-block: var(--spacing-xs);
+  }
+
+  & .draggable .menu-item__link {
+    padding-block: var(--spacing-xxs);
+  }
+}
+
+/**
+ * Wrapper of the toggle weight button (styled as a link).
+ */
+.tabledrag-toggle-weight-wrapper {
+  text-align: end;
+
+  /* Hide nested weight toggles as they are redundant. */
+  .draggable-table & {
+    display: none;
+  }
+}
+
+/**
+ * Keep crowded tabledrag cells vertically centered.
+ */
+.tabledrag-cell {
+  padding-block: 0;
+}
+
+/**
+ * If the first table cell is empty (like in a multiple field widget table),
+ * we can save some space for the following cells.
+ * If it isn't empty (Field UI table, taxonomy term overview page), this CSS
+ * class won't be added.
+ */
+.tabledrag-cell--only-drag {
+  width: 1px; /* This forces this cell to use the smallest possible width. */
+  padding-inline-end: 0;
+}
+
+.tabledrag-cell-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .tree {
+    flex-grow: 1;
+  }
+
+  .tabledrag-handle::after {
+    vertical-align: middle;
+  }
+}
+
+.tabledrag-cell-content__item {
+  padding-inline-end: var(--space-xs);
+
+  &:empty {
+    display: none;
+  }
+}
+
+/**
+ * Indentation.
+ */
+.indentation {
+  position: relative;
+  inset-inline-start: calc(var(--space-xs) * -0.5);
+  float: inline-start;
+  width: 25px;
+  height: 25px;
+  background: none !important;
+  line-height: 0;
+
+  .tabledrag-cell-content & {
+    /* Fixes Safari bug (16.1 at least) where table rows are overly large when
+      using indentation (e.g. re-ordering menu items. */
+    display: inline-flex;
+    float: none;
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+/**
+ * Tree is the visual representation for the simultaneously moved draggable
+ * rows.
+ *
+ * These rules are styling the inline SVG that is placed inside the .indentation
+ * element.
+ */
+.tree {
+  width: 25px;
+  height: 25px;
+}
+
+.tree__item {
+  display: none;
+}
+
+/* LTR tree child. */
+.tree-child path {
+  &:not(.tree__item-child-ltr) {
+    display: none;
+  }
+
+  &.tree__item-child-ltr {
+    display: block;
+  }
+}
+
+/* RTL tree child. */
+[dir="rtl"] {
+  & .tree-child path {
+    &:not(.tree__item-child-rtl) {
+      display: none;
+    }
+
+    &.tree__item-child-rtl {
+      display: block;
+    }
+  }
+
+  /* Last RTL tree child. */
+  & .tree-child-last path {
+    &:not(.tree__item-child-last-rtl) {
+      display: none;
+    }
+
+    &.tree__item-child-last-rtl {
+      display: block;
+    }
+  }
+}
+
+/* Last LTR tree child. */
+.tree-child-last path {
+  &:not(.tree__item-child-last-ltr) {
+    display: none;
+  }
+
+  &.tree__item-child-last-ltr {
+    display: block;
+  }
+}
+
+/* Horizontal line. */
+.tree-child-horizontal path {
+  &:not(.tree__item-horizontal) {
+    display: none;
+  }
+
+  &.tree__item-horizontal {
+    display: block;
+  }
+}

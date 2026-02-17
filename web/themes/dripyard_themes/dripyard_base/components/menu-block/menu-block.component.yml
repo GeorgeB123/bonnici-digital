@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Menu block
+status: stable
+noUi: true
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      title: Title
+      type: string
+      examples: ['Menu title']
+    show_title:
+      title: Show title
+      type: boolean
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+slots:
+  content:
+    title: Menu content

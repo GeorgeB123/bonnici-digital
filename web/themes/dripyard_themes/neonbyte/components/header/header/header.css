@@ -1,0 +1,199 @@
+/*
+ * @file
+ * Styles for site header.
+ */
+
+@property --site-header-dropdown-height {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.site-header {
+  --site-header-dropdown-height: 0px;
+  --site-header-flyout-padding: var(--spacing-s);
+  --site-header-fixed-offset: 20px;
+
+  position: fixed;
+  top: calc(var(--site-header-fixed-offset) + var(--drupal-displace-offset-top, 0px));
+  inset-inline-start: var(--drupal-displace-offset-left, 0);
+  z-index: 10;
+
+  /* @todo refactor to CQW when Safari can support fixed elements under container: inline-size. */
+  width: calc(100% - var(--drupal-displace-offset-left, 0px) - var(--drupal-displace-offset-right, 0px));
+  color: var(--theme-text-color-medium);
+
+  &:where(.header--no-fixed) {
+    position: absolute;
+  }
+
+  &.header--full-width {
+    --site-header-fixed-offset: 0px;
+  }
+
+  @media (width > 800px) {
+    --site-header-flyout-padding: var(--spacing-s) var(--spacing-xxl) var(--spacing-xl);
+  }
+
+  @media (width <= 1000px) and (scripting: none) {
+    position: relative;
+    top: 0;
+  }
+
+  &:dir(rtl) {
+    inset-inline-start: var(--drupal-displace-offset-right, 0);
+  }
+
+  /* Contextual links are not operable because of the `overflow: clip`. So we hide them to avoid confusion. */
+  .contextual {
+    display: none;
+  }
+}
+
+.site-header__shadow[class] {
+  border: solid 1px transparent;
+
+  &:where(.site-header-no-full-width &) {
+    width: var(--container-width);
+    margin-inline: auto;
+    /* Necessary for Safari (tested 18.3) at mobile. Remove when Safari can support fixed elements under container: inline-size. */
+    max-width: 94%;
+  }
+
+  &:where(.header--full-width &) {
+    border: 0;
+    border-bottom: solid 1px transparent;
+  }
+}
+
+.site-header__container {
+  @media (width > 1000px) {
+    overflow: clip;
+
+    @media (scripting: none) {
+      overflow: visible;
+    }
+  }
+
+  &::after {
+    @media (width > 1000px) {
+      display: block;
+      flex-basis: 100%;
+      width: 100%;
+      height: var(--site-header-dropdown-height);
+      visibility: hidden;
+      content: "";
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: height 0.2s;
+      }
+    }
+  }
+}
+
+.site-header__content {
+  position: relative; /* Anchor dropdowns. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+
+  /* When full width, content should still keep to container. */
+  .header--full-width & {
+    width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  @media (width <=1000px) and (scripting: none) {
+    flex-wrap: wrap; /* No-JS support at mobile. */
+  }
+}
+
+.header-navigation-wrapper__scrollable {
+  @media (width <= 1000px) {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+    padding: var(--site-header-flyout-padding);
+
+    .region-header-first {
+      padding: var(--site-header-flyout-padding);
+    }
+
+    .region-header-second {
+      gap: var(--site-header-flyout-padding);
+    }
+  }
+
+  @media (width > 1000px) {
+    display: contents;
+  }
+}
+
+/* Region wrapper <div>. This is the element that shows/hides on narrow screens. */
+.header-navigation-wrapper {
+  @media (width > 1000px) {
+    display: contents;
+  }
+
+  @media (width <= 1000px) {
+    --mobile-menu-offset: 10px; /* How far the mobile menu is offset from the header. */
+    --header-height: 68px; /* Height of the header (although we don't force this height. */
+
+    position: fixed;
+    z-index: 10;
+    visibility: hidden;
+    width: 100%;
+    height: calc(100dvh - var(--drupal-displace-offset-top, 0px) - var(--site-header-fixed-offset) - (var(--mobile-menu-offset) * 2) - var(--header-height));
+    transition: all 0.2s;
+    background: color-mix(in oklch, var(--theme-surface) 95%, transparent);
+    inset-block-start: calc(var(--mobile-menu-offset) + var(--header-height));
+    inset-inline-start: 0;
+    border: solid 1px transparent;
+    border-radius: var(--header-border-radius);
+    opacity: 0;
+    translate: 0 -30px;
+    box-shadow: 0 0 20px color-mix(in oklch, var(--theme-text-color-loud), transparent);
+
+    @media (scripting: none) {
+      position: unset;
+      visibility: unset;
+      height: unset;
+      translate: unset;
+      opacity: unset;
+      flex-basis: 100%;
+    }
+
+    &.is-expanded {
+      visibility: visible;
+      opacity: 1;
+      translate: 0;
+    }
+  }
+
+  @media (width > 1000px) {
+    flex-grow: 1;
+  }
+}
+
+.header-navigation-wrapper__third {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  reading-flow: flex-visual;
+
+  @media (width <=1000px) {
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: auto;
+  }
+}
+
+.is-active-mobile-menu {
+  @media (width <=1000px) {
+    width: 100%;
+    overflow: hidden;
+  }
+}

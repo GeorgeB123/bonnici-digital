@@ -1,0 +1,12 @@
+{
+  "name": "dripyard/neonbyte",
+  "description": "A theme from Dripyard",
+  "type": "drupal-theme",
+  "version": "1.0.0",
+  "require": { },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\neonbyte\\": "src/"
+    }
+  }
+}

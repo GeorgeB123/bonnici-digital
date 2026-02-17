@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_wrapper
+    - field.field.block_content.dripyard_wrapper.dripyard_wrapper
+    - field.field.block_content.dripyard_wrapper.dripyard_wrapper_props
+  module:
+    - options
+id: block_content.dripyard_wrapper.default
+targetEntityType: block_content
+bundle: dripyard_wrapper
+mode: default
+content:
+  dripyard_wrapper:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  dripyard_wrapper_props: true

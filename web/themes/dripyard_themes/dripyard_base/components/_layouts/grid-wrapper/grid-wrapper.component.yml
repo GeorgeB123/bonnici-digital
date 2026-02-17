@@ -1,0 +1,59 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Grid Wrapper
+description: A simple CSS grid layout generator with 12 columns and utility classes support.
+status: stable
+group: Dripyard Layout
+props:
+  type: object
+  required:
+    - column_gutter
+    - row_gutter
+  properties:
+    canvas_edit_mode:
+      title: Canvas edit mode
+      type: boolean
+      examples: [ true ]
+
+    additional_classes:
+      title: Additional CSS classes
+      type: string
+      description: Additional CSS classes that will be added to the wrapper (separated by spaces).
+
+    column_gutter:
+      type: string
+      title: Override column gutter width
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ medium ]
+
+    row_gutter:
+      type: string
+      title: Override row gutter width
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ medium ]
+
+slots:
+  grid_cells:
+    title: Grid Cells
+    description: Grid cells should be placed here
+
+libraryOverrides:
+  dependencies:
+    - dripyard_base/layout-utilities

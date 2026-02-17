@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 403ebc4f-39a4-4769-a4ca-635269dd97d9
+  bundle: dripyard_statistic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'SLA Guarantee (statistic)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_link:
+    -
+      uri: 'internal:/'
+      title: ''
+      options: {  }
+  dripyard_statistic:
+    -
+      value: 99.99%
+  dripyard_statistic_first_line:
+    -
+      value: Uptime
+  dripyard_statistic_second_line:
+    -
+      value: 'SLA Guarantee'

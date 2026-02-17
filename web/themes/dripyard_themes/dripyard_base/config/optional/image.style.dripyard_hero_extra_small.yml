@@ -1,0 +1,23 @@
+uuid: 00137a28-e71a-40e6-be81-ed8c7d9c8852
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gf8I6XwgMXuAnjWNeB-SehZ5OWipjZejXImgP5aiEMA
+name: dripyard_hero_extra_small
+label: 'Dripyard Hero Extra-Small'
+effects:
+  3c5bf049-8dfe-425d-a3c2-ba0f1c548b19:
+    uuid: 3c5bf049-8dfe-425d-a3c2-ba0f1c548b19
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      anchor: center-center
+  0e23423a-b113-4468-9238-139459800746:
+    uuid: 0e23423a-b113-4468-9238-139459800746
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

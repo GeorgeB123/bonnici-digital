@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 804b0c6f-16c5-4276-9e73-63d9053de5df
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    d461cc05-9e38-4642-b632-260038fd2ba8: node
+    28a54b28-3c7b-4707-9f1f-12fc6fa9d0be: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Certifications
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: d461cc05-9e38-4642-b632-260038fd2ba8
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:28a54b28-3c7b-4707-9f1f-12fc6fa9d0be'
+  revision_translation_affected:
+    -
+      value: true

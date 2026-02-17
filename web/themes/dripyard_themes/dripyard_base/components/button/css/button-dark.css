@@ -1,0 +1,82 @@
+/**
+ * @file
+ * Button dark variant.
+ */
+
+.button--dark:where(:not([disabled])) {
+  /* Background. */
+  --button-background-color: var(--neutral-1000);
+  --button-background-color-hover: var(--neutral-900);
+  --button-background-color-active: var(--neutral-800);
+
+  /* Text colors. */
+  --button-text-color: var(--neutral-100);
+  --button-text-color-hover: var(--neutral-100);
+  --button-text-color-active: var(--neutral-100);
+
+  /* Icons. */
+  --button-icon-fill: currentColor;
+  --button-icon-fill-hover: currentColor;
+  --button-icon-fill-active: currentColor;
+  --button-icon-background-color: var(--neutral-800);
+  --button-icon-background-color-hover: var(--neutral-800);
+  --button-icon-background-color-active: var(--neutral-800);
+
+  /* Borders. */
+  --button-border-color: transparent;
+  --button-border-color-hover: transparent;
+  --button-border-color-active: transparent;
+
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border-color: var(--button-border-color);
+
+  &:hover {
+    background-color: var(--button-background-color-hover);
+    border-color: var(--button-border-color-hover);
+    color: var(--button-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--button-background-color-active);
+    border-color: var(--button-border-color-active);
+    color: var(--button-text-color-active);
+  }
+
+  .button__prefix,
+  .button__suffix {
+    background-color: var(--button-icon-background-color);
+
+    svg,
+    path {
+      fill: var(--button-icon-fill);
+      color: var(--button-icon-fill);
+    }
+  }
+
+  &:hover {
+    .button__prefix,
+    .button__suffix {
+      background: var(--button-icon-background-color-hover);
+
+      svg,
+      path {
+        fill: var(--button-icon-fill-hover);
+        color: var(--button-icon-fill-hover);
+      }
+    }
+  }
+
+  &:active {
+    .button__prefix,
+    .button__suffix {
+      background: var(--button-icon-background-color-active);
+
+      svg,
+      path {
+        fill: var(--button-icon-fill-active);
+        color: var(--button-icon-fill-active);
+      }
+    }
+  }
+}

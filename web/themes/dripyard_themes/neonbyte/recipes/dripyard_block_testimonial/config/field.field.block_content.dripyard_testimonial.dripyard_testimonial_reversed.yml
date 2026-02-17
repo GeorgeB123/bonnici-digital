@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_testimonial
+    - field.storage.block_content.dripyard_testimonial_reversed
+id: block_content.dripyard_testimonial.dripyard_testimonial_reversed
+field_name: dripyard_testimonial_reversed
+entity_type: block_content
+bundle: dripyard_testimonial
+label: 'Reverse layout'
+description: 'Reverses the layout of the testimonial (image on the right instead of left).'
+required: false
+translatable: true
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

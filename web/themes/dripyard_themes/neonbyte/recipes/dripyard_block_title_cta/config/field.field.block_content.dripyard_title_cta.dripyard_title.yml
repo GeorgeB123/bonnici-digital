@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_title_cta
+    - field.storage.block_content.dripyard_title
+    - filter.format.dripyard_superbasic
+  module:
+    - text
+id: block_content.dripyard_title_cta.dripyard_title
+field_name: dripyard_title
+entity_type: block_content
+bundle: dripyard_title_cta
+label: 'CTA Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - dripyard_superbasic
+field_type: text_long

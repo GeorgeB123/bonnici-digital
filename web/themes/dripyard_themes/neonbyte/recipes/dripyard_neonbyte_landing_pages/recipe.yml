@@ -1,0 +1,11 @@
+name: Dripyard NeonByte Layout Builder
+type: Dripyard
+description: 'create layout builder'
+install:
+  - layout_builder
+  - layout_discovery
+recipes:
+  - 'dripyard_neonbyte_blocks'
+  - 'dripyard_node_landing_pages'
+config:
+  strict: false

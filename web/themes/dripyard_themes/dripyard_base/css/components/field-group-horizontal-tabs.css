@@ -1,0 +1,49 @@
+/*
+ * @file
+ * Style helpers for horizontal tabs from fieldgroup module.
+ * @see https://www.drupal.org/project/field_group
+ */
+.horizontal-tabs {
+  --horizontal-tabs-border-color: var(--theme-border-color-soft);
+  --horizontal-tabs-border-radius: var(--radius-sm);
+  --horizontal-tabs-background-color: transparent;
+  --horizontal-tabs-active-tab-background-color: var(--theme-surface-alt);
+
+  border: 0;
+
+  ul.horizontal-tabs-list {
+    display: flex;
+    background-color: var(--horizontal-tabs-background-color);
+    border: 0;
+
+    :focus-visible {
+      outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+    }
+  }
+
+  .horizontal-tab-button {
+    background-color: var(--horizontal-tabs-background-color);
+    border: 0;
+    border-radius: var(--horizontal-tabs-border-radius) var(--horizontal-tabs-border-radius) 0 0;
+
+    &.selected {
+      border: solid 1px var(--horizontal-tabs-border-color);
+      border-bottom: 0;
+      background-color: var(--horizontal-tabs-active-tab-background-color);
+    }
+
+    a {
+      padding: var(--spacing-xs) var(--spacing-s);
+    }
+  }
+
+  .horizontal-tabs-panes {
+    border: solid 1px var(--horizontal-tabs-border-color);
+    border-radius: var(--horizontal-tabs-border-radius);
+
+    /* No border-radius for top left of tab pane if the first item is selected. */
+    &:has(> :first-of-type(details):not([style*="display: none"])) {
+      border-start-start-radius: 0;
+    }
+  }
+}

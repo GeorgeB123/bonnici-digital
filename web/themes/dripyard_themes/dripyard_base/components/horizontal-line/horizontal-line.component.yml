@@ -1,0 +1,91 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Horizontal line
+status: stable
+group: Dripyard Basic
+props:
+  type: object
+  required:
+    - margin_top
+    - margin_bottom
+    - width
+    - color
+    - alignment
+  properties:
+    margin_top:
+      type: ['string']
+      title: Override top margin
+      description: Overrides the external spacing at the top of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ medium ]
+    margin_bottom:
+      type: ['string']
+      title: Override bottom margin
+      description: Overrides the external spacing at the bottom of the component.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ medium ]
+    color:
+      type:
+        - string
+      title: Line color
+      enum:
+        - soft
+        - medium
+        - loud
+        - primary
+      examples: [ primary ]
+      meta:enum:
+        default: Default
+        soft: Soft
+        medium: Medium
+        loud: Loud
+        primary: Primary
+    width:
+      type:
+        - string
+      title: Line width
+      enum:
+        - small
+        - medium
+        - full
+      meta:enum:
+        small: Small
+        medium: Medium
+        full: Full width
+      examples: [ full ]
+    alignment:
+      type:
+        - string
+      title: Horizontal alignment
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+      examples: [ start ]
+    modifier_classes:
+      type: string
+      title: Modifier CSS classes
+libraryOverrides:
+  dependencies:
+    - dripyard_base/layout-utilities

@@ -1,0 +1,948 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: abd45300-70e8-4c46-86cb-dbeeb3da0e1d
+  default_langcode: en
+  depends:
+    35eb9641-d907-4c18-ad15-fae08e054f5b: file
+    60c88a02-6f6a-437a-9068-f5bf21e0b923: media
+    8aac8711-ae16-47d5-b367-9d39d32fe1cf: file
+    2e5e1d4e-ec3a-4965-a266-bc6b13b3b501: media
+    a7a39488-7d63-4b6d-8e2d-1572f447ed7e: file
+    e3e46d5d-7ce2-4080-a5ac-b3bba206f74a: media
+    c0e024be-b1db-4175-86c1-9937463cfc63: file
+    52d3ae4a-39f6-4c25-b98a-89dd47e6d9c2: media
+    bbd3851b-f2dc-489c-9215-14aab9390667: file
+    8e7e7e16-3e26-4cf4-aaa7-d4a4a5d827a9: media
+    d7f90a7d-73b5-4d6f-98c7-3945e9d12425: file
+    7411a841-fc49-4a4b-8504-eae3ae1d53dc: media
+    4d23d420-d786-48ff-b4fe-7d6a36b574d8: file
+    3efd4e67-a6a4-4b5b-a2d5-25def6173ad9: media
+    b91d380e-bca2-48ac-9b0e-11d7e0f4603a: file
+    3c66c4f7-e8d6-4e11-b6c1-5e2274a735a4: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Neonbyte Home Page'
+  components:
+    -
+      uuid: decad486-a0f7-40a8-9edd-1bab3456a162
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: inherit
+        column_count: '1'
+        row_count: '1'
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: decad486-a0f7-40a8-9edd-1bab3456a162
+      slot: cell_1
+      uuid: 3c9a25bf-2e5f-4eac-9121-a2e264903e8a
+      component_id: sdc.neonbyte.hero
+      inputs:
+        theme: dark
+        height: full-screen
+        position_behind_against_screen_top: true
+        align_x: start
+        align_y: bottom
+        text_color: inherit
+    -
+      parent_uuid: 3c9a25bf-2e5f-4eac-9121-a2e264903e8a
+      slot: hero_media
+      uuid: 71b1befa-c021-4efe-94a9-4f63dcb5bda5
+      component_id: sdc.dripyard_base.canvas-image
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 60c88a02-6f6a-437a-9068-f5bf21e0b923
+            target_type: media
+        width: 2200
+        loading: eager
+    -
+      parent_uuid: 3c9a25bf-2e5f-4eac-9121-a2e264903e8a
+      slot: hero_content
+      uuid: a1a81965-f5dd-482f-9d74-8c2cbaed9752
+      component_id: sdc.dripyard_base.heading
+      inputs:
+        text: 'Securing Tomorrow. One Byte at a Time.'
+        html_element: h1
+        style: title
+        center: false
+        margin_top: zero
+        margin_bottom: zero
+    -
+      parent_uuid: 3c9a25bf-2e5f-4eac-9121-a2e264903e8a
+      slot: hero_content
+      uuid: ee462641-5f8f-416c-8375-11bebb603634
+      component_id: sdc.dripyard_base.flex-wrapper
+      inputs:
+        theme: inherit
+        wrap: true
+        align_x: start
+        align_y: center
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: zero
+        padding_bottom: zero
+        column_gutter: small
+        row_gutter: small
+    -
+      parent_uuid: ee462641-5f8f-416c-8375-11bebb603634
+      slot: content
+      uuid: 364dc3ad-2d0c-4d64-b1b2-662cf5bbc5d2
+      component_id: sdc.dripyard_base.button
+      inputs:
+        text: 'Book a Demo'
+        href:
+          uri: 'internal:/book-demo'
+          options: {  }
+        style: primary
+        size: medium
+        target: false
+        suffix_icon: arrow-right
+    -
+      parent_uuid: ee462641-5f8f-416c-8375-11bebb603634
+      slot: content
+      uuid: e80189ac-5ecd-40ad-909e-af741993994f
+      component_id: sdc.dripyard_base.button
+      inputs:
+        text: 'Contact sales'
+        href:
+          uri: 'internal:/contact'
+          options: {  }
+        style: default
+        size: medium
+        target: false
+    -
+      uuid: c6e9d5a4-ef47-4c75-8fb7-a3b18ebbc514
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: inherit
+        column_count: 1
+        row_count: 1
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: zero
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: c6e9d5a4-ef47-4c75-8fb7-a3b18ebbc514
+      slot: header
+      uuid: 38fa7bac-7cf9-4022-a0c9-93c9f2ded7dc
+      component_id: sdc.dripyard_base.title-cta
+      inputs:
+        layout: default
+        title: 'We offer powerful solutions for  Companies and Governments '
+        heading_style: h2
+        button_text: 'All Solutions'
+        button_href:
+          uri: 'internal:/solutions'
+          options: {  }
+        button_style: primary
+        button_target: false
+    -
+      parent_uuid: c6e9d5a4-ef47-4c75-8fb7-a3b18ebbc514
+      slot: cell_1
+      uuid: 3c918770-9b7d-4bc6-a9db-ea831f518c69
+      component_id: block.views_block.dripyard_article_cards-card_full_image
+      inputs:
+        label: 'Article Cards: Dripyard Card Full Image'
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: c8dd5b76-a598-44cb-8f0c-21d1a99a8e35
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: light
+        column_count: 3
+        row_count: 1
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: c8dd5b76-a598-44cb-8f0c-21d1a99a8e35
+      slot: cell_1
+      uuid: bb62ef80-4e85-49c5-888a-0891da6129be
+      component_id: sdc.dripyard_base.heading
+      inputs:
+        text: 'Reliable. Global. Proven'
+        html_element: h2
+        style: h2
+        center: false
+        margin_top: zero
+        margin_bottom: zero
+    -
+      parent_uuid: c8dd5b76-a598-44cb-8f0c-21d1a99a8e35
+      slot: cell_1
+      uuid: 51120325-550c-4eeb-ada2-844f3f63ba45
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>Enterprise-grade infrastructure.&nbsp;</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      parent_uuid: c8dd5b76-a598-44cb-8f0c-21d1a99a8e35
+      slot: cell_2
+      uuid: 09383ed1-5838-4824-ab10-2a53eb819b96
+      component_id: sdc.dripyard_base.statistic
+      inputs:
+        statistic: 99.99%
+        first_line: Uptime
+        second_line: 'SLA Guarantee'
+    -
+      parent_uuid: c8dd5b76-a598-44cb-8f0c-21d1a99a8e35
+      slot: cell_3
+      uuid: 7451aa2f-600a-4171-a78e-cabdd54b5c18
+      component_id: sdc.dripyard_base.statistic
+      inputs:
+        statistic: 200+
+        first_line: Datacenters
+        second_line: Worldwide
+    -
+      uuid: 72c3f473-d21e-40b3-a938-ce1eabb8418e
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: primary
+        column_count: 2
+        row_count: 1
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: 72c3f473-d21e-40b3-a938-ce1eabb8418e
+      slot: cell_1
+      uuid: 6cf10241-8ac9-4116-a37b-87687a2b8827
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>Trusted by Startups &amp; Enterprises</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      parent_uuid: 72c3f473-d21e-40b3-a938-ce1eabb8418e
+      slot: cell_1
+      uuid: 6baafcd7-6d71-45a2-a028-704a91602c3d
+      component_id: sdc.dripyard_base.heading
+      inputs:
+        text: 'Build Smarter, Safer, and Faster with NeonByte'
+        html_element: h2
+        style: h2
+        center: false
+        margin_top: zero
+        margin_bottom: zero
+    -
+      parent_uuid: 72c3f473-d21e-40b3-a938-ce1eabb8418e
+      slot: cell_1
+      uuid: 2f5f28a3-4d5f-4e1d-ac56-9026c14e57b3
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>Custom software, secure infrastructure, and AI-driven automation — all under one roof. Let NeonByte bring your next big idea to life, securely and at scale.</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      parent_uuid: 72c3f473-d21e-40b3-a938-ce1eabb8418e
+      slot: cell_1
+      uuid: 0d378620-4fec-4eac-bf92-e05699c906dc
+      component_id: sdc.dripyard_base.flex-wrapper
+      inputs:
+        theme: inherit
+        wrap: true
+        align_x: start
+        align_y: center
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: zero
+        padding_bottom: zero
+        column_gutter: small
+        row_gutter: small
+    -
+      parent_uuid: 0d378620-4fec-4eac-bf92-e05699c906dc
+      slot: content
+      uuid: 04e6f404-847b-46c2-9d0e-133ea154115d
+      component_id: sdc.dripyard_base.button
+      inputs:
+        text: 'Book a Free Consultation'
+        href:
+          uri: 'internal:/book-demo'
+          options: {  }
+        style: primary
+        size: medium
+        target: false
+        suffix_icon: arrow-right
+    -
+      parent_uuid: 0d378620-4fec-4eac-bf92-e05699c906dc
+      slot: content
+      uuid: 6cfe5af1-5495-426a-906d-c89322c9219a
+      component_id: sdc.dripyard_base.button
+      inputs:
+        text: 'Explore our Services'
+        href:
+          uri: 'internal:/solutions'
+          options: {  }
+        style: default
+        size: medium
+        target: false
+    -
+      parent_uuid: 72c3f473-d21e-40b3-a938-ce1eabb8418e
+      slot: cell_2
+      uuid: 3a8ef2b2-7634-48a5-99e5-705a268a56ae
+      component_id: sdc.dripyard_base.canvas-image
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 2e5e1d4e-ec3a-4965-a266-bc6b13b3b501
+            target_type: media
+        width: 800
+        loading: lazy
+    -
+      uuid: 79bfe2e6-440a-4db9-a0b4-63d1368ac9a8
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: inherit
+        column_count: '1'
+        row_count: '1'
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: 79bfe2e6-440a-4db9-a0b4-63d1368ac9a8
+      slot: header
+      uuid: f6f1d46e-bb2b-47f8-b9b7-7b5105d87828
+      component_id: sdc.dripyard_base.title-cta
+      inputs:
+        layout: center
+        title: 'We partner with the best '
+        heading_style: h2
+        button_text: 'Become a partner'
+        button_href:
+          uri: 'internal:/partners'
+          options: {  }
+        button_style: primary
+        button_target: false
+        button_size: medium
+    -
+      parent_uuid: 79bfe2e6-440a-4db9-a0b4-63d1368ac9a8
+      slot: cell_1
+      uuid: ccf16a82-8754-48bd-87f1-bb8e9a500989
+      component_id: sdc.dripyard_base.logo-grid
+      inputs:
+        logo_size: medium
+        layout: center
+        logo_background: auto
+        logo_border_radius: 'extra large'
+    -
+      parent_uuid: ccf16a82-8754-48bd-87f1-bb8e9a500989
+      slot: logo_grid_content
+      uuid: 2a725b11-450e-456a-b999-8d305941edb0
+      component_id: sdc.dripyard_base.logo-item-canvas
+      inputs:
+        href:
+          uri: 'internal:/partners'
+          options: {  }
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e3e46d5d-7ce2-4080-a5ac-b3bba206f74a
+            target_type: media
+    -
+      parent_uuid: ccf16a82-8754-48bd-87f1-bb8e9a500989
+      slot: logo_grid_content
+      uuid: 9fd55ed8-41df-4d0b-9625-94d509c95bf6
+      component_id: sdc.dripyard_base.logo-item-canvas
+      inputs:
+        href:
+          uri: 'internal:/partners'
+          options: {  }
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 52d3ae4a-39f6-4c25-b98a-89dd47e6d9c2
+            target_type: media
+    -
+      parent_uuid: ccf16a82-8754-48bd-87f1-bb8e9a500989
+      slot: logo_grid_content
+      uuid: f25a6736-e34c-4bc4-be76-9a67040349bf
+      component_id: sdc.dripyard_base.logo-item-canvas
+      inputs:
+        href:
+          uri: 'internal:/partners'
+          options: {  }
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8e7e7e16-3e26-4cf4-aaa7-d4a4a5d827a9
+            target_type: media
+    -
+      parent_uuid: ccf16a82-8754-48bd-87f1-bb8e9a500989
+      slot: logo_grid_content
+      uuid: 67cededa-5060-4042-9991-3700ed59f02d
+      component_id: sdc.dripyard_base.logo-item-canvas
+      inputs:
+        href:
+          uri: 'internal:/partners'
+          options: {  }
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7411a841-fc49-4a4b-8504-eae3ae1d53dc
+            target_type: media
+    -
+      parent_uuid: ccf16a82-8754-48bd-87f1-bb8e9a500989
+      slot: logo_grid_content
+      uuid: 3f7ff18c-4e29-424d-bdfb-66c67ee27801
+      component_id: sdc.dripyard_base.logo-item-canvas
+      inputs:
+        href:
+          uri: 'internal:/partners'
+          options: {  }
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 3efd4e67-a6a4-4b5b-a2d5-25def6173ad9
+            target_type: media
+    -
+      parent_uuid: ccf16a82-8754-48bd-87f1-bb8e9a500989
+      slot: logo_grid_content
+      uuid: 725b1f65-276a-44cc-8917-7fd7b8ba7e71
+      component_id: sdc.dripyard_base.logo-item-canvas
+      inputs:
+        href:
+          uri: 'internal:/partners'
+          options: {  }
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 3c66c4f7-e8d6-4e11-b6c1-5e2274a735a4
+            target_type: media
+    -
+      uuid: 9f1ece27-488f-4363-87a2-2c578862c342
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: dark
+        column_count: 1
+        row_count: 1
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: 9f1ece27-488f-4363-87a2-2c578862c342
+      slot: header
+      uuid: b2bd1f5a-b214-458f-bd8d-0a9fed160b3f
+      component_id: sdc.dripyard_base.title-cta
+      inputs:
+        layout: default
+        title: 'Latest News'
+        heading_style: h2
+        button_text: 'See all news'
+        button_href:
+          uri: 'internal:/news'
+          options: {  }
+        button_style: default
+        button_target: false
+        button_suffix_icon: arrow-right`
+    -
+      parent_uuid: 9f1ece27-488f-4363-87a2-2c578862c342
+      slot: cell_1
+      uuid: ea727538-8c0c-4af0-81df-d91767fe5498
+      component_id: block.views_block.dripyard_article_cards-card
+      inputs:
+        label: 'Article Cards: Dripyard Card'
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: 7dfb41d6-0c0f-49b6-822a-609ea9f5aef0
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: primary
+        column_count: 1
+        row_count: 1
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: 7dfb41d6-0c0f-49b6-822a-609ea9f5aef0
+      slot: header
+      uuid: 6bc0db0e-a357-42ba-a66b-a653524853c8
+      component_id: sdc.dripyard_base.heading
+      inputs:
+        text: 'View a demo of NeonByte'
+        html_element: h4
+        style: h4
+        center: false
+        margin_top: zero
+        margin_bottom: zero
+    -
+      parent_uuid: 7dfb41d6-0c0f-49b6-822a-609ea9f5aef0
+      slot: header
+      uuid: 43bb9610-e32a-4cd5-bf7a-a8073d188632
+      component_id: sdc.dripyard_base.heading
+      inputs:
+        text: 'Innovating tech. Unbreakable Security.'
+        html_element: h2
+        style: h2
+        margin_top: zero
+        margin_bottom: zero
+        center: false
+    -
+      parent_uuid: 7dfb41d6-0c0f-49b6-822a-609ea9f5aef0
+      slot: cell_1
+      uuid: 9cdc8ac5-d092-44ea-9bd1-ec11e15b7ea8
+      component_id: sdc.dripyard_base.video-youtube
+      inputs:
+        url: 'https://www.youtube.com/watch?v=lTBim0nMD5s'
+        title: 'Driesnote Dries Boytaert DrupalCon Vienna'
+    -
+      uuid: 61ff47d3-f06d-409c-8c04-d7beff978b6f
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: inherit
+        column_count: '1'
+        row_count: '1'
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: 61ff47d3-f06d-409c-8c04-d7beff978b6f
+      slot: header
+      uuid: 719efde1-25d0-4d50-9514-6523698b9ad5
+      component_id: sdc.dripyard_base.title-cta
+      inputs:
+        layout: default
+        title: 'Built for Scale. Backed by Strategy '
+        heading_style: h2
+        button_text: 'Contact us'
+        button_href:
+          uri: 'internal:/contact'
+          options: {  }
+        button_style: default
+        button_target: false
+        button_suffix_icon: phone
+    -
+      parent_uuid: 61ff47d3-f06d-409c-8c04-d7beff978b6f
+      slot: cell_1
+      uuid: 64db372f-0e8c-4017-a790-201544cd8be2
+      component_id: sdc.dripyard_base.accordion-group
+      inputs:
+        variation: background-color
+    -
+      parent_uuid: 64db372f-0e8c-4017-a790-201544cd8be2
+      slot: accordion_group_content
+      uuid: 44a49223-e4a5-47ef-ba8c-d8173a4cd4d0
+      component_id: sdc.dripyard_base.accordion-item
+      inputs:
+        title: 'End-to-End Development'
+        open: false
+    -
+      parent_uuid: 44a49223-e4a5-47ef-ba8c-d8173a4cd4d0
+      slot: accordion_item_content
+      uuid: 5b1bcaec-6f96-4262-a61a-f293bf991de1
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>At NeonByte, we specialize in delivering full-stack software solutions from the ground up. Our end-to-end development service covers everything — from product discovery and UI/UX design to backend architecture, frontend engineering, testing, and deployment. We take a collaborative approach, ensuring your input shapes every sprint while our team delivers clean, scalable code on time. With a strong emphasis on usability, maintainability, and performance, we build platforms that don’t just launch — they thrive.</p><p>But our work doesn’t stop at shipping. We equip your team with documentation, onboarding materials, and tools for long-term success. Post-launch, we’re available for feature enhancements, bug fixes, and optimizations to help your software evolve with your business. Whether you’re building a greenfield MVP or modernizing a legacy system, NeonByte brings the technical expertise and strategic insight to get you across the finish line — and beyond.</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      parent_uuid: 64db372f-0e8c-4017-a790-201544cd8be2
+      slot: accordion_group_content
+      uuid: cc30c951-6310-4e08-8b2b-4adf827781d8
+      component_id: sdc.dripyard_base.accordion-item
+      inputs:
+        title: 'Strategic Consulting & Long-Term Support'
+        open: false
+    -
+      parent_uuid: cc30c951-6310-4e08-8b2b-4adf827781d8
+      slot: accordion_item_content
+      uuid: 97998a32-cd89-4485-97d8-cabd2e1de9a7
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>Your application is only as strong as the infrastructure beneath it. That’s why NeonByte builds scalable, cloud-native environments that are secure, automated, and performance-optimized from day one. We use modern DevOps practices to design and implement infrastructure-as-code, set up CI/CD pipelines, containerize applications, and monitor system health in real time. This allows your team to deploy confidently, recover quickly, and scale effortlessly as your product grows.</p><p>Our DevOps team collaborates closely with developers and stakeholders to ensure seamless integration between infrastructure and code. Whether you’re running on AWS, Azure, GCP, or a self-hosted stack, we optimize your environment for reliability and cost-efficiency. We also provide proactive monitoring, alerting, and patch management — so you can focus on building features, not firefighting downtime. With NeonByte, operational excellence is built in from the start.</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      parent_uuid: 64db372f-0e8c-4017-a790-201544cd8be2
+      slot: accordion_group_content
+      uuid: 484b6125-a557-474c-ab6b-a0c02792d335
+      component_id: sdc.dripyard_base.accordion-item
+      inputs:
+        title: 'Scalable Infrastructure & DevOps'
+        open: false
+    -
+      parent_uuid: 484b6125-a557-474c-ab6b-a0c02792d335
+      slot: accordion_item_content
+      uuid: 17c1f5a9-a288-4636-a705-eab5880a54dd
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>Choosing the right technology at the right time can mean the difference between stalled growth and a competitive edge. NeonByte offers strategic consulting to help you navigate complex tech decisions with confidence. Whether you’re rearchitecting a monolith, moving to microservices, evaluating new frameworks, or seeking compliance with data privacy regulations, we provide expert guidance rooted in real-world experience. We help you identify risks, opportunities, and the clearest path forward.</p><p>Beyond one-off engagements, we offer long-term technical partnerships. Our team is available to act as your fractional CTO, systems architect, or DevSecOps advisor — whatever your roadmap requires. We provide hands-on support, quarterly technical reviews, and roadmap planning to ensure your systems stay resilient and aligned with your business goals. At NeonByte, consulting isn’t just advisory — it’s embedded, proactive, and results-driven.</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      uuid: 73103b30-95e0-4281-9640-0b735d09e627
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: inherit
+        column_count: '1'
+        row_count: '1'
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: 73103b30-95e0-4281-9640-0b735d09e627
+      slot: header
+      uuid: 69d1651f-3542-43d3-ae87-284e7f769707
+      component_id: sdc.dripyard_base.title-cta
+      inputs:
+        layout: default
+        title: 'Leading the future with AI Innovation'
+        heading_style: h2
+        button_text: 'Explore AI Solutions'
+        button_href:
+          uri: 'internal:/node/4'
+          options: {  }
+        button_style: default
+        button_target: false
+    -
+      parent_uuid: 73103b30-95e0-4281-9640-0b735d09e627
+      slot: cell_1
+      uuid: 8339faad-7a6f-4909-8825-cbf7d641ef51
+      component_id: sdc.dripyard_base.tab-group
+      inputs:
+        canvas_edit_mode: true
+        centered: false
+        placement: top
+        icon_size: small
+        icon_placement: vertical
+    -
+      parent_uuid: 8339faad-7a6f-4909-8825-cbf7d641ef51
+      slot: tabs
+      uuid: 78b566fd-c721-4b63-b3db-9671fe89dd35
+      component_id: sdc.dripyard_base.tab
+      inputs:
+        title: Technology
+        icon: lightbulb
+    -
+      parent_uuid: 78b566fd-c721-4b63-b3db-9671fe89dd35
+      slot: tab_panel_content
+      uuid: 446f7bfd-722a-46c8-b9f9-5f6f9f3b67d4
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>The right technology strategy can transform your business. NeonByte helps you align your tools, processes, and roadmap with your long-term goals. Whether you need help choosing vendors, optimizing workflows, or planning for scalable growth, we offer expert insights that turn tech decisions into competitive advantages.</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      parent_uuid: 8339faad-7a6f-4909-8825-cbf7d641ef51
+      slot: tabs
+      uuid: b261a8ee-fc05-4b01-a9ae-b30d677e4ffa
+      component_id: sdc.dripyard_base.tab
+      inputs:
+        title: Compliance
+        icon: file-shield
+    -
+      parent_uuid: b261a8ee-fc05-4b01-a9ae-b30d677e4ffa
+      slot: tab_panel_content
+      uuid: e19948d5-1117-4713-9de8-8cd15dfa0a87
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>At NeonByte, we make certification simple. Whether you’re targeting SOC 2, ISO 27001, HIPAA, or GDPR, we guide you through every requirement with clear, actionable steps. Our team helps you build the necessary policies, configure your systems securely, and prepare for audits with confidence. Achieve certification faster — and stay compliant without disrupting your business operations.</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      parent_uuid: 8339faad-7a6f-4909-8825-cbf7d641ef51
+      slot: tabs
+      uuid: bd5003f4-b97b-4ffd-8a03-3a645a11c886
+      component_id: sdc.dripyard_base.tab
+      inputs:
+        title: Security
+        icon: lock
+    -
+      parent_uuid: bd5003f4-b97b-4ffd-8a03-3a645a11c886
+      slot: tab_panel_content
+      uuid: 02ea0276-8c7b-470c-9fdf-1f4f8d04b229
+      component_id: sdc.dripyard_base.text
+      inputs:
+        text:
+          value: '<p>Security isn’t just about defense — it’s about smart architecture. NeonByte’s consulting services help you design scalable, secure systems that meet today’s standards and tomorrow’s challenges. From infrastructure reviews to threat modeling and incident response planning, we partner with your team to build a resilient foundation that grows with you.</p>'
+          format: canvas_html_block
+        style: body_m
+        color: medium
+        center: false
+    -
+      uuid: c595f14b-c452-4556-9cd1-49e3f4391f3f
+      component_id: sdc.dripyard_base.layout-dynamic
+      inputs:
+        theme: dark
+        column_count: 1
+        row_count: 1
+        two_column_layout: '50% / 50%'
+        three_column_layout: '33% / 33% / 33%'
+        cell_align_x: default
+        cell_align_y: default
+        section_width: edge-to-edge
+        content_width: max-width
+        margin_top: zero
+        margin_bottom: zero
+        padding_top: large
+        padding_bottom: large
+        column_gutter: default
+        row_gutter: default
+    -
+      parent_uuid: c595f14b-c452-4556-9cd1-49e3f4391f3f
+      slot: header
+      uuid: bc824172-d527-40d4-9d03-5b768ff48636
+      component_id: sdc.dripyard_base.title-cta
+      inputs:
+        layout: default
+        title: 'Transform your business with Next-gen Cloud Architecture'
+        heading_style: h2
+        button_text: 'Start Your Journey'
+        button_href:
+          uri: 'internal:/book-demo'
+          options: {  }
+        button_style: primary
+        button_target: false
+    -
+      parent_uuid: c595f14b-c452-4556-9cd1-49e3f4391f3f
+      slot: cell_1
+      uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      component_id: sdc.dripyard_base.carousel
+      inputs:
+        canvas_edit_mode: false
+        label: 'Product features'
+        pager: true
+        navigation_position: hidden
+        slides_per_view: 4
+        rows: 1
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: b68486f8-6d1e-46e5-aa96-973f1b8e4030
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'Modern Maintainable Software'
+        body: 'We build modern, maintainable software tailored to your business.'
+        icon: code-commit
+        href:
+          uri: 'internal:/solutions/software'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: 620c16dd-6d30-4363-87f5-063ce7f90e1f
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'AI & Automation'
+        body: 'Eliminate repetitive tasks and supercharge productivity.'
+        icon: robot
+        href:
+          uri: 'internal:/node/4'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: 56486d92-e673-42ba-b49a-a2885669c32d
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'Security & Compliance'
+        body: 'Stay ahead of threats and regulations.'
+        icon: lock
+        href:
+          uri: 'internal:/node/1'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: 3f8a7c2d-9b4e-4d6f-a1c5-7e9b2f4d8a6c
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'Cloud Infrastructure'
+        body: 'Scalable cloud solutions that grow with your business.'
+        icon: cloud
+        href:
+          uri: 'internal:/solutions'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: 8d2b5c9a-4f6e-4a7d-b3c8-9e1f7a4b6d2c
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'DevOps & CI/CD'
+        body: 'Continuous integration and deployment for faster releases.'
+        icon: infinity
+        href:
+          uri: 'internal:/solutions/software'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: 5a9c3e7b-2d8f-4b6a-9e4c-7f1a3d5b8c9e
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'API Development'
+        body: 'Robust APIs that connect your systems seamlessly.'
+        icon: plug
+        href:
+          uri: 'internal:/solutions/software'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: 2b7d4f8c-6a9e-4c3b-8d5f-1e9a7c4b3d6f
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'Data Analytics'
+        body: 'Transform raw data into actionable business insights.'
+        icon: chart-line
+        href:
+          uri: 'internal:/insights/analytics-reports'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+    -
+      parent_uuid: 126d7dbc-f667-41f3-8ac9-a93094d4cfef
+      slot: carousel_items
+      uuid: 9c4e6a8b-7f3d-4b9a-8c5e-2d7f9a6b4c8e
+      component_id: sdc.dripyard_base.icon-card
+      inputs:
+        title: 'Mobile Solutions'
+        body: 'Native and cross-platform apps for iOS and Android.'
+        icon: mobile
+        href:
+          uri: 'internal:/solutions'
+          options: {  }
+        no_background: false
+        layout: portrait
+        icon_size: large
+  path:
+    -
+      alias: /neonbyte-home-page
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

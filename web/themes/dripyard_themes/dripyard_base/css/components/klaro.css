@@ -1,0 +1,100 @@
+/*
+ * @file
+ * Style overrides for Klaro module, which is included in Drupal CMS.
+ * @see https://www.drupal.org/project/klaro
+ */
+
+.klaro[class] {
+  --klaro-primary-color: var(--primary-700);
+  --klaro-link-color: var(--klaro-primary-color);
+  --klaro-link-color-hover: var(--klaro-primary-color);
+  --klaro-link-decoration: underline;
+  --klaro-link-decoration-hover: inherit;
+  --klaro-link-decoration-line: inherit;
+  --klaro-link-decoration-line-hover: inherit;
+  --klaro-button-bg: var(--primary-500);
+  --klaro-button-text-color: var(--white);
+  --klaro-button-border: 1px solid transparent;
+  --klaro-button-border-radius: var(--radius-lg);
+  --klaro-button-padding: 10px 20px;
+  --klaro-button-font-size: 16px;
+  --klaro-button-font-weight: 600;
+  --klaro-button-line-height: 1;
+  --klaro-button-box-shadow: none;
+  --klaro-button-bg-hover: var(--primary-700);
+  --klaro-button-text-color-hover: var(--white);
+  --klaro-button-border-hover: 1px solid transparent;
+  --klaro-button-focus-outline: var(--focus-ring-width) var(--focus-ring-style) var(--klaro-button-bg);
+  --klaro-button-focus-outline-offset: 3px;
+  --klaro-button-focus-box-shadow: none;
+  --klaro-dialog-focus-outline: none;
+  --klaro-dialog-focus-box-shadow: none;
+  --border-radius: var(--radius-md);
+  --font-size: 1rem;
+  --font-family: inherit;
+  --title-font-family: inherit;
+  --klaro-slider-bg: var(--white2);
+  --klaro-slider-bg-active: var(--klaro-primary-color);
+  --klaro-slider-bg-required: var(--klaro-primary-color);
+  --green1: var(--klaro-link-color);
+  --green2: var(--klaro-link-color);
+  --green3: var(--klaro-link-color);
+
+  .cm-btn {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .cookie-modal .cm-modal {
+    .cm-header,
+    .cm-body,
+    .cm-footer {
+      padding: var(--spacing-s);
+    }
+
+    .cm-footer {
+      padding-bottom: var(--spacing-xs);
+    }
+  }
+
+  .cookie-notice:not(.cookie-modal-notice) {
+    background-color: var(--theme-surface);
+    box-shadow: 0 0 40px color-mix(in oklch, var(--theme-text-color-loud) 20%, transparent);
+    border: solid 1px transparent;
+  }
+
+  .context-notice .cm-buttons[class] {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xxxs);
+  }
+
+  .cookie-notice:not(.cookie-modal-notice) .cn-body {
+    padding: var(--spacing-s);
+  }
+
+  &.hide-consent-dialog-title {
+    padding: 0;
+  }
+
+  .context-notice {
+    gap: 10px;
+    background-color: color-mix(in oklch, var(--black) 75%, transparent) !important;
+    backdrop-filter: blur(10px);
+
+    p {
+      color: var(--white);
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+  }
+}

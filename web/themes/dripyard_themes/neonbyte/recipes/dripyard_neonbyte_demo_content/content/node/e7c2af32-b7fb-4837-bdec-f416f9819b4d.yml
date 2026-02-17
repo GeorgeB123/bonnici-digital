@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e7c2af32-b7fb-4837-bdec-f416f9819b4d
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Consulting
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /solutions/consulting
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte's consulting services bring strategic expertise to your technology initiatives. Our consultants work alongside your team to assess challenges, design solutions, and implement changes that deliver measurable results.</p><h2>Consulting Services</h2><ul><li><strong>Security Assessments</strong> — Penetration testing, vulnerability assessments, and risk analysis</li><li><strong>Architecture Reviews</strong> — Evaluate and optimize your technology infrastructure</li><li><strong>Digital Transformation</strong> — Strategic roadmaps for modernization initiatives</li><li><strong>Vendor Selection</strong> — Objective evaluation and recommendation of technology vendors</li></ul><h2>Engagement Models</h2><table><thead><tr><th>Model</th><th>Duration</th><th>Best For</th></tr></thead><tbody><tr><td>Assessment</td><td>2-4 weeks</td><td>Point-in-time evaluation</td></tr><tr><td>Project-Based</td><td>1-6 months</td><td>Defined scope initiatives</td></tr><tr><td>Retainer</td><td>Ongoing</td><td>Continuous advisory support</td></tr><tr><td>Staff Augmentation</td><td>Flexible</td><td>Embedded expertise</td></tr></tbody></table><h2>Why NeonByte Consulting</h2><ol><li>Senior consultants with 15+ years average experience</li><li>Industry-specific expertise across finance, healthcare, and government</li><li>Vendor-agnostic recommendations focused on your needs</li><li>Knowledge transfer to build internal capabilities</li></ol><p>Every engagement begins with a thorough discovery phase to understand your unique challenges and objectives. We deliver actionable recommendations, not just reports.</p>"
+      format: full_html
+      summary: ''

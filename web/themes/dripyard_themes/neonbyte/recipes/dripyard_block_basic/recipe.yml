@@ -1,0 +1,7 @@
+name: Dripyard Basic
+type: Dripyard
+description: 'Ensures the core basic_content block is available'
+config:
+  strict: false
+recipes:
+  - core/recipes/basic_block_type

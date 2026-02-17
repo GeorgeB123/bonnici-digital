@@ -1,0 +1,232 @@
+/**
+ * @file
+ * Styling for the primary menu at wide widths.
+ */
+
+@media (width > 1000px) {
+  .primary-menu {
+    position: relative; /* Anchor dropdown items. */
+  }
+
+  .primary-menu__mobile-button,
+  .primary-menu-overlay {
+    display: none;
+  }
+
+  /* <ul> elements. */
+  .primary-menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Top level <ul> element. */
+  .primary-menu__list--level-1 {
+    display: flex;
+  }
+
+  /* Second level <ul> element. */
+  .primary-menu__list--level-2 {
+    position: absolute;
+    z-index: 5; /* Appear above any heros that have stacking context. */
+    top: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    /* The width goes to the edge of the header, so we take into account
+    the --offset-from-header variable which is put in place by JS. */
+    width: calc(100% + var(--offset-from-header, 250px) - var(--header-padding-inline));
+    min-width: 100%;
+    padding: var(--padding-y) 0;
+    transition: visibility 0.2s, opacity 0.2s;
+    opacity: 0;
+    border: solid 1px currentColor;
+    background-color: var(--white);
+    inset-inline-start: 0;
+
+    /* Without JS, it looks far from perfect, but this makes it somewhat functional. */
+    @media (scripting: none) {
+      &:is(.primary-menu__list-item--level-1:is(:hover, :focus-within) *) {
+        top: 100%;
+        visibility: visible;
+        padding: var(--spacing-xs);
+        opacity: 1;
+        background-color: var(--theme-surface);
+        border-radius: var(--header-border-radius);
+      }
+    }
+
+    &.is-active-menu-parent {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* If menu cards exist. */
+    &:has(.primary-menu__megamenu-content) {
+      display: grid;
+      grid-template-columns: none;
+      gap: 0 24px;
+
+      > .primary-menu__list-item {
+        grid-column: 1;
+      }
+    }
+
+    /* When there are three menu levels, we adjust into a megamenu configuration. */
+    &:has(.primary-menu__list--level-3) {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 40px;
+
+      /* Nested <li>. */
+      .primary-menu__list-item--has-children {
+        display: block;
+
+        &:has(+ .primary-menu__megamenu-content) {
+          margin-inline-end: auto; /* Shove any menu cards over. */
+        }
+      }
+
+      .primary-menu__link--level-2 {
+        font-weight: 600;
+        font-size: var(--dropdown-link-heading-font-size);
+
+        &::after {
+          display: inline-block;
+          width: 0.75em;
+          content: "";
+          aspect-ratio: 1;
+          mask-image: url('images/arrow-right.svg');
+          mask-repeat: no-repeat;
+          mask-size: 100%;
+          mask-position: center;
+          background-color: currentColor;
+
+          &:dir(rtl) {
+            scale: -1;
+          }
+
+          @media (forced-colors: active) {
+            background-color: linkText;
+          }
+        }
+      }
+
+      .primary-menu__list--level-3 {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xxxs);
+        margin: 0; /* Added because modules such as Gin LB can add margin. */
+      }
+
+      .primary-menu__link--level-3 {
+        font-size: var(--dropdown-link-font-size);
+      }
+    }
+  }
+
+  .primary-menu__list-item {
+    margin: 0;
+  }
+
+  /* First level <li> elements. */
+  .primary-menu__list-item--level-1 {
+    --padding-x: 1rem;
+    --padding-y: 0.5rem;
+
+    @media (width < 1100px) {
+      --padding-x: 0.8rem;
+    }
+
+    display: flex;
+  }
+
+  /* Link (<a>, <button>, or <span>). */
+  .primary-menu__link {
+    display: block;
+    padding: var(--padding-y) var(--padding-x);
+    text-decoration: none;
+  }
+
+  .primary-menu__link--has-children {
+    padding-inline-end: 0;
+  }
+
+  /* <button> element that is created when top-level <a> link components have submenus. */
+  .primary-menu__button-toggle {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    appearance: none;
+    margin-inline: 2px calc(var(--padding-x) / 2);
+    color: var(--top-level-link-color);
+
+    &:hover {
+      color: var(--top-level-link-color);
+    }
+  }
+
+  /* Links that are <button> elements. */
+  .primary-menu__link--button {
+    display: flex;
+    align-items: center;
+    appearance: none;
+    border: 0;
+    background: transparent;
+
+    &.primary-menu__link--has-children {
+      padding-inline-end: calc(var(--padding-x) / 2);
+    }
+  }
+
+  .primary-menu__button-icon {
+    --icon-size: 8px;
+
+    position: relative;
+    display: block;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-inline: calc(var(--padding-x) / 2);
+    content: "\\$watermark$";
+
+    /* Down chevron icon. */
+    &::after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      transform: translateY(-25%) rotate(-45deg);
+      border-bottom: solid 2px currentColor;
+      border-left: solid 2px currentColor;
+    }
+  }
+
+  .primary-menu__megamenu-content {
+    grid-row: 1 / 100;
+    grid-column: 2;
+    width: fit-content;
+    list-style: none;
+
+    .primary-menu__list--level-2:not(:has(.primary-menu__list--level-3)) & {
+      margin-inline-start: auto;
+    }
+  }
+
+  .primary-menu__megamenu-content-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &:not(:has(> :nth-child(2))) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

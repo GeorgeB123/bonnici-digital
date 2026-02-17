@@ -1,0 +1,14 @@
+{% set classes = [
+  'logo-grid',
+  layout ? 'logo-grid--layout-' ~ layout|clean_class,
+  'logo-grid--size-' ~ logo_size|default('medium')|clean_class,
+  'logo-grid--logo-background-' ~ logo_background|clean_class,
+  logo_border_radius ? 'logo-grid--logo-radius-' ~ logo_border_radius|clean_class,
+] %}
+<div{{ attributes.addClass(classes)}}>
+  <div class="logo-grid__container">
+    <div class="logo-grid__content">
+      {% block logo_grid_content %}{% endblock %}
+    </div>
+  </div>
+</div>

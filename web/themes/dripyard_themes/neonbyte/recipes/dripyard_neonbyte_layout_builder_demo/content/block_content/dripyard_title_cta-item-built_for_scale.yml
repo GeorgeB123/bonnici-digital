@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 0ca2607f-3d8f-4c6a-b0ab-4f8ee4bc1540
+  bundle: dripyard_title_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Accordion (title cta)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_component_layout:
+    -
+      value: default
+  dripyard_cta:
+    -
+      uri: 'internal:/'
+      title: 'Contact us'
+      options: {  }
+  dripyard_title:
+    -
+      value: 'Built for Scale. Backed by Strategy'
+      format: dripyard_superbasic

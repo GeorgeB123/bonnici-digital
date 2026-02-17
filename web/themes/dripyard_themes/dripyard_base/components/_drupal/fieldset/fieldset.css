@@ -1,0 +1,74 @@
+/*
+ * @file
+ * Styles for Drupal's fieldset element.
+ */
+
+.fieldset {
+  --fieldset-border-color: transparent;
+  --fieldset-border-width: 1px;
+  --fieldset-border-radius: var(--radius-md);
+  --fieldset-background-color: var(--theme-surface-alt);
+  --fieldset-text-color: var(--theme-text-color-medium);
+  --fieldset-legend-text-color: var(--theme-text-color-primary);
+  --fieldset-padding-block: var(--spacing-xs);
+  --fieldset-padding-inline: var(--spacing-xs);
+
+  min-width: 0;
+  margin-inline: 0;
+  margin-bottom: var(--spacing-s);
+  padding: var(--fieldset-padding-block) var(--fieldset-padding-inline);
+  border-radius: var(--fieldset-border-radius);
+  background: var(--fieldset-background-color);
+  border: solid var(--fieldset-border-width) var(--fieldset-border-color);
+  color: var(--text-on-surface-light-medium);
+
+  &.error {
+    --fieldset-border-color: var(--theme-color-error);
+    --fieldset-border-width: 2px;
+  }
+
+  :is(.details, .fieldset) & {
+    --fieldset-border-color: var(--theme-border-color-soft);
+  }
+
+  &.required > .fieldset__legend > span::after {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-inline: 0.3em;
+    content: "";
+    vertical-align: text-top;
+    mask-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 7.562 1.114-3.438c2.565.906 4.43 1.688 5.59 2.35-.306-2.921-.467-4.93-.484-6.027h3.511c-.05 1.597-.234 3.6-.558 6.003 1.664-.838 3.566-1.613 5.714-2.325l1.113 3.437c-2.05.678-4.06 1.131-6.028 1.356.984.856 2.372 2.381 4.166 4.575l-2.906 2.059c-.935-1.274-2.041-3.009-3.316-5.206-1.194 2.275-2.244 4.013-3.147 5.206l-2.856-2.059c1.872-2.307 3.211-3.832 4.017-4.575-2.081-.402-4.058-.856-5.93-1.356' fill='%232494DB'/%3E%3C/svg%3E%0A");
+    mask-repeat: no-repeat;
+    mask-size: 0.5rem 0.5rem;
+    background-color: currentColor;
+  }
+}
+
+.fieldset__legend {
+  display: contents;
+
+  span {
+    display: block;
+    margin-bottom: var(--spacing-xxs);
+    font-weight: 600;
+  }
+}
+
+.fieldset__legend-inner {
+  font-weight: 600;
+  color: var(--fieldset-legend-text-color);
+}
+
+.fieldset__description {
+  margin-block: var(--spacing-xxs);
+  max-width: 60ch;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.fieldset__wrapper {
+  > *:not(:last-child) {
+    margin-bottom: var(--spacing-s);
+  }
+}

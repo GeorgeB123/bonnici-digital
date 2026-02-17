@@ -1,0 +1,96 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hero
+status: stable
+group: Dripyard Heros
+props:
+  type: object
+  required:
+    - height
+  properties:
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+      examples: [ inherit ]
+    height:
+      title: Hero height
+      type: string
+      enum:
+        - small
+        - medium
+        - large
+        - full-screen
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+        full-screen: Full Screen
+      examples: [ 'full-screen' ]
+    position_behind_against_screen_top:
+      title: Position against top edge of screen
+      description: Applies negative margin to position the hero against the top edge of the screen (behind the navigation). Only works if the hero is the first component on the page.
+      type:
+        - boolean
+        - 'null'
+      examples: [ true ]
+    align_x:
+      title: Alignment - horizontal
+      type: string
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+      examples: [ start ]
+    align_y:
+      title: Alignment - vertical
+      type: string
+      enum:
+        - top
+        - center
+        - bottom
+      meta:enum:
+        top: Top
+        center: Center
+        bottom: Bottom
+      examples: [ bottom ]
+    text_color:
+      title: Text color
+      type: string
+      enum:
+        - inherit
+        - black
+        - white
+        - primary
+      meta:enum:
+        inherit: Inherit
+        black: Black
+        white: White
+        primary: Primary
+      default: inherit
+      examples: [ 'inherit' ]
+slots:
+  hero_media:
+    title: Image or video
+    description: Accepts either background-image or video components to be used as background media. For Drupal Canvas, use background-image, and video-player-canvas components.
+  hero_content:
+    title: Hero content
+    description: Accepts any component including text, and flex-wrappers with nested buttons.

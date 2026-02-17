@@ -1,0 +1,133 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Grid Cell
+description: A responsive grid cell that spans a specified number of columns across different breakpoints.
+status: stable
+group: Dripyard Layout
+props:
+  type: object
+  required:
+    - padding
+    - columns_small
+    - columns_medium
+    - columns_large
+    - rows_small
+    - rows_medium
+    - rows_large
+  properties:
+    theme:
+      title: Theme
+      type: string
+      enum:
+        - inherit
+        - white
+        - light
+        - dark
+        - black
+        - primary
+        - secondary
+      meta:enum:
+        inherit: Inherit
+        white: White
+        light: Light
+        dark: Dark
+        black: Black
+        primary: Primary
+        secondary: Secondary
+      examples: [ inherit ]
+
+    padding:
+      type: string
+      title: Cell padding
+      description: Controls the internal padding of the grid cell.
+      enum:
+        - zero
+        - small
+        - medium
+        - large
+      meta:enum:
+        zero: Zero
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ zero ]
+
+    columns_small:
+      type: integer
+      title: Small screen columns
+      description: Number of grid columns to span on small widths (default breakpoint)
+      minimum: 1
+      maximum: 12
+      examples: [ 12 ]
+
+    columns_medium:
+      type: integer
+      title: Medium screen columns
+      description: Number of grid columns to span on medium widths (> 600px)
+      minimum: 1
+      maximum: 12
+      examples: [ 6 ]
+
+    columns_large:
+      type: integer
+      title: Large screen columns
+      description: Number of grid columns to span on large widths (> 1200px)
+      minimum: 1
+      maximum: 12
+      examples: [ 4 ]
+
+    rows_small:
+      type: integer
+      title: Small screen rows
+      description: Number of grid rows to span on small widths (default breakpoint)
+      minimum: 1
+      examples: [ 1 ]
+
+    rows_medium:
+      type: integer
+      title: Medium screen rows
+      description: Number of grid rows to span on medium widths (> 600px)
+      minimum: 1
+      examples: [ 1 ]
+
+    rows_large:
+      type: integer
+      title: Large screen rows
+      description: Number of grid rows to span on large widths (> 1200px)
+      minimum: 1
+      examples: [ 1 ]
+
+    horizontal_alignment:
+      title: Horizontal alignment
+      type: string
+      description: Controls horizontal alignment of content within the grid cell.
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+
+    vertical_alignment:
+      title: Vertical alignment
+      type: string
+      description: Controls vertical alignment of content within the grid cell.
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+
+    additional_classes:
+      title: Additional CSS classes
+      type: string
+      description: Additional CSS classes that will be added to the grid cell (separated by spaces).
+
+slots:
+  content:
+    title: Content
+    description: Content to be placed inside this grid cell

@@ -1,0 +1,63 @@
+/*
+ * @file
+ * White (default) theme.
+ */
+
+/* stylelint-disable comment-empty-line-before */
+:where(:root),
+.theme--white {
+  /* Surfaces. */
+  --theme-surface: var(--white);
+  --theme-surface-alt: var(--neutral-100);
+  --theme-surface-primary: color-mix(in oklch, var(--primary-100), var(--white));
+
+  /* Normal. Always minimum 4.5:1 contrast ratio over all surface colors. */
+  --theme-text-color-soft: var(--neutral-700);
+  --theme-text-color-medium: var(--neutral-800);
+  --theme-text-color-loud: var(--neutral-1000);
+  --theme-text-color-primary: var(--primary-700);
+
+  /* Borders and icon colors. Always minimum 3:1 contrast ratio against surface colors. */
+  --theme-border-color: var(--neutral-600);
+  --theme-border-color-alt: var(--primary-500);
+  --theme-border-color-soft: color-mix(in oklch, var(--neutral-500), transparent); /* No min contrast. */
+
+  /* Misc. */
+  --theme-link-color: oklch(from var(--theme-text-color-primary) l max(c, 0.15) h);
+  --theme-link-color-hover: var(--primary-800);
+  --theme-focus-ring-color: var(--theme-border-color-alt, currentColor);
+
+  /* Status colors. */
+  --theme-color-error: var(--color-error-dark);
+  --theme-color-warning: var(--color-warning-dark);
+  --theme-color-success: var(--color-success-dark);
+  --theme-color-info: var(--color-info-dark);
+
+  /*
+   * Button colors.
+   */
+  /* Background. */
+  --theme-button-background-color: var(--neutral-200);
+  --theme-button-background-color-hover: var(--neutral-300);
+  --theme-button-background-color-active: var(--neutral-300);
+
+  /* Text colors. */
+  --theme-button-text-color: var(--theme-text-color-loud);
+  --theme-button-text-color-hover: var(--theme-text-color-loud);
+  --theme-button-text-color-active: var(--theme-text-color-loud);
+
+  /* Icons. */
+  --theme-button-icon-fill: var(--theme-text-color-primary);
+  --theme-button-icon-fill-hover: var(--theme-text-color-primary);
+  --theme-button-icon-fill-active: var(--theme-text-color-primary);
+  --theme-button-icon-background-color: var(--neutral-100);
+  --theme-button-icon-background-color-hover: var(--neutral-200);
+  --theme-button-icon-background-color-active: var(--neutral-200);
+
+  /* Borders. */
+  --theme-button-border-color: transparent;
+  --theme-button-border-color-hover: transparent;
+  --theme-button-border-color-active: transparent;
+
+  color-scheme: light;
+}

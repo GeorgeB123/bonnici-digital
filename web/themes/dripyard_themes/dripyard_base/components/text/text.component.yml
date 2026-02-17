@@ -1,0 +1,64 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Text
+status: stable
+group: Dripyard Basic
+props:
+  type: object
+  required:
+    - style
+    - color
+  properties:
+    text:
+      title: Text
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples: [ 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.' ]
+    style:
+      type:
+        - string
+        - 'null'
+      title: Text size
+      enum:
+        - body_l
+        - body_m
+        - body_s
+      meta:enum:
+        body_l: Large
+        body_m: Medium
+        body_s: Small
+      examples: [ body_m ]
+    color:
+      type:
+        - string
+        - 'null'
+      title: Text color
+      enum:
+        - inherit
+        - soft
+        - medium
+        - loud
+        - primary
+      meta:enum:
+        inherit: Inherit
+        soft: Soft
+        medium: Medium
+        loud: Loud
+        primary: Primary
+      examples: [ 'inherit' ]
+    center:
+      type: boolean
+      title: Center text
+    text_max_width:
+      type: string
+      title: Text maximum width
+      enum:
+        - '400px'
+        - '600px'
+        - '800px'
+        - '1000px'
+        - '1200px'
+        - '1400px'
+    modifier_classes:
+      type: string
+      title: Modifier CSS classes

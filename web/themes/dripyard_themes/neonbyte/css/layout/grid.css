@@ -1,0 +1,91 @@
+/*
+ * @file
+ * Grid helpers.
+ */
+
+.grid {
+  --gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "content content content content content content"
+    "sidebar-first sidebar-first x x sidebar-second sidebar-second";
+  gap: var(--gap);
+
+  @container (width > 700px) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "sidebar-first sidebar-first content content content content content content content content sidebar-second sidebar-second";
+  }
+}
+
+.grid--content-narrow {
+  --gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--gap);
+
+  @container (width > 700px) {
+    grid-template-columns: repeat(12, 1fr);
+
+    > * {
+      grid-column: 2 / -2;
+    }
+  }
+}
+
+.grid--left-content {
+  --gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "content content content content content content"
+    "sidebar sidebar sidebar sidebar sidebar sidebar";
+  gap: var(--gap);
+
+  @container (width > 700px) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "content content content content content content content sidebar sidebar sidebar sidebar sidebar";
+  }
+}
+
+.grid--right-content {
+  --gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "content content content content content content"
+    "sidebar sidebar sidebar sidebar sidebar sidebar";
+  gap: var(--gap);
+
+  @container (width > 700px) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "sidebar sidebar sidebar sidebar content content content content content content content content";
+  }
+}
+
+:where([class*="grid"]) > * {
+  grid-column: 1 / -1;
+}
+
+.grid-area--content {
+  grid-area: content;
+}
+
+.grid-area--sidebar {
+  grid-area: sidebar;
+}
+
+.grid-area--sidebar-first {
+  grid-area: sidebar-first;
+}
+
+.grid-area--sidebar-second {
+  grid-area: sidebar-second;
+}

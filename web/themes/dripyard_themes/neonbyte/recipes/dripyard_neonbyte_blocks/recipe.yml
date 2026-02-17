@@ -1,0 +1,36 @@
+name: Dripyard NeonByte Blocks
+type: Dripyard
+description: 'Provides all block types for Dripyard NeonByte'
+config:
+  strict: false
+  actions:
+    block.block.dripyard_base_socialmedialinks:
+      placeBlockInDefaultTheme:
+        plugin: 'block_content:192edb9e-7c1e-4244-a309-2f623a8307f2'
+        region: footer_right
+        weight: 0
+        settings:
+          label: 'Social Media Links'
+          label_display: 0
+          status: true
+          info: ''
+          view_mode: full
+recipes:
+  - 'dripyard_block_accordion_item'
+  - 'dripyard_block_basic'
+  - 'dripyard_block_button'
+  - 'dripyard_block_card'
+  - 'dripyard_block_card_full_image'
+  - 'dripyard_block_event_listing_item'
+  - 'dripyard_block_hero'
+  - 'dripyard_block_icon_card'
+  - 'dripyard_block_logo_item'
+  - 'dripyard_block_layout_builder_wrapper'
+  - 'dripyard_block_media'
+  - 'dripyard_block_menu_card'
+  - 'dripyard_block_promo'
+  - 'dripyard_block_statistic'
+  - 'dripyard_block_tab_item'
+  - 'dripyard_block_testimonial'
+  - 'dripyard_block_title_cta'
+  - 'core/recipes/basic_html_format_editor'

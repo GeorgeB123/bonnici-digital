@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: b8c96915-86ab-4059-9c44-64696e0b4506
+  bundle: dripyard_tab_item
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Security and Risk Consulting'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Security isn’t just about defense — it’s about smart architecture. NeonByte’s consulting services help you design scalable, secure systems that meet today’s standards and tomorrow’s challenges. From infrastructure reviews to threat modeling and incident response planning, we partner with your team to build a resilient foundation that grows with you.</p>'
+      format: basic_html
+      summary: ''
+  dripyard_icon:
+    -
+      value: lock
+  dripyard_title:
+    -
+      value: '<p>Security</p>'
+      format: dripyard_superbasic

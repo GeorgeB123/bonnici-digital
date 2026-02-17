@@ -1,0 +1,121 @@
+{% set themes = [
+  'white',
+  'light',
+  'dark',
+  'black',
+  'primary',
+  'secondary',
+] %}
+
+{% set lorem %}Lorem ipsum dolor sit, <a href="">amet consectetur</a> adipisicing elit.{% endset %}
+
+<div{{ attributes.addClass('theme-test', 'container')}}>
+  {% for theme in themes %}
+    <div class="theme--{{ theme }}">
+      <div class="theme-test__test">
+        <h2 class="h6">This is theme--{{ theme }}</h2>
+        <h3 class="h6">Regular</h3>
+        <p class="theme-test__soft-text">
+          Soft text. {{ lorem }}
+        </p>
+        <p class="theme-test__medium-text">
+          Medium text. {{ lorem }}
+        </p>
+        <p class="theme-test__loud-text">
+          Loud text. {{ lorem }}
+        </p>
+        <div class="theme-test__variations">
+          <div class="theme-test__variation--alt">
+            <h3 class="h6">Alt</h3>
+            <p class="theme-test__soft-text">
+              Soft text. {{ lorem }}
+            </p>
+            <p class="theme-test__medium-text">
+              Medium text. {{ lorem }}
+            </p>
+            <p class="theme-test__loud-text">
+              Loud text. {{ lorem }}
+            </p>
+          </div>
+          <div class="theme-test__variation--primary">
+            <h3 class="h6">Primary</h3>
+            <p class="theme-test__soft-text">
+              Soft text. {{ lorem }}
+            </p>
+            <p class="theme-test__medium-text">
+              Medium text. {{ lorem }}
+            </p>
+            <p class="theme-test__loud-text">
+              Loud text. {{ lorem }}
+            </p>
+          </div>
+        </div>
+
+        {{ include('dripyard_base:button', {
+          href: '',
+          text: 'Primary',
+          style: 'primary',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          href: '',
+          text: 'Secondary',
+          style: 'secondary',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          href: '',
+          text: 'Light',
+          style: 'light',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          href: '',
+          text: 'Dark',
+          style: 'dark',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          href: '',
+          text: 'Default',
+          style: 'default',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          attributes: create_attribute().setAttribute('disabled', 'disabled'),
+          href: '',
+          text: 'Disabled',
+          style: 'default',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          attributes: create_attribute().addClass('button--danger'),
+          href: '',
+          text: 'Danger',
+          style: 'default',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          href: '',
+          text: 'Outline',
+          style: 'outline',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+
+        {{ include('dripyard_base:button', {
+          href: '',
+          text: 'Bare',
+          style: 'bare',
+          suffix_icon: 'arrow-right',
+        }, with_context = false) }}
+      </div>
+    </div>
+  {% endfor %}
+</div>

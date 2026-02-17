@@ -1,0 +1,9 @@
+<li{{ attributes.addClass('menu-card') }}>
+  {{ title_suffix }}
+  <div class="menu-card__image">
+    {{ include('dripyard_base:image-or-media', { image }, with_context = false) }}
+  </div>
+  <div class="menu-card__link">
+    {{ link }}
+  </div>
+</li>

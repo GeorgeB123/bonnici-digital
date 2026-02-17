@@ -1,0 +1,13 @@
+/*
+ * @file
+ * Misc variables.
+ */
+
+:root {
+  --radius-sm: var(--theme-setting-radius-sm, 4px);
+  --radius-md: var(--theme-setting-radius-md, 10px);
+  --radius-lg: var(--theme-setting-radius-lg, 40px);
+  --radius-button: var(--theme-setting-radius-button, 6px);
+  --focus-ring-width: 3px;
+  --focus-ring-style: dotted;
+}

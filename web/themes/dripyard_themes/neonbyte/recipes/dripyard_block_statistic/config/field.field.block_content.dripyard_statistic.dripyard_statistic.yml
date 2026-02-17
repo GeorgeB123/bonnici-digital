@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+    - field.storage.block_content.dripyard_statistic
+id: block_content.dripyard_statistic.dripyard_statistic
+field_name: dripyard_statistic
+entity_type: block_content
+bundle: dripyard_statistic
+label: 'Statistic Value'
+description: 'The main statistic number with optional prefix and/or suffix (e.g., $2,400, 98%, 5000+)'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

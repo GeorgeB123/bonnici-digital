@@ -1,0 +1,27 @@
+/*
+ * @file
+ * Styling for combination title + cta component.
+ */
+
+.title-cta--container {
+  --title-cta-heading-color: var(--theme-text-color-loud);
+  --title-cta-heading-width: 800px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap-large);
+
+  .title-cta--center & {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .heading {
+    max-width: var(--title-cta-heading-width);
+    margin: 0;
+    color: var(--title-cta-heading-color);
+  }
+}

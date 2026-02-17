@@ -1,0 +1,12 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+{% set block_content = content['#block_content'] %}
+  {% embed  'dripyard_base:statistic' with {
+      statistic: block_content.dripyard_statistic|first.value|default(''),
+      first_line: block_content.dripyard_statistic_first_line|first.value|default(''),
+      second_line: block_content.dripyard_statistic_second_line|first.value|default(''),
+      href: block_content.dripyard_link|first.uri|default(''),
+    } only %}
+    {% endembed %}
+</div>

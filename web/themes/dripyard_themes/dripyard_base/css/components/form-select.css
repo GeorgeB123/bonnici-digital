@@ -1,0 +1,65 @@
+/*
+ * @file
+ * Select element styling.
+ */
+
+select {
+  max-width: 100%;
+  height: var(--form-height);
+  padding-block: 0;
+  padding-inline: var(--form-padding-inline) calc(var(--form-padding-inline) + 20px);
+  color: var(--form-text-color);
+  border: var(--form-border);
+  border-radius: var(--form-border-radius);
+  background-color: var(--form-background);
+  background-image: url("../../images/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+  color-scheme: var(--form-color-scheme);
+
+  &:dir(rtl) {
+    background-position: left 8px center;
+  }
+
+  &:focus {
+    outline: var(--focus-ring-style) 2px var(--theme-focus-ring-color);
+    outline-offset: 2px;
+  }
+
+  &[disabled] {
+    background-color: var(--form-background-disabled);
+  }
+
+  &.error {
+    border: solid 2px var(--theme-color-error);
+
+    &:focus {
+      outline-color: var(--theme-color-error);
+    }
+  }
+
+  &[multiple] {
+    height: auto;
+    padding: var(--spacing-xxs);
+    background-image: none;
+
+    & option {
+      padding-inline: var(--spacing-xxs);
+    }
+  }
+
+  &.form-element--small {
+    height: var(--spacing-m);
+  }
+
+  /* Necessary to show chevron in forced colors mode in modern browsers. */
+  @media (forced-colors: active) {
+    padding-inline-end: var(--spacing-xs);
+    background-image: none;
+    appearance: revert;
+  }
+}

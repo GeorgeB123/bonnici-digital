@@ -1,0 +1,95 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Title and CTA
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - title
+  properties:
+    layout:
+      title: Layout
+      type: string
+      enum:
+        - default
+        - center
+      meta:enum:
+        default: Default
+        center: Center
+      examples: ['default']
+    title:
+      title: Title
+      type: string
+      examples: [ 'This is title text that is paired with a CTA' ]
+    heading_style:
+      title: Heading style
+      type: string
+      enum:
+        - title
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - body_l
+        - body_m
+        - body_s
+      examples: [ 'h2' ]
+    button_text:
+      title: Button text
+      type: string
+      examples:
+        - Learn more
+    button_href:
+      title: Hyperlink
+      type: string
+      format: uri-reference
+      examples:
+        - 'https://www.drupal.org'
+    button_style:
+      title: Button style
+      type: string
+      enum:
+        - default
+        - primary
+        - secondary
+        - light
+        - dark
+        - outline
+        - bare
+      meta:enum:
+        default: Default
+        primary: Primary
+        secondary: Secondary
+        light: Light
+        dark: Dark
+        outline: Outline
+        bare: Bare
+      examples: [ default ]
+    button_size:
+      title: Button size
+      type: string
+      enum:
+        - small
+        - medium
+        - large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+    button_target:
+      title: Open link in new window
+      type:
+        - boolean
+        - 'null'
+    button_prefix_icon:
+      title: Prefix icon
+      type:
+      - string
+      - 'null'
+    button_suffix_icon:
+      title: Suffix icon
+      type:
+      - string
+      - 'null'

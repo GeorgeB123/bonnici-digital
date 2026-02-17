@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: fab36ef8-267f-4ab5-967f-68a310ec6e7c
+  bundle: article
+  default_langcode: en
+  depends:
+    9cdd0cb8-58d8-464e-9cb6-4c7e695ae784: file
+    4e689e66-025a-4660-8519-2e9e0cd7f4bc: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Cybersecurity and Data Protection'
+  created:
+    -
+      value: 1745291619
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  body:
+    -
+      value: "<p>At NeonByte, we believe security isn’t a feature — it’s a foundation. Our platform is engineered with zero-trust architecture, continuous threat detection, and end-to-end encryption to protect your data at every layer. From initial login to API-level communication, every transaction is scrutinized, encrypted, and safeguarded in real time. Whether you're a startup or a global enterprise, NeonByte ensures your data remains yours — private, resilient, and always under your control.</p><p>We stay ahead of evolving threats with automated patching, machine learning anomaly detection, and full compliance with GDPR, SOC 2, and HIPAA standards. Our team of experts monitors and hardens systems around the clock, so you can focus on growth without sacrificing security. With NeonByte, peace of mind is built in — not bolted on.</p>"
+      format: full_html
+      summary: ''
+  field_image:
+    -
+      entity: 9cdd0cb8-58d8-464e-9cb6-4c7e695ae784
+      alt: 'Cybersecurity and Data Protection'
+      title: ''
+      width: 4000
+      height: 6000
+  field_tags:
+    -
+      entity: 4e689e66-025a-4660-8519-2e9e0cd7f4bc

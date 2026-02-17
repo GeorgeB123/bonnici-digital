@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_media
+label: 'Media'
+revision: false
+description: 'Provides a block type for embedding media in landing pages.'

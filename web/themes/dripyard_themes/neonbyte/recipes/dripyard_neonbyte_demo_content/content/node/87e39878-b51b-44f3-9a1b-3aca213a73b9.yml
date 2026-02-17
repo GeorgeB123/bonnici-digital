@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 87e39878-b51b-44f3-9a1b-3aca213a73b9
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Meet the Team'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /company/team
+      langcode: en
+  body:
+    -
+      value: "<p>Meet the talented individuals behind NeonByte. Our diverse team brings together expertise from technology, security, and business strategy to deliver exceptional solutions for our clients.</p><h2>Leadership Team</h2><ul><li><strong>Sarah Chen, CEO</strong> — Former security executive at Fortune 100, 20+ years in enterprise technology</li><li><strong>Marcus Williams, CTO</strong> — PhD in Computer Science, led engineering at three successful startups</li><li><strong>Dr. Elena Rodriguez, CISO</strong> — Former NSA analyst, author of industry security frameworks</li><li><strong>James O'Connor, COO</strong> — Operations expert with experience scaling companies from 50 to 500+ employees</li></ul><h2>Team by Department</h2><table><thead><tr><th>Department</th><th>Team Size</th><th>Specializations</th></tr></thead><tbody><tr><td>Engineering</td><td>85+</td><td>Full-stack, cloud, AI/ML, security</td></tr><tr><td>Security Operations</td><td>40+</td><td>Threat analysis, incident response, compliance</td></tr><tr><td>Consulting</td><td>35+</td><td>Strategy, implementation, training</td></tr><tr><td>Customer Success</td><td>25+</td><td>Onboarding, support, account management</td></tr></tbody></table><h2>Our Culture</h2><ol><li>Remote-first with offices in Austin, New York, and London</li><li>Continuous learning with education stipends and conference attendance</li><li>Diversity and inclusion initiatives driving innovation</li><li>Community involvement through tech education programs</li></ol><p>We're always looking for talented individuals who share our passion for technology and client success. Check out our careers page to join the team.</p>"
+      format: full_html
+      summary: ''

@@ -1,0 +1,120 @@
+{% if is_front %}
+  <div class="query-container">
+    <div class="region-container component-spacer">
+      {{ include('@dripyard_base/../components/dripyard/hero/hero.example.twig') }}
+      {{ include('@dripyard_base/../components/dripyard/layout-4-col/layout-4-col.example.twig', { directory }, with_context = false) }}
+      {{ include('@dripyard_base/../components/dripyard/accordion/accordion-group/accordion-group.example.twig', with_context = false) }}
+      {% embed 'dripyard_base:layout-4-col' with {
+        container_size: 'default',
+        theme: 'light',
+        directory,
+        } only %}
+        {% block content_above %}
+          {{ include('dripyard_base:title-cta', {
+            layout: 'center',
+            title: 'We offer icons for everyone',
+            button: {
+              href: 'http://www.example.com',
+              text: 'See icons',
+              style: 'primary',
+              size: 'large',
+              suffix_icon: 'arrow-right',
+            }
+        }, with_context = false) }}
+        {% endblock %}
+
+        {% block content_first %}
+          {{ include('@dripyard_base/../components/dripyard/icon-card/icon-card.example.twig', with_context = false) }}
+        {% endblock %}
+
+        {% block content_second %}
+          {{ include('@dripyard_base/../components/dripyard/icon-card/icon-card.example.twig', with_context = false) }}
+        {% endblock %}
+
+        {% block content_third %}
+          {{ include('@dripyard_base/../components/dripyard/icon-card/icon-card.example.twig', with_context = false) }}
+        {% endblock %}
+
+        {% block content_fourth %}
+          {{ include('@dripyard_base/../components/dripyard/icon-card/icon-card.example.twig', with_context = false) }}
+        {% endblock %}
+      {% endembed %}
+
+      {% embed 'dripyard_base:layout-1-col' with {
+        container_size: 'default',
+        theme: 'dark',
+        directory,
+        } only %}
+        {% block content_above %}
+          {{ include('dripyard_base:title-cta', {
+            layout: 'center',
+            title: 'Watch this excellent video from Mike\'s trip to the Grand Canyon',
+            button: {
+              href: 'http://www.example.com',
+              text: 'See the Grand Canyon',
+              style: 'primary',
+              size: 'large',
+              suffix_icon: 'arrow-right',
+            }
+        }, with_context = false) }}
+        {% endblock %}
+
+        {% block content_first %}
+          {{ include('@dripyard_base/../components/dripyard/video-player/video-player.example.twig', { directory }, with_context = false) }}
+        {% endblock %}
+      {% endembed %}
+
+      {% embed 'dripyard_base:layout-2-col' with {
+        container_size: 'default',
+        theme: 'primary',
+        directory,
+        } only %}
+        {% block content_first %}
+          {{ include('@dripyard_base/../components/dripyard/promo/promo.example.twig', with_context = false) }}
+        {% endblock %}
+        {% block content_second %}
+          <img src="{{ '/' ~ directory ~ '/images/example-images/example.webp'}}" alt="">
+        {% endblock %}
+      {% endembed %}
+
+      {% embed 'dripyard_base:layout-4-col' with {
+        container_size: 'default',
+        theme: 'black',
+        directory,
+        } only %}
+        {% block content_above %}
+          {{ include('dripyard_base:title-cta', {
+            layout: 'default',
+            title: 'Latest News',
+            button: {
+              href: 'http://www.example.com',
+              text: 'See all news',
+              style: 'primary',
+              size: 'large',
+              suffix_icon: 'arrow-right',
+            }
+        }, with_context = false) }}
+        {% endblock %}
+
+        {% block content_first %}
+          {{ include('@dripyard_base/../components/dripyard/card/card.example.twig', { directory }, with_context = false) }}
+        {% endblock %}
+
+        {% block content_second %}
+          {{ include('@dripyard_base/../components/dripyard/card/card.example.twig', { directory }, with_context = false) }}
+        {% endblock %}
+
+        {% block content_third %}
+          {{ include('@dripyard_base/../components/dripyard/card/card.example.twig', { directory }, with_context = false) }}
+        {% endblock %}
+
+        {% block content_fourth %}
+          {{ include('@dripyard_base/../components/dripyard/card/card.example.twig', { directory }, with_context = false) }}
+        {% endblock %}
+      {% endembed %}
+
+      {{ include('@dripyard_base/../components/dripyard/tabs/tab-group/tab-group.example.twig', with_context = false) }}
+      {{ include('@dripyard_base/../components/dripyard/tabs/tab-group/tab-group.example-horizontal.twig', with_context = false) }}
+    </div>
+  </div>
+{% endif %}

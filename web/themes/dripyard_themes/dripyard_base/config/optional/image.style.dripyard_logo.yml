@@ -1,0 +1,21 @@
+uuid: 705dea5b-6b61-413e-b8d4-5b87d3426eb6
+langcode: en
+status: true
+dependencies: {  }
+name: dripyard_logo
+label: 'Dripyard Logo'
+effects:
+  3000eed5-748b-4ae2-9b12-5758e3df99b2:
+    uuid: 3000eed5-748b-4ae2-9b12-5758e3df99b2
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: false
+  bdb918cb-d830-4125-95c4-bf06cd491f43:
+    uuid: bdb918cb-d830-4125-95c4-bf06cd491f43
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

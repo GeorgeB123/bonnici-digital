@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b222c211-cbd9-4f22-8a09-f5dd4a1690d4
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: AiByte
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /products/aibyte
+      langcode: en
+  body:
+    -
+      value: "<p>AiByte is NeonByte's flagship AI platform that brings intelligent automation to your workflows. Leverage machine learning to optimize operations, extract insights from unstructured data, and build AI-powered applications without extensive ML expertise.</p><h2>Platform Capabilities</h2><ul><li><strong>Document Intelligence</strong> — Extract, classify, and process documents automatically</li><li><strong>Conversational AI</strong> — Build chatbots and virtual assistants for customer support</li><li><strong>Predictive Analytics</strong> — Forecast trends and identify patterns in your data</li><li><strong>Process Automation</strong> — Automate repetitive tasks with intelligent decision-making</li></ul><h2>AiByte Editions</h2><table><thead><tr><th>Edition</th><th>Use Case</th><th>Key Features</th></tr></thead><tbody><tr><td>Starter</td><td>Small teams</td><td>5 workflows, 10K API calls/month</td></tr><tr><td>Professional</td><td>Growing businesses</td><td>25 workflows, 100K API calls/month</td></tr><tr><td>Enterprise</td><td>Large organizations</td><td>Unlimited workflows, custom models</td></tr></tbody></table><h2>Integration Ready</h2><p>AiByte connects with your existing tech stack:</p><ol><li>REST APIs and webhooks for custom integrations</li><li>Native connectors for Salesforce, HubSpot, and Zendesk</li><li>Data warehouse support for Snowflake, BigQuery, and Redshift</li><li>RPA platform compatibility with UiPath and Automation Anywhere</li></ol><p>Start transforming your operations with AI that's secure, explainable, and aligned with your business goals.</p>"
+      format: full_html
+      summary: ''

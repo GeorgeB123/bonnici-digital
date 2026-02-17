@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_logo_item
+label: 'Logo Item'
+revision: false
+description: 'Provides a block type to be used for logos to display throughout the site. '

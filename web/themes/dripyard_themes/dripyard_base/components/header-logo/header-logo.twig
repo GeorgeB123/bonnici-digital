@@ -1,0 +1,9 @@
+{% if site_logo %}
+  <div{{ attributes.addClass('header-logo')}}>
+    <a class="header-logo__link" href="{{ path('<front>') }}" rel="home" class="site-logo">
+      {% if site_logo %}
+        <img class="header-logo__image" src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+      {% endif %}
+    </a>
+  </div>
+{% endif %}

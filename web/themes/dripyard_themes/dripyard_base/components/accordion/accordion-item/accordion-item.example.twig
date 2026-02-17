@@ -1,0 +1,14 @@
+{% set title_set = [
+  'Lorem ipsum dolor sit amet.',
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, atque?',
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sit expedita ducimus quibusdam corporis ipsum!',
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur tenetur amet quos veniam ipsam? Nihil laudantium ratione quos temporibus repellat?',
+] %}
+{% embed 'dripyard_base:accordion-item' with {
+  title: random(title_set),
+  open,
+} only %}
+  {% block accordion_item_content %}
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum blanditiis atque modi tempora labore? Cum, id? Accusamus neque iure voluptas fuga perferendis numquam dignissimos quo quod et. Iure, eos eligendi?</p>
+  {% endblock %}
+{% endembed %}

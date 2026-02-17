@@ -1,0 +1,20 @@
+{% set in_layout_builder = attributes|render|trim %}
+
+{% if in_layout_builder %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+{% endif %}
+
+  {% embed 'dripyard_base:accordion-item' with {
+    title: props.dripyard_title|default(''),
+    content,
+  } only %}
+    {% block accordion_item_content %}
+      {{ content.body }}
+    {% endblock %}
+  {% endembed %}
+
+{% if in_layout_builder %}
+  </div>
+{% endif %}

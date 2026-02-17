@@ -1,0 +1,16 @@
+{% set content_id = 'header-search-content-' ~ random() %}
+
+<search{{ attributes.addClass('header-search') }}>
+  <button class="header-search__trigger" type="button" aria-expanded="false" aria-controls="{{ content_id }}">
+    <span class="visually-hidden">{{ 'Show search'|t }}</span>
+    <div class="header-search__search-icon">
+      {{ source(componentMetadata.path ~ '/images/search.svg') }}
+    </div>
+    <span class="header-search__close-icon"></span>
+  </button>
+  <div id="{{ content_id }}" class="header-search__content site-header__dropdown">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</search>

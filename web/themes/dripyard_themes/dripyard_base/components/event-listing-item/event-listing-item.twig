@@ -1,0 +1,31 @@
+<article{{ attributes.addClass('event-listing-item') }}>
+  <div class="event-listing-item__first">
+    {% block content_left %}
+      {{ include('dripyard_base:date-block', { date_time_stamp: date_time_stamp_begin }, with_context = false) }}
+    {% endblock %}
+  </div>
+  <div class="event-listing-item__second">
+    {% block content_center %}
+      <h3 class="event-listing-item__title h3">
+        <a href="{{ url }}">
+          {{ title }}
+        </a>
+      </h3>
+      {% if description %}
+        <div class="event-listing-item__description">
+          {{ description }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  </div>
+  <div class="event-listing-item__third">
+    {% block content_right %}
+      {% if formatted_time %}
+        <div class="event-listing-item__time">{{ formatted_time }}</div>
+      {% endif %}
+      {% if location %}
+        <div class="event-listing-item__location">{{ location }}</div>
+      {% endif %}
+    {% endblock %}
+  </div>
+</article>

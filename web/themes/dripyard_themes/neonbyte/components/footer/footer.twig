@@ -1,0 +1,30 @@
+{% set classes = [
+  'site-footer',
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class
+  ]
+%}
+
+<footer{{ attributes.addClass(classes) }}>
+  <div class="site-footer__container container grid">
+    {% if block('footer_top_content') %}
+      <div class="site-footer__top">
+        {% block footer_top_content %}{% endblock %}
+      </div>
+    {% endif %}
+    {% if block('footer_left_content') %}
+      <div class="site-footer__left">
+        {% block footer_left_content %}{% endblock %}
+      </div>
+    {% endif %}
+    {% if block('footer_right_content') %}
+      <div class="site-footer__right">
+        {% block footer_right_content %}{% endblock %}
+      </div>
+    {% endif %}
+    {% if block('footer_bottom_content') %}
+      <div class="site-footer__bottom">
+        {% block footer_bottom_content %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</footer>

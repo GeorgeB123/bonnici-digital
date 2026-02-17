@@ -1,0 +1,21 @@
+name: Dripyard NeonByte Layout Builder Demo
+type: Dripyard
+description: 'This recipe provides a Layout Builder based install of https://neonbyte.dripyard.com. It includes a landing page with various blocks and configurations.'
+recipes:
+  - 'dripyard_neonbyte_demo_content'
+  - 'dripyard_neonbyte_landing_pages'
+config:
+  strict: false
+  actions:
+    system.site:
+      simpleConfigUpdate:
+        page:
+          front: '/neonbyte-home-page'
+    core.menu.static_menu_link_overrides:
+      simpleConfigUpdate:
+        definitions.standard__front_page:
+          menu_name: main
+          enabled: false
+          expanded: false
+          parent: false
+          weight: -50

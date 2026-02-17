@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_statistic
+label: 'Statistic'
+revision: false
+description: 'Provides a statistic block type with a numerical value and optional descriptive text lines.'

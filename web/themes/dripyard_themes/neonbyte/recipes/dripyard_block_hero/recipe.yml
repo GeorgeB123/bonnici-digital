@@ -1,0 +1,8 @@
+name: Dripyard Hero Block
+type: Dripyard
+description: 'Provides a block type for the hero component'
+config:
+  strict: false
+recipes:
+  - 'dripyard_block_hero_base'
+  - 'dripyard_block_button'

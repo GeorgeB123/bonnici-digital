@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: d8fbc9de-a469-4127-9797-a8c610c38efd
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    5752bb44-f80b-41e8-86a1-fa1d8d177f86: node
+    47ce6b8d-65f2-420b-a28b-d604dff43fb5: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Resources
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 5752bb44-f80b-41e8-86a1-fa1d8d177f86
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:47ce6b8d-65f2-420b-a28b-d604dff43fb5'
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 5e7a8b1d-4f2c-4856-a19f-3c9d8e7b2f41
+  bundle: dripyard_title_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Cloud Transformation (title cta)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_component_layout:
+    -
+      value: default
+  dripyard_cta:
+    -
+      uri: 'internal:/'
+      title: 'Start Your Journey'
+      options: {  }
+  dripyard_title:
+    -
+      value: '<p>Transform your business with<br>Next-gen Cloud Architecture</p>'
+      format: dripyard_superbasic

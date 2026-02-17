@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 0ead4788-1baa-43da-bedc-31e3a4e27df5
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Footer Address'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Office<br>112 Thompson Drive<br>94107 San Francisco,&nbsp;<br>California, USA<br><br>info@neonbyte.com<br>press@neonbyte.com</p>'
+      format: basic_html
+      summary: ''

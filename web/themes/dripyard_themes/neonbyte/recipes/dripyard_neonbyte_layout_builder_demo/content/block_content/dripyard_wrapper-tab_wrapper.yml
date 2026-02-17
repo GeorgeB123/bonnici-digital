@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 656c6d97-a697-48e9-a4f1-fee8f868abbb
+  bundle: dripyard_wrapper
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Tab Wrapper'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_wrapper:
+    -
+      value: 'dripyard_base:tab-group'
+  dripyard_wrapper_props:
+    -
+      value: '{"centered":false,"title":"","placement":"top","theme":"inherit","icon_size":"small","icon_placement":"vertical"}'

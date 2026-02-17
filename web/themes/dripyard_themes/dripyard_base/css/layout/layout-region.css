@@ -1,0 +1,47 @@
+/*
+ * @file
+ * Shared styles for aligning layout cells (within layout components).
+ */
+
+.layout-region {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.layout-region__horizontal-align--start {
+  align-items: normal;
+}
+
+.layout-region__horizontal-align--center {
+  align-items: center;
+  text-align: center;
+
+  > * {
+    margin-inline: auto;
+  }
+}
+
+.layout-region__horizontal-align--end {
+  align-items: end;
+}
+
+.layout-region__vertical-align--top {
+  justify-content: start;
+}
+
+.layout-region__vertical-align--center {
+  justify-content: center;
+}
+
+.layout-region__vertical-align--bottom {
+  justify-content: end;
+}

@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Drupal CMS row template to override search result items for the advanced
+ * search recipe.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ include('dripyard_base:search-result-teaser', {
+    title_attributes: create_attribute(),
+    content_attributes: create_attribute(),
+    title: fields.title.content,
+    href: url('entity.node.canonical', {'node': row._entity.id}),
+    snippet: fields.search_api_excerpt.content,
+    date: row._entity.node.getCreatedTime()|date('F j, Y'),
+    content_type: row._entity.type.entity.label,
+  }, with_context = false) }}

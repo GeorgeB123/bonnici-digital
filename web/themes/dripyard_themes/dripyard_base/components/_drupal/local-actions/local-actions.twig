@@ -1,0 +1,12 @@
+{% if primary %}
+  <nav class="local-actions-wrapper local-actions-wrapper--primary" aria-labelledby="primary-local-actions-title">
+    <h2 id="primary-local-actions-title" class="visually-hidden">{{ 'Primary actions'|t }}</h2>
+    <ul class="local-actions local-actions--primary">{{ primary }}</ul>
+  </nav>
+{% endif %}
+{% if secondary %}
+  <nav class="local-actions-wrapper local-actions-wrapper--secondary" aria-labelledby="secondary-local-actions-title">
+    <h2 id="secondary-local-actions-title" class="visually-hidden">{{ 'Secondary actions'|t }}</h2>
+    <ul class="local-actions local-actions--secondary">{{ secondary }}</ul>
+  </nav>
+{% endif %}

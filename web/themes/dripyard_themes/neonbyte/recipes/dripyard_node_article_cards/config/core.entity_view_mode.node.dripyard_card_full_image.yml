@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.dripyard_card_full_image
+label: 'Card Full Image'
+description: ''
+targetEntityType: node
+cache: true

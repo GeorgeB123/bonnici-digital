@@ -1,0 +1,472 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+require_once __DIR__ . '/dripyard-classloader.php';
+
+use Drupal\dripyard_base\DripyardBasePrerender;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Render\Element;
+use Drupal\dripyard_base\Utility\ClassDiscovery;
+use Drupal\user\UserInterface;
+use Drupal\views\Plugin\views\row\EntityRow;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dripyard_base_form_system_theme_settings_alter(array &$form, FormStateInterface $form_state): void {
+  $theme = $form_state->getBuildInfo()['args'][0];
+
+  $theme_settings_classes = ClassDiscovery::getAvailableClasses($theme, 'ThemeSettings');
+
+  foreach ($theme_settings_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($theme, 'ThemeSettings', $class_name);
+    if ($class !== NULL) {
+      $settingsClass = new $class();
+      $settingsClass->setTheme($theme);
+      $settingsClass->themeSettingsFormAlter($form, $form_state);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess() for all templates.
+ */
+function dripyard_base_preprocess(array &$variables): void {
+  // Check if this is a Drupal Canvas page. If so, create a variable.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name && strpos($route_name, 'canvas') === 0) {
+    $variables['is_canvas'] = TRUE;
+    $variables['#attached']['library'][] = 'dripyard_base/canvas-helper';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function dripyard_base_preprocess_page(array &$variables): void {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+  $variables['footer_theme'] = \Drupal::config($current_theme . '.settings')->get('footer.theme') ?: 'primary';
+
+  $page_preprocessor_classes = ClassDiscovery::getAvailableClasses($current_theme, 'Preprocess/Page');
+
+  foreach ($page_preprocessor_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'Preprocess\\Page', $class_name);
+    if ($class !== NULL) {
+      $preprocessor = new $class();
+      $preprocessor->setTheme($current_theme);
+      if ($preprocessor->applies($variables)) {
+        $preprocessor->preprocess($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML.
+ */
+function dripyard_base_preprocess_html(array &$variables): void {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $html_preprocessor_classes = ClassDiscovery::getAvailableClasses($current_theme, 'Preprocess/Html');
+
+  foreach ($html_preprocessor_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'Preprocess\\Html', $class_name);
+    if ($class !== NULL) {
+      $preprocessor = new $class();
+      $preprocessor->setTheme($current_theme);
+      if ($preprocessor->applies($variables)) {
+        $preprocessor->preprocess($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page title templates.
+ */
+function dripyard_base_preprocess_page_title(array &$variables): void {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $page_title_preprocessor_classes = ClassDiscovery::getAvailableClasses($current_theme, 'Preprocess/PageTitle');
+
+  foreach ($page_title_preprocessor_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'Preprocess\\PageTitle', $class_name);
+    if ($class !== NULL) {
+      $preprocessor = new $class();
+      $preprocessor->setTheme($current_theme);
+      if ($preprocessor->applies($variables)) {
+        $preprocessor->preprocess($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_field(array &$variables): void {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $field_preprocessor_classes = ClassDiscovery::getAvailableClasses($current_theme, 'Preprocess/Field');
+
+  foreach ($field_preprocessor_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'Preprocess\\Field', $class_name);
+    if ($class !== NULL) {
+      $preprocessor = new $class();
+      $preprocessor->setTheme($current_theme);
+      if ($preprocessor->applies($variables)) {
+        $preprocessor->preprocess($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block.html.twig.
+ */
+function dripyard_base_preprocess_block(array &$variables): void {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $block_preprocessor_classes = ClassDiscovery::getAvailableClasses($current_theme, 'Preprocess/Block');
+
+  foreach ($block_preprocessor_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'Preprocess\\Block', $class_name);
+    if ($class !== NULL) {
+      $preprocessor = new $class();
+      $preprocessor->setTheme($current_theme);
+      if ($preprocessor->applies($variables)) {
+        $preprocessor->preprocess($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_menu(array &$variables): void {
+  if (isset($variables['attributes']['region'])) {
+    unset($variables['attributes']['region']);
+  }
+
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $menu_preprocessor_classes = ClassDiscovery::getAvailableClasses($current_theme, 'Preprocess/Menu');
+
+  foreach ($menu_preprocessor_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'Preprocess\\Menu', $class_name);
+    if ($class !== NULL) {
+      $preprocessor = new $class();
+      $preprocessor->setTheme($current_theme);
+      if ($preprocessor->applies($variables)) {
+        $preprocessor->preprocess($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_input(array &$variables): void {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $input_preprocessor_classes = ClassDiscovery::getAvailableClasses($current_theme, 'Preprocess/Input');
+
+  foreach ($input_preprocessor_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'Preprocess\\Input', $class_name);
+    if ($class !== NULL) {
+      $preprocessor = new $class();
+      $preprocessor->setTheme($current_theme);
+      if ($preprocessor->applies($variables)) {
+        $preprocessor->preprocess($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter() for adding classes and placeholder text to the search forms.
+ */
+function dripyard_base_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $form_alter_classes = ClassDiscovery::getAvailableClasses($current_theme, 'FormAlter');
+
+  foreach ($form_alter_classes as $class_name) {
+    $class = ClassDiscovery::loadClass($current_theme, 'FormAlter', $class_name);
+    if ($class !== NULL) {
+      $form_alter = new $class();
+      if ($form_alter->applies($form, $form_state, $form_id)) {
+        $form_alter->alter($form, $form_state, $form_id);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block().
+ */
+function dripyard_base_theme_suggestions_block_alter(array &$suggestions, array $variables): void {
+  if (!empty($variables['elements']['#id'])) {
+
+    /** @var \Drupal\block\BlockInterface $block */
+    $block = \Drupal::entityTypeManager()
+      ->getStorage('block')
+      ->load($variables['elements']['#id']);
+    if ($block) {
+      // Add region-specific block theme suggestions.
+      $region = $block->getRegion();
+      $suggestions[] = 'block__region_' . $region;
+      $suggestions[] = 'block__region_' . $region . '__' . $variables['elements']['#base_plugin_id'];
+      $suggestions[] = 'block__region_' . $region . '__' . $variables['elements']['#id'];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-tasks templates.
+ */
+function dripyard_base_preprocess_menu_local_tasks(array &$variables): void {
+  foreach (Element::children($variables['primary']) as $key) {
+    $variables['primary'][$key]['#level'] = 'primary';
+  }
+  foreach (Element::children($variables['secondary']) as $key) {
+    $variables['secondary'][$key]['#level'] = 'secondary';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_form_element_label(array &$variables): void {
+  $variables['attributes']['class'][] = 'form-item__label';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_textarea(array &$variables): void {
+  $variables['attributes']['class'][] = 'form-element';
+  $variables['attributes']['class'][] = 'form-element--type-textarea';
+  $variables['attributes']['class'][] = 'form-element--api-textarea';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_select(array &$variables): void {
+  $variables['attributes']['class'][] = 'form-element';
+  $variables['attributes']['class'][] = $variables['element']['#multiple'] ?
+    'form-element--type-select-multiple' :
+    'form-element--type-select';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_checkboxes(array &$variables): void {
+  $variables['attributes']['class'][] = 'form-boolean-group';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_radios(array &$variables): void {
+  $variables['attributes']['class'][] = 'form-boolean-group';
+}
+
+/**
+ * Implements template_preprocess_HOOK() for fieldset.
+ */
+function dripyard_base_preprocess_fieldset(array &$variables): void {
+  $element = $variables['element'];
+  $composite_types = ['checkboxes', 'radios'];
+
+  if (!empty($element['#type']) && in_array($element['#type'], $composite_types) && !empty($variables['element']['#children_errors'])) {
+    $variables['legend_span']['attributes']->addClass('has-error');
+  }
+
+  if (!empty($element['#disabled'])) {
+    $variables['legend_span']['attributes']->addClass('is-disabled');
+
+    if (!empty($variables['description']) && !empty($variables['description']['attributes'])) {
+      $variables['description']['attributes']->addClass('is-disabled');
+    }
+  }
+
+  // Remove 'container-inline' class from the main attributes and add a flag
+  // instead.
+  // @todo remove this after https://www.drupal.org/node/3059593 has been
+  //   resolved.
+  if (!empty($variables['attributes']['class'])) {
+    $container_inline_key = array_search('container-inline', $variables['attributes']['class']);
+
+    if ($container_inline_key !== FALSE) {
+      unset($variables['attributes']['class'][$container_inline_key]);
+      $variables['inline_items'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dripyard_base_theme_suggestions_user_alter(array &$suggestions, array $variables): void {
+  $suggestions[] = 'user__' . $variables['elements']['#view_mode'];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dripyard_base_form_node_preview_form_select_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $form['backlink']['#options']['attributes']['class'][] = 'button';
+  $form['backlink']['#options']['attributes']['class'][] = 'button--small';
+  $form['backlink']['#options']['attributes']['class'][] = 'button--icon-back';
+  $form['backlink']['#options']['attributes']['class'][] = 'button--primary';
+  $form['view_mode']['#attributes']['class'][] = 'form-element--small';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for comment.html.twig.
+ */
+function dripyard_base_preprocess_comment(array &$variables): void {
+  // Getting the node creation time stamp from the comment object.
+  $date = $variables['comment']->getCreatedTime();
+  // Formatting "created" as "X days ago".
+  $variables['created'] = t('@time ago', ['@time' => \Drupal::service('date.formatter')->formatInterval(\Drupal::time()->getRequestTime() - $date)]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for field--comment.html.twig.
+ */
+function dripyard_base_preprocess_field__comment(array &$variables): void {
+  // Add a comment_count.
+  $variables['comment_count'] = count(array_filter($variables['comments'], 'is_numeric', ARRAY_FILTER_USE_KEY));
+
+  // Add user.compact to field-comment if profile's avatar of current user
+  // exist.
+  $user = \Drupal::currentUser();
+  if ($user->isAuthenticated() && $user instanceof UserInterface) {
+    if ($user->hasField('user_picture') && !$user->get('user_picture')->isEmpty()) {
+      $variables['user_picture'] = \Drupal::entityTypeManager()
+        ->getViewBuilder('user')
+        ->view($user, 'compact');
+    }
+
+    $variables['#cache']['contexts'][] = 'user';
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function dripyard_base_element_info_alter(array &$info): void {
+  if (array_key_exists('text_format', $info)) {
+    $info['text_format']['#pre_render'][] = [DripyardBasePrerender::class, 'textFormat'];
+  }
+
+  if (isset($info['status_messages'])) {
+    $info['status_messages']['#pre_render'][] = [DripyardBasePrerender::class, 'messagePlaceholder'];
+  }
+}
+
+/**
+ * Implements template_preprocess_text_format_wrapper().
+ *
+ * @todo Remove when https://www.drupal.org/node/3016343 is fixed.
+ */
+function dripyard_base_preprocess_text_format_wrapper(array &$variables): void {
+  $description_attributes = [];
+  if (!empty($variables['attributes']['id'])) {
+    $description_attributes['id'] = $variables['attributes']['aria-describedby'] = $variables['attributes']['id'];
+    unset($variables['attributes']['id']);
+  }
+  $variables['description_attributes'] = new Attribute($description_attributes);
+}
+
+/**
+ * Implements hook_preprocess_links__comment().
+ */
+function dripyard_base_preprocess_links__comment(array &$variables): void {
+  foreach ($variables['links'] as &$link) {
+    $link['link']['#options']['attributes']['class'][] = 'comment__links-link button button--xs';
+  }
+}
+
+/**
+ * Implements hook_form_views_exposed_form_alter().
+ */
+function dripyard_base_form_views_exposed_form_alter(array &$form): void {
+  $form['#attributes']['class'][] = 'form--inline';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dripyard_base_preprocess_views_view_unformatted(array &$variables): void {
+  // Call the same block preprocessor that a rendered block entity would because
+  // Drupal doesn't render views blocks as entities. They're fields ¯\_(ツ)_/¯.
+  // @see https://www.drupal.org/project/drupal/issues/2704331
+  if (!empty($variables['view']->rowPlugin) && $variables['view']->rowPlugin instanceof EntityRow && $variables['view']->rowPlugin->getEntityTypeId() == 'block_content') {
+    foreach ($variables['rows'] as &$row) {
+      dripyard_base_preprocess_block($row);
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for menu.
+ */
+function dripyard_base_theme_suggestions_menu_alter(array &$suggestions, array $variables): void {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__region_' . $variables['attributes']['region'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Add button style to client link field for Drupal CMS project recipe.
+ */
+function dripyard_base_preprocess_field__field_project__client_link(array &$variables): void {
+  $variables['items'][0]['content']['#options']['attributes']['class'][] = 'button button--primary button--large';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Add button style to client link field for Drupal CMS case study recipe.
+ */
+function dripyard_base_preprocess_field__field_case_study__client_link(array &$variables): void {
+  $variables['items'][0]['content']['#options']['attributes']['class'][] = 'button button--primary button--large';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Add button style to event link field for Drupal CMS event recipe.
+ */
+function dripyard_base_preprocess_field__field_event__link(array &$variables): void {
+  $variables['items'][0]['content']['#options']['attributes']['class'][] = 'button button--primary button--large';
+}
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function dripyard_base_theme_suggestions_container_alter(array &$suggestions, array $variables): void {
+  // A list of view names in which to remove the container markup.
+  $views = [
+    'dripyard_menu_cards',
+  ];
+
+  if (!empty($variables['element']['#name']) && in_array($variables['element']['#name'], $views)) {
+    $suggestions[] = 'container__no_wrapper';
+  }
+}

@@ -1,0 +1,251 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.card-canvas
+    - canvas.component.sdc.dripyard_base.grid-cell
+    - canvas.component.sdc.dripyard_base.grid-wrapper
+    - canvas.component.sdc.dripyard_base.section
+    - canvas.component.sdc.dripyard_base.title-cta
+  module:
+    - link
+    - options
+id: sectioncardgroup
+label: 'Section - Card Group'
+component_tree:
+  0:
+    uuid: 96f2cd30-b1d2-4eb3-a1d3-ff043a9df31e
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: light
+      section_width: edge-to-edge
+      content_width: max-width
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: large
+      padding_bottom: large
+  '0:header:0':
+    parent_uuid: 96f2cd30-b1d2-4eb3-a1d3-ff043a9df31e
+    slot: header
+    uuid: 2e8bcb90-a451-47ee-887a-500acaf6d212
+    component_id: sdc.dripyard_base.title-cta
+    component_version: fd6bbffa9b05aa5a
+    inputs:
+      layout: default
+      title: 'This is title text that is paired with a CTA'
+      heading_style: h2
+      button_text: 'Learn more'
+      button_href:
+        uri: 'https://www.drupal.org'
+        options: {  }
+      button_style: default
+  '0:content:0':
+    parent_uuid: 96f2cd30-b1d2-4eb3-a1d3-ff043a9df31e
+    slot: content
+    uuid: 2f8b6a9b-7341-4d8f-ab4c-4b00c09ddb13
+    component_id: sdc.dripyard_base.grid-wrapper
+    component_version: ba954a2accbc0f5c
+    inputs:
+      column_gutter: medium
+      row_gutter: medium
+  '0:content:0:grid_cells:0':
+    parent_uuid: 2f8b6a9b-7341-4d8f-ab4c-4b00c09ddb13
+    slot: grid_cells
+    uuid: b8968b2a-aa2d-43e4-b7aa-ddcce51c5f00
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:0:content:0':
+    parent_uuid: b8968b2a-aa2d-43e4-b7aa-ddcce51c5f00
+    slot: content
+    uuid: b92a413f-0eda-451a-bebb-dbc6e5240b16
+    component_id: sdc.dripyard_base.card-canvas
+    component_version: 2264f12307a3994c
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.card-canvas
+      eyebrow_text: 'Eyebrow text'
+      title: 'Card title'
+      body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, amet.'
+  '0:content:0:grid_cells:1':
+    parent_uuid: 2f8b6a9b-7341-4d8f-ab4c-4b00c09ddb13
+    slot: grid_cells
+    uuid: bdbd2dc3-4af1-4392-a1b6-ef550f0c6c62
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:1:content:0':
+    parent_uuid: bdbd2dc3-4af1-4392-a1b6-ef550f0c6c62
+    slot: content
+    uuid: a53c3754-c8a1-4b5f-a1d1-04e3088611c5
+    component_id: sdc.dripyard_base.card-canvas
+    component_version: 2264f12307a3994c
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.card-canvas
+      eyebrow_text: 'Eyebrow text'
+      title: 'Card title'
+      body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, amet.'
+  '0:content:0:grid_cells:2':
+    parent_uuid: 2f8b6a9b-7341-4d8f-ab4c-4b00c09ddb13
+    slot: grid_cells
+    uuid: e4d0e911-946e-4ff8-9adb-7ac2a437e4f6
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:2:content:0':
+    parent_uuid: e4d0e911-946e-4ff8-9adb-7ac2a437e4f6
+    slot: content
+    uuid: ab3a0550-e8d4-4997-98a9-0e851de1d378
+    component_id: sdc.dripyard_base.card-canvas
+    component_version: 2264f12307a3994c
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.card-canvas
+      eyebrow_text: 'Eyebrow text'
+      title: 'Card title'
+      body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, amet.'
+  '0:content:0:grid_cells:3':
+    parent_uuid: 2f8b6a9b-7341-4d8f-ab4c-4b00c09ddb13
+    slot: grid_cells
+    uuid: 66eb0754-5243-4c27-9ab4-ffc11ee867c2
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:3:content:0':
+    parent_uuid: 66eb0754-5243-4c27-9ab4-ffc11ee867c2
+    slot: content
+    uuid: 9b8ae150-1c69-4cfc-a3e7-fe4bca75396a
+    component_id: sdc.dripyard_base.card-canvas
+    component_version: 2264f12307a3994c
+    inputs:
+      image:
+        sourceType: default-relative-url
+        value:
+          src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+        jsonSchema:
+          type: object
+          properties:
+            src:
+              type: string
+              contentMediaType: 'image/*'
+              format: uri-reference
+              x-allowed-schemes:
+                - http
+                - https
+            alt:
+              type: string
+            width:
+              type: integer
+            height:
+              type: integer
+          required:
+            - src
+        componentId: sdc.dripyard_base.card-canvas
+      eyebrow_text: 'Eyebrow text'
+      title: 'Card title'
+      body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, amet.'

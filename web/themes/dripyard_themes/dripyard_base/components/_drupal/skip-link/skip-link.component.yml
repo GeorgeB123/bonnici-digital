@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Skip link
+status: stable
+group: Drupal
+noUI: true
+props:
+  type: object
+  required:
+    - href
+    - text
+  properties:
+    href:
+      title: Link
+      type: string
+      format: uri-reference
+    text:
+      type: string
+      title: Link text

@@ -1,0 +1,13 @@
+{% set random_stat = [
+   '$1,200',
+   '98%',
+   '10€',
+   '200ppm',
+] %}
+
+{{ include('dripyard_base:statistic', {
+  statistic: random(random_stat),
+  first_line: 'Students',
+  second_line: 'Enrolled students from 45 countries',
+  href: 'https://www.drupal.org',
+}, with_context = false) }}

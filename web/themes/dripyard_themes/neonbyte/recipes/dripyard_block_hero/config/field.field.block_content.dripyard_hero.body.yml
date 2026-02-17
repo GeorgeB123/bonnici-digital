@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.body
+    - filter.format.dripyard_superbasic
+  module:
+    - text
+id: block_content.dripyard_hero.body
+field_name: body
+entity_type: block_content
+bundle: dripyard_hero
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - dripyard_superbasic
+field_type: text_with_summary

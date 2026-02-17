@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_card
+    - field.storage.block_content.dripyard_component_theme
+  module:
+    - options
+id: block_content.dripyard_card.dripyard_component_theme
+field_name: dripyard_component_theme
+entity_type: block_content
+bundle: dripyard_card
+label: 'Component Theme'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: inherit
+default_value_callback: ''
+settings: {  }
+field_type: list_string

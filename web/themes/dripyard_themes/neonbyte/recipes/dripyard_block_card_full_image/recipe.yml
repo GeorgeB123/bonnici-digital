@@ -1,0 +1,10 @@
+name: Dripyard Card Full Image Block
+type: Dripyard
+description: 'Provides a card block type with title, full image, and link.'
+install:
+  - block_content
+config:
+  strict: false
+recipes:
+  - 'dripyard_media'
+  - 'dripyard_fields_block'

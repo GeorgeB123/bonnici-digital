@@ -1,0 +1,323 @@
+{
+    "name": "drupal/cms",
+    "version": "2.0.0",
+    "description": "Drupal CMS is a ready-to-use platform built on Drupal core, offering smart defaults to get started quickly and enterprise-grade tools for marketers, designers, and content creators.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/cms",
+    "support": {
+        "docs": "https://new.drupal.org/docs/drupal-cms",
+        "chat": "https://drupal.org/node/314178"
+    },
+    "repositories": {
+        "codemirror": {
+            "type": "package",
+            "package": {
+                "name": "codemirror/codemirror",
+                "version": "5.65.12",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "codemirror"
+                },
+                "dist": {
+                    "url": "https://github.com/components/codemirror/archive/refs/tags/5.65.12.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "jquery.inputmask": {
+            "type": "package",
+            "package": {
+                "name": "jquery/inputmask",
+                "version": "5.0.9",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.inputmask"
+                },
+                "dist": {
+                    "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/refs/tags/5.0.9.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "jquery.intl-tel-input": {
+            "type": "package",
+            "package": {
+                "name": "jquery/intl-tel-input",
+                "version": "17.0.19",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.intl-tel-input"
+                },
+                "dist": {
+                    "url": "https://github.com/jackocnr/intl-tel-input/archive/refs/tags/v17.0.19.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "jquery.rateit": {
+            "type": "package",
+            "package": {
+                "name": "jquery/rateit",
+                "version": "1.1.5",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.rateit"
+                },
+                "dist": {
+                    "url": "https://github.com/gjunge/rateit.js/archive/refs/tags/1.1.5.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "jquery.select2": {
+            "type": "package",
+            "package": {
+                "name": "jquery/select2",
+                "version": "4.0.13",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.select2"
+                },
+                "dist": {
+                    "url": "https://github.com/select2/select2/archive/refs/tags/4.0.13.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "jquery.textcounter": {
+            "type": "package",
+            "package": {
+                "name": "jquery/textcounter",
+                "version": "0.9.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.textcounter"
+                },
+                "dist": {
+                    "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/refs/tags/0.9.1.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "jquery.timepicker": {
+            "type": "package",
+            "package": {
+                "name": "jquery/timepicker",
+                "version": "1.14.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.timepicker"
+                },
+                "dist": {
+                    "url": "https://github.com/jonthornton/jquery-timepicker/archive/refs/tags/1.14.0.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "popperjs": {
+            "type": "package",
+            "package": {
+                "name": "popperjs/popperjs",
+                "version": "2.11.6",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "popperjs"
+                },
+                "dist": {
+                    "url": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz",
+                    "type": "tar"
+                },
+                "license": "MIT"
+            }
+        },
+        "progress-tracker": {
+            "type": "package",
+            "package": {
+                "name": "progress-tracker/progress-tracker",
+                "version": "2.0.7",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "progress-tracker"
+                },
+                "dist": {
+                    "url": "https://github.com/NigelOToole/progress-tracker/archive/refs/tags/2.0.7.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "signature_pad": {
+            "type": "package",
+            "package": {
+                "name": "signature_pad/signature_pad",
+                "version": "2.3.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "signature_pad"
+                },
+                "dist": {
+                    "url": "https://github.com/szimek/signature_pad/archive/refs/tags/v2.3.0.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "tabby": {
+            "type": "package",
+            "package": {
+                "name": "tabby/tabby",
+                "version": "12.0.3",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "tabby"
+                },
+                "dist": {
+                    "url": "https://github.com/cferdinandi/tabby/archive/refs/tags/v12.0.3.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "tippyjs": {
+            "type": "package",
+            "package": {
+                "name": "tippyjs/tippyjs",
+                "version": "6.3.7",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "tippyjs"
+                },
+                "dist": {
+                    "url": "https://registry.npmjs.org/tippy.js/-/tippy.js-6.3.7.tgz",
+                    "type": "tar"
+                },
+                "license": "MIT"
+            }
+        },
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "require": {
+        "codemirror/codemirror": "^5.65",
+        "composer/composer": "^2.8",
+        "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2.0",
+        "drupal/ai_context": "^0.1@alpha",
+        "drupal/ai_provider_litellm": "^1.2",
+        "drupal/byte": "^1",
+        "drupal/canvas": "^1.1",
+        "drupal/core-composer-scaffold": "^11.3",
+        "drupal/core-project-message": "^11.3",
+        "drupal/core-recipe-unpack": "^11.3",
+        "drupal/core-recommended": "^11.3",
+        "drupal/core-vendor-hardening": "^11.3",
+        "drupal/drupal_cms_accessibility_tools": "^2",
+        "drupal/drupal_cms_ai": "^2",
+        "drupal/drupal_cms_forms": "^2",
+        "drupal/drupal_cms_google_analytics": "^2",
+        "drupal/drupal_cms_seo_tools": "^2",
+        "drupal/drupal_cms_starter": "^2",
+        "drupal/recipe_installer_kit": "^1.0.4",
+        "drupal/webform": "@beta",
+        "jquery/inputmask": "^5.0",
+        "jquery/intl-tel-input": "^17.0",
+        "jquery/rateit": "^1.1",
+        "jquery/select2": "^4.0",
+        "jquery/textcounter": "^0.9.1",
+        "jquery/timepicker": "^1.14",
+        "popperjs/popperjs": "^2.11",
+        "progress-tracker/progress-tracker": "^2.0",
+        "signature_pad/signature_pad": "^2.3",
+        "tabby/tabby": "^12.0",
+        "tippyjs/tippyjs": "^6.3"
+    },
+    "require-dev": {
+        "drush/drush": "^13.7"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "alpha",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-recipe-unpack": true,
+            "drupal/core-vendor-hardening": true,
+            "php-http/discovery": true,
+            "cweagans/composer-patches": true
+        },
+        "bin-dir": "vendor/bin",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "patches": {
+            "drupal/canvas": {
+                "Fix YAML object serialization in AI component description form": "patches/canvas/canvas-ai-yaml-object-fix.patch"
+            }
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "patches.json": false,
+                "patches.lock.json": false,
+                "patches/drupal/drupal_cms/373.patch": false,
+                "[web-root]/sites/default/settings.php": {
+                    "path": "web/core/assets/scaffold/files/default.settings.php",
+                    "overwrite": false
+                },
+                "[web-root]/example.gitignore": false
+            },
+            "allowed-packages": ["drupal/drupal_cms_seo_tools"]
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "./drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "./recipes/{$name}": ["type:drupal-recipe"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                   </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed Drupal CMS!    </>",
+                "<bg=blue;fg=white>                                                   </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://drupal.org/support",
+                "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
+            ]
+        },
+        "drupal-core-vendor-hardening": {
+            "composer/composer": false
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php -r \"@unlink('vendor/bin/composer');\""
+        ],
+        "post-drupal-scaffold-cmd": "cd web/sites/default && test -z \"$(grep 'include \\$devpanel_settings;' settings.php)\" && patch -Np1 -r /dev/null < $APP_ROOT/.devpanel/drupal-settings.patch || :"
+    }
+}

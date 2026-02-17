@@ -1,0 +1,43 @@
+/*
+ * @file
+ * Basic styling for tags.
+ */
+
+.tags {
+  --estimated-tags-height: 35px;
+
+  display: flex;
+  font-family: var(--font-sans);
+}
+
+.tags__title {
+  display: flex;
+  align-items: center;
+  height: var(--estimated-tags-height);
+  margin: 0;
+  margin-inline-end: 1ch;
+  color: var(--theme-text-color-soft);
+  font-size: var(--body-s-size);
+  font-weight: 600;
+  line-height: var(--body-s-line-height);
+  letter-spacing: var(--body-s-letter-spacing);
+
+  &::after {
+    content: ":";
+  }
+}
+
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xxs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags__item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}

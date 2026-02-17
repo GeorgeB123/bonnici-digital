@@ -1,0 +1,7 @@
+name: 'Dripyard Block: Statistic'
+description: 'Provides a statistic block type with numerical value and descriptive text lines.'
+type: 'Content type'
+recipes:
+  - dripyard_fields_block
+config:
+  strict: false

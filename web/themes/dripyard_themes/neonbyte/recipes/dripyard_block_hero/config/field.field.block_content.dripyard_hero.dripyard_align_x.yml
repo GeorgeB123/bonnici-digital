@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_align_x
+  module:
+    - options
+id: block_content.dripyard_hero.dripyard_align_x
+field_name: dripyard_align_x
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Align X'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: start
+default_value_callback: ''
+settings: {  }
+field_type: list_string

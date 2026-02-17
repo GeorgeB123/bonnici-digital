@@ -1,0 +1,12 @@
+.menu-block {
+  &[class*="theme"] {
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xs);
+    background: var(--theme-surface);
+  }
+}
+
+.menu-block__title[class] {
+  margin-top: 0;
+  color: var(--theme-text-color-loud)
+}

@@ -1,0 +1,25 @@
+{% set in_layout_builder = elements['#in_preview'] %}
+
+{% if in_layout_builder %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+{% endif %}
+
+  {{ include('dripyard_base:card-full-image', {
+    directory,
+    title: props.dripyard_title|default(''),
+    image: content.dripyard_image_media,
+    href: props.dripyard_link[0].href|default('/'),
+    byline: props.dripyard_link[0].text|default('Learn More'),
+    overlay_color: content['#block_content'].dripyard_overlay_color.value|default('dark'),
+    layout_vertical: 'bottom',
+    title_align: 'start',
+    byline_align: 'start',
+    overlay: 'full',
+    overlay_color: 'dark',
+    }, with_context = false) }}
+
+{% if in_layout_builder %}
+  </div>
+{% endif %}

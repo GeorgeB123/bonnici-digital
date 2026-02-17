@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dripyard_full_width
+label: 'Full Width'
+effects:
+  fae8a50c-9f7c-4823-b696-a6355d97c0ba:
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: null
+      upscale: false
+  b785dac9-2301-4ea1-93b7-e99c45a37b29:
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

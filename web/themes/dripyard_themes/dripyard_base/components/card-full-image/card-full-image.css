@@ -1,0 +1,151 @@
+/*
+ * @file
+ * Styles for card full image component.
+ */
+
+.card-full-image {
+  --card-full-image-padding: var(--spacing-xs);
+  --card-full-image-gap: var(--sp2);
+  --card-full-image-aspect-ratio: 5 / 7;
+  --card-full-image-border-radius: var(--radius-md);
+  --card-full-image-text-color: var(--theme-text-color-loud);
+  --card-full-image-title-font-size: var(--h3-size);
+  --card-full-image-title-line-height: var(--h3-line-height);
+  --card-full-image-title-letter-spacing: var(--h3-letter-spacing);
+  --card-full-image-byline-font-size: var(--body-m-size);
+  --card-full-image-byline-line-height: var(--body-m-line-height);
+  --card-full-image-byline-letter-spacing: var(--body-m-letter-spacing);
+  --card-full-image-overlay-color: var(--theme-surface);
+  --card-full-image-overlay-length: -100%;
+  --card-full-image-focus-ring-color: var(--theme-text-color-loud);
+
+  container-type: inline-size;
+  width: 100%;
+}
+
+.card-full-image__inner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  aspect-ratio: var(--card-full-image-aspect-ratio);
+  border-radius: var(--card-full-image-border-radius);
+  overflow: clip;
+  text-align: start;
+
+  @media (height < 900px) {
+    --card-full-image-aspect-ratio: 4 / 3;
+  }
+
+  @container (width > 600px) {
+    --card-full-image-aspect-ratio: 16 / 9;
+    --card-full-image-title-font-size: var(--h2-size);
+    --card-full-image-byline-font-size: var(--body-l-size);
+  }
+
+  &:focus-visible {
+    outline-offset: -6px;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+}
+
+.card-full-image--overlay-from-bottom {
+  --card-full-image-overlay-length: 50%;
+
+  @container (width > 600px) {
+    --card-full-image-overlay-length: 60%;
+  }
+}
+
+.card-full-image__overlay {
+  .card-full-image--overlay-from-bottom &,
+  .card-full-image--overlay-full & {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to top, var(--card-full-image-overlay-color), transparent calc(100% - var(--card-full-image-overlay-length)));
+    opacity: 0.5;
+    transition: opacity 0.2s;
+
+    .card-full-image:hover & {
+      opacity: 0.7;
+    }
+  }
+
+  .card-full-image--overlay-from-bottom & {
+    opacity: 0.8;
+
+    .card-full-image:hover & {
+      opacity: 1;
+    }
+  }
+}
+
+.card-full-image__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: auto;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: none; /* Focus indicator is provided within child to ensure it doesn't have opacity. */
+  }
+}
+
+.card-full-image__content {
+  position: relative; /* Create stacking context. */
+  display: flex;
+  gap: var(--card-full-image-gap);
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: var(--card-full-image-padding);
+
+  .card-full-image__link:focus-visible & {
+    outline: var(--focus-ring-style) var(--focus-ring-width) var(--card-full-image-focus-ring-color);
+    outline-offset: -8px;
+  }
+}
+
+.card-full-image__title,
+.card-full-image__byline {
+  margin: 0;
+  color: var(--card-full-image-text-color);
+}
+
+.card-full-image__title {
+  font-size: var(--card-full-image-title-font-size);
+  line-height: var(--card-full-image-title-line-height);
+  letter-spacing: var(--card-full-image-title-letter-spacing);
+
+  .card-full-image--align-y-center & {
+    margin-block: auto;
+
+    .card-full-image__content:has(.card-full-image__byline) & {
+      padding-top: 20px;
+    }
+  }
+
+  .card-full-image--title-align-center & {
+    text-align: center;
+  }
+}
+
+.card-full-image__byline {
+  font-size: var(--card-full-image-byline-font-size);
+  line-height: 1;
+  letter-spacing: var(--card-full-image-byline-letter-spacing);
+
+  .card-full-image--byline-align-end & {
+    margin-inline-start: auto;
+  }
+}

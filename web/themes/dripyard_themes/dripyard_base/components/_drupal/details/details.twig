@@ -1,0 +1,15 @@
+{%
+  set summary_classes = [
+    'details__summary',
+    required ? 'js-form-required',
+    required ? 'form-required',
+  ]
+%}
+{% set summary_attributes = summary_attributes ?: create_attribute() %}
+
+<details{{ attributes.addClass('details') }}>
+  <summary{{ summary_attributes.addClass(summary_classes) }}>{{ title }}</summary>
+  <div class="details__wrapper">
+    {% block details_content %}{% endblock %}
+  </div>
+</details>

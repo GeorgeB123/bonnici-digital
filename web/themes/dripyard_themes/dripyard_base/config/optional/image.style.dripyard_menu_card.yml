@@ -1,0 +1,22 @@
+uuid: 0eb8e635-3900-4d4b-b9b3-40b68cf16515
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: o0keoerk2pNXW78q813pwVnJOwJEWR29x5DkrqzgWwA
+name: dripyard_menu_card
+label: 'Dripyard Menu Card'
+effects:
+  fa871d0b-144e-40d3-843b-3c8ac1fc4b41:
+    uuid: fa871d0b-144e-40d3-843b-3c8ac1fc4b41
+    id: image_resize
+    weight: 1
+    data:
+      width: 300
+      height: 225
+  d8b66b6f-7338-4bf3-a4fc-61b922862c16:
+    uuid: d8b66b6f-7338-4bf3-a4fc-61b922862c16
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

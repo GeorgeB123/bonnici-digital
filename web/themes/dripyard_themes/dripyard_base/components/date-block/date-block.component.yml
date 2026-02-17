@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Date Block
+status: stable
+group: Dripyard General
+props:
+  type: object
+  required:
+    - date_time_stamp
+  properties:
+    date_time_stamp:
+      title: Date/time stamp
+      type: string
+      format: date-time
+      examples:
+        - '2024-07-15T14:30:00Z'
+        - '2024-12-25T09:00:00Z'

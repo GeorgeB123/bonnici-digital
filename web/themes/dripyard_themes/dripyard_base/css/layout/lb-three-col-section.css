@@ -1,0 +1,49 @@
+/*
+ * @file
+ * Override styles for core's three-column layout section.
+ */
+
+/* stylelint-disable selector-class-pattern */
+.layout--threecol-section {
+  --grid-template: auto;
+  --grid-column__first: auto;
+  --grid-column__second: auto;
+  --grid-column__third: auto;
+
+  display: grid;
+  gap: calc(var(--gap) * 2) var(--gap);
+  grid-template-columns: var(--grid-template, auto);
+
+  & > .layout__region--first {
+    grid-column: var(--grid-column__first);
+  }
+
+  & > .layout__region--second {
+    grid-column: var(--grid-column__second);
+  }
+
+  & > .layout__region--third {
+    grid-column: var(--grid-column__third);
+  }
+}
+
+@container (width > 1000px) {
+  .layout--threecol-section--25-50-25 {
+    --grid-template: repeat(4, minmax(0, 1fr));
+    --grid-column__second: span 2;
+  }
+
+  .layout--threecol-section--25-25-50 {
+    --grid-template: repeat(4, minmax(0, 1fr));
+    --grid-column__third: span 2;
+  }
+
+  .layout--threecol-section--50-25-25 {
+    --grid-template: repeat(4, minmax(0, 1fr));
+    --grid-column__first: span 2;
+  }
+
+  .layout--threecol-section--33-34-33 {
+    --grid-template: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: c8f4d912-3a7b-4c89-9d2e-8f1b6e5c3a42
+  bundle: dripyard_title_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'AI Innovation (title cta)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_component_layout:
+    -
+      value: center
+  dripyard_cta:
+    -
+      uri: 'internal:/'
+      title: 'Explore AI Solutions'
+      options: {  }
+  dripyard_title:
+    -
+      value: '<p>Leading the future with<br>AI Innovation</p>'
+      format: dripyard_superbasic

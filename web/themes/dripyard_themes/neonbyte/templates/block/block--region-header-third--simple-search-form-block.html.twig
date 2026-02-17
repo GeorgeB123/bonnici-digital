@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Theme override to display Drupal CMS's advanced search block within
+ * the header_third region.
+ */
+ #}
+{% embed 'neonbyte:header-search' with {
+    attributes,
+    content
+  } only %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}

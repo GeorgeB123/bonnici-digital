@@ -1,0 +1,9 @@
+name: Dripyard Logo Item
+type: Dripyard
+description: 'Provides a block type logo item component'
+install:
+  - views
+config:
+  strict: false
+recipes:
+  - 'dripyard_fields_block'

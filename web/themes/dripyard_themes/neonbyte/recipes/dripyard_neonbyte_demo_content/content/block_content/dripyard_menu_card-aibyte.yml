@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: bd48f72e-dea6-40dc-9a3c-0083ca039f18
+  bundle: dripyard_menu_card
+  default_langcode: en
+  depends:
+    c9f9bece-6c13-4a1b-9bc0-99a5bbf3a8a5: media
+    28a54b28-3c7b-4707-9f1f-12fc6fa9d0be: menu_link_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: AiByte
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_image_media:
+    -
+      entity: c9f9bece-6c13-4a1b-9bc0-99a5bbf3a8a5
+  dripyard_link:
+    -
+      uri: 'internal:/'
+      title: AiByte
+      options: {  }
+  dripyard_menu_item_reference:
+    -
+      entity: 28a54b28-3c7b-4707-9f1f-12fc6fa9d0be

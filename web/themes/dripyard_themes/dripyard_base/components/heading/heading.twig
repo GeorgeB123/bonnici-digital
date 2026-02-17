@@ -1,0 +1,23 @@
+{% set classes = [
+  'heading',
+  style|clean_class == 'title' ? 'heading-title' : style|clean_class,
+  modifier_classes,
+  center ? 'heading--centered',
+  margin_top == 'zero' ? 'margin-top--0',
+  margin_top == 'small' ? 'margin-top--s',
+  margin_top == 'medium' ? 'margin-top--m',
+  margin_top == 'large' ? 'margin-top--l',
+  margin_bottom == 'zero' ? 'margin-bottom--0',
+  margin_bottom == 'small' ? 'margin-bottom--s',
+  margin_bottom == 'medium' ? 'margin-bottom--m',
+  margin_bottom == 'large' ? 'margin-bottom--l',
+  color == 'soft' ? 'color--soft',
+  color == 'medium' ? 'color--medium',
+  color == 'loud' ? 'color--loud',
+  color == 'primary' ? 'color--primary',
+  ] %}
+{% set max_width_var = text_max_width ? '--heading-max-width: ' ~ text_max_width ~ ';' : false %}
+
+<{{ html_element }} {{ attributes.addClass(classes).setAttribute('style', max_width_var)}}>
+  {{ text }}
+</{{ html_element }}>

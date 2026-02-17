@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dripyard_hero_large
+label: 'Hero Large'
+effects:
+  9161022f-d655-40ff-a3c4-f03e5124e5f2:
+    uuid: 9161022f-d655-40ff-a3c4-f03e5124e5f2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1800
+      height: 1400
+      anchor: center-center
+  4d5dc939-4d0f-4348-9e06-efb92db30c13:
+    uuid: 4d5dc939-4d0f-4348-9e06-efb92db30c13
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

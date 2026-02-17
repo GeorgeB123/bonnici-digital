@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 95ace7e0-b9dc-4c6f-8f25-5134b6b50dc4
+  bundle: dripyard_title_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Powerful solutions (title cta)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_component_layout:
+    -
+      value: default
+  dripyard_cta:
+    -
+      uri: 'internal:/'
+      title: 'All Solutions'
+      options: {  }
+  dripyard_title:
+    -
+      value: '<p>We offer powerful solutions for&nbsp;<br>Companies and Governments</p>'
+      format: dripyard_superbasic

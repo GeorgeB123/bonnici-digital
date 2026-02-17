@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dripyard_hero_medium
+label: 'Hero Medium'
+effects:
+  6ea144ca-c197-4b63-a92d-d2057f4444a6:
+    uuid: 6ea144ca-c197-4b63-a92d-d2057f4444a6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 1000
+      anchor: center-center
+  55af581e-68af-4ca2-bb39-a63787717b57:
+    uuid: 55af581e-68af-4ca2-bb39-a63787717b57
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

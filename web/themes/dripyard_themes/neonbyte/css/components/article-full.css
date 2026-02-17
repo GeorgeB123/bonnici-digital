@@ -1,0 +1,10 @@
+/*
+ * @file
+ * Styles for full article display.
+ */
+
+ .article-full {
+  .text-content {
+    --wide-item-indentation: 100px;
+  }
+}

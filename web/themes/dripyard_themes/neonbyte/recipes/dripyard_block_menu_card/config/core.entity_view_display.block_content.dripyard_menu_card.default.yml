@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_menu_card
+    - field.field.block_content.dripyard_menu_card.dripyard_image_media
+    - field.field.block_content.dripyard_menu_card.dripyard_link
+    - field.field.block_content.dripyard_menu_card.dripyard_menu_item_reference
+    - image.style.dripyard_menu_card
+  module:
+    - link
+    - media
+id: block_content.dripyard_menu_card.default
+targetEntityType: block_content
+bundle: dripyard_menu_card
+mode: default
+content:
+  dripyard_image_media:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: dripyard_menu_card
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  dripyard_link:
+    type: link
+    label: above
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  dripyard_menu_item_reference: true

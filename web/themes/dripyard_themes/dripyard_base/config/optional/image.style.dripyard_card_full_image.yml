@@ -1,0 +1,21 @@
+uuid: 854f3bcf-2d63-4972-9bd5-4b00c4735f5e
+langcode: en
+status: true
+dependencies: {  }
+name: dripyard_card_full_image
+label: 'Dripyard Card Full Image'
+effects:
+  dbcf69c1-654e-4130-bd54-5d489c9479f9:
+    uuid: dbcf69c1-654e-4130-bd54-5d489c9479f9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 400
+      anchor: center-center
+  cffbbf6c-73b0-4323-84dd-b33c5e61b556:
+    uuid: cffbbf6c-73b0-4323-84dd-b33c5e61b556
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

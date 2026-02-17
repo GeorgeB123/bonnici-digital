@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 25aa5708-0803-443c-9a3e-72a67e646b55
+  bundle: dripyard_logo_item
+  default_langcode: en
+  depends:
+    52d3ae4a-39f6-4c25-b98a-89dd47e6d9c2: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Logo 6'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_image_media:
+    -
+      entity: 52d3ae4a-39f6-4c25-b98a-89dd47e6d9c2
+  dripyard_link:
+    -
+      uri: 'https://www.dripyard.com'
+      title: ''
+      options: {  }

@@ -1,0 +1,54 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Search result teaser
+status: stable
+noUi: true
+props:
+  type: object
+  required:
+    - title
+    - href
+  properties:
+    title:
+      title: Title
+      type: string
+      description: The title of the search result
+      examples: [ 'Search Result Title' ]
+    href:
+      title: URL
+      type: string
+      format: uri-reference
+      description: The URL link to the full content
+      examples: [ '/node/123', 'https://example.com/page' ]
+    snippet:
+      title: Snippet
+      type: string
+      description: Excerpt or summary text from the search result
+      examples: [ 'This is a brief excerpt from the search result content...' ]
+    author:
+      title: Author
+      type:
+        - string
+        - 'null'
+      description: Author name for the content
+      examples: [ 'John Doe' ]
+    date:
+      title: Date
+      type: string
+      description: Formatted publication date
+      examples: [ 'January 15, 2024' ]
+    content_type:
+      title: Content type
+      type: string
+      description: The type of content (e.g., Article, Page)
+      examples: [ 'Article', 'Page', 'Blog post' ]
+    image:
+      title: Image
+      type: object
+    title_prefix:
+      title: Title prefix
+      type: string
+      description: Content to display before the title
+    title_suffix:
+      title: Title suffix
+      type: string
+      description: Content to display after the title

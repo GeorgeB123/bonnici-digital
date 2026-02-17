@@ -1,0 +1,62 @@
+/**
+ * @file
+ * Button default variant.
+ */
+
+.button--default:where(:not(:disabled)) {
+  color: var(--theme-button-text-color);
+  border: solid var(--button-border-width) var(--theme-button-border-color);
+  background-color: var(--theme-button-background-color);
+
+  &:hover {
+    background-color: var(--theme-button-background-color-hover);
+    border-color: var(--theme-button-border-color-hover);
+    color: var(--theme-button-text-color-hover);
+
+    .button__prefix,
+    .button__suffix {
+      background: var(--theme-button-icon-background-color-hover);
+
+      svg,
+      path {
+        fill: var(--theme-button-icon-fill-hover);
+        color: var(--theme-button-icon-fill-hover);
+      }
+    }
+  }
+
+  &:active {
+    background-color: var(--theme-button-background-color-active);
+    border-color: var(--theme-button-border-color-active);
+    color: var(--theme-button-text-color-active);
+
+    .button__prefix,
+    .button__suffix {
+      background: var(--theme-button-icon-background-color-active);
+
+      svg,
+      path {
+        fill: var(--theme-button-icon-fill-active);
+        color: var(--theme-button-icon-fill-active);
+      }
+    }
+  }
+
+  .button__prefix,
+  .button__suffix {
+    background: var(--theme-button-icon-background-color);
+
+    svg {
+      &,
+      path {
+        fill: var(--theme-button-icon-fill);
+        color: var(--theme-button-icon-fill);
+      }
+    }
+  }
+}
+
+.button--default:disabled {
+  background-color: color-mix(in oklch, var(--theme-button-background-color), transparent);
+  color: color-mix(in oklch, var(--theme-button-text-color), transparent);
+}

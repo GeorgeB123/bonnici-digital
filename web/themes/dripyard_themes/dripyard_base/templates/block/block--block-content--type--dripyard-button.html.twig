@@ -1,0 +1,21 @@
+{% set block_content = content['#block_content'] %}
+{% set in_layout_builder = elements['#in_preview'] %}
+
+{% if in_layout_builder %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+{% endif %}
+  {{ include('dripyard_base:button', {
+    directory,
+    href: props.dripyard_link[0].href|default('/'),
+    text: props.dripyard_link[0].text|default(''),
+    prefix_icon: block_content.dripyard_icon[0].value|default(''),
+    suffix_icon: block_content.dripyard_suffix_icon[0].value|default(''),
+    style: block_content.dripyard_button_style[0].value|default('default'),
+    size: block_content.dripyard_button_size[0].value|default('small'),
+    }, with_context = false) }}
+
+{% if in_layout_builder %}
+  </div>
+{% endif %}

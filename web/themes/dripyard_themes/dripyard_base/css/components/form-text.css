@@ -1,0 +1,112 @@
+/*
+ * @file
+ * Form inputs.
+ */
+
+::placeholder {
+  color: var(--form-placeholder);
+}
+
+[type="color"],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="file"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+textarea {
+  min-width: 0;
+  max-width: 100%;
+  min-height: var(--form-height);
+  padding: 0 var(--form-padding-inline);
+  color: var(--form-text-color);
+  border: var(--form-border);
+  border-radius: var(--form-border-radius);
+  background-color: var(--form-background);
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+  color-scheme: var(--form-color-scheme);
+
+  &:focus {
+    outline: var(--focus-ring-style) 2px var(--theme-focus-ring-color);
+    outline-offset: 2px;
+  }
+
+  &[disabled] {
+    background-color: var(--form-background-disabled);
+    border-color: var(--theme-border-color-soft);
+    opacity: 0.7;
+  }
+
+  &:has(+ .button) {
+    margin-inline-end: var(--spacing-xxs);
+  }
+
+  &.error {
+    border: solid 2px var(--theme-color-error);
+
+    &:focus {
+      outline-color: var(--theme-color-error);
+      outline-offset: -2px;
+    }
+
+    & + .ck-editor > .ck-editor__main {
+      border: solid 2px var(--theme-color-error);
+    }
+  }
+
+  &.form-element--small {
+    min-height: var(--spacing-m);
+  }
+}
+
+[type="date"] {
+  /* Ensure that date field isn't larger than other fields. */
+  &::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+}
+
+[type="file"] {
+  color-scheme: inherit;
+  height: auto;
+  padding-block: 10px;
+  background-color: light-dark(var(--form-background), transparent);
+  color: light-dark(var(--form-text-color), var(--theme-text-color-medium));
+}
+
+[type="color"] {
+  aspect-ratio: 1;
+  padding: 0;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: var(--spacing-l);
+  padding: var(--spacing-xxs);
+}
+
+[class] input.form-autocomplete {
+  &,
+  &.ui-autocomplete-loading {
+    background-position: right var(--form-padding-inline) center;
+
+    &:dir(rtl) {
+      background-position: left var(--form-padding-inline) center;
+    }
+  }
+}
+
+.ck-editor:focus-within {
+  outline: var(--focus-ring-style) 2px var(--theme-focus-ring-color);
+  outline-offset: 3px;
+}

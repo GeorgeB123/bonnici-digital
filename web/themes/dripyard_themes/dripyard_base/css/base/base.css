@@ -1,0 +1,212 @@
+/**
+ * @file
+ * Generic base elements.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--theme-text-color-primary);
+  color: var(--theme-surface-alt);
+}
+
+:focus-visible {
+  outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+  outline-offset: 3px;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scroll-padding-top: calc(20px + var(--drupal-displace-offset-top, 0px)) !important;
+  accent-color: var(--form-accent);
+  interpolate-size: allow-keywords; /* Allow animating to keywords. */
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: revert;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--theme-surface);
+  color: var(--theme-text-color-medium);
+  -webkit-font-smoothing: antialiased;
+
+  &.is-active-mobile-menu {
+    overflow: clip;
+  }
+}
+
+:any-link:where(:not([data-drupal-admin-styles] *)) {
+  color: var(--theme-link-color);
+  transition: color 0.2s;
+
+  &:where(:hover) {
+    color: var(--theme-link-color-hover);
+  }
+
+  &:where(:focus-visible) {
+    outline: var(--focus-ring-style) var(--focus-ring-width) var(--theme-focus-ring-color);
+    outline-offset: 3px;
+  }
+}
+
+button {
+  font: inherit;
+  border: 0;
+  background: 0;
+  appearance: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  color: inherit;
+
+  &:where(:focus-visible) {
+    outline: var(--focus-ring-style) 3px var(--theme-focus-ring-color);
+    outline-offset: 3px;
+  }
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+audio {
+  display: block;
+  max-width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  /* stylelint-disable-next-line */
+  aspect-ratio: attr(width) / attr(height);  /* Not currently supported. Currently implemented in helpers.js. */
+}
+
+h1 {
+  margin-block: var(--h1-margin-block);
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+  font-family: var(--h1-font-family);
+}
+
+h2 {
+  margin-block: var(--h2-margin-block);
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-spacing);
+  font-family: var(--h2-font-family);
+}
+
+h3 {
+  margin-block: var(--h3-margin-block);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
+  font-family: var(--h3-font-family);
+}
+
+h4 {
+  margin-block: var(--h4-margin-block);
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
+  font-family: var(--h4-font-family);
+}
+
+h5 {
+  margin-block: var(--h5-margin-block);
+  font-size: var(--h5-size);
+  font-weight: var(--h5-weight);
+  line-height: var(--h5-line-height);
+  letter-spacing: var(--h5-letter-spacing);
+  font-family: var(--h5-font-family);
+}
+
+h6 {
+  margin-block: var(--h6-margin-block);
+  font-size: var(--h6-size);
+  font-weight: var(--h6-weight);
+  line-height: var(--h6-line-height);
+  letter-spacing: var(--h6-letter-spacing);
+  font-family: var(--h6-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  text-box: trim-start cap alphabetic;
+  color: var(--theme-text-color-loud);
+}
+
+ul {
+  list-style-type: disc;
+  list-style-image: none;
+}
+
+ul,
+ol {
+  margin-block: var(--spacing-m);
+  margin-inline: 1.5em 0;
+  padding-inline-start: 0;
+
+  ul,
+  ol {
+    margin-block: var(--spacing-xxxs);
+  }
+}
+
+li {
+  &::marker {
+    color: var(--theme-text-color-soft);
+  }
+}
+
+p {
+  margin-block: var(--body-l-margin-block);
+  font-size: var(--body-l-size);
+  font-weight: var(--body-l-weight);
+  line-height: var(--body-l-line-height);
+  letter-spacing: var(--body-l-letter-spacing);
+  font-family: var(--body-l-font-family);
+  text-wrap: pretty;
+  text-box: trim-both cap alphabetic;
+
+  &:where(:first-child) {
+    margin-top: 0;
+  }
+
+  &:where(:last-child) {
+    /* Prevents hanging elements from potentially getting cut off. */
+    text-box: trim-start cap alphabetic;
+  }
+
+  &:where(:not(:has(+ p))) {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-weight: 600;
+}

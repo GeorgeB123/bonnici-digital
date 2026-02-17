@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' submit #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+{#  Workaround to convert the already sanitized value into Twig\Markup so that
+special characters (e.g. `>`) do not get double escaped. A use case for this is
+Webform's multistep button, which uses angle brackets for next and previous. #}
+{% set text %}{{ attributes.value|raw }}{% endset %}
+
+{% set primary_button_value = [
+  'submit',
+  'checkout',
+  'continue to review',
+] %}
+
+{% if attributes.value|render|lower in primary_button_value %}
+  {% set is_primary = true %}
+{% endif %}
+
+{{ include('dripyard_base:button', {
+  attributes,
+  text: text|raw,
+  style: is_primary ? 'primary' : 'default',
+  suffix_icon: is_primary ? 'arrow-right' : '',
+}, with_context = false) }}
+
+{{ children }}

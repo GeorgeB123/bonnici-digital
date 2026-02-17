@@ -1,0 +1,21 @@
+/*
+ * @file
+ * Generic node styling.
+ */
+
+.node__meta {
+  margin-bottom: var(--spacing-m);
+}
+
+.node__content {
+  position: relative; /* Anchor unpublished badge. */
+
+  > *:where(:not(:last-child)) {
+    margin-bottom: var(--spacing-l);
+  }
+}
+
+.node__links {
+  margin-top: var(--spacing-l);
+  font-size: var(--body-l-size);
+}

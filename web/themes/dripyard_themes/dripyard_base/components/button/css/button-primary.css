@@ -1,0 +1,82 @@
+/**
+ * @file
+ * Button primary variant.
+ */
+
+.button--primary:where(:not([disabled])) {
+  /* Background. */
+  --button-background-color: var(--primary);
+  --button-background-color-hover: var(--color-primary-surface-alt);
+  --button-background-color-active: var(--color-primary-surface-alt-2);
+
+  /* Text colors. */
+  --button-text-color: var(--color-primary-text-color);
+  --button-text-color-hover: var(--color-primary-text-color);
+  --button-text-color-active: var(--color-primary-text-color);
+
+  /* Icons. */
+  --button-icon-fill: var(--color-primary-text-color);
+  --button-icon-fill-hover: var(--color-primary-text-color);
+  --button-icon-fill-active: var(--color-primary-text-color);
+  --button-icon-background-color: var(--color-primary-surface-alt-2);
+  --button-icon-background-color-hover: var(--color-primary-surface-alt-2);
+  --button-icon-background-color-active: var(--color-primary-surface-alt-2);
+
+  /* Borders. */
+  --button-border-color: var(--color-primary-surface-alt);
+  --button-border-color-hover: var(--color-primary-surface-alt);
+  --button-border-color-active: var(--color-primary-surface-alt);
+
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border-color: var(--button-border-color);
+
+  &:hover {
+    background-color: var(--button-background-color-hover);
+    border-color: var(--button-border-color-hover);
+    color: var(--button-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--button-background-color-active);
+    border-color: var(--button-border-color-active);
+    color: var(--button-text-color-active);
+  }
+
+  .button__prefix,
+  .button__suffix {
+    background-color: var(--button-icon-background-color);
+
+    svg,
+    path {
+      fill: var(--button-icon-fill);
+      color: var(--button-icon-fill);
+    }
+  }
+
+  &:hover {
+    .button__prefix,
+    .button__suffix {
+      background: var(--button-icon-background-color-hover);
+
+      svg,
+      path {
+        fill: var(--button-icon-fill-hover);
+        color: var(--button-icon-fill-hover);
+      }
+    }
+  }
+
+  &:active {
+    .button__prefix,
+    .button__suffix {
+      background: var(--button-icon-background-color-active);
+
+      svg,
+      path {
+        fill: var(--button-icon-fill-active);
+        color: var(--button-icon-fill-active);
+      }
+    }
+  }
+}

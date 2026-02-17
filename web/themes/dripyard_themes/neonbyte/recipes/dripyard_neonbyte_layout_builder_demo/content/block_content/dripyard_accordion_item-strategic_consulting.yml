@@ -1,0 +1,28 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 5d694c5e-2e4d-459c-8866-b394cbb51540
+  bundle: dripyard_accordion_item
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Strategic Consulting & Long-Term Support'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Choosing the right technology at the right time can mean the difference between stalled growth and a competitive edge. NeonByte offers strategic consulting to help you navigate complex tech decisions with confidence. Whether you’re rearchitecting a monolith, moving to microservices, evaluating new frameworks, or seeking compliance with data privacy regulations, we provide expert guidance rooted in real-world experience. We help you identify risks, opportunities, and the clearest path forward.</p><p>Beyond one-off engagements, we offer long-term technical partnerships. Our team is available to act as your fractional CTO, systems architect, or DevSecOps advisor — whatever your roadmap requires. We provide hands-on support, quarterly technical reviews, and roadmap planning to ensure your systems stay resilient and aligned with your business goals. At NeonByte, consulting isn’t just advisory — it’s embedded, proactive, and results-driven.</p>'
+      format: basic_html
+      summary: ''
+  dripyard_title:
+    -
+      value: 'Strategic Consulting & Long-Term Support'
+      format: plain_text

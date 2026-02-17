@@ -1,0 +1,7 @@
+{% if social_media_links is defined and social_media_links|length > 0 %}
+  {{ include('dripyard_base:social-media-nav', {
+      size: 'medium',
+      align_x: 'start',
+      items: social_media_links
+    }, with_context = false ) }}
+{% endif %}

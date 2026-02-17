@@ -1,0 +1,30 @@
+{% set classes = [
+  'testimonial',
+  reversed ? 'testimonial--reversed',
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="testimonial__content">
+    <div class="testimonial__first">
+      {% block content %}
+        {# This hides at desktop widths. #}
+        <div class="testimonial__mobile-image">
+          {{ include('dripyard_base:image-or-media', { image, width: 200 }, with_context = false) }}
+        </div>
+        <blockquote class="testimonial__quote">
+          {{ quote }}
+        </blockquote>
+        {% if citation %}
+          <cite class="testimonial__citation">{{ citation }}</cite>
+        {% endif %}
+      {% endblock %}
+    </div>
+
+    {# This hides at mobile widths. #}
+    <div class="testimonial__second">
+      {{ include('dripyard_base:image-or-media', { image, width: 800 }, with_context = false) }}
+    </div>
+  </div>
+</div>

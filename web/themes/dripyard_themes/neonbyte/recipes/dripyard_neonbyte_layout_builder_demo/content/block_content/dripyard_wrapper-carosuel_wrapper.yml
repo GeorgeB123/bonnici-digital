@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 53a6b5a5-db19-43e2-b0c6-660642048a49
+  bundle: dripyard_wrapper
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Carosuel Wrapper'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_wrapper:
+    -
+      value: 'dripyard_base:carousel'
+  dripyard_wrapper_props:
+    -
+      value: '{"label":"Carosuel","pager":true,"navigation_position":"outside","slides_per_view":4,"rows":1,"theme":"inherit"}'

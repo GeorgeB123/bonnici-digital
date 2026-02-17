@@ -1,0 +1,67 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Image
+status: stable
+group: Dripyard Basic
+props:
+  type: object
+  properties:
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: images/placeholder.webp
+          alt: 'Placeholder image'
+          width: 1024
+          height: 1024
+    image_link:
+      title: Link image (optional)
+      type: string
+      format: uri-reference
+    border_radius:
+      title: Border radius
+      type: string
+      enum:
+        - small
+        - medium
+        - large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+    width:
+      title: Image width
+      type: number
+      examples: [ 800 ]
+    aspect_ratio:
+      title: Aspect ratio override
+      type: string
+      enum:
+        - square
+        - landscape
+        - portrait
+        - wide
+        - tall
+      meta:enum:
+        square: Square (1:1)
+        landscape: Landscape (4:3)
+        portrait: Portrait (3:4)
+        wide: Wide (16:9)
+        tall: Tall (9:16)
+    alt:
+      title: Alt text override
+      type:
+        - string
+        - 'null'
+      description: 'Override the alt text if necessary'
+    loading:
+      title: Image loading
+      description: 'Keep this set to "lazy" unless you are absolutely sure this will always appear "Above the fold" on page load.'
+      type: string
+      enum:
+        - eager
+        - lazy
+      meta:enum:
+        eager: Eager
+        lazy: Lazy (recommended)
+      examples: [ lazy ]

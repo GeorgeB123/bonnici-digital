@@ -1,0 +1,115 @@
+/*
+ * @file
+ * Color semantic variables.
+ */
+
+/* stylelint-disable hue-degree-notation, custom-property-empty-line-before */
+:root {
+  --white: white;
+  --black: black;
+
+  /*
+   * Primary colors.
+   *
+   * The `--theme-setting-base-primary-color` variable is placed on the <html>
+   * element within the_drip_preprocess_html(). The value can be changed at the
+   * theme settings page.
+   *
+   * If you have a specific palette, you can override colors here.
+   */
+  --base-primary-color: var(--theme-setting-base-primary-color);
+
+  --primary: var(--base-primary-color);
+  --primary-100: oklch(from var(--primary) 1 c h);
+  --primary-200: oklch(from var(--primary) 0.94 c h);
+  --primary-300: oklch(from var(--primary) 0.84 c h);
+  --primary-400: oklch(from var(--primary) 0.76 c h);
+  --primary-500: oklch(from var(--primary) 0.68 c h);
+  --primary-600: oklch(from var(--primary) 0.55 c h);
+  --primary-700: oklch(from var(--primary) 0.48 c h);
+  --primary-800: oklch(from var(--primary) 0.4 c h);
+  --primary-900: oklch(from var(--primary) 0.25 c h);
+  --primary-1000: oklch(from var(--primary) 0.18 c h);
+
+  /*
+   * Secondary colors.
+   *
+   * The `--theme-setting-base-secondary-color` variable is placed on the <html>
+   * element within the_drip_preprocess_html(). The value can be changed at the
+   * theme settings page.
+   */
+  --base-secondary-color: var(--theme-setting-base-secondary-color);
+
+  --secondary: var(--base-secondary-color);
+  --secondary-100: oklch(from var(--secondary) 1 c h);
+  --secondary-200: oklch(from var(--secondary) 0.94 c h);
+  --secondary-300: oklch(from var(--secondary) 0.84 c h);
+  --secondary-400: oklch(from var(--secondary) 0.76 c h);
+  --secondary-500: oklch(from var(--secondary) 0.68 c h);
+  --secondary-600: oklch(from var(--secondary) 0.55 c h);
+  --secondary-700: oklch(from var(--secondary) 0.48 c h);
+  --secondary-800: oklch(from var(--secondary) 0.4 c h);
+  --secondary-900: oklch(from var(--secondary) 0.25 c h);
+  --secondary-1000: oklch(from var(--secondary) 0.18 c h);
+
+  /* Neutral color derived from primary. */
+  --chroma: 0%;
+  --neutral-100: oklch(from var(--primary) 0.98 var(--chroma) h);
+  --neutral-200: oklch(from var(--primary) 0.94 var(--chroma) h);
+  --neutral-300: oklch(from var(--primary) 0.90 var(--chroma) h);
+  --neutral-400: oklch(from var(--primary) 0.76 var(--chroma) h);
+  --neutral-500: oklch(from var(--primary) 0.68 var(--chroma) h);
+  --neutral-600: oklch(from var(--primary) 0.55 var(--chroma) h);
+  --neutral-700: oklch(from var(--primary) 0.48 var(--chroma) h);
+  --neutral-800: oklch(from var(--primary) 0.4 var(--chroma) h);
+  --neutral-900: oklch(from var(--primary) 0.22 var(--chroma) h);
+  --neutral-1000: oklch(from var(--primary) 0.15 var(--chroma) h);
+
+  /* Status colors. */
+  --color-error-light: #ff616b;
+  --color-error-dark: #dc0000;
+  --color-warning-light: #fdca40;
+  --color-warning-dark: #8c7024;
+  --color-success-light: #00b300;
+  --color-success-dark: green;
+  --color-info-light: lightblue;
+  --color-info-dark: #007aa2;
+
+  /*
+   * PHP code on server adds `.primary-color-is-dark` or `.primary-color-is-light`
+   * to the <html> tag based on the selected color. This allows us to make informed
+   * choices on whether the text color should be white or black.
+   */
+  &.primary-color-is-dark {
+    --color-primary-surface-alt: oklch(from var(--primary) calc(l + 0.04) c h);
+    --color-primary-surface-alt-2: oklch(from var(--primary) calc(l + 0.08) c h);
+    --color-primary-text-color: var(--white);
+    --color-primary-text-opposite: var(--black);
+  }
+
+  &.primary-color-is-light {
+    --color-primary-surface-alt: oklch(from var(--primary) calc(l - 0.04) c h);
+    --color-primary-surface-alt-2: oklch(from var(--primary) calc(l - 0.08) c h);
+    --color-primary-text-color: var(--black);
+    --color-primary-text-opposite: var(--white);
+  }
+
+  /*
+   * PHP code on server adds `.secondary-color-is-dark` or `.secondary-color-is-light`
+   * to the <html> tag based on the selected color. This allows us to make informed
+   * choices on whether the text color should be white or black.
+   */
+  &.secondary-color-is-dark {
+    --color-secondary-surface-alt: oklch(from var(--secondary) calc(l + 0.04) c h);
+    --color-secondary-surface-alt-2: oklch(from var(--secondary) calc(l + 0.08) c h);
+    --color-secondary-text-color: var(--white);
+    --color-secondary-text-opposite: var(--black);
+  }
+
+  &.secondary-color-is-light {
+    --color-secondary-surface-alt: oklch(from var(--secondary) calc(l - 0.04) c h);
+    --color-secondary-surface-alt-2: oklch(from var(--secondary) calc(l - 0.08) c h);
+    --color-secondary-text-color: var(--black);
+    --color-secondary-text-opposite: var(--white);
+  }
+}

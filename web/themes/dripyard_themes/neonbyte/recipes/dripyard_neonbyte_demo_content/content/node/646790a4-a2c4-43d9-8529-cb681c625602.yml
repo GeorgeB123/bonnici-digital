@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 646790a4-a2c4-43d9-8529-cb681c625602
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Reporting
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /insights/reporting
+      langcode: en
+  body:
+    -
+      value: "<p>Comprehensive reporting solutions that keep stakeholders informed. NeonByte helps you automate reports, visualize trends, and track KPIs effectively so you can focus on action rather than data gathering.</p><h2>Reporting Capabilities</h2><ul><li><strong>Executive Dashboards</strong> — High-level views for leadership decision-making</li><li><strong>Operational Reports</strong> — Detailed metrics for day-to-day management</li><li><strong>Compliance Reports</strong> — Audit-ready documentation and evidence</li><li><strong>Custom Analytics</strong> — Tailored reports for specific business needs</li></ul><h2>Report Types</h2><table><thead><tr><th>Report</th><th>Audience</th><th>Frequency</th></tr></thead><tbody><tr><td>Security Posture</td><td>CISO, Board</td><td>Monthly</td></tr><tr><td>Compliance Status</td><td>Audit Committee</td><td>Quarterly</td></tr><tr><td>Incident Summary</td><td>Security Team</td><td>Weekly</td></tr><tr><td>Cost Analysis</td><td>Finance, IT</td><td>Monthly</td></tr><tr><td>Performance Metrics</td><td>Operations</td><td>Real-time</td></tr></tbody></table><h2>Automation Features</h2><ol><li>Scheduled report generation and distribution</li><li>Data aggregation from multiple source systems</li><li>Customizable templates and branding</li><li>Export to PDF, Excel, PowerPoint formats</li><li>Role-based access to sensitive data</li></ol><p>Our reporting solutions integrate with your existing data sources to provide a unified view without manual data collection.</p>"
+      format: full_html
+      summary: ''

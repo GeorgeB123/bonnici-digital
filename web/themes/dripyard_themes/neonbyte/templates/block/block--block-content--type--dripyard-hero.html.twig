@@ -1,0 +1,75 @@
+{% set block_content = content['#block_content'] %}
+{% set in_layout_builder = elements['#in_preview'] %}
+{% if in_layout_builder %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+{% endif %}
+  {% embed 'neonbyte:hero' with {
+    image: content.dripyard_image_media|add_suggestion('bare'),
+    button_group: props.dripyard_cta,
+    button_style: block_content.dripyard_button_style|first.value|default('primary'),
+    title_text: props.dripyard_title|default(''),
+    theme: props.dripyard_component_theme|default('inherit'),
+    height: block_content.dripyard_hero_height|first.value|default('full-screen'),
+    position_behind_against_screen_top: block_content.dripyard_hero_position_top|first.value ? true : false,
+    align_x: block_content.dripyard_align_x|first.value|default('start'),
+    align_y: block_content.dripyard_align_y|first.value|default('bottom'),
+    text_color: block_content.dripyard_text_color|first.value|default('inherit'),
+    body: content.body
+  } only %}
+
+    {% block hero_media %}
+      {{ image }}
+    {% endblock %}
+
+    {% block hero_content %}
+      {% if body %}
+        {{ body }}
+      {% endif %}
+
+      {% if title_text %}
+        {{ include('dripyard_base:heading', {
+          text: title_text,
+          html_element: 'h1',
+          style: 'title',
+          color: 'default',
+          center: false,
+          margin_top: 'zero',
+          margin_bottom: 'zero',
+        }, with_context = false) }}
+      {% endif %}
+
+      {% if button_group %}
+        {% embed 'dripyard_base:flex-wrapper' with {
+          button_group,
+          button_style,
+          margin_top: 'zero',
+          margin_bottom: 'zero',
+          padding_top: 'zero',
+          padding_bottom: 'zero',
+          column_gutter: 'small',
+          row_gutter: 'small',
+          align_x: 'start',
+          align_y: 'center',
+        } only %}
+          {% block content %}
+            {% for button in button_group %}
+              {{ include('dripyard_base:button', {
+                  href: button.href|default('/'),
+                  text: button.text|default(''),
+                  style: loop.first ? (button_style|default('primary')) : (button.style|default('default')),
+                  suffix_icon: button.suffix_icon,
+                  size: button.size|default('large'),
+              }, with_context = false) }}
+            {% endfor %}
+          {% endblock %}
+        {% endembed %}
+      {% endif %}
+
+    {% endblock %}
+  {% endembed %}
+
+{% if in_layout_builder %}
+  </div>
+{% endif %}

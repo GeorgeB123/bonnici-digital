@@ -1,0 +1,68 @@
+/*
+ * @file
+ * Styling for webform progress tracker.
+ */
+
+.progress-tracker {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Active step. */
+.progress-step.is-active .progress-marker {
+  /* Text in the circle */
+  color: var(--theme-surface);
+
+  /* Circular background. */
+  &::before {
+    background-color: var(--theme-text-color-primary);
+  }
+}
+
+/* Completed step circular background hover state,
+   Active step circular background hover state. */
+.webform-progress-tracker .progress-step.is-complete:hover .progress-marker[role="link"]::before,
+.webform-progress-tracker .progress-step.is-active:hover .progress-marker::before {
+  background-color: var(--theme-text-color-primary);
+  color: var(--theme-surface);
+}
+
+/* Inactive step. */
+.progress-step .progress-marker {
+  color: var(--theme-text-color-medium);
+
+  &::before {
+    background-color: var(--theme-surface);
+  }
+}
+
+/* Inactive step circular background hover state. */
+.webform-progress-tracker .progress-step:hover .progress-marker::before {
+  background-color: var(--theme-surface);
+}
+
+/* Line after the circle. */
+.webform-progress-tracker .progress-step .progress-marker::after {
+  background-color: var(--theme-border-color-soft);
+}
+
+/* Light text. */
+.webform-progress-tracker .progress-step .progress-text {
+  color: var(--theme-text-color-loud);
+}
+
+/* Dark text */
+.webform-progress-tracker .progress-step.is-active .progress-text,
+.webform-progress-tracker .progress-step.is-complete .progress-text {
+  color: var(--theme-text-color-soft);
+}
+
+/* Completed step hyperlink. */
+.webform-progress-tracker .progress-title[role="link"] {
+  color: var(--theme-link-color);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--theme-link-color-hover);
+  }
+}

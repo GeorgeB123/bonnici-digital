@@ -1,0 +1,22 @@
+{
+    "name": "dripyard/dripyard_base_recipe",
+    "description": "Base recipie for all Dripyard themes.",
+    "type": "drupal-recipe",
+    "version": "1.0.0",
+    "require": {
+        "drupal/core": ">=11",
+        "drupal/drupal_cms_accessibility_tools": "~1.1.0",
+        "drupal/drupal_cms_ai": "~1.1.0",
+        "drupal/drupal_cms_analytics": "~1.1.0",
+        "drupal/drupal_cms_blog": "~1.1.0",
+        "drupal/drupal_cms_case_study": "~1.1.0",
+        "drupal/drupal_cms_events": "~1.1.0",
+        "drupal/drupal_cms_forms": "~1.1.0",
+        "drupal/drupal_cms_news": "~1.1.0",
+        "drupal/drupal_cms_page": "~1.1.0",
+        "drupal/drupal_cms_person": "~1.1.0",
+        "drupal/drupal_cms_project": "~1.1.0",
+        "drupal/drupal_cms_seo_tools": "~1.1.0",
+        "drupal/drupal_cms_starter": "~1.1.0"
+    }
+}

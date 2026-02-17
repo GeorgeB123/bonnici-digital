@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Local actions
+status: stable
+group: Drupal internal
+noUi: true
+props:
+  type: object
+  required:
+    - primary
+  properties:
+    primary:
+      type: array
+      title: primary
+    secondary:
+      type: array
+      title: secondary

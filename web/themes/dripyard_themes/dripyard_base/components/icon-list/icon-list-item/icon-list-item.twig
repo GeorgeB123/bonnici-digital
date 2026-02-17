@@ -1,0 +1,10 @@
+<li{{ attributes.addClass('icon-list-item') }}>
+  {{ include('dripyard_base:icon', { icon }, with_context = false) }}
+  <div class="icon-list-item__content">
+    {% if href %}
+      <a href="{{ href }}">{{ text }}</a>
+    {% else %}
+      {{ text }}
+    {% endif %}
+  </div>
+</li>

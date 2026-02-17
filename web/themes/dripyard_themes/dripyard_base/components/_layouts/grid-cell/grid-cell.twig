@@ -1,0 +1,32 @@
+{% set classes = [
+  'grid-cell',
+  additional_classes,
+  theme and theme != 'inherit' ? 'theme--' ~ theme|clean_class,
+  padding ? 'grid-cell--padding-' ~ padding|clean_class,
+  horizontal_alignment ? 'grid-cell--align-horizontal-' ~ horizontal_alignment|clean_class,
+  vertical_alignment ? 'grid-cell--align-vertical-' ~ vertical_alignment|clean_class,
+] %}
+
+{% set inline_styles = [] %}
+{% if columns_small %}
+  {% set inline_styles = inline_styles|merge(['--grid-cell-columns-small: ' ~ (columns_small / 2)|round(0, 'floor')]) %}
+{% endif %}
+{% if columns_medium %}
+  {% set inline_styles = inline_styles|merge(['--grid-cell-columns-medium: ' ~ columns_medium]) %}
+{% endif %}
+{% if columns_large %}
+  {% set inline_styles = inline_styles|merge(['--grid-cell-columns-large: ' ~ columns_large]) %}
+{% endif %}
+{% if rows_small %}
+  {% set inline_styles = inline_styles|merge(['--grid-cell-rows-small: ' ~ rows_small]) %}
+{% endif %}
+{% if rows_medium %}
+  {% set inline_styles = inline_styles|merge(['--grid-cell-rows-medium: ' ~ rows_medium]) %}
+{% endif %}
+{% if rows_large %}
+  {% set inline_styles = inline_styles|merge(['--grid-cell-rows-large: ' ~ rows_large]) %}
+{% endif %}
+
+<div{{ attributes.addClass(classes).setAttribute('style', inline_styles|join('; ') ~ ';') }}>
+  {% block content %}{% endblock %}
+</div>

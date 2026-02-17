@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 3fdb1d99-25c4-4d72-a70d-f12b52229c71
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Inovating tech. Unbreakable Security.'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<h4>View a demo of NeonByte&nbsp;</h4><h2>Innovating tech. Unbreakable Security.</h2>'
+      format: basic_html
+      summary: ''

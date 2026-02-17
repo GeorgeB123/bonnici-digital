@@ -1,0 +1,21 @@
+/*
+ * @file
+ * Form variables.
+ */
+:root,
+form {
+  --form-padding-inline: var(--sp1-5);
+  --form-height: var(--sp6);
+  --form-text-color: var(--neutral-800);
+  --form-background: var(--white);
+  --form-background-disabled: #eee;
+  --form-border: 1px solid var(--theme-border-color);
+  --form-border-radius: var(--radius-sm);
+  --form-accent: var(--primary-500);
+  --form-placeholder: color-mix(in oklch, currentColor 60%, transparent);
+
+  /* This next one is important and needs to match the form background. It
+     controls the legibility of little form controls such as number incrementors,
+     calendar icons in  <input type="date"> etc. */
+  --form-color-scheme: light;
+}

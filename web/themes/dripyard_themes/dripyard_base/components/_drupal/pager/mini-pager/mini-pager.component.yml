@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Mini pager
+status: stable
+noUi: true
+props:
+  type: object
+  required:
+    - items
+    - pagination_heading_level
+  properties:
+    pagination_heading_level:
+      type: string
+    items:
+      type: [object, 'null']
+      properties:
+        previous:
+          type: object
+          properties:
+            href:
+              type: string
+        next:
+          type: object
+          properties:
+            href:
+              type: string
+        current:
+          type: [integer, 'null']
+libraryOverrides:
+  dependencies:
+    - core/components.dripyard_base--pager

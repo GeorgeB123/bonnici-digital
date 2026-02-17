@@ -1,0 +1,99 @@
+{% import _self as menus %}
+{% set attributes = attributes.addClass('menu') %}
+
+<div class="primary-menu">
+  {{ menus.menu_links(items, attributes, 0, 'primary-menu-item-', mega_menu_content) }}
+</div>
+
+{% macro menu_links(items, attributes, menu_level, aria_id, mega_menu_content) %}
+
+  {% set main_nav_level = 'primary-menu__list--level-' ~ (menu_level + 1) %}
+  {% set drupal_selector_main_nav_level = menu_level <= 1 ? 'primary-nav-menu--level-' ~ (menu_level + 1) : false %}
+  {% set is_top_level_menu = menu_level == 0 %}
+  {% set list_classes = [
+    'primary-menu__list',
+    main_nav_level,
+    menu_level == 1 ? 'site-header__dropdown',
+  ] %}
+  {% import _self as menus %}
+  {% if items %}
+
+    <ul{{ attributes.addClass(list_classes).setAttribute('data-drupal-selector', drupal_selector_main_nav_level) }}>
+      {% set attributes = attributes.removeClass(main_nav_level) %}
+      {% for item in items %}
+
+        {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
+          {% set menu_item_type = 'nolink' %}
+        {% elseif item.url.isRouted and item.url.routeName == '<button>' %}
+          {% set menu_item_type = 'button' %}
+        {% else %}
+          {% set menu_item_type = 'link' %}
+        {% endif %}
+
+        {% set item_classes = [
+            'primary-menu__list-item',
+            'primary-menu__list-item--' ~ menu_item_type,
+            'primary-menu__list-item--level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'primary-menu__list-item--active-trail',
+            item.below ? 'primary-menu__list-item--has-children',
+          ]
+        %}
+
+        {% set link_classes = [
+            'primary-menu__link',
+            'primary-menu__link--' ~ menu_item_type,
+            'primary-menu__link--level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'primary-menu__link--active-trail',
+            item.below ? 'primary-menu__link--has-children',
+          ]
+        %}
+
+        <li{{ item.attributes.addClass(item_classes).setAttribute('data-drupal-selector', is_top_level_menu and item.below ? 'primary-menu-item-has-children': false) }}>
+          {% set aria_id = (aria_id ~ loop.index )|clean_unique_id %}
+          {% set is_parent_button = is_top_level_menu and item.below and menu_item_type == 'button' %}
+          {% set link_title %}
+            {{ item.title }}
+            {% if is_parent_button %}
+              <span class="primary-menu__button-icon"></span>
+            {% endif %}
+          {% endset %}
+
+          {{ link(link_title, item.url, {
+            'class': link_classes,
+            'data-drupal-selector': is_top_level_menu and item.below ? 'primary-menu-link-has-children' : false,
+            'aria-controls': is_parent_button ? aria_id : false,
+            'aria-expanded': is_parent_button ? 'false' : false,
+            })
+          }}
+
+          {% if item.below %}
+            {# If top level <a> element and has submenu, insert <button> element to toggle the submenu. #}
+            {% if is_top_level_menu and menu_item_type != 'button' %}
+              {% set toggle_button_attributes = create_attribute({
+                'class': 'primary-menu__button-toggle',
+                'data-drupal-selector': 'primary-submenu-toggle-button',
+                'aria-controls': aria_id,
+                'aria-expanded': 'false',
+              }) %}
+
+              <button{{ toggle_button_attributes }}>
+                <span class="primary-menu__button-icon"></span>
+                <span class="visually-hidden">{{ '@title sub-navigation'|t({'@title': item.title}) }}</span>
+              </button>
+            {% endif %}
+            {% set item_mega_menu_content = item.menu_cards %}
+            {% set attributes = attributes.setAttribute('id', aria_id) %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id, item_mega_menu_content) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      {% if mega_menu_content|render|striptags('<drupal-render-placeholder><img><a>')|trim %}
+        <li class="primary-menu__megamenu-content">
+          <ul class="primary-menu__megamenu-content-list">
+            {{ mega_menu_content }}
+          </ul>
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %}
+{% endmacro %}

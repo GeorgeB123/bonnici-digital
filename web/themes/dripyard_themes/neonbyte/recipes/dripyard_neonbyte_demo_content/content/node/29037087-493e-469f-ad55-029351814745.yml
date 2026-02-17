@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 29037087-493e-469f-ad55-029351814745
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Governments
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /clients/governments
+      langcode: en
+  body:
+    -
+      value: "<p>Government agencies at the federal, state, and local levels trust NeonByte for secure, compliant technology solutions. We understand the unique requirements of public sector organizations, including strict security mandates, procurement processes, and citizen data protection.</p><h2>Government Capabilities</h2><ul><li><strong>FedRAMP Compliance</strong> — Cloud solutions meeting federal security requirements</li><li><strong>StateRAMP</strong> — State-level cloud security authorization</li><li><strong>CJIS Compliance</strong> — Criminal justice information systems security</li><li><strong>IL4/IL5 Environments</strong> — High-impact level secure deployments</li></ul><h2>Government Contract Vehicles</h2><table><thead><tr><th>Vehicle</th><th>Scope</th><th>NeonByte Services</th></tr></thead><tbody><tr><td>GSA Schedule</td><td>Federal agencies</td><td>All products and services</td></tr><tr><td>SEWP V</td><td>IT products</td><td>Software licenses, hardware</td></tr><tr><td>State Contracts</td><td>State/local</td><td>Varies by state</td></tr></tbody></table><h2>Why Government Agencies Choose NeonByte</h2><ol><li>Cleared personnel available for sensitive projects</li><li>Experience with complex agency environments and legacy systems</li><li>Proven track record with DHS, DOD, and civilian agencies</li><li>Dedicated government account team familiar with procurement processes</li><li>Continuous monitoring and compliance reporting</li></ol><p>From modernizing citizen services to protecting critical infrastructure, NeonByte delivers solutions that meet the highest standards of security and reliability.</p>"
+      format: full_html
+      summary: ''

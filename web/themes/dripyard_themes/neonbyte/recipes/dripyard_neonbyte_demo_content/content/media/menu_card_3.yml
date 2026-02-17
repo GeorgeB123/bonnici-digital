@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c9f9bece-6c13-4a1b-9bc0-99a5bbf3a8a5
+  bundle: image
+  default_langcode: en
+  depends:
+    6b418cdc-eb85-4519-a8b9-b0ed46c07ca9: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: menu_card_3.jpg
+  created:
+    -
+      value: 1744857416
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 6b418cdc-eb85-4519-a8b9-b0ed46c07ca9
+      alt: AiByte
+      title: ''
+      width: 3000
+      height: 4000

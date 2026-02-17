@@ -1,0 +1,14 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+{% set block_content = content['#block_content'] %}
+  {% embed  'dripyard_base:event-listing-item' with {
+      title: block_content.dripyard_title|first.value|default(''),
+      url: props.dripyard_link[0].href|default('/'),
+      date_time_stamp_begin: block_content.dripyard_date|first.value ? block_content.dripyard_date|first.value ~ 'Z' : '',
+      description: content.body,
+      location: block_content.dripyard_location|first.value|default(''),
+      formatted_time: block_content.dripyard_date|first.value|date('g:i A')|default(''),
+    } only %}
+    {% endembed %}
+</div>

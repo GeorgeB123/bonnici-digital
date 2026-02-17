@@ -1,0 +1,32 @@
+/*
+ * @file
+ * Styles the node preview toolbar.
+ */
+
+.node-preview-container {
+  position: fixed;
+  bottom: calc(20px + var(--drupal-displace-offset-bottom, 0px));
+  inset-inline: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  width: fit-content;
+  max-width: 94%;
+  margin-inline: auto;
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  border: solid 1px transparent;
+  border-radius: var(--radius-md);
+  background-color: var(--theme-surface);
+  color: var(--theme-text-color-medium);
+  box-shadow: 4px 4px 20px #0003;
+
+  .form-type-select {
+    margin: 0;
+  }
+}
+
+.node-preview-form-select {
+  display: contents;
+}

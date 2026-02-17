@@ -1,0 +1,63 @@
+/*
+ * @file
+ * Icon styles
+ */
+
+.dy-icon {
+  display: contents;
+
+  a {
+    display: block;
+    color: inherit;
+
+    svg {
+      display: block;
+    }
+  }
+
+  /* If fill is defined, set it to currentColor and respect forced-colors. */
+  [fill]:not(:is([fill="none"], [fill="0"])) {
+    fill: currentColor;
+
+    @media (forced-colors: active) {
+      fill: canvasText;
+    }
+  }
+
+  /* If stroke is defined, set it to currentColor and respect forced-colors. */
+  [stroke]:not(:is([stroke="none"], [stroke="0"])) {
+    stroke: currentColor;
+
+    @media (forced-colors: active) {
+      stroke: canvasText;
+    }
+  }
+
+  /* Fill and stroke should use linkText if nested under hyperlink. */
+  a [fill]:not(:is([fill="none"], [fill="0"])),
+  a & {
+    @media (forced-colors: active) {
+      fill: linkText;
+    }
+  }
+
+  a [stroke]:not(:is([stroke="none"], [stroke="0"])),
+  a & {
+    @media (forced-colors: active) {
+      stroke: linkText;
+    }
+  }
+
+  /* Fill and stroke should use buttonText if nested under button element. */
+  button [fill]:not(:is([fill="none"], [fill="0"])) {
+    @media (forced-colors: active) {
+      fill: buttonText;
+    }
+  }
+
+  button [stroke]:not(:is([stroke="none"], [stroke="0"])) {
+    @media (forced-colors: active) {
+      stroke: buttonText;
+    }
+  }
+}

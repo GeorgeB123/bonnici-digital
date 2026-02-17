@@ -1,0 +1,31 @@
+/*
+ * @file
+ * General theming variables for the primary menu.
+ */
+
+@media (width < 1000px) {
+  .primary-menu {
+    --top-level-link-border-radius: 0;
+    --top-level-link-color: var(--theme-text-color-loud);
+    --top-level-link-color-hover: var(--theme-text-color-loud);
+    --top-level-link-font-weight: bold;
+    --top-level-link-background: transparent;
+    --top-level-link-background-hover: transparent;
+
+    /* Dropdown. */
+    --dropdown-background: transparent;
+    --dropdown-border-width: 4px;
+    --dropdown-border-color: var(--theme-border-color-alt);
+    --dropdown-padding: 20px;
+
+    /* Dropdown links. */
+    --dropdown-link-color: var(--theme-text-color-loud);
+    --dropdown-link-background: transparent;
+    --dropdown-link-color-hover: var(--theme-text-color-primary);
+    --dropdown-link-background-hover: transparent;
+    --dropdown-link-border-radius: 0;
+    --dropdown-link-padding: 8px 0;
+    --dropdown-link-heading-font-size: 18px;
+    --dropdown-link-font-size: 18px;
+  }
+}

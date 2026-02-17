@@ -1,0 +1,11 @@
+name: Dripyard Testimonial Block
+type: Dripyard
+description: 'Provides a testimonial block type with quote, citation, and image.'
+install:
+  - block_content
+config:
+  strict: false
+recipes:
+  - 'dripyard_media'
+  - 'dripyard_fields_block'
+  - 'dripyard_text_format_superbasic'

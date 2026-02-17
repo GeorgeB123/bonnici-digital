@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_title_cta
+    - field.storage.block_content.dripyard_component_layout
+  module:
+    - options
+id: block_content.dripyard_title_cta.dripyard_component_layout
+field_name: dripyard_component_layout
+entity_type: block_content
+bundle: dripyard_title_cta
+label: 'CTA Layout'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

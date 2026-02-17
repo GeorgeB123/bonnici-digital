@@ -1,0 +1,49 @@
+/*
+ * @file
+ * Override styles for core's two-column layout section.
+ */
+
+/* stylelint-disable selector-class-pattern */
+.layout--twocol-section {
+  --grid-template: auto;
+  --grid-column__first: auto;
+  --grid-column__second: auto;
+
+  display: grid;
+  gap: calc(var(--gap) * 2) var(--gap);
+  grid-template-columns: var(--grid-template);
+
+  & > .layout__region--first {
+    grid-column: var(--grid-column__first);
+  }
+
+  & > .layout__region--second {
+    grid-column: var(--grid-column__second);
+  }
+}
+
+@container (width > 600px) {
+  .layout--twocol-section--50-50 {
+    --grid-template: repeat(2, minmax(0, 1fr));
+  }
+
+  .layout--twocol-section--33-67 {
+    --grid-template: repeat(3, minmax(0, 1fr));
+    --grid-column__second: span 2;
+  }
+
+  .layout--twocol-section--67-33 {
+    --grid-template: repeat(3, minmax(0, 1fr));
+    --grid-column__first: span 2;
+  }
+
+  .layout--twocol-section--25-75 {
+    --grid-template: repeat(4, minmax(0, 1fr));
+    --grid-column__second: span 3;
+  }
+
+  .layout--twocol-section--75-25 {
+    --grid-template: repeat(4, minmax(0, 1fr));
+    --grid-column__first: span 3;
+  }
+}

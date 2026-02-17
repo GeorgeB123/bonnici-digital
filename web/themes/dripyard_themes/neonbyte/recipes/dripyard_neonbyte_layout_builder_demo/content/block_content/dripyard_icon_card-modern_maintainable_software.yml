@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: a775b89d-ed62-485d-9847-9fe952700386
+  bundle: dripyard_icon_card
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Modern Maintainable Software (icon card)'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  dripyard_icon:
+    -
+      value: code-commit
+  dripyard_link:
+    -
+      uri: 'internal:/'
+      title: ''
+      options: {  }
+  dripyard_title:
+    -
+      value: 'Modern Maintainable Software'
+      format: plain_text
+  body:
+    -
+      value: "We build modern, maintainable software tailored to your business."
+      format: plain_text

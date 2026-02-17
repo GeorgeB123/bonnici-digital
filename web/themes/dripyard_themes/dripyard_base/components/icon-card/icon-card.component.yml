@@ -1,0 +1,56 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Icon card
+status: stable
+group: Dripyard Cards
+props:
+  type: object
+  required:
+    - icon
+    - title
+  properties:
+    title:
+      title: Title
+      type: string
+      examples: ['Icon card title']
+    body:
+      title: Body
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples: ['Lorem ipsum dolor sit, amet consectetur adipisicing elit.']
+    icon:
+      title: Icon
+      type: string
+      examples: [ 'cloud' ]
+    href:
+      type:
+        - string
+        - 'null'
+      title: Link
+      format: uri-reference
+      examples: [ 'http://www.example.com' ]
+    no_background:
+      type: boolean
+      title: No background
+    layout:
+      type: string
+      title: Layout
+      enum:
+        - portrait
+        - landscape
+      meta:enum:
+        portrait: Portrait
+        landscape: Landscape
+      examples: [ 'portrait' ]
+    icon_size:
+      type: string
+      title: Icon size
+      enum:
+        - small
+        - medium
+        - large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+      examples: [ 'large' ]

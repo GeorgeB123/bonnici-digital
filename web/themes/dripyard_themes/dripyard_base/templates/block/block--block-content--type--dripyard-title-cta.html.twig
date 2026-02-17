@@ -1,0 +1,17 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {{ include('dripyard_base:title-cta', {
+    layout: content['#block_content'].dripyard_component_layout|first.value,
+    title: props.dripyard_title|default(''),
+    heading_style: 'h2',
+    button_href: props.dripyard_cta.0.href|default('/'),
+    button_text: props.dripyard_cta.0.text|default(''),
+    button_style: content['#block_content'].dripyard_button_style|first.value|default('primary'),
+    button_size: 'medium',
+    button_suffix_icon: 'arrow-right',
+    button_target: false,
+  }, with_context = false) }}
+
+</div>

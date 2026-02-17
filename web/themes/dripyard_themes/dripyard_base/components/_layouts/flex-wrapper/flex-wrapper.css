@@ -1,0 +1,100 @@
+/*
+ * @file
+ * Styles for the Flex Layout component.
+ */
+
+.flex-wrapper {
+  --flex-wrapper-padding-inline: 0px;
+
+  container-type: inline-size;
+  color: var(--theme-text-color-medium);
+
+  /* Default padding if not nested within itself. */
+  &:where(:not(.flex-wrapper *)) {
+    padding-inline: var(--flex-wrapper-padding-inline);
+  }
+
+  &[class*="theme"] {
+    background: var(--theme-surface);
+
+    &.container {
+      --flex-wrapper-padding-inline: var(--spacing-xs);
+
+      @container (width > 600px) {
+        --flex-wrapper-padding-inline: var(--spacing-m);
+      }
+    }
+  }
+
+  &:has(.has-background-image) {
+    padding: 0;
+  }
+}
+
+.flex-wrapper__container {
+  .flex-wrapper--section-edge-to-edge.flex-wrapper--content-edge-to-edge & {
+    padding-inline: var(--sp2);
+
+    @container (width > 700px) {
+      padding-inline: var(--sp4);
+    }
+  }
+}
+
+.flex-wrapper__header {
+  margin-bottom: var(--spacing-component-internal);
+
+  /* If it doesn't have any elements underneath, hide it. */
+  &:not(:has(*)) {
+    display: none;
+  }
+}
+
+.flex-wrapper__layout {
+  display: flex;
+  gap: 20px;
+
+  @container (width > 800px) {
+    gap: 40px 20px;
+  }
+
+  .flex-wrapper__wrap & {
+    flex-wrap: wrap;
+  }
+
+  .flex-wrapper__align-x-start & {
+    justify-content: start;
+  }
+
+  .flex-wrapper__align-x-center & {
+    justify-content: center;
+  }
+
+  .flex-wrapper__align-x-end & {
+    justify-content: end;
+  }
+
+  .flex-wrapper__align-x-space-between & {
+    justify-content: space-between;
+  }
+
+  .flex-wrapper__align-x-space-around & {
+    justify-content: space-around;
+  }
+
+  .flex-wrapper__align-y-top & {
+    align-items: start;
+  }
+
+  .flex-wrapper__align-y-center & {
+    align-items: center;
+  }
+
+  .flex-wrapper__align-y-bottom & {
+    align-items: end;
+  }
+
+  .flex-wrapper__align-y-stretch & {
+    align-items: stretch;
+  }
+}

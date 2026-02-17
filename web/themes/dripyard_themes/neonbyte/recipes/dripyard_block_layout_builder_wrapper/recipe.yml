@@ -1,0 +1,7 @@
+name: Dripyard Layout Builder Wrapper Block
+type: Dripyard
+description: 'Provides a wrapper placeholder for use in Layout Builder to wrap other blocks automatically'
+install:
+  - block_content
+config:
+  strict: false

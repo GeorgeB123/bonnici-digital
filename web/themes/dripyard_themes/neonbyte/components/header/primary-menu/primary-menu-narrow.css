@@ -1,0 +1,203 @@
+/**
+ * @file
+ * Styling for the main menu at narrow widths.
+ */
+
+@media (width <= 1000px) {
+  /* <ul> menu elements. */
+  .primary-menu {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Top level <ul> menu element. */
+  .primary-menu__list--level-1 {
+    margin: 0 0 2rem;
+  }
+
+  /* Second level <ul> menu element. */
+  .primary-menu__list--level-2 {
+    display: none;
+    flex-basis: 100%;
+    margin: 0;
+    padding-block: 0;
+    padding-inline-start: var(--sp2);
+    background-color: var(--dropdown-background);
+    border-inline-start: solid var(--dropdown-border-width) var(--dropdown-border-color);
+
+    /* Rudimentary support for navigation if no JavaScript. */
+    @media (scripting: none) {
+      display: block;
+    }
+
+    &.is-active-menu-parent {
+      display: block;
+    }
+
+    > svg {
+      display: none;
+    }
+  }
+
+  .primary-menu__list--level-3 {
+    margin: 0;
+    padding-inline-start: var(--sp2);
+  }
+
+  /* Menu item <li>. */
+  .primary-menu__list-item {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+
+  .primary-menu__list-item--level-1 {
+    font-size: 1.5rem;
+
+    &.primary-menu__list-item--has-children {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .primary-menu__list-item--level-2 {
+    flex-direction: column;
+  }
+
+  /* Link element (can be <a>, <button>, or <span>). */
+  .primary-menu__link {
+    flex-grow: 1;
+    padding: 0.5rem 0;
+    text-decoration: none;
+  }
+
+  .primary-menu__link--level-1[class] {
+    color: var(--top-level-link-color);
+
+    &:hover {
+      color: var(--top-level-link-color-hover);
+    }
+  }
+
+  .primary-menu__link--level-2[class],
+  .primary-menu__link--level-3[class] {
+    padding: var(--dropdown-link-padding);
+    background-color: var(--dropdown-link-background);
+    border-radius: var(--dropdown-link-border-radius);
+    font-size: var(--dropdown-link-font-size);
+    color: var(--dropdown-link-color);
+
+    &:hover {
+      background-color: var(--dropdown-link-background-hover);
+      color: var(--dropdown-link-color-hover);
+    }
+  }
+
+  /* <button> element that is created when <a> link elements have submenus. */
+  .primary-menu__button-toggle {
+    align-self: stretch;
+    padding: 0;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: var(--top-level-link-color);
+  }
+
+  /* Toggle icon that appears within both parent <button> elements, and
+     <button> elements that get generated next to parent <a> links. */
+  .primary-menu__button-icon {
+    --icon-size: 20px;
+    --icon-line-width: 3px;
+    --icon-color: var(--top-level-link-color);
+
+    position: relative; /* Anchor icon. */
+    display: block;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-inline: 20px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      content: "";
+      border-top: solid var(--icon-line-width) var(--icon-color);
+      inset-block-start: calc(50% - var(--icon-line-width) / 2);
+      inset-inline-start: 0;
+    }
+
+    &::after {
+      transition: opacity 0.2s;
+      transform: rotate(90deg);
+
+      /* Submenus are open if there is no JS, so indicate so. */
+      @media (scripting: none) {
+        opacity: 0;
+      }
+    }
+
+    /* Turn the plus icon into a minus when parent button is expanded. */
+    [aria-expanded="true"] &::after {
+      opacity: 0;
+    }
+  }
+
+  /* Menu links that are <button> elements. */
+  .primary-menu__link--button {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    border: 0;
+    background: transparent;
+    appearance: none;
+
+    &.primary-menu__link--has-children {
+      justify-content: space-between;
+      padding-inline-end: 0; /* Align icon. */
+    }
+  }
+
+  .primary-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    color: var(--black);
+    background-color: currentColor;
+  }
+
+  .primary-menu__megamenu-content {
+    grid-row: 1 / 100;
+    grid-column: 2;
+    width: fit-content;
+    list-style: none;
+    margin-block: var(--spacing-m) 0;
+  }
+
+  .primary-menu__megamenu-content-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &:not(:has(> :nth-child(2))) {
+      grid-template-columns: 1fr;
+    }
+
+    .menu-card {
+      max-width: 150px;
+
+      @media (width < 500px) {
+        max-width: 125px;
+      }
+    }
+  }
+}

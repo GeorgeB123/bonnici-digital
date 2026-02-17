@@ -1,0 +1,19 @@
+{%
+  set legend_span_classes = [
+    'fieldset__legend-inner',
+    required ? 'js-form-required',
+    required ? 'form-required',
+  ]
+%}
+
+{% set legend_attributes = legend_attributes ?: create_attribute() %}
+{% set legend_span_attributes = legend_span_attributes ?: create_attribute() %}
+
+<fieldset{{ attributes.addClass('fieldset') }}>
+  <legend{{ legend_attributes.addClass('fieldset__legend') }}>
+    <span{{ legend_span_attributes.addClass(legend_span_classes) }}>{{ legend_title }}</span>
+  </legend>
+  <div class="fieldset__wrapper">
+    {% block fieldset_content %}{% endblock %}
+  </div>
+</fieldset>

@@ -1,0 +1,28 @@
+/*
+ * @file
+ * Styles for core's layout sections.
+ */
+
+.layout:has(+ .layout) {
+  margin-bottom: var(--spacing-component-internal);
+}
+
+.layout__region {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-large);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.block-layout-builder {
+  :first-child {
+    margin-top: 0;
+  }
+}

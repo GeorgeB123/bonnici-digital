@@ -1,0 +1,57 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+    - field.field.block_content.dripyard_statistic.dripyard_link
+    - field.field.block_content.dripyard_statistic.dripyard_statistic
+    - field.field.block_content.dripyard_statistic.dripyard_statistic_first_line
+    - field.field.block_content.dripyard_statistic.dripyard_statistic_second_line
+  module:
+    - link
+id: block_content.dripyard_statistic.default
+targetEntityType: block_content
+bundle: dripyard_statistic
+mode: default
+content:
+  dripyard_statistic:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  dripyard_statistic_first_line:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  dripyard_statistic_second_line:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  dripyard_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

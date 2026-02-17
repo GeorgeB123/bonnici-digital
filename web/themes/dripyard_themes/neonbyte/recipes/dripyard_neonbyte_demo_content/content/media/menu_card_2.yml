@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6c7a548e-edde-46d6-8b3a-32fae4ed49d8
+  bundle: image
+  default_langcode: en
+  depends:
+    1eaad5cf-1f5f-40a4-9f21-c00f6a56845c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: menu_card_2.jpg
+  created:
+    -
+      value: 1744857542
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 1eaad5cf-1f5f-40a4-9f21-c00f6a56845c
+      alt: 'Data Security'
+      title: ''
+      width: 4000
+      height: 6000

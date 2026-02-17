@@ -1,0 +1,19 @@
+{% set image %}
+  <img src="/{{ directory }}/screenshot.png" alt>
+{% endset %}
+
+{% set body %}
+  {% trans %}
+    This is a placeholder for the Dripyard landing page card. To add content,
+    edit <code>node--dripyard-landing-page--card.html.twig</code> and map your content fields.
+  {% endtrans %}
+{% endset %}
+
+{{ include('dripyard_base:card', {
+  title: node.label,
+  image,
+  href: url('entity.node.canonical', {'node': node.id}),
+  byline: 'Learn more',
+  eyebrow_text: 'Placeholder',
+  body,
+  }, with_context = false) }}

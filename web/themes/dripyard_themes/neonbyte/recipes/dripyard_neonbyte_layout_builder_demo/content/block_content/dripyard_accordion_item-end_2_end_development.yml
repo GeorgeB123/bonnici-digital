@@ -1,0 +1,28 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 4787f56d-b524-44e1-91a6-d466a69bdc05
+  bundle: dripyard_accordion_item
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'End-to-End Development'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>At NeonByte, we specialize in delivering full-stack software solutions from the ground up. Our end-to-end development service covers everything — from product discovery and UI/UX design to backend architecture, frontend engineering, testing, and deployment. We take a collaborative approach, ensuring your input shapes every sprint while our team delivers clean, scalable code on time. With a strong emphasis on usability, maintainability, and performance, we build platforms that don’t just launch — they thrive.</p><p>But our work doesn’t stop at shipping. We equip your team with documentation, onboarding materials, and tools for long-term success. Post-launch, we’re available for feature enhancements, bug fixes, and optimizations to help your software evolve with your business. Whether you’re building a greenfield MVP or modernizing a legacy system, NeonByte brings the technical expertise and strategic insight to get you across the finish line — and beyond.</p>'
+      format: basic_html
+      summary: ''
+  dripyard_title:
+    -
+      value: 'End-to-End Development'
+      format: plain_text

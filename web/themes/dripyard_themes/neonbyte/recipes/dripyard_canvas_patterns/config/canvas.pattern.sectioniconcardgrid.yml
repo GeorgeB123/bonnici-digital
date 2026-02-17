@@ -1,0 +1,318 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.dripyard_base.grid-cell
+    - canvas.component.sdc.dripyard_base.grid-wrapper
+    - canvas.component.sdc.dripyard_base.icon-card
+    - canvas.component.sdc.dripyard_base.section
+    - canvas.component.sdc.dripyard_base.title-cta
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - options
+    - text
+id: sectioniconcardgrid
+label: 'Section - Icon Card Grid'
+component_tree:
+  0:
+    uuid: f8476e72-e4ea-47f2-b3ab-f080dc3710ba
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: dark
+      section_width: edge-to-edge
+      content_width: narrow
+      margin_top: zero
+      margin_bottom: zero
+      padding_top: large
+      padding_bottom: large
+  '0:content:0':
+    parent_uuid: f8476e72-e4ea-47f2-b3ab-f080dc3710ba
+    slot: content
+    uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    component_id: sdc.dripyard_base.grid-wrapper
+    component_version: ba954a2accbc0f5c
+    inputs:
+      canvas_edit_mode: true
+      column_gutter: medium
+      row_gutter: medium
+  '0:content:0:grid_cells:0':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: 625c0f63-adbd-4dc7-8278-5db3caacc6e9
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:0:content:0':
+    parent_uuid: 625c0f63-adbd-4dc7-8278-5db3caacc6e9
+    slot: content
+    uuid: d2d3b09d-bb66-4f67-a06c-bf9cc954ca9f
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:content:0:grid_cells:1':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: 878cfd00-7654-450d-bcfd-85f014da1242
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:1:content:0':
+    parent_uuid: 878cfd00-7654-450d-bcfd-85f014da1242
+    slot: content
+    uuid: 18bccb15-0d46-4e07-8265-56b198c654c6
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:content:0:grid_cells:2':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: 851418ef-6e55-401e-b030-dba5e4a65e5d
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:2:content:0':
+    parent_uuid: 851418ef-6e55-401e-b030-dba5e4a65e5d
+    slot: content
+    uuid: 68fcfb97-6e0a-40d3-85ee-6d4e11927948
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:content:0:grid_cells:3':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: c459060e-aa3c-41cf-8ff1-a512aa4bcc47
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:3:content:0':
+    parent_uuid: c459060e-aa3c-41cf-8ff1-a512aa4bcc47
+    slot: content
+    uuid: e9af49bf-f336-4850-aef3-0e63bfb77441
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:content:0:grid_cells:4':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: d7c630b2-c21b-4b02-af33-46955ba98c8a
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:4:content:0':
+    parent_uuid: d7c630b2-c21b-4b02-af33-46955ba98c8a
+    slot: content
+    uuid: edfdece8-a6c0-4e70-8103-1878e0592aa3
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:content:0:grid_cells:5':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: 8c4c7551-c57c-4330-9897-903b3a76796b
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:5:content:0':
+    parent_uuid: 8c4c7551-c57c-4330-9897-903b3a76796b
+    slot: content
+    uuid: dd9dfca0-eb92-4025-8c51-1d1666336f63
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:content:0:grid_cells:6':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: 6610ba8f-ffec-48a5-b503-c60bbbe2f46a
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:6:content:0':
+    parent_uuid: 6610ba8f-ffec-48a5-b503-c60bbbe2f46a
+    slot: content
+    uuid: 23dcbd32-776b-469b-8a2d-75317b29cecf
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:content:0:grid_cells:7':
+    parent_uuid: 59215128-8379-4b49-9d26-946f00b7e325
+    slot: grid_cells
+    uuid: 64e5eca5-a621-45ad-8863-e788f66aa949
+    component_id: sdc.dripyard_base.grid-cell
+    component_version: 54ebe916bdb35c0b
+    inputs:
+      theme: inherit
+      padding: zero
+      columns_small: 12
+      columns_medium: 6
+      columns_large: 3
+      rows_small: 1
+      rows_medium: 1
+      rows_large: 1
+  '0:content:0:grid_cells:7:content:0':
+    parent_uuid: 64e5eca5-a621-45ad-8863-e788f66aa949
+    slot: content
+    uuid: ea6f946e-1dc4-422e-b887-7c472cea09a4
+    component_id: sdc.dripyard_base.icon-card
+    component_version: 0eeb0932e0c0186e
+    inputs:
+      title: 'Icon card title'
+      body:
+        value: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+        format: canvas_html_block
+      icon: cloud
+      href:
+        uri: 'http://www.example.com'
+        options: {  }
+      no_background: true
+      layout: landscape
+      icon_size: small
+  '0:header:0':
+    parent_uuid: f8476e72-e4ea-47f2-b3ab-f080dc3710ba
+    slot: header
+    uuid: 6cee298e-4d4b-4e1f-8f6d-eced41892951
+    component_id: sdc.dripyard_base.title-cta
+    component_version: fd6bbffa9b05aa5a
+    inputs:
+      layout: default
+      title: 'This is title text that is paired with a CTA'
+      heading_style: h2
+      button_text: 'Learn more'
+      button_href:
+        uri: 'https://www.drupal.org'
+        options: {  }
+      button_style: default

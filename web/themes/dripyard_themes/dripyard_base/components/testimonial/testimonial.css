@@ -1,0 +1,113 @@
+/*
+ * @file
+ * Styles for individual testimonials.
+ */
+
+.testimonial {
+  --testimonial-min-height: 0px;
+  --testimonial-padding-block: 0px;
+  --testimonial-padding-inline: 32px;
+  --testimonial-font-size: var(--body-l-size);
+  --testimonial-gap: var(--gap, 20px);
+  --testimonial-border-radius: var(--testimonial-carousel-border-radius, 24px);
+  --testimonial-background-color: var(--theme-surface);
+  --testimonial-quote-text-color: var(--theme-text-color-loud);
+  --testimonial-cite-text-color: var(--theme-text-color-medium);
+
+  container-type: inline-size;
+}
+
+.testimonial__content {
+  @container (width > 800px) {
+    --testimonial-min-height: 670px;
+    --testimonial-padding-block: 40px;
+    --testimonial-font-size: var(--h4-size);
+  }
+
+  @container (width > 1000px) {
+    --testimonial-padding-inline: 64px;
+    --testimonial-font-size: var(--h3-size);
+  }
+
+  display: grid;
+  grid-template-columns: auto;
+  gap: var(--testimonial-gap);
+  align-items: stretch;
+
+  @container (width > 800px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: var(--testimonial-min-height);
+  }
+}
+
+.testimonial__first {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 0;
+  padding-inline: var(--testimonial-padding-inline);
+  background-color: var(--testimonial-background-color);
+  border-radius: var(--testimonial-border-radius);
+  overflow: clip;
+  text-align: center;
+  color: var(--testimonial-quote-text-color);
+
+  @container (width > 800px) {
+    justify-content: center;
+    padding-block: var(--testimonial-padding-block);
+  }
+
+  .testimonial--reversed & {
+    order: 2;
+  }
+}
+
+/* This only shows at mobile widths. */
+.testimonial__mobile-image {
+  img,
+  video {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  @container (width > 800px) {
+    display: none;
+  }
+}
+
+.testimonial__quote {
+  margin: 0;
+  color: var(--testimonial-quote-text-color);
+  font-size: var(--testimonial-font-size);
+  text-wrap: balance;
+}
+
+.testimonial__citation {
+  color: var(--testimonial-cite-text-color);
+  font-style: normal;
+}
+
+/* This only shows at desktop widths. */
+.testimonial__second {
+  position: relative;
+  display: none;
+  border-radius: var(--testimonial-border-radius);
+  overflow: clip;
+
+  @container (width > 800px) {
+    display: block;
+  }
+
+  img,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

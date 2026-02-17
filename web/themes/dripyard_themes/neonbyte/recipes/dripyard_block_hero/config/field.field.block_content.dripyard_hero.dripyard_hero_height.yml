@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_hero_height
+  module:
+    - options
+id: block_content.dripyard_hero.dripyard_hero_height
+field_name: dripyard_hero_height
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Hero height'
+description: ''
+required: true
+translatable: true
+default_value:
+  - 
+    value: full-screen
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,37 @@
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+    'query-container',
+  ]
+%}
+
+{#
+  The goal of this complicated twig conditionals and tags is to only render the
+  wrapping elements if content exists. This is very hard in Drupal, with lots of
+  gotchas.
+
+  To do this, we first render the content, strip tags (except for non-closing
+  tags, and tags that typically don't include content).
+
+  But this is not enough, because sometimes the region contains a
+  `<drupal-render-placeholder>` that turns into nothing. This causes the
+  wrapping elements to render, with their respective margins, which throws off
+  the visual spacing.
+
+  To work around this, we apply use Twig's whitespace control to remove
+  whitespace around the markup (but not the content, which needs spaces). This
+  will cause the markup to render, but without any whitespace. We then can use
+  CSS to hide any wrapping elements using the `:empty` pseudo-class (which will
+  not activate if there's whitespace). #DrupalWTF
+
+  @see https://www.drupal.org/project/drupal/issues/953034
+  @see https://www.lullabot.com/articles/level-your-twiggery#checking-field-is-empty
+  @see https://developer.mozilla.org/en-US/docs/Web/CSS/:empty
+ #}
+
+{%- if is_canvas or content|render|striptags('<drupal-render-placeholder><a><img><hr><br><iframe><video><link><svg>')|trim -%}
+  <div{{ attributes.addClass(classes) }}><div class="region-container">
+    {{- content -}}
+  </div></div>
+{%- endif -%}

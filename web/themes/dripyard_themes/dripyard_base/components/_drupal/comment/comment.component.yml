@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Comment
+status: stable
+group: Drupal
+props:
+  type: object
+  required:
+    - content
+  properties:
+    new_indicator_timestamp:
+      title: New indicator timestamp
+      type: integer
+    author:
+      title: Author
+      type: ['string', 'null']
+    time:
+      title: Time
+      type: ['string', 'null']
+    parent:
+      title: Parent
+      type: ['string', 'null']
+    title:
+      title: Title
+      type: ['string', 'null']
+    title_prefix:
+      title: Title prefix
+      type: ['string', 'null']
+    title_suffix:
+      title: Title suffix
+      type: ['string', 'null']
+    content:
+      title: Content
+      type: string
+    comment:
+      title: Comment entity
+      type: object
+slots:
+  comment_content:
+    title: Comment content

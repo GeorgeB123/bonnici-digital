@@ -1,0 +1,15 @@
+name: Dripyard Fields Block
+type: Dripyard
+description: 'Provides common block field defintions for Dripyard components.'
+install:
+  - block_content
+  - datetime
+  - link
+  - options
+  - text
+config:
+  strict: false
+  import:
+    block_content: '*'
+recipes:
+  - dripyard_media

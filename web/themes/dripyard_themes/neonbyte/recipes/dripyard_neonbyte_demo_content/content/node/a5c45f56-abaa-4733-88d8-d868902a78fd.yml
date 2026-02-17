@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a5c45f56-abaa-4733-88d8-d868902a78fd
+  bundle: article
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 0
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: Companies
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /clients/companies
+      langcode: en
+  body:
+    -
+      value: "<p>NeonByte partners with companies of all sizes, from innovative startups to established enterprises. We understand that each organization has unique challenges, and we tailor our approach to deliver solutions that drive real business value.</p><h2>Company Segments We Serve</h2><ul><li><strong>Startups</strong> — Build secure foundations and scale with confidence</li><li><strong>Mid-Market</strong> — Modernize operations and accelerate growth</li><li><strong>Enterprise</strong> — Transform complex environments with proven expertise</li></ul><h2>Solutions by Company Size</h2><table><thead><tr><th>Segment</th><th>Common Needs</th><th>NeonByte Solution</th></tr></thead><tbody><tr><td>Startups (1-50)</td><td>Security foundations, compliance</td><td>Starter packages, SOC 2 fast-track</td></tr><tr><td>Mid-Market (51-500)</td><td>Scaling systems, automation</td><td>AiByte, custom integrations</td></tr><tr><td>Enterprise (500+)</td><td>Complex environments, governance</td><td>Full platform suite, dedicated support</td></tr></tbody></table><h2>Partnership Benefits</h2><ol><li>Dedicated account team who understands your business</li><li>Flexible engagement models that fit your budget</li><li>Access to NeonByte's full product and service portfolio</li><li>Priority support and early access to new features</li></ol><p>Whether you're preparing for your first compliance audit or managing security across a global enterprise, NeonByte has the expertise and solutions to help you succeed.</p>"
+      format: full_html
+      summary: ''

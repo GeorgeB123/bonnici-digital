@@ -1,0 +1,205 @@
+/*
+ * @file
+ * Status messages.
+ */
+
+.messages-list {
+  --horizontal-offset: var(--spacing-s);
+
+  container-type: inline-size;
+  padding-block: 0;
+  padding-inline: 0;
+  list-style: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.messages {
+  --messages-icon-size: 40px;
+  --messages-surface: var(--theme-surface);
+  --messages-text: var(--theme-text-color-loud);
+  --messages-border-radius: var(--radius-md);
+  --transition-out-duration: 0.2s;
+
+  min-height: calc(var(--messages-icon-size) + 2 * var(--spacing-xs));
+  max-width: 100%;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-radius: var(--messages-border-radius);
+  color: var(--messages-text);
+  border: solid 1px transparent;
+  background-color: var(--messages-surface);
+  background-image: none !important; /* Override some Webform styles. */
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: height var(--transition-out-duration), padding-block var(--transition-out-duration), opacity var(--transition-out-duration), margin-block var(--transition-out-duration);
+  }
+
+  & * {
+    color: inherit;
+  }
+
+  /* Additional specificity to override contrib modules. */
+  &.messages-list__item {
+    background-image: none;
+  }
+}
+
+.messages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:where(.messages) ~ .messages {
+  margin-block-start: var(--spacing-xs);
+}
+
+/* Helper to animate out, prior to being removed from DOM. */
+.messages.messages--👋 { /* stylelint-disable-line selector-class-pattern */
+  height: 0;
+  min-height: 0;
+  margin-block: 0;
+  padding-block: 0;
+  overflow: clip;
+  opacity: 0;
+}
+
+.messages__item + .messages__item {
+  margin-block-start: var(--spacing-xxs);
+}
+
+.messages__container {
+  display: flex;
+
+  @container (width < 300px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+.messages__header {
+  flex-shrink: 0;
+  margin-inline-end: var(--spacing-xs);
+
+  &.no-icon {
+    margin-inline-end: 0;
+  }
+
+  h2 {
+    margin: 0; /* Even though this is visually-hidden, the margin appears and causes scroll bars in region bottom right. */
+  }
+}
+
+.messages__content {
+  overflow: auto; /* Ensure large code blocks can be scrolled to. */
+  flex: 1;
+  padding-block-start: 3px;
+
+  @container (width < 300px) {
+    order: 2;
+    flex-basis: 100%;
+  }
+
+  .messages__list,
+  .messages__list li {
+    margin: revert;
+    padding: revert;
+    list-style: revert;
+
+    &::marker {
+      color: currentColor;
+    }
+  }
+}
+
+.messages__button {
+  flex-shrink: 0;
+  margin-inline-start: var(--spacing-xs);
+  padding-block-start: 3px;
+}
+
+.messages__close {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: top;
+  border: 0;
+  background: none;
+  appearance: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 33px;
+    height: 0;
+    content: "";
+    border-top: solid 2px currentColor;
+    translate: -50% -50%;
+    opacity: 0.5;
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      border-color: #aaa; /* @todo */
+    }
+  }
+
+  &:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+.messages__icon svg {
+  vertical-align: top;
+
+  @media (forced-colors: active) {
+    fill: canvasText !important;
+  }
+}
+
+.messages--error .messages__icon svg {
+  fill: var(--theme-color-error);
+}
+
+.messages--warning .messages__icon svg {
+  fill: var(--theme-color-warning);
+}
+
+.messages--status .messages__icon svg {
+  fill: var(--theme-color-success);
+}
+
+.messages--info .messages__icon svg {
+  fill: var(--theme-color-info);
+}
+
+.messages a {
+  color: inherit;
+}
+
+.messages pre {
+  margin: 0;
+}
+
+.js-form-managed-file .messages {
+  margin-block-end: var(--spacing-xs);
+  border-inline-start: solid 6px var(--theme-color-error);
+}

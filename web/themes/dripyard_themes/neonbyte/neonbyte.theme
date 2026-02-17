@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+// Support autoloading of classes when composer is not used.
+require_once __DIR__ . '/../dripyard_base/dripyard-classloader.php';

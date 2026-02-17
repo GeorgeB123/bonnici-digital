@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Button large variant.
+ */
+
+.button--large {
+  --button-height: 56px;
+  --button-padding-inline: 20px;
+  --button-font-size: 20px;
+
+  &:has(.button__prefix) {
+    padding-inline-start: 10px;
+  }
+
+  &:has(.button__suffix) {
+    padding-inline-end: 10px;
+  }
+
+  .button__prefix,
+  .button__suffix {
+    padding: 8px;
+  }
+}

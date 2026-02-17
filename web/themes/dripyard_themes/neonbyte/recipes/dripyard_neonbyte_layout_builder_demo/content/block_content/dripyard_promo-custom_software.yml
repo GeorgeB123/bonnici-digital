@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 88e5aa70-5bac-41b9-b802-78c0b72d7713
+  bundle: dripyard_promo
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: Custom Software (promo)
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Custom software, secure infrastructure, and AI-driven automation — all under one roof. Let NeonByte bring your next big idea to life, securely and at scale.</p>'
+      format: dripyard_superbasic
+      summary: ''
+  dripyard_ctas:
+    -
+      uri: 'internal:/'
+      title: 'Book a Free Consultation'
+      options: {  }
+    -
+      uri: 'internal:/'
+      title: 'Explore our Services'
+      options: {  }
+  dripyard_title:
+    -
+      value: '<p>Build Smarter, Safer, and Faster with NeonByte</p>'
+      format: basic_html
+  dripyard_eyebrow:
+    -
+      value: ' Trusted by Startups & Enterprises'

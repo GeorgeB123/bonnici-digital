@@ -1,0 +1,34 @@
+/**
+ * @file
+ * Styling for the secondary menu.
+ */
+
+.secondary-menu {
+  --secondary-menu-link-color: var(--theme-text-color-medium);
+  --secondary-menu-font-size: var(--body-m-size);
+  --secondary-menu-border-radius: var(--radius-lg);
+  --secondary-menu-link-hover-background: color-mix(in oklch, var(--theme-surface-alt) 40%, transparent);
+}
+
+.secondary-menu__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.secondary-menu__list-item {
+  margin: 0;
+}
+
+.secondary-menu__link[class] {
+  padding: 10px 15px;
+  border-radius: var(--secondary-menu-border-radius);
+  font-size: var(--secondary-menu-font-size);
+  color: var(--secondary-menu-link-color);
+  text-decoration: none;
+
+  &:hover {
+    background: var(--secondary-menu-link-hover-background);
+  }
+}

@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{{ include('dripyard_base:breadcrumb', {
+  breadcrumb_heading,
+  breadcrumb,
+}, with_context = false) }}

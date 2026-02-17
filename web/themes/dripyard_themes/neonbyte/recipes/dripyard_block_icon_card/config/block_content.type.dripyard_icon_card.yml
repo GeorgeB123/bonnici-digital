@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dripyard_icon_card
+label: 'Icon Card'
+revision: false
+description: 'Provides an icon card block.'

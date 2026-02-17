@@ -1,0 +1,98 @@
+/**
+ * @file
+ * Button general styles.
+ */
+
+:where(:root) {
+  /* Borders. */
+  --button-border-radius: var(--radius-button);
+  --button-border-width: 1px;
+  --button-icon-background-radius: 50%;
+
+  /* Typography. */
+  --button-font-family: inherit;
+  --button-font-size: var(--body-m-size);
+  --button-font-weight: 600;
+
+  /* Layout. */
+  --button-height: 48px;
+  --button-padding-block: 10px;
+  --button-padding-inline: 20px;
+}
+
+.button {
+  &:has(.button__prefix) {
+    padding-inline-start: 8px;
+  }
+
+  &:has(.button__suffix) {
+    padding-inline-end: 8px;
+  }
+
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  height: var(--button-height);
+  margin: 0;
+  white-space: nowrap;
+  padding-block: var(--button-padding-block);
+  padding-inline: var(--button-padding-inline);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--button-border-radius);
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: 1;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  touch-action: manipulation;
+  text-box: trim-both cap alphabetic;
+  transition: scale 0.1s, background-color 0.2s;
+
+  &:where(:not(:disabled)):active {
+    scale: 1.03;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border-color: var(--button-border-color);
+
+    .button__prefix,
+    .button__suffix {
+      opacity: 0.4;
+    }
+  }
+}
+
+.button__prefix,
+.button__suffix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  padding: 3px;
+  border-radius: var(--button-icon-background-radius);
+  aspect-ratio: 1;
+  transition: translate 0.2s;
+
+  svg {
+    height: 100%;
+    width: auto;
+
+    &,
+    path {
+      @media (forced-colors: active)  {
+        fill: linkText !important;
+        color: linkText !important;
+      }
+    }
+  }
+}
+
+.button--default:disabled {
+  background-color: color-mix(in oklch, var(--button-background-color), transparent);
+  color: color-mix(in oklch, var(--button-text-color), transparent);
+}

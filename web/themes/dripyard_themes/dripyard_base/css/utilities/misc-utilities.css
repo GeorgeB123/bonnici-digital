@@ -1,0 +1,8 @@
+/*
+ * @file
+ * Miscellaneous CSS Utility classes.
+ */
+
+.visibility-hidden {
+  visibility: hidden;
+}

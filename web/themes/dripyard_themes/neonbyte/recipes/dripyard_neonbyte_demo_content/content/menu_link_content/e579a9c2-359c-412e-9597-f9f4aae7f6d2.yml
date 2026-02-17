@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: e579a9c2-359c-412e-9597-f9f4aae7f6d2
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    07cf807b-cef5-452b-bb74-ebf0094c1b10: node
+    7feaba5a-0a9a-4fe6-b183-9c96eebb64b9: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Single Sign On'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 07cf807b-cef5-452b-bb74-ebf0094c1b10
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:7feaba5a-0a9a-4fe6-b183-9c96eebb64b9'
+  revision_translation_affected:
+    -
+      value: true

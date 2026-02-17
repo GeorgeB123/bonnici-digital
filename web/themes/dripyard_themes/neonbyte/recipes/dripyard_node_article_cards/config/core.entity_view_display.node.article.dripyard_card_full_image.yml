@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.dripyard_card_full_image
+    - field.field.node.article.body
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
+    - image.style.large
+    - node.type.article
+  module:
+    - image
+    - user
+id: node.article.dripyard_card_full_image
+targetEntityType: node
+bundle: article
+mode: dripyard_card_full_image
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_tags: true
+  links: true

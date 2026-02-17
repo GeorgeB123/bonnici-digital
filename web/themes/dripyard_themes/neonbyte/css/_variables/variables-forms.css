@@ -1,0 +1,16 @@
+/*
+ * @file
+ * Form variables.
+ */
+:root,
+form {
+  --form-padding-inline: var(--sp1-5);
+  --form-height: var(--sp6);
+  --form-text-color: var(--neutral-800);
+  --form-background: var(--white);
+  --form-background-disabled: #eee;
+  --form-border: 1px solid var(--theme-border-color);
+  --form-border-radius: var(--radius-sm);
+  --form-accent: var(--primary-500);
+  --form-placeholder: color-mix(in oklch, currentColor 60%, transparent);
+}

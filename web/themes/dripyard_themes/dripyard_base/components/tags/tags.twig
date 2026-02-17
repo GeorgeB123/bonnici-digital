@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'tags',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% if title %}
+    <h3 class="tags__title">{{ title }}</h3>
+  {% endif %}
+  <ul class="tags__list">
+    {% for item in items %}
+      <li{{ item.attributes.addClass('tags__item') }}>
+        {{ include('dripyard_base:pill', { content: item.content }, with_context = false) }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

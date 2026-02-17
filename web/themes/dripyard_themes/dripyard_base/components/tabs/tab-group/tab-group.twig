@@ -1,0 +1,16 @@
+{% set classes = [
+  'tabs',
+  centered ? 'tabs--centered',
+  'tabs--icon-position-' ~ icon_placement|default('vertical'),
+  'tabs--icon-size-' ~ icon_size|default('small'),
+  canvas_edit_mode ? 'canvas-edit-mode',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="tabs__container">
+    <sl-tab-group class="sl-tab-group" placement="{{ placement|default('top') }}">
+      <link rel="stylesheet" href="{{ '/' ~ componentMetadata.path ~ '/tab-group.css' }}">
+      {% block tabs %}{% endblock %}
+    </sl-tab-group>
+  </div>
+</div>

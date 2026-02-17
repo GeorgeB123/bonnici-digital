@@ -1,0 +1,206 @@
+{#
+/**
+ * @file
+ * Dripyard theme implementation to display a dynamic layout.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ * - settings: Layout settings from configuration form.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if in_preview %}
+  <div{{ attributes }}>
+{% endif %}
+
+  {% embed 'dripyard_base:layout-dynamic' with {
+    region_attributes,
+    content,
+    section_width: settings.section_width|default('edge-to-edge'),
+    content_width: settings.content_width|default('max-width'),
+    theme: settings.dripyard_theme|default('inherit'),
+    cell_align_x: settings.cell_align_x|default('default'),
+    cell_align_y: settings.cell_align_y|default('default'),
+    column_count: settings.column_count|default(1),
+    row_count: settings.row_count|default(1),
+    two_column_layout: settings.two_column_layout|default('50% / 50%'),
+    three_column_layout: settings.three_column_layout|default('33% / 33% / 33%'),
+    margin_top: settings.margin_top|default('zero'),
+    margin_bottom: settings.margin_bottom|default('zero'),
+    padding_top: settings.padding_top|default('large'),
+    padding_bottom: settings.padding_bottom|default('large'),
+    column_gutter: settings.column_gutter|default('default'),
+    row_gutter: settings.row_gutter|default('default'),
+    additional_classes: settings.additional_classes|default(''),
+    in_preview,
+    } only %}
+
+    {% block cell_1 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_1 }}>
+      {% endif %}
+        {{ content.cell_1 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_2 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_2 }}>
+      {% endif %}
+        {{ content.cell_2 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_3 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_3 }}>
+      {% endif %}
+        {{ content.cell_3 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_4 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_4 }}>
+      {% endif %}
+        {{ content.cell_4 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_5 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_5 }}>
+      {% endif %}
+        {{ content.cell_5 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_6 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_6 }}>
+      {% endif %}
+        {{ content.cell_6 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_7 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_7 }}>
+      {% endif %}
+        {{ content.cell_7 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_8 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_8 }}>
+      {% endif %}
+        {{ content.cell_8 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_9 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_9 }}>
+      {% endif %}
+        {{ content.cell_9 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_10 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_10 }}>
+      {% endif %}
+        {{ content.cell_10 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_11 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_11 }}>
+      {% endif %}
+        {{ content.cell_11 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_12 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_12 }}>
+      {% endif %}
+        {{ content.cell_12 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_13 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_13 }}>
+      {% endif %}
+        {{ content.cell_13 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_14 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_14 }}>
+      {% endif %}
+        {{ content.cell_14 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_15 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_15 }}>
+      {% endif %}
+        {{ content.cell_15 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block cell_16 %}
+      {% if in_preview %}
+        <div{{ region_attributes.cell_16 }}>
+      {% endif %}
+        {{ content.cell_16 }}
+      {% if in_preview %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+  {% endembed %}
+
+{% if in_preview %}
+  </div>
+{% endif %}

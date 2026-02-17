@@ -1,0 +1,24 @@
+{% set classes = [
+  'horizontal-line',
+  modifier_classes,
+  margin_top == 'zero' ? 'margin-top--0',
+  margin_top == 'small' ? 'margin-top--s',
+  margin_top == 'medium' ? 'margin-top--m',
+  margin_top == 'large' ? 'margin-top--l',
+  margin_bottom == 'zero' ? 'margin-bottom--0',
+  margin_bottom == 'small' ? 'margin-bottom--s',
+  margin_bottom == 'medium' ? 'margin-bottom--m',
+  margin_bottom == 'large' ? 'margin-bottom--l',
+  color == 'soft' ? 'horizontal-line--color-soft',
+  color == 'medium' ? 'horizontal-line--color-medium',
+  color == 'loud' ? 'horizontal-line--color-loud',
+  color == 'primary' ? 'horizontal-line--color-primary',
+  width == 'small' ? 'horizontal-line--width-small',
+  width == 'medium' ? 'horizontal-line--width-medium',
+  width == 'large' ? 'horizontal-line--width-large',
+  alignment == 'start' ? 'horizontal-line--align-start',
+  alignment == 'center' ? 'horizontal-line--align-center',
+  alignment == 'end' ? 'horizontal-line--align-end',
+] %}
+
+<hr{{ attributes.addClass(classes) }}>
