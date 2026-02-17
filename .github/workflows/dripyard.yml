@@ -1,19 +1,14 @@
-# GitHub Actions workflow for DevPanel CI/CD
-name: Deploy to DevPanel
-
+# Github
+name: issue-greeter
 on:
   push:
     branches:
       - dripyard
-
 jobs:
-  notify-devpanel:
+  notify-devpanel-dripyard:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify DevPanel of deployment
+      - name: notify
         run: |
-          curl -s -X PUT \
-            "https://console.devpanel.com/webhooks/applications/69883ed8b6432f91abfabe43/git" \
-            -d "{\"username\": \"${{ secrets.DP_USERNAME }}\", \"token\": \"${{ secrets.DP_ACCESS_TOKEN }}\"}" \
-            -H "content-type: application/json"
-          echo "DevPanel notified - deployment triggered for branch: ${{ github.ref_name }}"
+          curl -s -X PUT https://console.devpanel.com/webhooks/applications/6993669fbad55556203d3738/git -d "{\"username\": \"${{ secrets.DP_USERNAME }}\", \"token\": \"${{ secrets.DP_ACCESS_TOKEN }}\"}" -H "content-type: application/json"
+          
