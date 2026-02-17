@@ -4,8 +4,6 @@ name: Deploy to DevPanel
 on:
   push:
     branches:
-      - main
-      - develop
       - dripyard
 
 jobs:
