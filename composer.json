@@ -227,6 +227,7 @@
         "drupal/drupal_cms_google_analytics": "^2",
         "drupal/drupal_cms_seo_tools": "^2",
         "drupal/drupal_cms_starter": "^2",
+        "drupal/json_ld_schema": "^2.0",
         "drupal/recipe_installer_kit": "^1.0.4",
         "drupal/webform": "@beta",
         "jquery/inputmask": "^5.0",
