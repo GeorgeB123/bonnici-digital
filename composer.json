@@ -244,7 +244,11 @@
         "tippyjs/tippyjs": "^6.3"
     },
     "require-dev": {
-        "drush/drush": "^13.7"
+        "drush/drush": "^13.7",
+        "drupal/core-dev": "^11.0",
+        "phpstan/phpstan": "^2.0",
+        "mglaman/phpstan-drupal": "^2.0",
+        "phpstan/extension-installer": "^1.4"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -259,7 +263,9 @@
             "drupal/core-recipe-unpack": true,
             "drupal/core-vendor-hardening": true,
             "php-http/discovery": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         },
         "bin-dir": "vendor/bin",
         "sort-packages": true,
