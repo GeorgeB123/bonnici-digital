@@ -1,0 +1,263 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - develop
+      - staging
+      - main
+
+jobs:
+  quality:
+    name: Quality Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
+          coverage: none
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Check for security vulnerabilities
+        run: composer audit
+
+      - name: PHP syntax check
+        run: |
+          if [ -d "web/modules/custom" ]; then
+            find web/modules/custom -name "*.php" -print0 | xargs -0 -n1 php -l
+          else
+            echo "No custom modules found, skipping PHP syntax check"
+          fi
+
+      - name: Check Drupal coding standards
+        run: |
+          if [ -d "web/modules/custom" ]; then
+            vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml web/modules/custom
+          else
+            echo "No custom modules found, skipping coding standards check"
+          fi
+
+  build:
+    name: Build Artifact
+    runs-on: ubuntu-latest
+    needs: quality
+
+    outputs:
+      artifact-name: ${{ steps.create-artifact.outputs.artifact-name }}
+      artifact-url: ${{ steps.upload-artifact.outputs.artifact-url }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
+          coverage: none
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install production dependencies
+        run: composer install --no-dev --prefer-dist --optimize-autoloader --no-progress
+
+      - name: Clean unnecessary files
+        run: |
+          # Remove .git directories from vendor
+          find vendor -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
+          # Remove test directories
+          find vendor -name "tests" -type d -exec rm -rf {} + 2>/dev/null || true
+          find vendor -name "Tests" -type d -exec rm -rf {} + 2>/dev/null || true
+          # Remove documentation
+          find vendor -name "docs" -type d -exec rm -rf {} + 2>/dev/null || true
+
+      - name: Create artifact
+        id: create-artifact
+        run: |
+          TIMESTAMP=$(date +%s)
+          SHA_SHORT=${GITHUB_SHA:0:7}
+          ARTIFACT_NAME="bonnici-digital-${SHA_SHORT}-${TIMESTAMP}"
+
+          # Create tarball with essential files
+          tar -czf "${ARTIFACT_NAME}.tar.gz" \
+            web/ \
+            vendor/ \
+            composer.json \
+            composer.lock \
+            config/ \
+            drush/ \
+            scripts/ \
+            2>/dev/null || true
+
+          echo "artifact-name=${ARTIFACT_NAME}" >> $GITHUB_OUTPUT
+          echo "artifact-file=${ARTIFACT_NAME}.tar.gz" >> $GITHUB_OUTPUT
+
+          # Calculate checksum
+          CHECKSUM=$(sha256sum "${ARTIFACT_NAME}.tar.gz" | cut -d' ' -f1)
+          echo "checksum=${CHECKSUM}" >> $GITHUB_OUTPUT
+
+      - name: Generate metadata
+        run: |
+          cat > artifact-metadata.json <<EOF
+          {
+            "sha": "${GITHUB_SHA:0:7}",
+            "full_sha": "${GITHUB_SHA}",
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "branch": "${GITHUB_REF_NAME}",
+            "artifact_name": "${{ steps.create-artifact.outputs.artifact-name }}",
+            "artifact_file": "${{ steps.create-artifact.outputs.artifact-file }}",
+            "checksum": "${{ steps.create-artifact.outputs.checksum }}"
+          }
+          EOF
+          cat artifact-metadata.json
+
+      - name: Upload artifact
+        id: upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.create-artifact.outputs.artifact-name }}
+          path: |
+            ${{ steps.create-artifact.outputs.artifact-file }}
+            artifact-metadata.json
+          retention-days: 30
+          compression-level: 0
+
+      - name: Set artifact URL output
+        id: set-url
+        run: |
+          ARTIFACT_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "artifact-url=${ARTIFACT_URL}" >> $GITHUB_OUTPUT
+
+  deploy-dev:
+    name: Deploy to Dev
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/develop'
+
+    steps:
+      - name: Trigger DevPanel deployment
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X PUT \
+            https://console.devpanel.com/webhooks/applications/69883ed8b6432f91abfabe43/git \
+            -d "{\"username\": \"${{ secrets.DP_USERNAME }}\", \"token\": \"${{ secrets.DP_ACCESS_TOKEN }}\", \"branch\": \"develop\", \"sha\": \"${GITHUB_SHA:0:7}\", \"artifact_url\": \"${{ needs.build.outputs.artifact-url }}\"}" \
+            -H "content-type: application/json")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n-1)
+
+          echo "DevPanel response: $BODY"
+          echo "HTTP status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::DevPanel deployment trigger failed with status $HTTP_CODE"
+            exit 1
+          fi
+
+      - name: Post deployment status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Dev deployment triggered successfully"
+          else
+            echo "❌ Dev deployment trigger failed"
+          fi
+
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/staging'
+
+    steps:
+      - name: Trigger DevPanel deployment
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X PUT \
+            https://console.devpanel.com/webhooks/applications/69883ed8b6432f91abfabe43/git \
+            -d "{\"username\": \"${{ secrets.DP_USERNAME }}\", \"token\": \"${{ secrets.DP_ACCESS_TOKEN }}\", \"branch\": \"staging\", \"sha\": \"${GITHUB_SHA:0:7}\", \"artifact_url\": \"${{ needs.build.outputs.artifact-url }}\"}" \
+            -H "content-type: application/json")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n-1)
+
+          echo "DevPanel response: $BODY"
+          echo "HTTP status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::DevPanel deployment trigger failed with status $HTTP_CODE"
+            exit 1
+          fi
+
+      - name: Post deployment status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Staging deployment triggered successfully"
+          else
+            echo "❌ Staging deployment trigger failed"
+          fi
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Trigger DevPanel deployment
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X PUT \
+            https://console.devpanel.com/webhooks/applications/69883ed8b6432f91abfabe43/git \
+            -d "{\"username\": \"${{ secrets.DP_USERNAME }}\", \"token\": \"${{ secrets.DP_ACCESS_TOKEN }}\", \"branch\": \"main\", \"sha\": \"${GITHUB_SHA:0:7}\", \"artifact_url\": \"${{ needs.build.outputs.artifact-url }}\"}" \
+            -H "content-type: application/json")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n-1)
+
+          echo "DevPanel response: $BODY"
+          echo "HTTP status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::DevPanel deployment trigger failed with status $HTTP_CODE"
+            exit 1
+          fi
+
+      - name: Post deployment status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Production deployment triggered successfully"
+          else
+            echo "❌ Production deployment trigger failed"
+          fi
