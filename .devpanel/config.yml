@@ -5,7 +5,11 @@ hooks:
     push:
       - branch: "main"
         cmd: |-
+          git fetch --all
+          git pull origin main
           composer -n install --no-dev >> /tmp/composer_main.txt
+          drush cim -y
+          drush cr
       - branch: "develop"
         cmd: |-
           composer -n install >> /tmp/composer_develop.txt
