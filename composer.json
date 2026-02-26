@@ -227,6 +227,7 @@
         "drupal/drupal_cms_google_analytics": "^2",
         "drupal/drupal_cms_seo_tools": "^2",
         "drupal/drupal_cms_starter": "^2",
+        "drupal/entity_print": "^2.18",
         "drupal/json_ld_schema": "^2.0",
         "drupal/recipe_installer_kit": "^1.0.4",
         "drupal/webform": "@beta",
@@ -265,11 +266,6 @@
         "optimize-autoloader": true
     },
     "extra": {
-        "patches": {
-            "drupal/canvas": {
-                "Fix YAML object serialization in AI component description form": "patches/canvas/canvas-ai-yaml-object-fix.patch"
-            }
-        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
