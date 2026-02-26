@@ -1,6 +1,6 @@
 # Drupal CMS
 
-Drupal CMS is a fast moving open source product that enables site builders to easily create new Drupal sites and extend them with smart defaults, all using their browser.
+Drupal CMS Blkah LKajfuihr is a fast moving open source product that enables site builders to easily create new Drupal sites and extend them with smart defaults, all using their browser.
 
 ## Getting this test test test to get started
 
