@@ -2,7 +2,7 @@
 
 Drupal CMS is a fast moving open source product that enables site builders to easily create new Drupal sites and extend them with smart defaults, all using their browser.
 
-## Getting f started
+## Getting this to get started
 
 If you want to use [DDEV](https://ddev.com) to run Drupal CMS locally, follow these instructions:
 
