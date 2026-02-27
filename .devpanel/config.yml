@@ -13,7 +13,7 @@ hooks:
 
       - branch: "main"
         cmd: |-
-          /home/devpanel/applications/bonnici-digital/public_html/scripts/devpanel-deploy.sh main "${DP_GIT_SHA:-unknown}" "${DP_ARTIFACT_URL:-}"
+          /var/www/html/scripts/devpanel-deploy.sh main "${DP_GIT_SHA:-unknown}" "${DP_ARTIFACT_URL:-}"
 
       - branch: "dripyard"
         cmd: |-
