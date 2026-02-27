@@ -77,3 +77,4 @@ artifact-metadata.json
 
 # Config keys with plaintext secrets (use environment variables instead)
 /config/sync/key.key.*.yml
+logs/
