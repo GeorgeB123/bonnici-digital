@@ -231,6 +231,7 @@
         "drupal/json_ld_schema": "^2.0",
         "drupal/metatag": "^2.2",
         "drupal/recipe_installer_kit": "^1.0.4",
+        "drupal/twig_tweak": "^3.4",
         "drupal/webform": "@beta",
         "jquery/inputmask": "^5.0",
         "jquery/intl-tel-input": "^17.0",
