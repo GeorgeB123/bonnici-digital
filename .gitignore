@@ -68,3 +68,9 @@
 /web/sites/example.settings.local.php
 /web/sites/example.sites.php
 /web/sites/README.txt
+
+# Deployment artifacts
+.deployed-version
+/tmp/deployment-*.log
+*.tar.gz
+artifact-metadata.json
