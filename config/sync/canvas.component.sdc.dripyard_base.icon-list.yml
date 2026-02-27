@@ -1,0 +1,55 @@
+uuid: 0f2d1ba6-4173-433b-ae4c-03aa8166b309
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - dripyard_base
+active_version: 5249c68ce17cfc73
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        size:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: medium
+          expression: ℹ︎list_string␟value
+        icon_color:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: primary
+          expression: ℹ︎list_string␟value
+        column_width:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: full-width
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: 'Icon list items'
+label: 'Icon list'
+id: sdc.dripyard_base.icon-list
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:icon-list'

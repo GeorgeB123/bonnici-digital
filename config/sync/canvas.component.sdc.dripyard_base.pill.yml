@@ -1,0 +1,20 @@
+uuid: 3ce57acb-7854-4406-b346-cf2505b6a701
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dripyard_base
+active_version: d54b181baa9953d9
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+label: Pill
+id: sdc.dripyard_base.pill
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:pill'

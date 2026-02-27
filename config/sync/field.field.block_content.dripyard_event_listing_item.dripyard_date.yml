@@ -1,0 +1,23 @@
+uuid: 3b84e49c-da87-4577-ba84-ad48d12acf83
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_event_listing_item
+    - field.storage.block_content.dripyard_date
+  module:
+    - datetime
+_core:
+  default_config_hash: LX3jjyXRsYxyWfzrNrYqlLfDkl9KNRVdv4dOiV6r1gs
+id: block_content.dripyard_event_listing_item.dripyard_date
+field_name: dripyard_date
+entity_type: block_content
+bundle: dripyard_event_listing_item
+label: 'Event Date/Time'
+description: 'The start date and time of the event'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

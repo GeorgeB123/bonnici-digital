@@ -1,0 +1,25 @@
+uuid: a3008a7a-85c0-4bda-a0af-06bbb6b02b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_media
+    - field.field.block_content.dripyard_media.dripyard_media
+_core:
+  default_config_hash: 8l8umgGXSE70ccuR-Xc6CWBX5J2g03Wgh14d1OZwTtc
+id: block_content.dripyard_media.default
+targetEntityType: block_content
+bundle: dripyard_media
+mode: default
+content:
+  dripyard_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: dripyard_full_width
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

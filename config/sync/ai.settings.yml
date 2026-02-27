@@ -1,0 +1,27 @@
+_core:
+  default_config_hash: RGedRkFydKZjS0ZJ6vbtZH00KbhYVGsK-ABILHdQLyw
+prompt_logging: false
+prompt_logging_tags: ''
+default_providers:
+  chat:
+    provider_id: anthropic
+    model_id: claude-sonnet-4-5-20250929
+  chat_with_complex_json:
+    provider_id: anthropic
+    model_id: claude-sonnet-4-5-20250929
+  chat_with_image_vision:
+    provider_id: litellm
+    model_id: openai/gpt-4o-mini
+  chat_with_structured_response:
+    provider_id: anthropic
+    model_id: claude-sonnet-4-5-20250929
+  chat_with_tools:
+    provider_id: anthropic
+    model_id: claude-sonnet-4-5-20250929
+  embeddings:
+    provider_id: litellm
+    model_id: openai/text-embedding-3-small
+  text_to_speech:
+    provider_id: litellm
+    model_id: openai/gpt-4o-mini-realtime-preview
+default_vdb_provider: ''

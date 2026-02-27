@@ -1,0 +1,111 @@
+uuid: c743365a-e7d4-4706-bf5e-0a2bcac79173
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - dripyard_base
+active_version: e6079b189d228dad
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        theme:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: inherit
+          expression: ℹ︎list_string␟value
+        additional_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        section_width:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: edge-to-edge
+          expression: ℹ︎list_string␟value
+        content_width:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: max-width
+          expression: ℹ︎list_string␟value
+        margin_top:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: zero
+          expression: ℹ︎list_string␟value
+        margin_bottom:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: zero
+          expression: ℹ︎list_string␟value
+        padding_top:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: large
+          expression: ℹ︎list_string␟value
+        padding_bottom:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: large
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        header:
+          title: 'Header content'
+          description: 'Optional header content for the section'
+        content:
+          title: 'Section content'
+          description: 'Main content area of the section'
+label: 'Basic Section'
+id: sdc.dripyard_base.section
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:section'

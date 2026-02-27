@@ -1,0 +1,51 @@
+uuid: 277709ef-0b6b-451e-9734-3cc6032a34c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.webform_block
+    - canvas.component.sdc.dripyard_base.heading
+    - canvas.component.sdc.dripyard_base.section
+  module:
+    - options
+id: contactsection
+label: 'Contact Section'
+component_tree:
+  0:
+    uuid: 5ab40a24-035b-475e-9281-906c654919a1
+    component_id: sdc.dripyard_base.section
+    component_version: e6079b189d228dad
+    inputs:
+      theme: inherit
+      margin_top: zero
+      padding_top: large
+      content_width: max-width
+      margin_bottom: zero
+      section_width: edge-to-edge
+      padding_bottom: small
+  '0:content:0':
+    parent_uuid: 5ab40a24-035b-475e-9281-906c654919a1
+    slot: content
+    uuid: 37d12e29-4c66-44be-a8a7-9c4881752a23
+    component_id: block.webform_block
+    component_version: 75298500addde82f
+    inputs:
+      label: Webform
+      label_display: '0'
+      webform_id: contact_form
+      default_data: ''
+      redirect: false
+      lazy: false
+  '0:header:0':
+    parent_uuid: 5ab40a24-035b-475e-9281-906c654919a1
+    slot: header
+    uuid: 5b3dc6b5-483b-48d4-8c79-24b54f113b36
+    component_id: sdc.dripyard_base.heading
+    component_version: 69804e3c5ff45a2b
+    inputs:
+      text: 'Get in Touch'
+      style: h3
+      center: false
+      margin_top: zero
+      html_element: h3
+      margin_bottom: zero

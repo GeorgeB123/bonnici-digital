@@ -1,0 +1,30 @@
+uuid: 13cf92f2-c649-4420-be1f-8b9a91a51a20
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_menu_card
+    - field.storage.block_content.dripyard_menu_item_reference
+_core:
+  default_config_hash: z3BIcAn0XufAP6enOYTqjLqd_vtFuGgh2GZhEyr7UBw
+id: block_content.dripyard_menu_card.dripyard_menu_item_reference
+field_name: dripyard_menu_item_reference
+entity_type: block_content
+bundle: dripyard_menu_card
+label: 'Menu Item Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:menu_link_content'
+  handler_settings:
+    target_bundles:
+      menu_link_content: menu_link_content
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

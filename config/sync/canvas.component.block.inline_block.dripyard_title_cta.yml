@@ -1,0 +1,28 @@
+uuid: 43c74fbd-b73e-4637-b03e-9df307a48357
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_title_cta
+  module:
+    - layout_builder
+active_version: 26ecbb228a84c33c
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_title_cta'
+        label: 'Title CTA'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Title CTA'
+id: block.inline_block.dripyard_title_cta
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_title_cta'

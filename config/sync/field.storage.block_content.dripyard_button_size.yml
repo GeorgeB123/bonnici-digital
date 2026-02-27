@@ -1,0 +1,32 @@
+uuid: b48a1aa3-fe31-4441-83b3-22e0a8dfc215
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: pj5mavZwTO4juAxAPZaoMAHMx27R7VO09OCnP94BV7k
+id: block_content.dripyard_button_size
+field_name: dripyard_button_size
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: small
+      label: Small
+    -
+      value: medium
+      label: Medium
+    -
+      value: large
+      label: Large
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

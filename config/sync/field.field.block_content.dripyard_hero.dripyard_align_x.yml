@@ -1,0 +1,25 @@
+uuid: cdb35711-03f7-4e59-94f1-e5fd2fae354b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_align_x
+  module:
+    - options
+_core:
+  default_config_hash: PwQ9dvLXQmuKj4pV1m98BgHjr07AE-Oj50qcqCkt-Rs
+id: block_content.dripyard_hero.dripyard_align_x
+field_name: dripyard_align_x
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Align X'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: start
+default_value_callback: ''
+settings: {  }
+field_type: list_string

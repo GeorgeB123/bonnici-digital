@@ -1,0 +1,28 @@
+uuid: d6cd6222-e74e-4c80-bd50-a3ec0426b2fb
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_testimonial
+  module:
+    - layout_builder
+active_version: d039cd36a32402ae
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_testimonial'
+        label: Testimonial
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: Testimonial
+id: block.inline_block.dripyard_testimonial
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_testimonial'

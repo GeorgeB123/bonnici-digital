@@ -1,0 +1,31 @@
+uuid: e87f699a-492e-4c42-a002-63bfff0d3e84
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dripyard_base
+active_version: c94513cb34df0c8a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Details title'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        details_content:
+          title: 'Details Content'
+          description: 'Main content of the details element.'
+label: Details
+id: sdc.dripyard_base.details
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:details'

@@ -1,0 +1,23 @@
+uuid: 4543b29e-3f73-49ff-af87-753234a006b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_icon_card
+    - field.storage.block_content.dripyard_icon
+  module:
+    - options
+_core:
+  default_config_hash: U7eQltFfhXtd5XcilR2k1FsnUFA6T6N3IRYUP45aoiw
+id: block_content.dripyard_icon_card.dripyard_icon
+field_name: dripyard_icon
+entity_type: block_content
+bundle: dripyard_icon_card
+label: Icon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

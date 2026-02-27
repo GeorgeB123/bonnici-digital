@@ -1,0 +1,19 @@
+uuid: 18f971e0-c3a8-4498-82b8-6a356e2023a6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - neonbyte
+id: dripyard_base_socialmedialinks
+theme: neonbyte
+region: footer_right
+weight: 0
+provider: null
+plugin: 'block_content:192edb9e-7c1e-4244-a309-2f623a8307f2'
+settings:
+  id: broken
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: core
+  view_mode: full
+visibility: {  }

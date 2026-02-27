@@ -1,0 +1,60 @@
+uuid: 62f127f3-15aa-40ca-a258-f95686e1cac2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.dripyard_card
+    - field.field.node.article.body
+    - field.field.node.article.field_image
+    - field.field.node.article.field_seo_analysis
+    - field.field.node.article.field_seo_description
+    - field.field.node.article.field_seo_image
+    - field.field.node.article.field_seo_title
+    - field.field.node.article.field_tags
+    - image.style.large
+    - node.type.article
+  module:
+    - svg_image
+    - text
+    - user
+_core:
+  default_config_hash: YeXenK2G7eH6QGVrC40ckd83TwEr65HiqJcd3vC5HuU
+id: node.article.dripyard_card
+targetEntityType: node
+bundle: article
+mode: dripyard_card
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 175
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_seo_analysis: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true
+  links: true
+  search_api_excerpt: true

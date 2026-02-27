@@ -1,0 +1,48 @@
+uuid: 3f9cd82f-f4df-460f-bd14-bfd6a3ace7a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - dripyard_base
+active_version: d0baf18ce4d0b67c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'This is the teaser title'
+          expression: ℹ︎string␟value
+        href:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'http://www.example.com'
+              options: {  }
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions:
+        teaser_content:
+          title: Content
+        meta:
+          title: Meta
+          description: 'Teaser meta'
+label: Teaser
+id: sdc.dripyard_base.teaser
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:teaser'

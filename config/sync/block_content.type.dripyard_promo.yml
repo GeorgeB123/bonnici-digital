@@ -1,0 +1,10 @@
+uuid: 64f49bcb-3438-46fa-a5d4-5f4f136b5644
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9ZanAyVsW4kq1Y8xRIQU1iefw6KcLVCF3GWV6IGmhnI
+id: dripyard_promo
+label: Promo
+revision: false
+description: 'Used to create promo blocks that contain an eyebrow, title, and call(s) to action.'

@@ -1,0 +1,28 @@
+uuid: 722cb3e5-6e4c-4d68-8e7a-733cedc035d6
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_menu_card
+  module:
+    - layout_builder
+active_version: 778e3ce50b0557a1
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_menu_card'
+        label: 'Menu Card'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Menu Card'
+id: block.inline_block.dripyard_menu_card
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_menu_card'

@@ -1,0 +1,26 @@
+uuid: 44bd6880-1a4f-479b-b38d-40be5a1f2400
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_wrapper
+    - field.field.block_content.dripyard_wrapper.dripyard_wrapper
+    - field.field.block_content.dripyard_wrapper.dripyard_wrapper_props
+_core:
+  default_config_hash: xKNqicRsyyrWHwcP7H9Cfl1N12E3OG6KtzylDIG98Mo
+id: block_content.dripyard_wrapper.default
+targetEntityType: block_content
+bundle: dripyard_wrapper
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  dripyard_wrapper: true
+  dripyard_wrapper_props: true

@@ -1,0 +1,37 @@
+uuid: 7d1a9ea0-a7fc-4d95-a6d9-9cc57a2c6f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.dripyard_full_width
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+  module:
+    - file
+_core:
+  default_config_hash: 5m0m0Nrw2CZwR9TRWesZEJhfXDkhDvlBHaCR7dBqcfw
+id: media.video.dripyard_full_width
+targetEntityType: media
+bundle: video
+mode: dripyard_full_width
+content:
+  field_media_video_file:
+    type: file_video
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+      muted: false
+      width: 640
+      height: 480
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

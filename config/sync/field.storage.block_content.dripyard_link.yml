@@ -1,0 +1,21 @@
+uuid: d374ecde-9164-4744-864e-b89ab1c401f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: n21HgV39P1_tUwpzarHXZDwk0aYXw839yhOheG1-8iQ
+id: block_content.dripyard_link
+field_name: dripyard_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

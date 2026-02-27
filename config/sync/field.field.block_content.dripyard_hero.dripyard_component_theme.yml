@@ -1,0 +1,23 @@
+uuid: 957afc00-fe55-4d98-b3d5-08840fb418c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_component_theme
+  module:
+    - options
+_core:
+  default_config_hash: 7o7M4frjIrvTRAtRhOI80vYyT9Kcyel094VABMQ-2-E
+id: block_content.dripyard_hero.dripyard_component_theme
+field_name: dripyard_component_theme
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Component Theme'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

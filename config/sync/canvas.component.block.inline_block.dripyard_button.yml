@@ -1,0 +1,28 @@
+uuid: a627b660-2d5d-43b3-8747-35a9419d7854
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_button
+  module:
+    - layout_builder
+active_version: 728d895d4bfb0845
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_button'
+        label: Button
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: Button
+id: block.inline_block.dripyard_button
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_button'

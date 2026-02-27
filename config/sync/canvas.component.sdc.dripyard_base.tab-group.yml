@@ -1,0 +1,72 @@
+uuid: 3f5400b7-f249-4451-8d6b-73cd229efa4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - dripyard_base
+active_version: 912d35db4fbdbf16
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        canvas_edit_mode:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        centered:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        placement:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: top
+          expression: ℹ︎list_string␟value
+        icon_size:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: small
+          expression: ℹ︎list_string␟value
+        icon_placement:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: vertical
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        tabs:
+          title: 'Tab group content'
+          description: 'Insert tabs here.'
+label: 'Tab group'
+id: sdc.dripyard_base.tab-group
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:tab-group'

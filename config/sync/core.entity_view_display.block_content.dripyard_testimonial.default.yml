@@ -1,0 +1,59 @@
+uuid: 9d9bdac1-911a-4912-81a3-37db5f8069fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_testimonial
+    - field.field.block_content.dripyard_testimonial.body
+    - field.field.block_content.dripyard_testimonial.dripyard_image_media
+    - field.field.block_content.dripyard_testimonial.dripyard_testimonial_citation
+    - field.field.block_content.dripyard_testimonial.dripyard_testimonial_reversed
+    - image.style.dripyard_square
+  module:
+    - media
+    - text
+_core:
+  default_config_hash: q1v_q1XbGCtuir8ry2nUeuRqo9nXYQM6ESjCwGfu31o
+id: block_content.dripyard_testimonial.default
+targetEntityType: block_content
+bundle: dripyard_testimonial
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  dripyard_image_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: dripyard_square
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  dripyard_testimonial_citation:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  dripyard_testimonial_reversed:
+    type: boolean
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

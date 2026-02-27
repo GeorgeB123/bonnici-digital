@@ -1,0 +1,23 @@
+uuid: 5bac95e3-f52d-47da-baa8-e361270e4e8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_button
+    - field.storage.block_content.dripyard_icon
+  module:
+    - options
+_core:
+  default_config_hash: S1MmhmWGySVGbTnUM7sp3kGQxPIOhvjrP95oUW9TD2Q
+id: block_content.dripyard_button.dripyard_icon
+field_name: dripyard_icon
+entity_type: block_content
+bundle: dripyard_button
+label: 'Prefix Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

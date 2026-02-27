@@ -1,0 +1,20 @@
+uuid: 2daf8b74-e6fb-437d-921b-a1047954e528
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: n3nQzqghCEQ-xeYUe53kwCrWhP_f5Qd-pGuzxqU2BTo
+id: block_content.dripyard_no_background
+field_name: dripyard_no_background
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

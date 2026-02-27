@@ -1,0 +1,10 @@
+uuid: d6a91337-35cc-493e-9522-9e5f974db83e
+langcode: en
+status: true
+dependencies: {  }
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.dripyard_base.theme-test
+  - sdc.navigation.title

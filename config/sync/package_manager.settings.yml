@@ -1,0 +1,3 @@
+additional_trusted_composer_plugins:
+  - cweagans/composer-patches
+include_unknown_files_in_project_root: false

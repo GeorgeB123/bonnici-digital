@@ -1,0 +1,65 @@
+_core:
+  default_config_hash: ZBVIRKtth0YEFKnQWRS-aHREBFOzzXcyTtBVRTbeHF8
+favicon:
+  path: ''
+  use_default: false
+features:
+  comment_user_picture: false
+  comment_user_verification: true
+  favicon: false
+  node_user_picture: false
+logo:
+  use_default: true
+third_party_settings:
+  shortcut:
+    module_link: true
+theme_colors:
+  site_theme: white
+  color_scheme: slate
+  colors:
+    base_primary_color: '#47625b'
+    base_primary_color_brightness: dark
+    base_secondary_color: '#5a4a3a'
+    base_secondary_color_brightness: dark
+footer:
+  theme: primary
+layout_settings:
+  container_max_width: '1440'
+  border_radius_sm: '4'
+  border_radius_md: '8'
+  border_radius_lg: '16'
+  border_radius_button: '40'
+header_settings:
+  full_width: 1
+  remove_sticky: 0
+  remove_transparency: 0
+  theme: light
+social_media_links:
+  bluesky: ''
+  discord: ''
+  facebook: ''
+  github: ''
+  instagram: ''
+  linkedin: ''
+  mastodon: ''
+  pinterest: ''
+  reddit: ''
+  snapchat: ''
+  telegram: ''
+  threads: ''
+  tiktok: ''
+  twitch: ''
+  twitter: ''
+  whatsapp: ''
+  youtube: ''
+apply_recipes:
+  dripyard_neonbyte_blocks: 0
+  dripyard_neonbyte_nodes: 0
+  dripyard_neonbyte_demo_content: 0
+  dripyard_neonbyte_landing_pages: 0
+  dripyard_neonbyte_layout_builder_demo: 0
+  dripyard_neonbyte_canvas_demo: 0
+  notice: ''
+  dripyard_neonbyte_canvas_patterns: 0
+license_uuid: 500d308b-71ad-4ac1-8f36-ef1ff234296c
+dripyard_uid: 51

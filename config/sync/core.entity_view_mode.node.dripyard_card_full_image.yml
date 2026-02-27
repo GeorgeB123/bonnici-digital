@@ -1,0 +1,13 @@
+uuid: 83baa314-f0f9-44ee-b77b-61e6c1627623
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: l3udFEq0xsAb9axBQ6L6EPb9zkty6WxCaegAlxPKk2w
+id: node.dripyard_card_full_image
+label: 'Card Full Image'
+description: ''
+targetEntityType: node
+cache: true

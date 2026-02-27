@@ -1,0 +1,10 @@
+uuid: 32fbd237-b05a-4876-aca9-e3ff62f6c1e9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7ZIf-qBA3sN37PiEQPmu6QSeuQLuYkbhIyOtmh2RnWY
+id: dripyard_logo_item
+label: 'Logo Item'
+revision: false
+description: 'Provides a block type to be used for logos to display throughout the site. '

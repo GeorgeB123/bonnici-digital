@@ -1,0 +1,28 @@
+uuid: 90e9a56d-ab24-4725-991e-8122f04c293f
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_event_listing_item
+  module:
+    - layout_builder
+active_version: 4aa8111d32c3a57c
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_event_listing_item'
+        label: 'Event Listing Item'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Event Listing Item'
+id: block.inline_block.dripyard_event_listing_item
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_event_listing_item'

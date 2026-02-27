@@ -1,0 +1,20 @@
+uuid: 4522b042-e1f3-44a7-9db8-692f5110f6b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: J-iMLs2z0frSEt03w1hWTeWybPLprD2A74I3BOuLppg
+id: block_content.dripyard_hero_position_top
+field_name: dripyard_hero_position_top
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

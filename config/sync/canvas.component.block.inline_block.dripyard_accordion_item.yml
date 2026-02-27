@@ -1,0 +1,28 @@
+uuid: beaa2e05-f274-486d-82c4-fac5bfefc6a9
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_accordion_item
+  module:
+    - layout_builder
+active_version: d9bd8ded99cd9325
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_accordion_item'
+        label: 'Accordion Item'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Accordion Item'
+id: block.inline_block.dripyard_accordion_item
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_accordion_item'

@@ -1,0 +1,31 @@
+uuid: af788f68-8965-458e-8b16-ccac09099388
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+  theme:
+    - dripyard_base
+active_version: 4a5cdc35a2c16f19
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        date_time_stamp:
+          required: true
+          field_type: datetime
+          field_storage_settings:
+            datetime_type: datetime
+          field_instance_settings: {  }
+          field_widget: datetime_default
+          default_value:
+            -
+              value: '2024-07-15T14:30:00Z'
+          expression: ℹ︎datetime␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Date Block'
+id: sdc.dripyard_base.date-block
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:date-block'

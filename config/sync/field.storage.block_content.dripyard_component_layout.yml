@@ -1,0 +1,29 @@
+uuid: 8d32c78d-afac-461a-a32b-0708e5a20a44
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: ZKCVmOlfPlAB94M6xM-ffKNs7ogGIWD8NFlh0Vf2YBM
+id: block_content.dripyard_component_layout
+field_name: dripyard_component_layout
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: center
+      label: Centered
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

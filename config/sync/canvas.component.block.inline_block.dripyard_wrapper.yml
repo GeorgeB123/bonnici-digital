@@ -1,0 +1,28 @@
+uuid: 311b0f52-12bd-4f9d-b84d-b256f738b1fc
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_wrapper
+  module:
+    - layout_builder
+active_version: 4a9d08b1e96d0982
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_wrapper'
+        label: 'Layout Builder Wrapper'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Layout Builder Wrapper'
+id: block.inline_block.dripyard_wrapper
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_wrapper'

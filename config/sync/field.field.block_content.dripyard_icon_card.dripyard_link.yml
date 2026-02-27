@@ -1,0 +1,25 @@
+uuid: 23b2acc0-4fb0-42bc-b07f-9eb362a719b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_icon_card
+    - field.storage.block_content.dripyard_link
+  module:
+    - link
+_core:
+  default_config_hash: B_4LyqVLfldqixHekHw-nwdWcu2FyZgk3tSZ30xXNf4
+id: block_content.dripyard_icon_card.dripyard_link
+field_name: dripyard_link
+entity_type: block_content
+bundle: dripyard_icon_card
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

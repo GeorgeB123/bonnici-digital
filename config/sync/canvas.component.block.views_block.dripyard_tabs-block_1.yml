@@ -1,0 +1,26 @@
+uuid: 168fc3bc-fb13-42d8-a637-84a5ee33dfc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dripyard_tabs
+  module:
+    - views
+active_version: 5348849434f557a6
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:dripyard_tabs-block_1'
+        label: 'Tabs: Dripyard Tabs'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Tabs: Dripyard Tabs'
+id: block.views_block.dripyard_tabs-block_1
+provider: views
+source: block
+source_local_id: 'views_block:dripyard_tabs-block_1'

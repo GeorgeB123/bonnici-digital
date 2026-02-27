@@ -1,0 +1,35 @@
+uuid: d7df90a7-5fb2-4bfb-a3a3-0639ce11923a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: IbJa5h08SgL2Ru9fXcYrH6z4aKGqMnPYja23QTzmJWk
+id: block_content.dripyard_wrapper
+field_name: dripyard_wrapper
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'dripyard_base:accordion-group'
+      label: 'Accordion Group'
+    -
+      value: 'dripyard_base:carousel'
+      label: Carousel
+    -
+      value: 'dripyard_base:tab-group'
+      label: 'Tab Group'
+    -
+      value: 'dripyard_base:logo-grid'
+      label: 'Logo Grid'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

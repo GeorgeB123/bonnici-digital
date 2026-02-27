@@ -1,0 +1,23 @@
+uuid: 61eaa51e-c3b7-4ffe-b711-d10730d03860
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: R-XCDL7Z-xbyNGV2FVNOuI817AXL8ixtupwISR8jeDM
+name: dripyard_card_promo
+label: 'Dripyard Card/Promo'
+effects:
+  ade84706-9170-490c-ae0a-a833f69d41ba:
+    uuid: ade84706-9170-490c-ae0a-a833f69d41ba
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 600
+      anchor: center-center
+  a3e23b9a-d82a-41a7-8d87-4b6b89010009:
+    uuid: a3e23b9a-d82a-41a7-8d87-4b6b89010009
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

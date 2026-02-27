@@ -1,0 +1,25 @@
+uuid: 4ebe6352-a24d-4792-a2d6-f641b725e6e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+    - field.storage.block_content.dripyard_link
+  module:
+    - link
+_core:
+  default_config_hash: 8QJSa3Bte-RYEtJKjojWZTet3H1Dt4B2nX-5c-LrpXI
+id: block_content.dripyard_statistic.dripyard_link
+field_name: dripyard_link
+entity_type: block_content
+bundle: dripyard_statistic
+label: Link
+description: 'Optional link for the statistic'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

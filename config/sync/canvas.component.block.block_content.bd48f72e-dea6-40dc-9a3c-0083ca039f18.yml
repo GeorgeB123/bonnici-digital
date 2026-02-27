@@ -1,0 +1,25 @@
+uuid: a5285b89-c34e-4ab3-bc53-10e93b258477
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:dripyard_menu_card:bd48f72e-dea6-40dc-9a3c-0083ca039f18'
+  module:
+    - block_content
+active_version: 59b1876e955a8ce9
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:bd48f72e-dea6-40dc-9a3c-0083ca039f18'
+        label: 'AI and Automation'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'AI and Automation'
+id: block.block_content.bd48f72e-dea6-40dc-9a3c-0083ca039f18
+provider: block_content
+source: block
+source_local_id: 'block_content:bd48f72e-dea6-40dc-9a3c-0083ca039f18'

@@ -1,0 +1,10 @@
+uuid: 32677c2e-6fb2-4d92-81c4-1f1c5088622c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pClo4pHeOKIgeiHjyRaADjRshFTb4dt1kQTTnfAiurM
+id: dripyard_button
+label: Button
+revision: false
+description: 'Provides a block type to add a simple button.'

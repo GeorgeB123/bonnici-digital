@@ -1,0 +1,23 @@
+uuid: 4cb8aeaf-178c-4d21-9953-3628be1d949d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_button
+    - field.storage.block_content.dripyard_button_size
+  module:
+    - options
+_core:
+  default_config_hash: RWWNxXoe4R0UDmNs6J8xJ-wGlwa-q7Dwynt6vmS4Prg
+id: block_content.dripyard_button.dripyard_button_size
+field_name: dripyard_button_size
+entity_type: block_content
+bundle: dripyard_button
+label: 'Button Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,10 @@
+uuid: 4eef2991-4f3b-4fe8-a30e-1574e2cde56b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: i1QS8VHVRqBWdVmjg2m-I4BrDj4H1H3f-IQXsgB2qGA
+id: dripyard_hero
+label: Hero
+revision: false
+description: 'Provides a block type for Dripyard hero component'

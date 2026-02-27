@@ -1,0 +1,62 @@
+uuid: 008b10e8-43f6-460c-bfd5-7e4227ee4874
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_card_full_image
+    - field.field.block_content.dripyard_card_full_image.dripyard_image_media
+    - field.field.block_content.dripyard_card_full_image.dripyard_link
+    - field.field.block_content.dripyard_card_full_image.dripyard_overlay_color
+    - field.field.block_content.dripyard_card_full_image.dripyard_title
+    - image.style.dripyard_card_full_image
+  module:
+    - link
+    - media
+    - options
+    - text
+_core:
+  default_config_hash: j6GeEvScE8vvMC3QkeEF9f6mXWZ4Mo0NaaVBMKpF47Q
+id: block_content.dripyard_card_full_image.default
+targetEntityType: block_content
+bundle: dripyard_card_full_image
+mode: default
+content:
+  dripyard_image_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: dripyard_card_full_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  dripyard_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  dripyard_overlay_color:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  dripyard_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,5705 @@
+uuid: 53eecf76-1d8b-42e7-af3f-0f1303a75cdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: 69OQu_que_mK9jMEt6DFfkm9taG8n7ZojtEsK0DXyVY
+id: block_content.dripyard_suffix_icon
+field_name: dripyard_suffix_icon
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: '0'
+    -
+      value: '1'
+      label: '1'
+    -
+      value: '2'
+      label: '2'
+    -
+      value: '3'
+      label: '3'
+    -
+      value: '4'
+      label: '4'
+    -
+      value: 42-group
+      label: 42-group
+    -
+      value: '5'
+      label: '5'
+    -
+      value: 500px
+      label: 500px
+    -
+      value: '6'
+      label: '6'
+    -
+      value: '7'
+      label: '7'
+    -
+      value: '8'
+      label: '8'
+    -
+      value: '9'
+      label: '9'
+    -
+      value: a
+      label: a
+    -
+      value: accessible-icon
+      label: accessible-icon
+    -
+      value: accusoft
+      label: accusoft
+    -
+      value: address-book
+      label: address-book
+    -
+      value: address-card
+      label: address-card
+    -
+      value: adn
+      label: adn
+    -
+      value: adversal
+      label: adversal
+    -
+      value: affiliatetheme
+      label: affiliatetheme
+    -
+      value: airbnb
+      label: airbnb
+    -
+      value: algolia
+      label: algolia
+    -
+      value: align-center
+      label: align-center
+    -
+      value: align-justify
+      label: align-justify
+    -
+      value: align-left
+      label: align-left
+    -
+      value: align-right
+      label: align-right
+    -
+      value: alipay
+      label: alipay
+    -
+      value: amazon-pay
+      label: amazon-pay
+    -
+      value: amazon
+      label: amazon
+    -
+      value: amilia
+      label: amilia
+    -
+      value: anchor-circle-check
+      label: anchor-circle-check
+    -
+      value: anchor-circle-exclamation
+      label: anchor-circle-exclamation
+    -
+      value: anchor-circle-xmark
+      label: anchor-circle-xmark
+    -
+      value: anchor-lock
+      label: anchor-lock
+    -
+      value: anchor
+      label: anchor
+    -
+      value: android
+      label: android
+    -
+      value: angellist
+      label: angellist
+    -
+      value: angle-down
+      label: angle-down
+    -
+      value: angle-left
+      label: angle-left
+    -
+      value: angle-right
+      label: angle-right
+    -
+      value: angle-up
+      label: angle-up
+    -
+      value: angles-down
+      label: angles-down
+    -
+      value: angles-left
+      label: angles-left
+    -
+      value: angles-right
+      label: angles-right
+    -
+      value: angles-up
+      label: angles-up
+    -
+      value: angrycreative
+      label: angrycreative
+    -
+      value: angular
+      label: angular
+    -
+      value: ankh
+      label: ankh
+    -
+      value: app-store-ios
+      label: app-store-ios
+    -
+      value: app-store
+      label: app-store
+    -
+      value: apper
+      label: apper
+    -
+      value: apple-pay
+      label: apple-pay
+    -
+      value: apple-whole
+      label: apple-whole
+    -
+      value: apple
+      label: apple
+    -
+      value: archway
+      label: archway
+    -
+      value: arrow-down-1-9
+      label: arrow-down-1-9
+    -
+      value: arrow-down-9-1
+      label: arrow-down-9-1
+    -
+      value: arrow-down-a-z
+      label: arrow-down-a-z
+    -
+      value: arrow-down-long
+      label: arrow-down-long
+    -
+      value: arrow-down-short-wide
+      label: arrow-down-short-wide
+    -
+      value: arrow-down-up-across-line
+      label: arrow-down-up-across-line
+    -
+      value: arrow-down-up-lock
+      label: arrow-down-up-lock
+    -
+      value: arrow-down-wide-short
+      label: arrow-down-wide-short
+    -
+      value: arrow-down-z-a
+      label: arrow-down-z-a
+    -
+      value: arrow-down
+      label: arrow-down
+    -
+      value: arrow-left-long
+      label: arrow-left-long
+    -
+      value: arrow-left
+      label: arrow-left
+    -
+      value: arrow-pointer
+      label: arrow-pointer
+    -
+      value: arrow-right-arrow-left
+      label: arrow-right-arrow-left
+    -
+      value: arrow-right-from-bracket
+      label: arrow-right-from-bracket
+    -
+      value: arrow-right-long
+      label: arrow-right-long
+    -
+      value: arrow-right-to-bracket
+      label: arrow-right-to-bracket
+    -
+      value: arrow-right-to-city
+      label: arrow-right-to-city
+    -
+      value: arrow-right
+      label: arrow-right
+    -
+      value: arrow-rotate-left
+      label: arrow-rotate-left
+    -
+      value: arrow-rotate-right
+      label: arrow-rotate-right
+    -
+      value: arrow-trend-down
+      label: arrow-trend-down
+    -
+      value: arrow-trend-up
+      label: arrow-trend-up
+    -
+      value: arrow-turn-down
+      label: arrow-turn-down
+    -
+      value: arrow-turn-up
+      label: arrow-turn-up
+    -
+      value: arrow-up-1-9
+      label: arrow-up-1-9
+    -
+      value: arrow-up-9-1
+      label: arrow-up-9-1
+    -
+      value: arrow-up-a-z
+      label: arrow-up-a-z
+    -
+      value: arrow-up-from-bracket
+      label: arrow-up-from-bracket
+    -
+      value: arrow-up-from-ground-water
+      label: arrow-up-from-ground-water
+    -
+      value: arrow-up-from-water-pump
+      label: arrow-up-from-water-pump
+    -
+      value: arrow-up-long
+      label: arrow-up-long
+    -
+      value: arrow-up-right-dots
+      label: arrow-up-right-dots
+    -
+      value: arrow-up-right-from-square
+      label: arrow-up-right-from-square
+    -
+      value: arrow-up-short-wide
+      label: arrow-up-short-wide
+    -
+      value: arrow-up-wide-short
+      label: arrow-up-wide-short
+    -
+      value: arrow-up-z-a
+      label: arrow-up-z-a
+    -
+      value: arrow-up
+      label: arrow-up
+    -
+      value: arrows-down-to-line
+      label: arrows-down-to-line
+    -
+      value: arrows-down-to-people
+      label: arrows-down-to-people
+    -
+      value: arrows-left-right-to-line
+      label: arrows-left-right-to-line
+    -
+      value: arrows-left-right
+      label: arrows-left-right
+    -
+      value: arrows-rotate
+      label: arrows-rotate
+    -
+      value: arrows-spin
+      label: arrows-spin
+    -
+      value: arrows-split-up-and-left
+      label: arrows-split-up-and-left
+    -
+      value: arrows-to-circle
+      label: arrows-to-circle
+    -
+      value: arrows-to-dot
+      label: arrows-to-dot
+    -
+      value: arrows-to-eye
+      label: arrows-to-eye
+    -
+      value: arrows-turn-right
+      label: arrows-turn-right
+    -
+      value: arrows-turn-to-dots
+      label: arrows-turn-to-dots
+    -
+      value: arrows-up-down-left-right
+      label: arrows-up-down-left-right
+    -
+      value: arrows-up-down
+      label: arrows-up-down
+    -
+      value: arrows-up-to-line
+      label: arrows-up-to-line
+    -
+      value: artstation
+      label: artstation
+    -
+      value: asterisk
+      label: asterisk
+    -
+      value: asymmetrik
+      label: asymmetrik
+    -
+      value: at
+      label: at
+    -
+      value: atlassian
+      label: atlassian
+    -
+      value: atom
+      label: atom
+    -
+      value: audible
+      label: audible
+    -
+      value: audio-description
+      label: audio-description
+    -
+      value: austral-sign
+      label: austral-sign
+    -
+      value: autoprefixer
+      label: autoprefixer
+    -
+      value: avianex
+      label: avianex
+    -
+      value: aviato
+      label: aviato
+    -
+      value: award
+      label: award
+    -
+      value: aws
+      label: aws
+    -
+      value: b
+      label: b
+    -
+      value: baby-carriage
+      label: baby-carriage
+    -
+      value: baby
+      label: baby
+    -
+      value: backward-fast
+      label: backward-fast
+    -
+      value: backward-step
+      label: backward-step
+    -
+      value: backward
+      label: backward
+    -
+      value: bacon
+      label: bacon
+    -
+      value: bacteria
+      label: bacteria
+    -
+      value: bacterium
+      label: bacterium
+    -
+      value: bag-shopping
+      label: bag-shopping
+    -
+      value: bahai
+      label: bahai
+    -
+      value: baht-sign
+      label: baht-sign
+    -
+      value: ban-smoking
+      label: ban-smoking
+    -
+      value: ban
+      label: ban
+    -
+      value: bandage
+      label: bandage
+    -
+      value: bandcamp
+      label: bandcamp
+    -
+      value: bangladeshi-taka-sign
+      label: bangladeshi-taka-sign
+    -
+      value: barcode
+      label: barcode
+    -
+      value: bars-progress
+      label: bars-progress
+    -
+      value: bars-staggered
+      label: bars-staggered
+    -
+      value: bars
+      label: bars
+    -
+      value: baseball-bat-ball
+      label: baseball-bat-ball
+    -
+      value: baseball
+      label: baseball
+    -
+      value: basket-shopping
+      label: basket-shopping
+    -
+      value: basketball
+      label: basketball
+    -
+      value: bath
+      label: bath
+    -
+      value: battery-empty
+      label: battery-empty
+    -
+      value: battery-full
+      label: battery-full
+    -
+      value: battery-half
+      label: battery-half
+    -
+      value: battery-quarter
+      label: battery-quarter
+    -
+      value: battery-three-quarters
+      label: battery-three-quarters
+    -
+      value: battle-net
+      label: battle-net
+    -
+      value: bed-pulse
+      label: bed-pulse
+    -
+      value: bed
+      label: bed
+    -
+      value: beer-mug-empty
+      label: beer-mug-empty
+    -
+      value: behance
+      label: behance
+    -
+      value: bell-concierge
+      label: bell-concierge
+    -
+      value: bell-slash
+      label: bell-slash
+    -
+      value: bell
+      label: bell
+    -
+      value: bezier-curve
+      label: bezier-curve
+    -
+      value: bicycle
+      label: bicycle
+    -
+      value: bilibili
+      label: bilibili
+    -
+      value: bimobject
+      label: bimobject
+    -
+      value: binoculars
+      label: binoculars
+    -
+      value: biohazard
+      label: biohazard
+    -
+      value: bitbucket
+      label: bitbucket
+    -
+      value: bitcoin-sign
+      label: bitcoin-sign
+    -
+      value: bitcoin
+      label: bitcoin
+    -
+      value: bity
+      label: bity
+    -
+      value: black-tie
+      label: black-tie
+    -
+      value: blackberry
+      label: blackberry
+    -
+      value: blender-phone
+      label: blender-phone
+    -
+      value: blender
+      label: blender
+    -
+      value: blog
+      label: blog
+    -
+      value: blogger-b
+      label: blogger-b
+    -
+      value: blogger
+      label: blogger
+    -
+      value: bluesky
+      label: bluesky
+    -
+      value: bluetooth-b
+      label: bluetooth-b
+    -
+      value: bluetooth
+      label: bluetooth
+    -
+      value: bold
+      label: bold
+    -
+      value: bolt-lightning
+      label: bolt-lightning
+    -
+      value: bolt
+      label: bolt
+    -
+      value: bomb
+      label: bomb
+    -
+      value: bone
+      label: bone
+    -
+      value: bong
+      label: bong
+    -
+      value: book-atlas
+      label: book-atlas
+    -
+      value: book-bible
+      label: book-bible
+    -
+      value: book-bookmark
+      label: book-bookmark
+    -
+      value: book-journal-whills
+      label: book-journal-whills
+    -
+      value: book-medical
+      label: book-medical
+    -
+      value: book-open-reader
+      label: book-open-reader
+    -
+      value: book-open
+      label: book-open
+    -
+      value: book-quran
+      label: book-quran
+    -
+      value: book-skull
+      label: book-skull
+    -
+      value: book-tanakh
+      label: book-tanakh
+    -
+      value: book
+      label: book
+    -
+      value: bookmark
+      label: bookmark
+    -
+      value: bootstrap
+      label: bootstrap
+    -
+      value: border-all
+      label: border-all
+    -
+      value: border-none
+      label: border-none
+    -
+      value: border-top-left
+      label: border-top-left
+    -
+      value: bore-hole
+      label: bore-hole
+    -
+      value: bots
+      label: bots
+    -
+      value: bottle-droplet
+      label: bottle-droplet
+    -
+      value: bottle-water
+      label: bottle-water
+    -
+      value: bowl-food
+      label: bowl-food
+    -
+      value: bowl-rice
+      label: bowl-rice
+    -
+      value: bowling-ball
+      label: bowling-ball
+    -
+      value: box-archive
+      label: box-archive
+    -
+      value: box-open
+      label: box-open
+    -
+      value: box-tissue
+      label: box-tissue
+    -
+      value: box
+      label: box
+    -
+      value: boxes-packing
+      label: boxes-packing
+    -
+      value: boxes-stacked
+      label: boxes-stacked
+    -
+      value: braille
+      label: braille
+    -
+      value: brain
+      label: brain
+    -
+      value: brave-reverse
+      label: brave-reverse
+    -
+      value: brave
+      label: brave
+    -
+      value: brazilian-real-sign
+      label: brazilian-real-sign
+    -
+      value: bread-slice
+      label: bread-slice
+    -
+      value: bridge-circle-check
+      label: bridge-circle-check
+    -
+      value: bridge-circle-exclamation
+      label: bridge-circle-exclamation
+    -
+      value: bridge-circle-xmark
+      label: bridge-circle-xmark
+    -
+      value: bridge-lock
+      label: bridge-lock
+    -
+      value: bridge-water
+      label: bridge-water
+    -
+      value: bridge
+      label: bridge
+    -
+      value: briefcase-medical
+      label: briefcase-medical
+    -
+      value: briefcase
+      label: briefcase
+    -
+      value: broom-ball
+      label: broom-ball
+    -
+      value: broom
+      label: broom
+    -
+      value: brush
+      label: brush
+    -
+      value: btc
+      label: btc
+    -
+      value: bucket
+      label: bucket
+    -
+      value: buffer
+      label: buffer
+    -
+      value: bug-slash
+      label: bug-slash
+    -
+      value: bug
+      label: bug
+    -
+      value: bugs
+      label: bugs
+    -
+      value: building-circle-arrow-right
+      label: building-circle-arrow-right
+    -
+      value: building-circle-check
+      label: building-circle-check
+    -
+      value: building-circle-exclamation
+      label: building-circle-exclamation
+    -
+      value: building-circle-xmark
+      label: building-circle-xmark
+    -
+      value: building-columns
+      label: building-columns
+    -
+      value: building-flag
+      label: building-flag
+    -
+      value: building-lock
+      label: building-lock
+    -
+      value: building-ngo
+      label: building-ngo
+    -
+      value: building-shield
+      label: building-shield
+    -
+      value: building-un
+      label: building-un
+    -
+      value: building-user
+      label: building-user
+    -
+      value: building-wheat
+      label: building-wheat
+    -
+      value: building
+      label: building
+    -
+      value: bullhorn
+      label: bullhorn
+    -
+      value: bullseye
+      label: bullseye
+    -
+      value: burger
+      label: burger
+    -
+      value: buromobelexperte
+      label: buromobelexperte
+    -
+      value: burst
+      label: burst
+    -
+      value: bus-simple
+      label: bus-simple
+    -
+      value: bus
+      label: bus
+    -
+      value: business-time
+      label: business-time
+    -
+      value: buy-n-large
+      label: buy-n-large
+    -
+      value: buysellads
+      label: buysellads
+    -
+      value: c
+      label: c
+    -
+      value: cable-car
+      label: cable-car
+    -
+      value: cake-candles
+      label: cake-candles
+    -
+      value: calculator
+      label: calculator
+    -
+      value: calendar-check
+      label: calendar-check
+    -
+      value: calendar-day
+      label: calendar-day
+    -
+      value: calendar-days
+      label: calendar-days
+    -
+      value: calendar-minus
+      label: calendar-minus
+    -
+      value: calendar-plus
+      label: calendar-plus
+    -
+      value: calendar-week
+      label: calendar-week
+    -
+      value: calendar-xmark
+      label: calendar-xmark
+    -
+      value: calendar
+      label: calendar
+    -
+      value: camera-retro
+      label: camera-retro
+    -
+      value: camera-rotate
+      label: camera-rotate
+    -
+      value: camera
+      label: camera
+    -
+      value: campground
+      label: campground
+    -
+      value: canadian-maple-leaf
+      label: canadian-maple-leaf
+    -
+      value: candy-cane
+      label: candy-cane
+    -
+      value: cannabis
+      label: cannabis
+    -
+      value: capsules
+      label: capsules
+    -
+      value: car-battery
+      label: car-battery
+    -
+      value: car-burst
+      label: car-burst
+    -
+      value: car-on
+      label: car-on
+    -
+      value: car-rear
+      label: car-rear
+    -
+      value: car-side
+      label: car-side
+    -
+      value: car-tunnel
+      label: car-tunnel
+    -
+      value: car
+      label: car
+    -
+      value: caravan
+      label: caravan
+    -
+      value: caret-down
+      label: caret-down
+    -
+      value: caret-left
+      label: caret-left
+    -
+      value: caret-right
+      label: caret-right
+    -
+      value: caret-up
+      label: caret-up
+    -
+      value: carrot
+      label: carrot
+    -
+      value: cart-arrow-down
+      label: cart-arrow-down
+    -
+      value: cart-flatbed-suitcase
+      label: cart-flatbed-suitcase
+    -
+      value: cart-flatbed
+      label: cart-flatbed
+    -
+      value: cart-plus
+      label: cart-plus
+    -
+      value: cart-shopping
+      label: cart-shopping
+    -
+      value: cash-register
+      label: cash-register
+    -
+      value: cat
+      label: cat
+    -
+      value: cc-amazon-pay
+      label: cc-amazon-pay
+    -
+      value: cc-amex
+      label: cc-amex
+    -
+      value: cc-apple-pay
+      label: cc-apple-pay
+    -
+      value: cc-diners-club
+      label: cc-diners-club
+    -
+      value: cc-discover
+      label: cc-discover
+    -
+      value: cc-jcb
+      label: cc-jcb
+    -
+      value: cc-mastercard
+      label: cc-mastercard
+    -
+      value: cc-paypal
+      label: cc-paypal
+    -
+      value: cc-stripe
+      label: cc-stripe
+    -
+      value: cc-visa
+      label: cc-visa
+    -
+      value: cedi-sign
+      label: cedi-sign
+    -
+      value: cent-sign
+      label: cent-sign
+    -
+      value: centercode
+      label: centercode
+    -
+      value: centos
+      label: centos
+    -
+      value: certificate
+      label: certificate
+    -
+      value: chair
+      label: chair
+    -
+      value: chalkboard-user
+      label: chalkboard-user
+    -
+      value: chalkboard
+      label: chalkboard
+    -
+      value: champagne-glasses
+      label: champagne-glasses
+    -
+      value: charging-station
+      label: charging-station
+    -
+      value: chart-area
+      label: chart-area
+    -
+      value: chart-bar
+      label: chart-bar
+    -
+      value: chart-column
+      label: chart-column
+    -
+      value: chart-diagram
+      label: chart-diagram
+    -
+      value: chart-gantt
+      label: chart-gantt
+    -
+      value: chart-line
+      label: chart-line
+    -
+      value: chart-pie
+      label: chart-pie
+    -
+      value: chart-simple
+      label: chart-simple
+    -
+      value: check-double
+      label: check-double
+    -
+      value: check-to-slot
+      label: check-to-slot
+    -
+      value: check
+      label: check
+    -
+      value: cheese
+      label: cheese
+    -
+      value: chess-bishop
+      label: chess-bishop
+    -
+      value: chess-board
+      label: chess-board
+    -
+      value: chess-king
+      label: chess-king
+    -
+      value: chess-knight
+      label: chess-knight
+    -
+      value: chess-pawn
+      label: chess-pawn
+    -
+      value: chess-queen
+      label: chess-queen
+    -
+      value: chess-rook
+      label: chess-rook
+    -
+      value: chess
+      label: chess
+    -
+      value: chevron-down
+      label: chevron-down
+    -
+      value: chevron-left
+      label: chevron-left
+    -
+      value: chevron-right
+      label: chevron-right
+    -
+      value: chevron-up
+      label: chevron-up
+    -
+      value: child-combatant
+      label: child-combatant
+    -
+      value: child-dress
+      label: child-dress
+    -
+      value: child-reaching
+      label: child-reaching
+    -
+      value: child
+      label: child
+    -
+      value: children
+      label: children
+    -
+      value: chrome
+      label: chrome
+    -
+      value: chromecast
+      label: chromecast
+    -
+      value: church
+      label: church
+    -
+      value: circle-arrow-down
+      label: circle-arrow-down
+    -
+      value: circle-arrow-left
+      label: circle-arrow-left
+    -
+      value: circle-arrow-right
+      label: circle-arrow-right
+    -
+      value: circle-arrow-up
+      label: circle-arrow-up
+    -
+      value: circle-check
+      label: circle-check
+    -
+      value: circle-chevron-down
+      label: circle-chevron-down
+    -
+      value: circle-chevron-left
+      label: circle-chevron-left
+    -
+      value: circle-chevron-right
+      label: circle-chevron-right
+    -
+      value: circle-chevron-up
+      label: circle-chevron-up
+    -
+      value: circle-dollar-to-slot
+      label: circle-dollar-to-slot
+    -
+      value: circle-dot
+      label: circle-dot
+    -
+      value: circle-down
+      label: circle-down
+    -
+      value: circle-exclamation
+      label: circle-exclamation
+    -
+      value: circle-h
+      label: circle-h
+    -
+      value: circle-half-stroke
+      label: circle-half-stroke
+    -
+      value: circle-info
+      label: circle-info
+    -
+      value: circle-left
+      label: circle-left
+    -
+      value: circle-minus
+      label: circle-minus
+    -
+      value: circle-nodes
+      label: circle-nodes
+    -
+      value: circle-notch
+      label: circle-notch
+    -
+      value: circle-pause
+      label: circle-pause
+    -
+      value: circle-play
+      label: circle-play
+    -
+      value: circle-plus
+      label: circle-plus
+    -
+      value: circle-question
+      label: circle-question
+    -
+      value: circle-radiation
+      label: circle-radiation
+    -
+      value: circle-right
+      label: circle-right
+    -
+      value: circle-stop
+      label: circle-stop
+    -
+      value: circle-up
+      label: circle-up
+    -
+      value: circle-user
+      label: circle-user
+    -
+      value: circle-xmark
+      label: circle-xmark
+    -
+      value: circle
+      label: circle
+    -
+      value: city
+      label: city
+    -
+      value: clapperboard
+      label: clapperboard
+    -
+      value: clipboard-check
+      label: clipboard-check
+    -
+      value: clipboard-list
+      label: clipboard-list
+    -
+      value: clipboard-question
+      label: clipboard-question
+    -
+      value: clipboard-user
+      label: clipboard-user
+    -
+      value: clipboard
+      label: clipboard
+    -
+      value: clock-rotate-left
+      label: clock-rotate-left
+    -
+      value: clock
+      label: clock
+    -
+      value: clone
+      label: clone
+    -
+      value: closed-captioning
+      label: closed-captioning
+    -
+      value: cloud-arrow-down
+      label: cloud-arrow-down
+    -
+      value: cloud-arrow-up
+      label: cloud-arrow-up
+    -
+      value: cloud-bolt
+      label: cloud-bolt
+    -
+      value: cloud-meatball
+      label: cloud-meatball
+    -
+      value: cloud-moon-rain
+      label: cloud-moon-rain
+    -
+      value: cloud-moon
+      label: cloud-moon
+    -
+      value: cloud-rain
+      label: cloud-rain
+    -
+      value: cloud-showers-heavy
+      label: cloud-showers-heavy
+    -
+      value: cloud-showers-water
+      label: cloud-showers-water
+    -
+      value: cloud-sun-rain
+      label: cloud-sun-rain
+    -
+      value: cloud-sun
+      label: cloud-sun
+    -
+      value: cloud
+      label: cloud
+    -
+      value: cloudflare
+      label: cloudflare
+    -
+      value: cloudscale
+      label: cloudscale
+    -
+      value: cloudsmith
+      label: cloudsmith
+    -
+      value: cloudversify
+      label: cloudversify
+    -
+      value: clover
+      label: clover
+    -
+      value: cmplid
+      label: cmplid
+    -
+      value: code-branch
+      label: code-branch
+    -
+      value: code-commit
+      label: code-commit
+    -
+      value: code-compare
+      label: code-compare
+    -
+      value: code-fork
+      label: code-fork
+    -
+      value: code-merge
+      label: code-merge
+    -
+      value: code-pull-request
+      label: code-pull-request
+    -
+      value: code
+      label: code
+    -
+      value: codepen
+      label: codepen
+    -
+      value: codiepie
+      label: codiepie
+    -
+      value: coins
+      label: coins
+    -
+      value: colon-sign
+      label: colon-sign
+    -
+      value: comment-dollar
+      label: comment-dollar
+    -
+      value: comment-dots
+      label: comment-dots
+    -
+      value: comment-medical
+      label: comment-medical
+    -
+      value: comment-nodes
+      label: comment-nodes
+    -
+      value: comment-slash
+      label: comment-slash
+    -
+      value: comment-sms
+      label: comment-sms
+    -
+      value: comment
+      label: comment
+    -
+      value: comments-dollar
+      label: comments-dollar
+    -
+      value: comments
+      label: comments
+    -
+      value: compact-disc
+      label: compact-disc
+    -
+      value: compass-drafting
+      label: compass-drafting
+    -
+      value: compass
+      label: compass
+    -
+      value: compress
+      label: compress
+    -
+      value: computer-mouse
+      label: computer-mouse
+    -
+      value: computer
+      label: computer
+    -
+      value: confluence
+      label: confluence
+    -
+      value: connectdevelop
+      label: connectdevelop
+    -
+      value: contao
+      label: contao
+    -
+      value: cookie-bite
+      label: cookie-bite
+    -
+      value: cookie
+      label: cookie
+    -
+      value: copy
+      label: copy
+    -
+      value: copyright
+      label: copyright
+    -
+      value: cotton-bureau
+      label: cotton-bureau
+    -
+      value: couch
+      label: couch
+    -
+      value: cow
+      label: cow
+    -
+      value: cpanel
+      label: cpanel
+    -
+      value: creative-commons-by
+      label: creative-commons-by
+    -
+      value: creative-commons-nc-eu
+      label: creative-commons-nc-eu
+    -
+      value: creative-commons-nc-jp
+      label: creative-commons-nc-jp
+    -
+      value: creative-commons-nc
+      label: creative-commons-nc
+    -
+      value: creative-commons-nd
+      label: creative-commons-nd
+    -
+      value: creative-commons-pd-alt
+      label: creative-commons-pd-alt
+    -
+      value: creative-commons-pd
+      label: creative-commons-pd
+    -
+      value: creative-commons-remix
+      label: creative-commons-remix
+    -
+      value: creative-commons-sa
+      label: creative-commons-sa
+    -
+      value: creative-commons-sampling-plus
+      label: creative-commons-sampling-plus
+    -
+      value: creative-commons-sampling
+      label: creative-commons-sampling
+    -
+      value: creative-commons-share
+      label: creative-commons-share
+    -
+      value: creative-commons-zero
+      label: creative-commons-zero
+    -
+      value: creative-commons
+      label: creative-commons
+    -
+      value: credit-card
+      label: credit-card
+    -
+      value: critical-role
+      label: critical-role
+    -
+      value: crop-simple
+      label: crop-simple
+    -
+      value: crop
+      label: crop
+    -
+      value: cross
+      label: cross
+    -
+      value: crosshairs
+      label: crosshairs
+    -
+      value: crow
+      label: crow
+    -
+      value: crown
+      label: crown
+    -
+      value: crutch
+      label: crutch
+    -
+      value: cruzeiro-sign
+      label: cruzeiro-sign
+    -
+      value: css
+      label: css
+    -
+      value: css3-alt
+      label: css3-alt
+    -
+      value: css3
+      label: css3
+    -
+      value: cube
+      label: cube
+    -
+      value: cubes-stacked
+      label: cubes-stacked
+    -
+      value: cubes
+      label: cubes
+    -
+      value: cuttlefish
+      label: cuttlefish
+    -
+      value: d-and-d-beyond
+      label: d-and-d-beyond
+    -
+      value: d-and-d
+      label: d-and-d
+    -
+      value: d
+      label: d
+    -
+      value: dailymotion
+      label: dailymotion
+    -
+      value: dart-lang
+      label: dart-lang
+    -
+      value: dashcube
+      label: dashcube
+    -
+      value: database
+      label: database
+    -
+      value: debian
+      label: debian
+    -
+      value: deezer
+      label: deezer
+    -
+      value: delete-left
+      label: delete-left
+    -
+      value: delicious
+      label: delicious
+    -
+      value: democrat
+      label: democrat
+    -
+      value: deploydog
+      label: deploydog
+    -
+      value: deskpro
+      label: deskpro
+    -
+      value: desktop
+      label: desktop
+    -
+      value: dev
+      label: dev
+    -
+      value: deviantart
+      label: deviantart
+    -
+      value: dharmachakra
+      label: dharmachakra
+    -
+      value: dhl
+      label: dhl
+    -
+      value: diagram-next
+      label: diagram-next
+    -
+      value: diagram-predecessor
+      label: diagram-predecessor
+    -
+      value: diagram-project
+      label: diagram-project
+    -
+      value: diagram-successor
+      label: diagram-successor
+    -
+      value: diamond-turn-right
+      label: diamond-turn-right
+    -
+      value: diamond
+      label: diamond
+    -
+      value: diaspora
+      label: diaspora
+    -
+      value: dice-d20
+      label: dice-d20
+    -
+      value: dice-d6
+      label: dice-d6
+    -
+      value: dice-five
+      label: dice-five
+    -
+      value: dice-four
+      label: dice-four
+    -
+      value: dice-one
+      label: dice-one
+    -
+      value: dice-six
+      label: dice-six
+    -
+      value: dice-three
+      label: dice-three
+    -
+      value: dice-two
+      label: dice-two
+    -
+      value: dice
+      label: dice
+    -
+      value: digg
+      label: digg
+    -
+      value: digital-ocean
+      label: digital-ocean
+    -
+      value: discord
+      label: discord
+    -
+      value: discourse
+      label: discourse
+    -
+      value: disease
+      label: disease
+    -
+      value: display
+      label: display
+    -
+      value: divide
+      label: divide
+    -
+      value: dna
+      label: dna
+    -
+      value: dochub
+      label: dochub
+    -
+      value: docker
+      label: docker
+    -
+      value: dog
+      label: dog
+    -
+      value: dollar-sign
+      label: dollar-sign
+    -
+      value: dolly
+      label: dolly
+    -
+      value: dong-sign
+      label: dong-sign
+    -
+      value: door-closed
+      label: door-closed
+    -
+      value: door-open
+      label: door-open
+    -
+      value: dove
+      label: dove
+    -
+      value: down-left-and-up-right-to-center
+      label: down-left-and-up-right-to-center
+    -
+      value: down-long
+      label: down-long
+    -
+      value: download
+      label: download
+    -
+      value: draft2digital
+      label: draft2digital
+    -
+      value: dragon
+      label: dragon
+    -
+      value: draw-polygon
+      label: draw-polygon
+    -
+      value: dribbble
+      label: dribbble
+    -
+      value: dropbox
+      label: dropbox
+    -
+      value: droplet-slash
+      label: droplet-slash
+    -
+      value: droplet
+      label: droplet
+    -
+      value: drum-steelpan
+      label: drum-steelpan
+    -
+      value: drum
+      label: drum
+    -
+      value: drumstick-bite
+      label: drumstick-bite
+    -
+      value: drupal
+      label: drupal
+    -
+      value: dumbbell
+      label: dumbbell
+    -
+      value: dumpster-fire
+      label: dumpster-fire
+    -
+      value: dumpster
+      label: dumpster
+    -
+      value: dungeon
+      label: dungeon
+    -
+      value: dyalog
+      label: dyalog
+    -
+      value: e
+      label: e
+    -
+      value: ear-deaf
+      label: ear-deaf
+    -
+      value: ear-listen
+      label: ear-listen
+    -
+      value: earlybirds
+      label: earlybirds
+    -
+      value: earth-africa
+      label: earth-africa
+    -
+      value: earth-americas
+      label: earth-americas
+    -
+      value: earth-asia
+      label: earth-asia
+    -
+      value: earth-europe
+      label: earth-europe
+    -
+      value: earth-oceania
+      label: earth-oceania
+    -
+      value: ebay
+      label: ebay
+    -
+      value: edge-legacy
+      label: edge-legacy
+    -
+      value: edge
+      label: edge
+    -
+      value: egg
+      label: egg
+    -
+      value: eject
+      label: eject
+    -
+      value: elementor
+      label: elementor
+    -
+      value: elevator
+      label: elevator
+    -
+      value: ellipsis-vertical
+      label: ellipsis-vertical
+    -
+      value: ellipsis
+      label: ellipsis
+    -
+      value: ello
+      label: ello
+    -
+      value: ember
+      label: ember
+    -
+      value: empire
+      label: empire
+    -
+      value: envelope-circle-check
+      label: envelope-circle-check
+    -
+      value: envelope-open-text
+      label: envelope-open-text
+    -
+      value: envelope-open
+      label: envelope-open
+    -
+      value: envelope
+      label: envelope
+    -
+      value: envelopes-bulk
+      label: envelopes-bulk
+    -
+      value: envira
+      label: envira
+    -
+      value: equals
+      label: equals
+    -
+      value: eraser
+      label: eraser
+    -
+      value: erlang
+      label: erlang
+    -
+      value: ethereum
+      label: ethereum
+    -
+      value: ethernet
+      label: ethernet
+    -
+      value: etsy
+      label: etsy
+    -
+      value: euro-sign
+      label: euro-sign
+    -
+      value: evernote
+      label: evernote
+    -
+      value: exclamation
+      label: exclamation
+    -
+      value: expand
+      label: expand
+    -
+      value: expeditedssl
+      label: expeditedssl
+    -
+      value: explosion
+      label: explosion
+    -
+      value: eye-dropper
+      label: eye-dropper
+    -
+      value: eye-low-vision
+      label: eye-low-vision
+    -
+      value: eye-slash
+      label: eye-slash
+    -
+      value: eye
+      label: eye
+    -
+      value: f
+      label: f
+    -
+      value: face-angry
+      label: face-angry
+    -
+      value: face-dizzy
+      label: face-dizzy
+    -
+      value: face-flushed
+      label: face-flushed
+    -
+      value: face-frown-open
+      label: face-frown-open
+    -
+      value: face-frown
+      label: face-frown
+    -
+      value: face-grimace
+      label: face-grimace
+    -
+      value: face-grin-beam-sweat
+      label: face-grin-beam-sweat
+    -
+      value: face-grin-beam
+      label: face-grin-beam
+    -
+      value: face-grin-hearts
+      label: face-grin-hearts
+    -
+      value: face-grin-squint-tears
+      label: face-grin-squint-tears
+    -
+      value: face-grin-squint
+      label: face-grin-squint
+    -
+      value: face-grin-stars
+      label: face-grin-stars
+    -
+      value: face-grin-tears
+      label: face-grin-tears
+    -
+      value: face-grin-tongue-squint
+      label: face-grin-tongue-squint
+    -
+      value: face-grin-tongue-wink
+      label: face-grin-tongue-wink
+    -
+      value: face-grin-tongue
+      label: face-grin-tongue
+    -
+      value: face-grin-wide
+      label: face-grin-wide
+    -
+      value: face-grin-wink
+      label: face-grin-wink
+    -
+      value: face-grin
+      label: face-grin
+    -
+      value: face-kiss-beam
+      label: face-kiss-beam
+    -
+      value: face-kiss-wink-heart
+      label: face-kiss-wink-heart
+    -
+      value: face-kiss
+      label: face-kiss
+    -
+      value: face-laugh-beam
+      label: face-laugh-beam
+    -
+      value: face-laugh-squint
+      label: face-laugh-squint
+    -
+      value: face-laugh-wink
+      label: face-laugh-wink
+    -
+      value: face-laugh
+      label: face-laugh
+    -
+      value: face-meh-blank
+      label: face-meh-blank
+    -
+      value: face-meh
+      label: face-meh
+    -
+      value: face-rolling-eyes
+      label: face-rolling-eyes
+    -
+      value: face-sad-cry
+      label: face-sad-cry
+    -
+      value: face-sad-tear
+      label: face-sad-tear
+    -
+      value: face-smile-beam
+      label: face-smile-beam
+    -
+      value: face-smile-wink
+      label: face-smile-wink
+    -
+      value: face-smile
+      label: face-smile
+    -
+      value: face-surprise
+      label: face-surprise
+    -
+      value: face-tired
+      label: face-tired
+    -
+      value: facebook-f
+      label: facebook-f
+    -
+      value: facebook-messenger
+      label: facebook-messenger
+    -
+      value: facebook
+      label: facebook
+    -
+      value: fan
+      label: fan
+    -
+      value: fantasy-flight-games
+      label: fantasy-flight-games
+    -
+      value: faucet-drip
+      label: faucet-drip
+    -
+      value: faucet
+      label: faucet
+    -
+      value: fax
+      label: fax
+    -
+      value: feather-pointed
+      label: feather-pointed
+    -
+      value: feather
+      label: feather
+    -
+      value: fedex
+      label: fedex
+    -
+      value: fedora
+      label: fedora
+    -
+      value: ferry
+      label: ferry
+    -
+      value: figma
+      label: figma
+    -
+      value: file-arrow-down
+      label: file-arrow-down
+    -
+      value: file-arrow-up
+      label: file-arrow-up
+    -
+      value: file-audio
+      label: file-audio
+    -
+      value: file-circle-check
+      label: file-circle-check
+    -
+      value: file-circle-exclamation
+      label: file-circle-exclamation
+    -
+      value: file-circle-minus
+      label: file-circle-minus
+    -
+      value: file-circle-plus
+      label: file-circle-plus
+    -
+      value: file-circle-question
+      label: file-circle-question
+    -
+      value: file-circle-xmark
+      label: file-circle-xmark
+    -
+      value: file-code
+      label: file-code
+    -
+      value: file-contract
+      label: file-contract
+    -
+      value: file-csv
+      label: file-csv
+    -
+      value: file-excel
+      label: file-excel
+    -
+      value: file-export
+      label: file-export
+    -
+      value: file-fragment
+      label: file-fragment
+    -
+      value: file-half-dashed
+      label: file-half-dashed
+    -
+      value: file-image
+      label: file-image
+    -
+      value: file-import
+      label: file-import
+    -
+      value: file-invoice-dollar
+      label: file-invoice-dollar
+    -
+      value: file-invoice
+      label: file-invoice
+    -
+      value: file-lines
+      label: file-lines
+    -
+      value: file-medical
+      label: file-medical
+    -
+      value: file-pdf
+      label: file-pdf
+    -
+      value: file-pen
+      label: file-pen
+    -
+      value: file-powerpoint
+      label: file-powerpoint
+    -
+      value: file-prescription
+      label: file-prescription
+    -
+      value: file-shield
+      label: file-shield
+    -
+      value: file-signature
+      label: file-signature
+    -
+      value: file-video
+      label: file-video
+    -
+      value: file-waveform
+      label: file-waveform
+    -
+      value: file-word
+      label: file-word
+    -
+      value: file-zipper
+      label: file-zipper
+    -
+      value: file
+      label: file
+    -
+      value: files-pinwheel
+      label: files-pinwheel
+    -
+      value: fill-drip
+      label: fill-drip
+    -
+      value: fill
+      label: fill
+    -
+      value: film
+      label: film
+    -
+      value: filter-circle-dollar
+      label: filter-circle-dollar
+    -
+      value: filter-circle-xmark
+      label: filter-circle-xmark
+    -
+      value: filter
+      label: filter
+    -
+      value: fingerprint
+      label: fingerprint
+    -
+      value: fire-burner
+      label: fire-burner
+    -
+      value: fire-extinguisher
+      label: fire-extinguisher
+    -
+      value: fire-flame-curved
+      label: fire-flame-curved
+    -
+      value: fire-flame-simple
+      label: fire-flame-simple
+    -
+      value: fire
+      label: fire
+    -
+      value: firefox-browser
+      label: firefox-browser
+    -
+      value: firefox
+      label: firefox
+    -
+      value: first-order-alt
+      label: first-order-alt
+    -
+      value: first-order
+      label: first-order
+    -
+      value: firstdraft
+      label: firstdraft
+    -
+      value: fish-fins
+      label: fish-fins
+    -
+      value: fish
+      label: fish
+    -
+      value: flag-checkered
+      label: flag-checkered
+    -
+      value: flag-usa
+      label: flag-usa
+    -
+      value: flag
+      label: flag
+    -
+      value: flask-vial
+      label: flask-vial
+    -
+      value: flask
+      label: flask
+    -
+      value: flickr
+      label: flickr
+    -
+      value: flipboard
+      label: flipboard
+    -
+      value: floppy-disk
+      label: floppy-disk
+    -
+      value: florin-sign
+      label: florin-sign
+    -
+      value: flutter
+      label: flutter
+    -
+      value: fly
+      label: fly
+    -
+      value: folder-closed
+      label: folder-closed
+    -
+      value: folder-minus
+      label: folder-minus
+    -
+      value: folder-open
+      label: folder-open
+    -
+      value: folder-plus
+      label: folder-plus
+    -
+      value: folder-tree
+      label: folder-tree
+    -
+      value: folder
+      label: folder
+    -
+      value: font-awesome
+      label: font-awesome
+    -
+      value: font
+      label: font
+    -
+      value: fonticons-fi
+      label: fonticons-fi
+    -
+      value: fonticons
+      label: fonticons
+    -
+      value: football
+      label: football
+    -
+      value: fort-awesome-alt
+      label: fort-awesome-alt
+    -
+      value: fort-awesome
+      label: fort-awesome
+    -
+      value: forumbee
+      label: forumbee
+    -
+      value: forward-fast
+      label: forward-fast
+    -
+      value: forward-step
+      label: forward-step
+    -
+      value: forward
+      label: forward
+    -
+      value: foursquare
+      label: foursquare
+    -
+      value: franc-sign
+      label: franc-sign
+    -
+      value: free-code-camp
+      label: free-code-camp
+    -
+      value: freebsd
+      label: freebsd
+    -
+      value: frog
+      label: frog
+    -
+      value: fulcrum
+      label: fulcrum
+    -
+      value: futbol
+      label: futbol
+    -
+      value: g
+      label: g
+    -
+      value: galactic-republic
+      label: galactic-republic
+    -
+      value: galactic-senate
+      label: galactic-senate
+    -
+      value: gamepad
+      label: gamepad
+    -
+      value: gas-pump
+      label: gas-pump
+    -
+      value: gauge-high
+      label: gauge-high
+    -
+      value: gauge-simple-high
+      label: gauge-simple-high
+    -
+      value: gauge-simple
+      label: gauge-simple
+    -
+      value: gauge
+      label: gauge
+    -
+      value: gavel
+      label: gavel
+    -
+      value: gear
+      label: gear
+    -
+      value: gears
+      label: gears
+    -
+      value: gem
+      label: gem
+    -
+      value: genderless
+      label: genderless
+    -
+      value: get-pocket
+      label: get-pocket
+    -
+      value: gg-circle
+      label: gg-circle
+    -
+      value: gg
+      label: gg
+    -
+      value: ghost
+      label: ghost
+    -
+      value: gift
+      label: gift
+    -
+      value: gifts
+      label: gifts
+    -
+      value: git-alt
+      label: git-alt
+    -
+      value: git
+      label: git
+    -
+      value: github-alt
+      label: github-alt
+    -
+      value: github
+      label: github
+    -
+      value: gitkraken
+      label: gitkraken
+    -
+      value: gitlab
+      label: gitlab
+    -
+      value: gitter
+      label: gitter
+    -
+      value: glass-water-droplet
+      label: glass-water-droplet
+    -
+      value: glass-water
+      label: glass-water
+    -
+      value: glasses
+      label: glasses
+    -
+      value: glide-g
+      label: glide-g
+    -
+      value: glide
+      label: glide
+    -
+      value: globe
+      label: globe
+    -
+      value: gofore
+      label: gofore
+    -
+      value: golang
+      label: golang
+    -
+      value: golf-ball-tee
+      label: golf-ball-tee
+    -
+      value: goodreads-g
+      label: goodreads-g
+    -
+      value: goodreads
+      label: goodreads
+    -
+      value: google-drive
+      label: google-drive
+    -
+      value: google-pay
+      label: google-pay
+    -
+      value: google-play
+      label: google-play
+    -
+      value: google-plus-g
+      label: google-plus-g
+    -
+      value: google-plus
+      label: google-plus
+    -
+      value: google-scholar
+      label: google-scholar
+    -
+      value: google-wallet
+      label: google-wallet
+    -
+      value: google
+      label: google
+    -
+      value: gopuram
+      label: gopuram
+    -
+      value: graduation-cap
+      label: graduation-cap
+    -
+      value: gratipay
+      label: gratipay
+    -
+      value: grav
+      label: grav
+    -
+      value: greater-than-equal
+      label: greater-than-equal
+    -
+      value: greater-than
+      label: greater-than
+    -
+      value: grip-lines-vertical
+      label: grip-lines-vertical
+    -
+      value: grip-lines
+      label: grip-lines
+    -
+      value: grip-vertical
+      label: grip-vertical
+    -
+      value: grip
+      label: grip
+    -
+      value: gripfire
+      label: gripfire
+    -
+      value: group-arrows-rotate
+      label: group-arrows-rotate
+    -
+      value: grunt
+      label: grunt
+    -
+      value: guarani-sign
+      label: guarani-sign
+    -
+      value: guilded
+      label: guilded
+    -
+      value: guitar
+      label: guitar
+    -
+      value: gulp
+      label: gulp
+    -
+      value: gun
+      label: gun
+    -
+      value: h
+      label: h
+    -
+      value: hacker-news
+      label: hacker-news
+    -
+      value: hackerrank
+      label: hackerrank
+    -
+      value: hammer
+      label: hammer
+    -
+      value: hamsa
+      label: hamsa
+    -
+      value: hand-back-fist
+      label: hand-back-fist
+    -
+      value: hand-dots
+      label: hand-dots
+    -
+      value: hand-fist
+      label: hand-fist
+    -
+      value: hand-holding-dollar
+      label: hand-holding-dollar
+    -
+      value: hand-holding-droplet
+      label: hand-holding-droplet
+    -
+      value: hand-holding-hand
+      label: hand-holding-hand
+    -
+      value: hand-holding-heart
+      label: hand-holding-heart
+    -
+      value: hand-holding-medical
+      label: hand-holding-medical
+    -
+      value: hand-holding
+      label: hand-holding
+    -
+      value: hand-lizard
+      label: hand-lizard
+    -
+      value: hand-middle-finger
+      label: hand-middle-finger
+    -
+      value: hand-peace
+      label: hand-peace
+    -
+      value: hand-point-down
+      label: hand-point-down
+    -
+      value: hand-point-left
+      label: hand-point-left
+    -
+      value: hand-point-right
+      label: hand-point-right
+    -
+      value: hand-point-up
+      label: hand-point-up
+    -
+      value: hand-pointer
+      label: hand-pointer
+    -
+      value: hand-scissors
+      label: hand-scissors
+    -
+      value: hand-sparkles
+      label: hand-sparkles
+    -
+      value: hand-spock
+      label: hand-spock
+    -
+      value: hand
+      label: hand
+    -
+      value: handcuffs
+      label: handcuffs
+    -
+      value: hands-asl-interpreting
+      label: hands-asl-interpreting
+    -
+      value: hands-bound
+      label: hands-bound
+    -
+      value: hands-bubbles
+      label: hands-bubbles
+    -
+      value: hands-clapping
+      label: hands-clapping
+    -
+      value: hands-holding-child
+      label: hands-holding-child
+    -
+      value: hands-holding-circle
+      label: hands-holding-circle
+    -
+      value: hands-holding
+      label: hands-holding
+    -
+      value: hands-praying
+      label: hands-praying
+    -
+      value: hands
+      label: hands
+    -
+      value: handshake-angle
+      label: handshake-angle
+    -
+      value: handshake-simple-slash
+      label: handshake-simple-slash
+    -
+      value: handshake-simple
+      label: handshake-simple
+    -
+      value: handshake-slash
+      label: handshake-slash
+    -
+      value: handshake
+      label: handshake
+    -
+      value: hanukiah
+      label: hanukiah
+    -
+      value: hard-drive
+      label: hard-drive
+    -
+      value: hashnode
+      label: hashnode
+    -
+      value: hashtag
+      label: hashtag
+    -
+      value: hat-cowboy-side
+      label: hat-cowboy-side
+    -
+      value: hat-cowboy
+      label: hat-cowboy
+    -
+      value: hat-wizard
+      label: hat-wizard
+    -
+      value: head-side-cough-slash
+      label: head-side-cough-slash
+    -
+      value: head-side-cough
+      label: head-side-cough
+    -
+      value: head-side-mask
+      label: head-side-mask
+    -
+      value: head-side-virus
+      label: head-side-virus
+    -
+      value: heading
+      label: heading
+    -
+      value: headphones-simple
+      label: headphones-simple
+    -
+      value: headphones
+      label: headphones
+    -
+      value: headset
+      label: headset
+    -
+      value: heart-circle-bolt
+      label: heart-circle-bolt
+    -
+      value: heart-circle-check
+      label: heart-circle-check
+    -
+      value: heart-circle-exclamation
+      label: heart-circle-exclamation
+    -
+      value: heart-circle-minus
+      label: heart-circle-minus
+    -
+      value: heart-circle-plus
+      label: heart-circle-plus
+    -
+      value: heart-circle-xmark
+      label: heart-circle-xmark
+    -
+      value: heart-crack
+      label: heart-crack
+    -
+      value: heart-pulse
+      label: heart-pulse
+    -
+      value: heart
+      label: heart
+    -
+      value: helicopter-symbol
+      label: helicopter-symbol
+    -
+      value: helicopter
+      label: helicopter
+    -
+      value: helmet-safety
+      label: helmet-safety
+    -
+      value: helmet-un
+      label: helmet-un
+    -
+      value: hexagon-nodes-bolt
+      label: hexagon-nodes-bolt
+    -
+      value: hexagon-nodes
+      label: hexagon-nodes
+    -
+      value: highlighter
+      label: highlighter
+    -
+      value: hill-avalanche
+      label: hill-avalanche
+    -
+      value: hill-rockslide
+      label: hill-rockslide
+    -
+      value: hippo
+      label: hippo
+    -
+      value: hips
+      label: hips
+    -
+      value: hire-a-helper
+      label: hire-a-helper
+    -
+      value: hive
+      label: hive
+    -
+      value: hockey-puck
+      label: hockey-puck
+    -
+      value: holly-berry
+      label: holly-berry
+    -
+      value: hooli
+      label: hooli
+    -
+      value: hornbill
+      label: hornbill
+    -
+      value: horse-head
+      label: horse-head
+    -
+      value: horse
+      label: horse
+    -
+      value: hospital-user
+      label: hospital-user
+    -
+      value: hospital
+      label: hospital
+    -
+      value: hot-tub-person
+      label: hot-tub-person
+    -
+      value: hotdog
+      label: hotdog
+    -
+      value: hotel
+      label: hotel
+    -
+      value: hotjar
+      label: hotjar
+    -
+      value: hourglass-end
+      label: hourglass-end
+    -
+      value: hourglass-half
+      label: hourglass-half
+    -
+      value: hourglass-start
+      label: hourglass-start
+    -
+      value: hourglass
+      label: hourglass
+    -
+      value: house-chimney-crack
+      label: house-chimney-crack
+    -
+      value: house-chimney-medical
+      label: house-chimney-medical
+    -
+      value: house-chimney-user
+      label: house-chimney-user
+    -
+      value: house-chimney-window
+      label: house-chimney-window
+    -
+      value: house-chimney
+      label: house-chimney
+    -
+      value: house-circle-check
+      label: house-circle-check
+    -
+      value: house-circle-exclamation
+      label: house-circle-exclamation
+    -
+      value: house-circle-xmark
+      label: house-circle-xmark
+    -
+      value: house-crack
+      label: house-crack
+    -
+      value: house-fire
+      label: house-fire
+    -
+      value: house-flag
+      label: house-flag
+    -
+      value: house-flood-water-circle-arrow-right
+      label: house-flood-water-circle-arrow-right
+    -
+      value: house-flood-water
+      label: house-flood-water
+    -
+      value: house-laptop
+      label: house-laptop
+    -
+      value: house-lock
+      label: house-lock
+    -
+      value: house-medical-circle-check
+      label: house-medical-circle-check
+    -
+      value: house-medical-circle-exclamation
+      label: house-medical-circle-exclamation
+    -
+      value: house-medical-circle-xmark
+      label: house-medical-circle-xmark
+    -
+      value: house-medical-flag
+      label: house-medical-flag
+    -
+      value: house-medical
+      label: house-medical
+    -
+      value: house-signal
+      label: house-signal
+    -
+      value: house-tsunami
+      label: house-tsunami
+    -
+      value: house-user
+      label: house-user
+    -
+      value: house
+      label: house
+    -
+      value: houzz
+      label: houzz
+    -
+      value: hryvnia-sign
+      label: hryvnia-sign
+    -
+      value: html5
+      label: html5
+    -
+      value: hubspot
+      label: hubspot
+    -
+      value: hurricane
+      label: hurricane
+    -
+      value: i-cursor
+      label: i-cursor
+    -
+      value: i
+      label: i
+    -
+      value: ice-cream
+      label: ice-cream
+    -
+      value: icicles
+      label: icicles
+    -
+      value: icons
+      label: icons
+    -
+      value: id-badge
+      label: id-badge
+    -
+      value: id-card-clip
+      label: id-card-clip
+    -
+      value: id-card
+      label: id-card
+    -
+      value: ideal
+      label: ideal
+    -
+      value: igloo
+      label: igloo
+    -
+      value: image-portrait
+      label: image-portrait
+    -
+      value: image
+      label: image
+    -
+      value: images
+      label: images
+    -
+      value: imdb
+      label: imdb
+    -
+      value: inbox
+      label: inbox
+    -
+      value: indent
+      label: indent
+    -
+      value: indian-rupee-sign
+      label: indian-rupee-sign
+    -
+      value: industry
+      label: industry
+    -
+      value: infinity
+      label: infinity
+    -
+      value: info
+      label: info
+    -
+      value: instagram
+      label: instagram
+    -
+      value: instalod
+      label: instalod
+    -
+      value: intercom
+      label: intercom
+    -
+      value: internet-explorer
+      label: internet-explorer
+    -
+      value: invision
+      label: invision
+    -
+      value: ioxhost
+      label: ioxhost
+    -
+      value: italic
+      label: italic
+    -
+      value: itch-io
+      label: itch-io
+    -
+      value: itunes-note
+      label: itunes-note
+    -
+      value: itunes
+      label: itunes
+    -
+      value: j
+      label: j
+    -
+      value: jar-wheat
+      label: jar-wheat
+    -
+      value: jar
+      label: jar
+    -
+      value: java
+      label: java
+    -
+      value: jedi-order
+      label: jedi-order
+    -
+      value: jedi
+      label: jedi
+    -
+      value: jenkins
+      label: jenkins
+    -
+      value: jet-fighter-up
+      label: jet-fighter-up
+    -
+      value: jet-fighter
+      label: jet-fighter
+    -
+      value: jira
+      label: jira
+    -
+      value: joget
+      label: joget
+    -
+      value: joint
+      label: joint
+    -
+      value: joomla
+      label: joomla
+    -
+      value: js
+      label: js
+    -
+      value: jsfiddle
+      label: jsfiddle
+    -
+      value: jug-detergent
+      label: jug-detergent
+    -
+      value: jxl
+      label: jxl
+    -
+      value: k
+      label: k
+    -
+      value: kaaba
+      label: kaaba
+    -
+      value: kaggle
+      label: kaggle
+    -
+      value: key
+      label: key
+    -
+      value: keybase
+      label: keybase
+    -
+      value: keyboard
+      label: keyboard
+    -
+      value: keycdn
+      label: keycdn
+    -
+      value: khanda
+      label: khanda
+    -
+      value: kickstarter-k
+      label: kickstarter-k
+    -
+      value: kickstarter
+      label: kickstarter
+    -
+      value: kip-sign
+      label: kip-sign
+    -
+      value: kit-medical
+      label: kit-medical
+    -
+      value: kitchen-set
+      label: kitchen-set
+    -
+      value: kiwi-bird
+      label: kiwi-bird
+    -
+      value: korvue
+      label: korvue
+    -
+      value: l
+      label: l
+    -
+      value: land-mine-on
+      label: land-mine-on
+    -
+      value: landmark-dome
+      label: landmark-dome
+    -
+      value: landmark-flag
+      label: landmark-flag
+    -
+      value: landmark
+      label: landmark
+    -
+      value: language
+      label: language
+    -
+      value: laptop-code
+      label: laptop-code
+    -
+      value: laptop-file
+      label: laptop-file
+    -
+      value: laptop-medical
+      label: laptop-medical
+    -
+      value: laptop
+      label: laptop
+    -
+      value: laravel
+      label: laravel
+    -
+      value: lari-sign
+      label: lari-sign
+    -
+      value: lastfm
+      label: lastfm
+    -
+      value: layer-group
+      label: layer-group
+    -
+      value: leaf
+      label: leaf
+    -
+      value: leanpub
+      label: leanpub
+    -
+      value: left-long
+      label: left-long
+    -
+      value: left-right
+      label: left-right
+    -
+      value: lemon
+      label: lemon
+    -
+      value: less-than-equal
+      label: less-than-equal
+    -
+      value: less-than
+      label: less-than
+    -
+      value: less
+      label: less
+    -
+      value: letterboxd
+      label: letterboxd
+    -
+      value: life-ring
+      label: life-ring
+    -
+      value: lightbulb
+      label: lightbulb
+    -
+      value: line
+      label: line
+    -
+      value: lines-leaning
+      label: lines-leaning
+    -
+      value: link-slash
+      label: link-slash
+    -
+      value: link
+      label: link
+    -
+      value: linkedin-in
+      label: linkedin-in
+    -
+      value: linkedin
+      label: linkedin
+    -
+      value: linode
+      label: linode
+    -
+      value: linux
+      label: linux
+    -
+      value: lira-sign
+      label: lira-sign
+    -
+      value: list-check
+      label: list-check
+    -
+      value: list-ol
+      label: list-ol
+    -
+      value: list-ul
+      label: list-ul
+    -
+      value: list
+      label: list
+    -
+      value: litecoin-sign
+      label: litecoin-sign
+    -
+      value: location-arrow
+      label: location-arrow
+    -
+      value: location-crosshairs
+      label: location-crosshairs
+    -
+      value: location-dot
+      label: location-dot
+    -
+      value: location-pin-lock
+      label: location-pin-lock
+    -
+      value: location-pin
+      label: location-pin
+    -
+      value: lock-open
+      label: lock-open
+    -
+      value: lock
+      label: lock
+    -
+      value: locust
+      label: locust
+    -
+      value: lungs-virus
+      label: lungs-virus
+    -
+      value: lungs
+      label: lungs
+    -
+      value: lyft
+      label: lyft
+    -
+      value: m
+      label: m
+    -
+      value: magento
+      label: magento
+    -
+      value: magnet
+      label: magnet
+    -
+      value: magnifying-glass-arrow-right
+      label: magnifying-glass-arrow-right
+    -
+      value: magnifying-glass-chart
+      label: magnifying-glass-chart
+    -
+      value: magnifying-glass-dollar
+      label: magnifying-glass-dollar
+    -
+      value: magnifying-glass-location
+      label: magnifying-glass-location
+    -
+      value: magnifying-glass-minus
+      label: magnifying-glass-minus
+    -
+      value: magnifying-glass-plus
+      label: magnifying-glass-plus
+    -
+      value: magnifying-glass
+      label: magnifying-glass
+    -
+      value: mailchimp
+      label: mailchimp
+    -
+      value: manat-sign
+      label: manat-sign
+    -
+      value: mandalorian
+      label: mandalorian
+    -
+      value: map-location-dot
+      label: map-location-dot
+    -
+      value: map-location
+      label: map-location
+    -
+      value: map-pin
+      label: map-pin
+    -
+      value: map
+      label: map
+    -
+      value: markdown
+      label: markdown
+    -
+      value: marker
+      label: marker
+    -
+      value: mars-and-venus-burst
+      label: mars-and-venus-burst
+    -
+      value: mars-and-venus
+      label: mars-and-venus
+    -
+      value: mars-double
+      label: mars-double
+    -
+      value: mars-stroke-right
+      label: mars-stroke-right
+    -
+      value: mars-stroke-up
+      label: mars-stroke-up
+    -
+      value: mars-stroke
+      label: mars-stroke
+    -
+      value: mars
+      label: mars
+    -
+      value: martini-glass-citrus
+      label: martini-glass-citrus
+    -
+      value: martini-glass-empty
+      label: martini-glass-empty
+    -
+      value: martini-glass
+      label: martini-glass
+    -
+      value: mask-face
+      label: mask-face
+    -
+      value: mask-ventilator
+      label: mask-ventilator
+    -
+      value: mask
+      label: mask
+    -
+      value: masks-theater
+      label: masks-theater
+    -
+      value: mastodon
+      label: mastodon
+    -
+      value: mattress-pillow
+      label: mattress-pillow
+    -
+      value: maxcdn
+      label: maxcdn
+    -
+      value: maximize
+      label: maximize
+    -
+      value: mdb
+      label: mdb
+    -
+      value: medal
+      label: medal
+    -
+      value: medapps
+      label: medapps
+    -
+      value: medium
+      label: medium
+    -
+      value: medrt
+      label: medrt
+    -
+      value: meetup
+      label: meetup
+    -
+      value: megaport
+      label: megaport
+    -
+      value: memory
+      label: memory
+    -
+      value: mendeley
+      label: mendeley
+    -
+      value: menorah
+      label: menorah
+    -
+      value: mercury
+      label: mercury
+    -
+      value: message
+      label: message
+    -
+      value: meta
+      label: meta
+    -
+      value: meteor
+      label: meteor
+    -
+      value: microblog
+      label: microblog
+    -
+      value: microchip
+      label: microchip
+    -
+      value: microphone-lines-slash
+      label: microphone-lines-slash
+    -
+      value: microphone-lines
+      label: microphone-lines
+    -
+      value: microphone-slash
+      label: microphone-slash
+    -
+      value: microphone
+      label: microphone
+    -
+      value: microscope
+      label: microscope
+    -
+      value: microsoft
+      label: microsoft
+    -
+      value: mill-sign
+      label: mill-sign
+    -
+      value: minimize
+      label: minimize
+    -
+      value: mintbit
+      label: mintbit
+    -
+      value: minus
+      label: minus
+    -
+      value: mitten
+      label: mitten
+    -
+      value: mix
+      label: mix
+    -
+      value: mixcloud
+      label: mixcloud
+    -
+      value: mixer
+      label: mixer
+    -
+      value: mizuni
+      label: mizuni
+    -
+      value: mobile-button
+      label: mobile-button
+    -
+      value: mobile-retro
+      label: mobile-retro
+    -
+      value: mobile-screen-button
+      label: mobile-screen-button
+    -
+      value: mobile-screen
+      label: mobile-screen
+    -
+      value: mobile
+      label: mobile
+    -
+      value: modx
+      label: modx
+    -
+      value: monero
+      label: monero
+    -
+      value: money-bill-1-wave
+      label: money-bill-1-wave
+    -
+      value: money-bill-1
+      label: money-bill-1
+    -
+      value: money-bill-transfer
+      label: money-bill-transfer
+    -
+      value: money-bill-trend-up
+      label: money-bill-trend-up
+    -
+      value: money-bill-wave
+      label: money-bill-wave
+    -
+      value: money-bill-wheat
+      label: money-bill-wheat
+    -
+      value: money-bill
+      label: money-bill
+    -
+      value: money-bills
+      label: money-bills
+    -
+      value: money-check-dollar
+      label: money-check-dollar
+    -
+      value: money-check
+      label: money-check
+    -
+      value: monument
+      label: monument
+    -
+      value: moon
+      label: moon
+    -
+      value: mortar-pestle
+      label: mortar-pestle
+    -
+      value: mosque
+      label: mosque
+    -
+      value: mosquito-net
+      label: mosquito-net
+    -
+      value: mosquito
+      label: mosquito
+    -
+      value: motorcycle
+      label: motorcycle
+    -
+      value: mound
+      label: mound
+    -
+      value: mountain-city
+      label: mountain-city
+    -
+      value: mountain-sun
+      label: mountain-sun
+    -
+      value: mountain
+      label: mountain
+    -
+      value: mug-hot
+      label: mug-hot
+    -
+      value: mug-saucer
+      label: mug-saucer
+    -
+      value: music
+      label: music
+    -
+      value: 'n'
+      label: 'n'
+    -
+      value: naira-sign
+      label: naira-sign
+    -
+      value: napster
+      label: napster
+    -
+      value: neos
+      label: neos
+    -
+      value: network-wired
+      label: network-wired
+    -
+      value: neuter
+      label: neuter
+    -
+      value: newspaper
+      label: newspaper
+    -
+      value: nfc-directional
+      label: nfc-directional
+    -
+      value: nfc-symbol
+      label: nfc-symbol
+    -
+      value: nimblr
+      label: nimblr
+    -
+      value: node-js
+      label: node-js
+    -
+      value: node
+      label: node
+    -
+      value: not-equal
+      label: not-equal
+    -
+      value: notdef
+      label: notdef
+    -
+      value: note-sticky
+      label: note-sticky
+    -
+      value: notes-medical
+      label: notes-medical
+    -
+      value: npm
+      label: npm
+    -
+      value: ns8
+      label: ns8
+    -
+      value: nutritionix
+      label: nutritionix
+    -
+      value: o
+      label: o
+    -
+      value: object-group
+      label: object-group
+    -
+      value: object-ungroup
+      label: object-ungroup
+    -
+      value: octopus-deploy
+      label: octopus-deploy
+    -
+      value: odnoklassniki
+      label: odnoklassniki
+    -
+      value: odysee
+      label: odysee
+    -
+      value: oil-can
+      label: oil-can
+    -
+      value: oil-well
+      label: oil-well
+    -
+      value: old-republic
+      label: old-republic
+    -
+      value: om
+      label: om
+    -
+      value: opencart
+      label: opencart
+    -
+      value: openid
+      label: openid
+    -
+      value: opensuse
+      label: opensuse
+    -
+      value: opera
+      label: opera
+    -
+      value: optin-monster
+      label: optin-monster
+    -
+      value: orcid
+      label: orcid
+    -
+      value: osi
+      label: osi
+    -
+      value: otter
+      label: otter
+    -
+      value: outdent
+      label: outdent
+    -
+      value: p
+      label: p
+    -
+      value: padlet
+      label: padlet
+    -
+      value: page4
+      label: page4
+    -
+      value: pagelines
+      label: pagelines
+    -
+      value: pager
+      label: pager
+    -
+      value: paint-roller
+      label: paint-roller
+    -
+      value: paintbrush
+      label: paintbrush
+    -
+      value: palette
+      label: palette
+    -
+      value: palfed
+      label: palfed
+    -
+      value: pallet
+      label: pallet
+    -
+      value: panorama
+      label: panorama
+    -
+      value: paper-plane
+      label: paper-plane
+    -
+      value: paperclip
+      label: paperclip
+    -
+      value: parachute-box
+      label: parachute-box
+    -
+      value: paragraph
+      label: paragraph
+    -
+      value: passport
+      label: passport
+    -
+      value: paste
+      label: paste
+    -
+      value: patreon
+      label: patreon
+    -
+      value: pause
+      label: pause
+    -
+      value: paw
+      label: paw
+    -
+      value: paypal
+      label: paypal
+    -
+      value: peace
+      label: peace
+    -
+      value: pen-clip
+      label: pen-clip
+    -
+      value: pen-fancy
+      label: pen-fancy
+    -
+      value: pen-nib
+      label: pen-nib
+    -
+      value: pen-ruler
+      label: pen-ruler
+    -
+      value: pen-to-square
+      label: pen-to-square
+    -
+      value: pen
+      label: pen
+    -
+      value: pencil
+      label: pencil
+    -
+      value: people-arrows
+      label: people-arrows
+    -
+      value: people-carry-box
+      label: people-carry-box
+    -
+      value: people-group
+      label: people-group
+    -
+      value: people-line
+      label: people-line
+    -
+      value: people-pulling
+      label: people-pulling
+    -
+      value: people-robbery
+      label: people-robbery
+    -
+      value: people-roof
+      label: people-roof
+    -
+      value: pepper-hot
+      label: pepper-hot
+    -
+      value: perbyte
+      label: perbyte
+    -
+      value: percent
+      label: percent
+    -
+      value: periscope
+      label: periscope
+    -
+      value: person-arrow-down-to-line
+      label: person-arrow-down-to-line
+    -
+      value: person-arrow-up-from-line
+      label: person-arrow-up-from-line
+    -
+      value: person-biking
+      label: person-biking
+    -
+      value: person-booth
+      label: person-booth
+    -
+      value: person-breastfeeding
+      label: person-breastfeeding
+    -
+      value: person-burst
+      label: person-burst
+    -
+      value: person-cane
+      label: person-cane
+    -
+      value: person-chalkboard
+      label: person-chalkboard
+    -
+      value: person-circle-check
+      label: person-circle-check
+    -
+      value: person-circle-exclamation
+      label: person-circle-exclamation
+    -
+      value: person-circle-minus
+      label: person-circle-minus
+    -
+      value: person-circle-plus
+      label: person-circle-plus
+    -
+      value: person-circle-question
+      label: person-circle-question
+    -
+      value: person-circle-xmark
+      label: person-circle-xmark
+    -
+      value: person-digging
+      label: person-digging
+    -
+      value: person-dots-from-line
+      label: person-dots-from-line
+    -
+      value: person-dress-burst
+      label: person-dress-burst
+    -
+      value: person-dress
+      label: person-dress
+    -
+      value: person-drowning
+      label: person-drowning
+    -
+      value: person-falling-burst
+      label: person-falling-burst
+    -
+      value: person-falling
+      label: person-falling
+    -
+      value: person-half-dress
+      label: person-half-dress
+    -
+      value: person-harassing
+      label: person-harassing
+    -
+      value: person-hiking
+      label: person-hiking
+    -
+      value: person-military-pointing
+      label: person-military-pointing
+    -
+      value: person-military-rifle
+      label: person-military-rifle
+    -
+      value: person-military-to-person
+      label: person-military-to-person
+    -
+      value: person-praying
+      label: person-praying
+    -
+      value: person-pregnant
+      label: person-pregnant
+    -
+      value: person-rays
+      label: person-rays
+    -
+      value: person-rifle
+      label: person-rifle
+    -
+      value: person-running
+      label: person-running
+    -
+      value: person-shelter
+      label: person-shelter
+    -
+      value: person-skating
+      label: person-skating
+    -
+      value: person-skiing-nordic
+      label: person-skiing-nordic
+    -
+      value: person-skiing
+      label: person-skiing
+    -
+      value: person-snowboarding
+      label: person-snowboarding
+    -
+      value: person-swimming
+      label: person-swimming
+    -
+      value: person-through-window
+      label: person-through-window
+    -
+      value: person-walking-arrow-loop-left
+      label: person-walking-arrow-loop-left
+    -
+      value: person-walking-arrow-right
+      label: person-walking-arrow-right
+    -
+      value: 'person-walking-dashed-line-arrow-right synagogue'
+      label: 'person-walking-dashed-line-arrow-right synagogue'
+    -
+      value: person-walking-luggage
+      label: person-walking-luggage
+    -
+      value: person-walking-with-cane
+      label: person-walking-with-cane
+    -
+      value: person-walking
+      label: person-walking
+    -
+      value: person
+      label: person
+    -
+      value: peseta-sign
+      label: peseta-sign
+    -
+      value: peso-sign
+      label: peso-sign
+    -
+      value: phabricator
+      label: phabricator
+    -
+      value: phoenix-framework
+      label: phoenix-framework
+    -
+      value: phoenix-squadron
+      label: phoenix-squadron
+    -
+      value: phone-flip
+      label: phone-flip
+    -
+      value: phone-slash
+      label: phone-slash
+    -
+      value: phone-volume
+      label: phone-volume
+    -
+      value: phone
+      label: phone
+    -
+      value: photo-film
+      label: photo-film
+    -
+      value: php
+      label: php
+    -
+      value: pied-piper-alt
+      label: pied-piper-alt
+    -
+      value: pied-piper-hat
+      label: pied-piper-hat
+    -
+      value: pied-piper-pp
+      label: pied-piper-pp
+    -
+      value: pied-piper
+      label: pied-piper
+    -
+      value: piggy-bank
+      label: piggy-bank
+    -
+      value: pills
+      label: pills
+    -
+      value: pinterest-p
+      label: pinterest-p
+    -
+      value: pinterest
+      label: pinterest
+    -
+      value: pix
+      label: pix
+    -
+      value: pixiv
+      label: pixiv
+    -
+      value: pizza-slice
+      label: pizza-slice
+    -
+      value: place-of-worship
+      label: place-of-worship
+    -
+      value: plane-arrival
+      label: plane-arrival
+    -
+      value: plane-circle-check
+      label: plane-circle-check
+    -
+      value: plane-circle-exclamation
+      label: plane-circle-exclamation
+    -
+      value: plane-circle-xmark
+      label: plane-circle-xmark
+    -
+      value: plane-departure
+      label: plane-departure
+    -
+      value: plane-lock
+      label: plane-lock
+    -
+      value: plane-slash
+      label: plane-slash
+    -
+      value: plane-up
+      label: plane-up
+    -
+      value: plane
+      label: plane
+    -
+      value: plant-wilt
+      label: plant-wilt
+    -
+      value: plate-wheat
+      label: plate-wheat
+    -
+      value: play
+      label: play
+    -
+      value: playstation
+      label: playstation
+    -
+      value: plug-circle-bolt
+      label: plug-circle-bolt
+    -
+      value: plug-circle-check
+      label: plug-circle-check
+    -
+      value: plug-circle-exclamation
+      label: plug-circle-exclamation
+    -
+      value: plug-circle-minus
+      label: plug-circle-minus
+    -
+      value: plug-circle-plus
+      label: plug-circle-plus
+    -
+      value: plug-circle-xmark
+      label: plug-circle-xmark
+    -
+      value: plug
+      label: plug
+    -
+      value: plus-minus
+      label: plus-minus
+    -
+      value: plus
+      label: plus
+    -
+      value: podcast
+      label: podcast
+    -
+      value: poo-storm
+      label: poo-storm
+    -
+      value: poo
+      label: poo
+    -
+      value: poop
+      label: poop
+    -
+      value: power-off
+      label: power-off
+    -
+      value: prescription-bottle-medical
+      label: prescription-bottle-medical
+    -
+      value: prescription-bottle
+      label: prescription-bottle
+    -
+      value: prescription
+      label: prescription
+    -
+      value: print
+      label: print
+    -
+      value: product-hunt
+      label: product-hunt
+    -
+      value: pump-medical
+      label: pump-medical
+    -
+      value: pump-soap
+      label: pump-soap
+    -
+      value: pushed
+      label: pushed
+    -
+      value: puzzle-piece
+      label: puzzle-piece
+    -
+      value: python
+      label: python
+    -
+      value: q
+      label: q
+    -
+      value: qq
+      label: qq
+    -
+      value: qrcode
+      label: qrcode
+    -
+      value: question
+      label: question
+    -
+      value: quinscape
+      label: quinscape
+    -
+      value: quora
+      label: quora
+    -
+      value: quote-left
+      label: quote-left
+    -
+      value: quote-right
+      label: quote-right
+    -
+      value: r-project
+      label: r-project
+    -
+      value: r
+      label: r
+    -
+      value: radiation
+      label: radiation
+    -
+      value: radio
+      label: radio
+    -
+      value: rainbow
+      label: rainbow
+    -
+      value: ranking-star
+      label: ranking-star
+    -
+      value: raspberry-pi
+      label: raspberry-pi
+    -
+      value: ravelry
+      label: ravelry
+    -
+      value: react
+      label: react
+    -
+      value: reacteurope
+      label: reacteurope
+    -
+      value: readme
+      label: readme
+    -
+      value: rebel
+      label: rebel
+    -
+      value: receipt
+      label: receipt
+    -
+      value: record-vinyl
+      label: record-vinyl
+    -
+      value: rectangle-ad
+      label: rectangle-ad
+    -
+      value: rectangle-list
+      label: rectangle-list
+    -
+      value: rectangle-xmark
+      label: rectangle-xmark
+    -
+      value: recycle
+      label: recycle
+    -
+      value: red-river
+      label: red-river
+    -
+      value: reddit-alien
+      label: reddit-alien
+    -
+      value: reddit
+      label: reddit
+    -
+      value: redhat
+      label: redhat
+    -
+      value: registered
+      label: registered
+    -
+      value: renren
+      label: renren
+    -
+      value: repeat
+      label: repeat
+    -
+      value: reply-all
+      label: reply-all
+    -
+      value: reply
+      label: reply
+    -
+      value: replyd
+      label: replyd
+    -
+      value: republican
+      label: republican
+    -
+      value: researchgate
+      label: researchgate
+    -
+      value: resolving
+      label: resolving
+    -
+      value: restroom
+      label: restroom
+    -
+      value: retweet
+      label: retweet
+    -
+      value: rev
+      label: rev
+    -
+      value: ribbon
+      label: ribbon
+    -
+      value: right-from-bracket
+      label: right-from-bracket
+    -
+      value: right-left
+      label: right-left
+    -
+      value: right-long
+      label: right-long
+    -
+      value: right-to-bracket
+      label: right-to-bracket
+    -
+      value: ring
+      label: ring
+    -
+      value: road-barrier
+      label: road-barrier
+    -
+      value: road-bridge
+      label: road-bridge
+    -
+      value: road-circle-check
+      label: road-circle-check
+    -
+      value: road-circle-exclamation
+      label: road-circle-exclamation
+    -
+      value: road-circle-xmark
+      label: road-circle-xmark
+    -
+      value: road-lock
+      label: road-lock
+    -
+      value: road-spikes
+      label: road-spikes
+    -
+      value: road
+      label: road
+    -
+      value: robot
+      label: robot
+    -
+      value: rocket
+      label: rocket
+    -
+      value: rocketchat
+      label: rocketchat
+    -
+      value: rockrms
+      label: rockrms
+    -
+      value: rotate-left
+      label: rotate-left
+    -
+      value: rotate-right
+      label: rotate-right
+    -
+      value: rotate
+      label: rotate
+    -
+      value: route
+      label: route
+    -
+      value: rss
+      label: rss
+    -
+      value: ruble-sign
+      label: ruble-sign
+    -
+      value: rug
+      label: rug
+    -
+      value: ruler-combined
+      label: ruler-combined
+    -
+      value: ruler-horizontal
+      label: ruler-horizontal
+    -
+      value: ruler-vertical
+      label: ruler-vertical
+    -
+      value: ruler
+      label: ruler
+    -
+      value: rupee-sign
+      label: rupee-sign
+    -
+      value: rupiah-sign
+      label: rupiah-sign
+    -
+      value: rust
+      label: rust
+    -
+      value: s
+      label: s
+    -
+      value: sack-dollar
+      label: sack-dollar
+    -
+      value: sack-xmark
+      label: sack-xmark
+    -
+      value: safari
+      label: safari
+    -
+      value: sailboat
+      label: sailboat
+    -
+      value: salesforce
+      label: salesforce
+    -
+      value: sass
+      label: sass
+    -
+      value: satellite-dish
+      label: satellite-dish
+    -
+      value: satellite
+      label: satellite
+    -
+      value: scale-balanced
+      label: scale-balanced
+    -
+      value: scale-unbalanced-flip
+      label: scale-unbalanced-flip
+    -
+      value: scale-unbalanced
+      label: scale-unbalanced
+    -
+      value: schlix
+      label: schlix
+    -
+      value: school-circle-check
+      label: school-circle-check
+    -
+      value: school-circle-exclamation
+      label: school-circle-exclamation
+    -
+      value: school-circle-xmark
+      label: school-circle-xmark
+    -
+      value: school-flag
+      label: school-flag
+    -
+      value: school-lock
+      label: school-lock
+    -
+      value: school
+      label: school
+    -
+      value: scissors
+      label: scissors
+    -
+      value: screenpal
+      label: screenpal
+    -
+      value: screwdriver-wrench
+      label: screwdriver-wrench
+    -
+      value: screwdriver
+      label: screwdriver
+    -
+      value: scribd
+      label: scribd
+    -
+      value: scroll-torah
+      label: scroll-torah
+    -
+      value: scroll
+      label: scroll
+    -
+      value: sd-card
+      label: sd-card
+    -
+      value: searchengin
+      label: searchengin
+    -
+      value: section
+      label: section
+    -
+      value: seedling
+      label: seedling
+    -
+      value: sellcast
+      label: sellcast
+    -
+      value: sellsy
+      label: sellsy
+    -
+      value: server
+      label: server
+    -
+      value: servicestack
+      label: servicestack
+    -
+      value: shapes
+      label: shapes
+    -
+      value: share-from-square
+      label: share-from-square
+    -
+      value: share-nodes
+      label: share-nodes
+    -
+      value: share
+      label: share
+    -
+      value: sheet-plastic
+      label: sheet-plastic
+    -
+      value: shekel-sign
+      label: shekel-sign
+    -
+      value: shield-cat
+      label: shield-cat
+    -
+      value: shield-dog
+      label: shield-dog
+    -
+      value: shield-halved
+      label: shield-halved
+    -
+      value: shield-heart
+      label: shield-heart
+    -
+      value: shield-virus
+      label: shield-virus
+    -
+      value: shield
+      label: shield
+    -
+      value: ship
+      label: ship
+    -
+      value: shirt
+      label: shirt
+    -
+      value: shirtsinbulk
+      label: shirtsinbulk
+    -
+      value: shoe-prints
+      label: shoe-prints
+    -
+      value: shoelace
+      label: shoelace
+    -
+      value: shop-lock
+      label: shop-lock
+    -
+      value: shop-slash
+      label: shop-slash
+    -
+      value: shop
+      label: shop
+    -
+      value: shopify
+      label: shopify
+    -
+      value: shopware
+      label: shopware
+    -
+      value: shower
+      label: shower
+    -
+      value: shrimp
+      label: shrimp
+    -
+      value: shuffle
+      label: shuffle
+    -
+      value: shuttle-space
+      label: shuttle-space
+    -
+      value: sign-hanging
+      label: sign-hanging
+    -
+      value: signal-messenger
+      label: signal-messenger
+    -
+      value: signal
+      label: signal
+    -
+      value: signature
+      label: signature
+    -
+      value: signs-post
+      label: signs-post
+    -
+      value: sim-card
+      label: sim-card
+    -
+      value: simplybuilt
+      label: simplybuilt
+    -
+      value: sink
+      label: sink
+    -
+      value: sistrix
+      label: sistrix
+    -
+      value: sitemap
+      label: sitemap
+    -
+      value: sith
+      label: sith
+    -
+      value: sitrox
+      label: sitrox
+    -
+      value: sketch
+      label: sketch
+    -
+      value: skull-crossbones
+      label: skull-crossbones
+    -
+      value: skull
+      label: skull
+    -
+      value: skyatlas
+      label: skyatlas
+    -
+      value: skype
+      label: skype
+    -
+      value: slack
+      label: slack
+    -
+      value: slash
+      label: slash
+    -
+      value: sleigh
+      label: sleigh
+    -
+      value: sliders
+      label: sliders
+    -
+      value: slideshare
+      label: slideshare
+    -
+      value: smog
+      label: smog
+    -
+      value: smoking
+      label: smoking
+    -
+      value: snapchat
+      label: snapchat
+    -
+      value: snowflake
+      label: snowflake
+    -
+      value: snowman
+      label: snowman
+    -
+      value: snowplow
+      label: snowplow
+    -
+      value: soap
+      label: soap
+    -
+      value: socks
+      label: socks
+    -
+      value: solar-panel
+      label: solar-panel
+    -
+      value: sort-down
+      label: sort-down
+    -
+      value: sort-up
+      label: sort-up
+    -
+      value: sort
+      label: sort
+    -
+      value: soundcloud
+      label: soundcloud
+    -
+      value: sourcetree
+      label: sourcetree
+    -
+      value: spa
+      label: spa
+    -
+      value: space-awesome
+      label: space-awesome
+    -
+      value: spaghetti-monster-flying
+      label: spaghetti-monster-flying
+    -
+      value: speakap
+      label: speakap
+    -
+      value: speaker-deck
+      label: speaker-deck
+    -
+      value: spell-check
+      label: spell-check
+    -
+      value: spider
+      label: spider
+    -
+      value: spinner
+      label: spinner
+    -
+      value: splotch
+      label: splotch
+    -
+      value: spoon
+      label: spoon
+    -
+      value: spotify
+      label: spotify
+    -
+      value: spray-can-sparkles
+      label: spray-can-sparkles
+    -
+      value: spray-can
+      label: spray-can
+    -
+      value: square-arrow-up-right
+      label: square-arrow-up-right
+    -
+      value: square-behance
+      label: square-behance
+    -
+      value: square-binary
+      label: square-binary
+    -
+      value: square-bluesky
+      label: square-bluesky
+    -
+      value: square-caret-down
+      label: square-caret-down
+    -
+      value: square-caret-left
+      label: square-caret-left
+    -
+      value: square-caret-right
+      label: square-caret-right
+    -
+      value: square-caret-up
+      label: square-caret-up
+    -
+      value: square-check
+      label: square-check
+    -
+      value: square-dribbble
+      label: square-dribbble
+    -
+      value: square-envelope
+      label: square-envelope
+    -
+      value: square-facebook
+      label: square-facebook
+    -
+      value: square-font-awesome-stroke
+      label: square-font-awesome-stroke
+    -
+      value: square-font-awesome
+      label: square-font-awesome
+    -
+      value: square-full
+      label: square-full
+    -
+      value: square-git
+      label: square-git
+    -
+      value: square-github
+      label: square-github
+    -
+      value: square-gitlab
+      label: square-gitlab
+    -
+      value: square-google-plus
+      label: square-google-plus
+    -
+      value: square-h
+      label: square-h
+    -
+      value: square-hacker-news
+      label: square-hacker-news
+    -
+      value: square-instagram
+      label: square-instagram
+    -
+      value: square-js
+      label: square-js
+    -
+      value: square-lastfm
+      label: square-lastfm
+    -
+      value: square-letterboxd
+      label: square-letterboxd
+    -
+      value: square-minus
+      label: square-minus
+    -
+      value: square-nfi
+      label: square-nfi
+    -
+      value: square-odnoklassniki
+      label: square-odnoklassniki
+    -
+      value: square-parking
+      label: square-parking
+    -
+      value: square-pen
+      label: square-pen
+    -
+      value: square-person-confined
+      label: square-person-confined
+    -
+      value: square-phone-flip
+      label: square-phone-flip
+    -
+      value: square-phone
+      label: square-phone
+    -
+      value: square-pied-piper
+      label: square-pied-piper
+    -
+      value: square-pinterest
+      label: square-pinterest
+    -
+      value: square-plus
+      label: square-plus
+    -
+      value: square-poll-horizontal
+      label: square-poll-horizontal
+    -
+      value: square-poll-vertical
+      label: square-poll-vertical
+    -
+      value: square-reddit
+      label: square-reddit
+    -
+      value: square-root-variable
+      label: square-root-variable
+    -
+      value: square-rss
+      label: square-rss
+    -
+      value: square-share-nodes
+      label: square-share-nodes
+    -
+      value: square-snapchat
+      label: square-snapchat
+    -
+      value: square-steam
+      label: square-steam
+    -
+      value: square-threads
+      label: square-threads
+    -
+      value: square-tumblr
+      label: square-tumblr
+    -
+      value: square-twitter
+      label: square-twitter
+    -
+      value: square-up-right
+      label: square-up-right
+    -
+      value: square-upwork
+      label: square-upwork
+    -
+      value: square-viadeo
+      label: square-viadeo
+    -
+      value: square-vimeo
+      label: square-vimeo
+    -
+      value: square-virus
+      label: square-virus
+    -
+      value: square-web-awesome-stroke
+      label: square-web-awesome-stroke
+    -
+      value: square-web-awesome
+      label: square-web-awesome
+    -
+      value: square-whatsapp
+      label: square-whatsapp
+    -
+      value: square-x-twitter
+      label: square-x-twitter
+    -
+      value: square-xing
+      label: square-xing
+    -
+      value: square-xmark
+      label: square-xmark
+    -
+      value: square-youtube
+      label: square-youtube
+    -
+      value: square
+      label: square
+    -
+      value: squarespace
+      label: squarespace
+    -
+      value: stack-exchange
+      label: stack-exchange
+    -
+      value: stack-overflow
+      label: stack-overflow
+    -
+      value: stackpath
+      label: stackpath
+    -
+      value: staff-snake
+      label: staff-snake
+    -
+      value: stairs
+      label: stairs
+    -
+      value: stamp
+      label: stamp
+    -
+      value: stapler
+      label: stapler
+    -
+      value: star-and-crescent
+      label: star-and-crescent
+    -
+      value: star-half-stroke
+      label: star-half-stroke
+    -
+      value: star-half
+      label: star-half
+    -
+      value: star-of-david
+      label: star-of-david
+    -
+      value: star-of-life
+      label: star-of-life
+    -
+      value: star
+      label: star
+    -
+      value: staylinked
+      label: staylinked
+    -
+      value: steam-symbol
+      label: steam-symbol
+    -
+      value: steam
+      label: steam
+    -
+      value: sterling-sign
+      label: sterling-sign
+    -
+      value: stethoscope
+      label: stethoscope
+    -
+      value: sticker-mule
+      label: sticker-mule
+    -
+      value: stop
+      label: stop
+    -
+      value: stopwatch-20
+      label: stopwatch-20
+    -
+      value: stopwatch
+      label: stopwatch
+    -
+      value: store-slash
+      label: store-slash
+    -
+      value: store
+      label: store
+    -
+      value: strava
+      label: strava
+    -
+      value: street-view
+      label: street-view
+    -
+      value: strikethrough
+      label: strikethrough
+    -
+      value: stripe-s
+      label: stripe-s
+    -
+      value: stripe
+      label: stripe
+    -
+      value: stroopwafel
+      label: stroopwafel
+    -
+      value: stubber
+      label: stubber
+    -
+      value: studiovinari
+      label: studiovinari
+    -
+      value: stumbleupon-circle
+      label: stumbleupon-circle
+    -
+      value: stumbleupon
+      label: stumbleupon
+    -
+      value: subscript
+      label: subscript
+    -
+      value: suitcase-medical
+      label: suitcase-medical
+    -
+      value: suitcase-rolling
+      label: suitcase-rolling
+    -
+      value: suitcase
+      label: suitcase
+    -
+      value: sun-plant-wilt
+      label: sun-plant-wilt
+    -
+      value: sun
+      label: sun
+    -
+      value: superpowers
+      label: superpowers
+    -
+      value: superscript
+      label: superscript
+    -
+      value: supple
+      label: supple
+    -
+      value: suse
+      label: suse
+    -
+      value: swatchbook
+      label: swatchbook
+    -
+      value: swift
+      label: swift
+    -
+      value: symfony
+      label: symfony
+    -
+      value: syringe
+      label: syringe
+    -
+      value: t
+      label: t
+    -
+      value: table-cells-column-lock
+      label: table-cells-column-lock
+    -
+      value: table-cells-large
+      label: table-cells-large
+    -
+      value: table-cells-row-lock
+      label: table-cells-row-lock
+    -
+      value: table-cells-row-unlock
+      label: table-cells-row-unlock
+    -
+      value: table-cells
+      label: table-cells
+    -
+      value: table-columns
+      label: table-columns
+    -
+      value: table-list
+      label: table-list
+    -
+      value: table-tennis-paddle-ball
+      label: table-tennis-paddle-ball
+    -
+      value: table
+      label: table
+    -
+      value: tablet-button
+      label: tablet-button
+    -
+      value: tablet-screen-button
+      label: tablet-screen-button
+    -
+      value: tablet
+      label: tablet
+    -
+      value: tablets
+      label: tablets
+    -
+      value: tachograph-digital
+      label: tachograph-digital
+    -
+      value: tag
+      label: tag
+    -
+      value: tags
+      label: tags
+    -
+      value: tape
+      label: tape
+    -
+      value: tarp-droplet
+      label: tarp-droplet
+    -
+      value: tarp
+      label: tarp
+    -
+      value: taxi
+      label: taxi
+    -
+      value: teamspeak
+      label: teamspeak
+    -
+      value: teeth-open
+      label: teeth-open
+    -
+      value: teeth
+      label: teeth
+    -
+      value: telegram
+      label: telegram
+    -
+      value: temperature-arrow-down
+      label: temperature-arrow-down
+    -
+      value: temperature-arrow-up
+      label: temperature-arrow-up
+    -
+      value: temperature-empty
+      label: temperature-empty
+    -
+      value: temperature-full
+      label: temperature-full
+    -
+      value: temperature-half
+      label: temperature-half
+    -
+      value: temperature-high
+      label: temperature-high
+    -
+      value: temperature-low
+      label: temperature-low
+    -
+      value: temperature-quarter
+      label: temperature-quarter
+    -
+      value: temperature-three-quarters
+      label: temperature-three-quarters
+    -
+      value: tencent-weibo
+      label: tencent-weibo
+    -
+      value: tenge-sign
+      label: tenge-sign
+    -
+      value: tent-arrow-down-to-line
+      label: tent-arrow-down-to-line
+    -
+      value: tent-arrow-left-right
+      label: tent-arrow-left-right
+    -
+      value: tent-arrow-turn-left
+      label: tent-arrow-turn-left
+    -
+      value: tent-arrows-down
+      label: tent-arrows-down
+    -
+      value: tent
+      label: tent
+    -
+      value: tents
+      label: tents
+    -
+      value: terminal
+      label: terminal
+    -
+      value: text-height
+      label: text-height
+    -
+      value: text-slash
+      label: text-slash
+    -
+      value: text-width
+      label: text-width
+    -
+      value: the-red-yeti
+      label: the-red-yeti
+    -
+      value: themeco
+      label: themeco
+    -
+      value: themeisle
+      label: themeisle
+    -
+      value: thermometer
+      label: thermometer
+    -
+      value: think-peaks
+      label: think-peaks
+    -
+      value: threads
+      label: threads
+    -
+      value: thumbs-down
+      label: thumbs-down
+    -
+      value: thumbs-up
+      label: thumbs-up
+    -
+      value: thumbtack-slash
+      label: thumbtack-slash
+    -
+      value: thumbtack
+      label: thumbtack
+    -
+      value: ticket-simple
+      label: ticket-simple
+    -
+      value: ticket
+      label: ticket
+    -
+      value: tiktok
+      label: tiktok
+    -
+      value: timeline
+      label: timeline
+    -
+      value: toggle-off
+      label: toggle-off
+    -
+      value: toggle-on
+      label: toggle-on
+    -
+      value: toilet-paper-slash
+      label: toilet-paper-slash
+    -
+      value: toilet-paper
+      label: toilet-paper
+    -
+      value: toilet-portable
+      label: toilet-portable
+    -
+      value: toilet
+      label: toilet
+    -
+      value: toilets-portable
+      label: toilets-portable
+    -
+      value: toolbox
+      label: toolbox
+    -
+      value: tooth
+      label: tooth
+    -
+      value: torii-gate
+      label: torii-gate
+    -
+      value: tornado
+      label: tornado
+    -
+      value: tower-broadcast
+      label: tower-broadcast
+    -
+      value: tower-cell
+      label: tower-cell
+    -
+      value: tower-observation
+      label: tower-observation
+    -
+      value: tractor
+      label: tractor
+    -
+      value: trade-federation
+      label: trade-federation
+    -
+      value: trademark
+      label: trademark
+    -
+      value: traffic-light
+      label: traffic-light
+    -
+      value: trailer
+      label: trailer
+    -
+      value: train-subway
+      label: train-subway
+    -
+      value: train-tram
+      label: train-tram
+    -
+      value: train
+      label: train
+    -
+      value: transgender
+      label: transgender
+    -
+      value: trash-arrow-up
+      label: trash-arrow-up
+    -
+      value: trash-can-arrow-up
+      label: trash-can-arrow-up
+    -
+      value: trash-can
+      label: trash-can
+    -
+      value: trash
+      label: trash
+    -
+      value: tree-city
+      label: tree-city
+    -
+      value: tree
+      label: tree
+    -
+      value: trello
+      label: trello
+    -
+      value: triangle-exclamation
+      label: triangle-exclamation
+    -
+      value: trophy
+      label: trophy
+    -
+      value: trowel-bricks
+      label: trowel-bricks
+    -
+      value: trowel
+      label: trowel
+    -
+      value: truck-arrow-right
+      label: truck-arrow-right
+    -
+      value: truck-droplet
+      label: truck-droplet
+    -
+      value: truck-fast
+      label: truck-fast
+    -
+      value: truck-field-un
+      label: truck-field-un
+    -
+      value: truck-field
+      label: truck-field
+    -
+      value: truck-front
+      label: truck-front
+    -
+      value: truck-medical
+      label: truck-medical
+    -
+      value: truck-monster
+      label: truck-monster
+    -
+      value: truck-moving
+      label: truck-moving
+    -
+      value: truck-pickup
+      label: truck-pickup
+    -
+      value: truck-plane
+      label: truck-plane
+    -
+      value: truck-ramp-box
+      label: truck-ramp-box
+    -
+      value: truck
+      label: truck
+    -
+      value: tty
+      label: tty
+    -
+      value: tumblr
+      label: tumblr
+    -
+      value: turkish-lira-sign
+      label: turkish-lira-sign
+    -
+      value: turn-down
+      label: turn-down
+    -
+      value: turn-up
+      label: turn-up
+    -
+      value: tv
+      label: tv
+    -
+      value: twitch
+      label: twitch
+    -
+      value: twitter
+      label: twitter
+    -
+      value: typo3
+      label: typo3
+    -
+      value: u
+      label: u
+    -
+      value: uber
+      label: uber
+    -
+      value: ubuntu
+      label: ubuntu
+    -
+      value: uikit
+      label: uikit
+    -
+      value: umbraco
+      label: umbraco
+    -
+      value: umbrella-beach
+      label: umbrella-beach
+    -
+      value: umbrella
+      label: umbrella
+    -
+      value: uncharted
+      label: uncharted
+    -
+      value: underline
+      label: underline
+    -
+      value: uniregistry
+      label: uniregistry
+    -
+      value: unity
+      label: unity
+    -
+      value: universal-access
+      label: universal-access
+    -
+      value: unlock-keyhole
+      label: unlock-keyhole
+    -
+      value: unlock
+      label: unlock
+    -
+      value: unsplash
+      label: unsplash
+    -
+      value: untappd
+      label: untappd
+    -
+      value: up-down-left-right
+      label: up-down-left-right
+    -
+      value: up-down
+      label: up-down
+    -
+      value: up-long
+      label: up-long
+    -
+      value: up-right-and-down-left-from-center
+      label: up-right-and-down-left-from-center
+    -
+      value: up-right-from-square
+      label: up-right-from-square
+    -
+      value: upload
+      label: upload
+    -
+      value: ups
+      label: ups
+    -
+      value: upwork
+      label: upwork
+    -
+      value: usb
+      label: usb
+    -
+      value: user-astronaut
+      label: user-astronaut
+    -
+      value: user-check
+      label: user-check
+    -
+      value: user-clock
+      label: user-clock
+    -
+      value: user-doctor
+      label: user-doctor
+    -
+      value: user-gear
+      label: user-gear
+    -
+      value: user-graduate
+      label: user-graduate
+    -
+      value: user-group
+      label: user-group
+    -
+      value: user-injured
+      label: user-injured
+    -
+      value: user-large-slash
+      label: user-large-slash
+    -
+      value: user-large
+      label: user-large
+    -
+      value: user-lock
+      label: user-lock
+    -
+      value: user-minus
+      label: user-minus
+    -
+      value: user-ninja
+      label: user-ninja
+    -
+      value: user-nurse
+      label: user-nurse
+    -
+      value: user-pen
+      label: user-pen
+    -
+      value: user-plus
+      label: user-plus
+    -
+      value: user-secret
+      label: user-secret
+    -
+      value: user-shield
+      label: user-shield
+    -
+      value: user-slash
+      label: user-slash
+    -
+      value: user-tag
+      label: user-tag
+    -
+      value: user-tie
+      label: user-tie
+    -
+      value: user-xmark
+      label: user-xmark
+    -
+      value: user
+      label: user
+    -
+      value: users-between-lines
+      label: users-between-lines
+    -
+      value: users-gear
+      label: users-gear
+    -
+      value: users-line
+      label: users-line
+    -
+      value: users-rays
+      label: users-rays
+    -
+      value: users-rectangle
+      label: users-rectangle
+    -
+      value: users-slash
+      label: users-slash
+    -
+      value: users-viewfinder
+      label: users-viewfinder
+    -
+      value: users
+      label: users
+    -
+      value: usps
+      label: usps
+    -
+      value: ussunnah
+      label: ussunnah
+    -
+      value: utensils
+      label: utensils
+    -
+      value: v
+      label: v
+    -
+      value: vaadin
+      label: vaadin
+    -
+      value: van-shuttle
+      label: van-shuttle
+    -
+      value: vault
+      label: vault
+    -
+      value: vector-square
+      label: vector-square
+    -
+      value: venus-double
+      label: venus-double
+    -
+      value: venus-mars
+      label: venus-mars
+    -
+      value: venus
+      label: venus
+    -
+      value: vest-patches
+      label: vest-patches
+    -
+      value: vest
+      label: vest
+    -
+      value: viacoin
+      label: viacoin
+    -
+      value: viadeo
+      label: viadeo
+    -
+      value: vial-circle-check
+      label: vial-circle-check
+    -
+      value: vial-virus
+      label: vial-virus
+    -
+      value: vial
+      label: vial
+    -
+      value: vials
+      label: vials
+    -
+      value: viber
+      label: viber
+    -
+      value: video-slash
+      label: video-slash
+    -
+      value: video
+      label: video
+    -
+      value: vihara
+      label: vihara
+    -
+      value: vimeo-v
+      label: vimeo-v
+    -
+      value: vimeo
+      label: vimeo
+    -
+      value: vine
+      label: vine
+    -
+      value: virus-covid-slash
+      label: virus-covid-slash
+    -
+      value: virus-covid
+      label: virus-covid
+    -
+      value: virus-slash
+      label: virus-slash
+    -
+      value: virus
+      label: virus
+    -
+      value: viruses
+      label: viruses
+    -
+      value: vk
+      label: vk
+    -
+      value: vnv
+      label: vnv
+    -
+      value: voicemail
+      label: voicemail
+    -
+      value: volcano
+      label: volcano
+    -
+      value: volleyball
+      label: volleyball
+    -
+      value: volume-high
+      label: volume-high
+    -
+      value: volume-low
+      label: volume-low
+    -
+      value: volume-off
+      label: volume-off
+    -
+      value: volume-xmark
+      label: volume-xmark
+    -
+      value: vr-cardboard
+      label: vr-cardboard
+    -
+      value: vuejs
+      label: vuejs
+    -
+      value: w
+      label: w
+    -
+      value: walkie-talkie
+      label: walkie-talkie
+    -
+      value: wallet
+      label: wallet
+    -
+      value: wand-magic-sparkles
+      label: wand-magic-sparkles
+    -
+      value: wand-magic
+      label: wand-magic
+    -
+      value: wand-sparkles
+      label: wand-sparkles
+    -
+      value: warehouse
+      label: warehouse
+    -
+      value: watchman-monitoring
+      label: watchman-monitoring
+    -
+      value: water-ladder
+      label: water-ladder
+    -
+      value: water
+      label: water
+    -
+      value: wave-square
+      label: wave-square
+    -
+      value: waze
+      label: waze
+    -
+      value: web-awesome
+      label: web-awesome
+    -
+      value: webflow
+      label: webflow
+    -
+      value: weebly
+      label: weebly
+    -
+      value: weibo
+      label: weibo
+    -
+      value: weight-hanging
+      label: weight-hanging
+    -
+      value: weight-scale
+      label: weight-scale
+    -
+      value: weixin
+      label: weixin
+    -
+      value: whatsapp
+      label: whatsapp
+    -
+      value: wheat-awn-circle-exclamation
+      label: wheat-awn-circle-exclamation
+    -
+      value: wheat-awn
+      label: wheat-awn
+    -
+      value: wheelchair-move
+      label: wheelchair-move
+    -
+      value: wheelchair
+      label: wheelchair
+    -
+      value: whiskey-glass
+      label: whiskey-glass
+    -
+      value: whmcs
+      label: whmcs
+    -
+      value: wifi
+      label: wifi
+    -
+      value: wikipedia-w
+      label: wikipedia-w
+    -
+      value: wind
+      label: wind
+    -
+      value: window-maximize
+      label: window-maximize
+    -
+      value: window-minimize
+      label: window-minimize
+    -
+      value: window-restore
+      label: window-restore
+    -
+      value: windows
+      label: windows
+    -
+      value: wine-bottle
+      label: wine-bottle
+    -
+      value: wine-glass-empty
+      label: wine-glass-empty
+    -
+      value: wine-glass
+      label: wine-glass
+    -
+      value: wirsindhandwerk
+      label: wirsindhandwerk
+    -
+      value: wix
+      label: wix
+    -
+      value: wizards-of-the-coast
+      label: wizards-of-the-coast
+    -
+      value: wodu
+      label: wodu
+    -
+      value: wolf-pack-battalion
+      label: wolf-pack-battalion
+    -
+      value: won-sign
+      label: won-sign
+    -
+      value: wordpress-simple
+      label: wordpress-simple
+    -
+      value: wordpress
+      label: wordpress
+    -
+      value: worm
+      label: worm
+    -
+      value: wpbeginner
+      label: wpbeginner
+    -
+      value: wpexplorer
+      label: wpexplorer
+    -
+      value: wpforms
+      label: wpforms
+    -
+      value: wpressr
+      label: wpressr
+    -
+      value: wrench
+      label: wrench
+    -
+      value: x-ray
+      label: x-ray
+    -
+      value: x-twitter
+      label: x-twitter
+    -
+      value: x
+      label: x
+    -
+      value: xbox
+      label: xbox
+    -
+      value: xing
+      label: xing
+    -
+      value: xmark
+      label: xmark
+    -
+      value: xmarks-lines
+      label: xmarks-lines
+    -
+      value: y-combinator
+      label: y-combinator
+    -
+      value: 'y'
+      label: 'y'
+    -
+      value: yahoo
+      label: yahoo
+    -
+      value: yammer
+      label: yammer
+    -
+      value: yandex-international
+      label: yandex-international
+    -
+      value: yandex
+      label: yandex
+    -
+      value: yarn
+      label: yarn
+    -
+      value: yelp
+      label: yelp
+    -
+      value: yen-sign
+      label: yen-sign
+    -
+      value: yin-yang
+      label: yin-yang
+    -
+      value: yoast
+      label: yoast
+    -
+      value: youtube
+      label: youtube
+    -
+      value: z
+      label: z
+    -
+      value: zhihu
+      label: zhihu
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: a5efceed-9474-4aff-8d80-7b91ddd18664
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_wrapper
+    - field.storage.block_content.dripyard_wrapper
+  module:
+    - options
+_core:
+  default_config_hash: FxbdIekBMvxbvaFZw4MZ99Xn0WaAZN3b0JDJU4Jyf_0
+id: block_content.dripyard_wrapper.dripyard_wrapper
+field_name: dripyard_wrapper
+entity_type: block_content
+bundle: dripyard_wrapper
+label: 'Wrapper Type'
+description: 'This block type is used to create wrappers in Layout Builder cells. Place this block at the top of the layout cell and anything underneath it will be wrapped in the wrapper type selected above. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

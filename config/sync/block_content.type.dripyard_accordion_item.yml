@@ -1,0 +1,10 @@
+uuid: a70c48f8-57b7-45da-bed2-374b3bd88f07
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NmPEIglR6bsfZTZ_voAP7tE5OU1cXOMya5xBA8jQxaU
+id: dripyard_accordion_item
+label: 'Accordion Item'
+revision: false
+description: 'Provides an accordion item for displaying content in accordion groups. '

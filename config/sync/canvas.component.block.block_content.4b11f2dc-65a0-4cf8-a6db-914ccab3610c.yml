@@ -1,0 +1,25 @@
+uuid: c5691527-e970-4d2d-bd8c-e09d00319351
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:dripyard_menu_card:4b11f2dc-65a0-4cf8-a6db-914ccab3610c'
+  module:
+    - block_content
+active_version: 3e9bbfe75a7ad032
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:4b11f2dc-65a0-4cf8-a6db-914ccab3610c'
+        label: Consulting
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: Consulting
+id: block.block_content.4b11f2dc-65a0-4cf8-a6db-914ccab3610c
+provider: block_content
+source: block
+source_local_id: 'block_content:4b11f2dc-65a0-4cf8-a6db-914ccab3610c'

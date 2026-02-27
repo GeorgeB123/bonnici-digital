@@ -1,0 +1,21 @@
+uuid: ff349cfc-f491-49e9-8ee3-2f623bb7ea07
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_wrapper
+    - field.storage.block_content.dripyard_wrapper_props
+_core:
+  default_config_hash: TS-nPfmm9_owmBgLi0DIOAAiih9_nlKiTXvDuFs7tA0
+id: block_content.dripyard_wrapper.dripyard_wrapper_props
+field_name: dripyard_wrapper_props
+entity_type: block_content
+bundle: dripyard_wrapper
+label: 'Wrapper Props'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

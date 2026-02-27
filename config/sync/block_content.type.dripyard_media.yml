@@ -1,0 +1,10 @@
+uuid: 6503eeb3-0744-4df9-b78b-b00c2476a6cf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BL_v58uwerQwaP3xOxOZbP9Xakz5E35oPcz6RsM17sg
+id: dripyard_media
+label: Media
+revision: false
+description: 'Provides a block type for embedding media in landing pages.'

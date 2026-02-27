@@ -1,0 +1,21 @@
+uuid: e7211f58-fb33-4380-a1d7-722bbc9ff0c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_card
+    - field.storage.block_content.dripyard_eyebrow
+_core:
+  default_config_hash: 9YkMp4jKyKJzWFtlRS6uB2B8mHRCXOpIJvamjLTdK-U
+id: block_content.dripyard_card.dripyard_eyebrow
+field_name: dripyard_eyebrow
+entity_type: block_content
+bundle: dripyard_card
+label: Eyebrow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

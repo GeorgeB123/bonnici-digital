@@ -1,0 +1,26 @@
+uuid: a8274fa3-bacd-4787-8b6f-500363270bab
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_title
+    - filter.format.dripyard_superbasic
+  module:
+    - text
+_core:
+  default_config_hash: sBhxxDMtYzi0J5z4ZuUFWKhmXwhhAqan_WD-OwpHZOk
+id: block_content.dripyard_hero.dripyard_title
+field_name: dripyard_title
+entity_type: block_content
+bundle: dripyard_hero
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - dripyard_superbasic
+field_type: text_long

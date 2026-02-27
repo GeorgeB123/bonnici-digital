@@ -1,0 +1,25 @@
+uuid: 29e4376d-0a15-4a8d-a198-62350ab713a9
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:dripyard_menu_card:60a0e64b-ecd0-429f-9ae2-db3d623bdd3c'
+  module:
+    - block_content
+active_version: c13fe634af96a509
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:60a0e64b-ecd0-429f-9ae2-db3d623bdd3c'
+        label: Police
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: Police
+id: block.block_content.60a0e64b-ecd0-429f-9ae2-db3d623bdd3c
+provider: block_content
+source: block
+source_local_id: 'block_content:60a0e64b-ecd0-429f-9ae2-db3d623bdd3c'

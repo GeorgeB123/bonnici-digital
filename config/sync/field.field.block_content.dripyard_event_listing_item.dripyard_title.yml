@@ -1,0 +1,26 @@
+uuid: e94806cb-4d34-40e1-9da2-97a61b47d131
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_event_listing_item
+    - field.storage.block_content.dripyard_title
+    - filter.format.plain_text
+  module:
+    - text
+_core:
+  default_config_hash: uV86WQJwZQr9gz0v4GBcjMde1W6VLssFL5F29N7z1As
+id: block_content.dripyard_event_listing_item.dripyard_title
+field_name: dripyard_title
+entity_type: block_content
+bundle: dripyard_event_listing_item
+label: 'Event Title'
+description: 'The title of the event'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

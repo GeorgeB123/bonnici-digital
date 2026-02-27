@@ -1,0 +1,34 @@
+uuid: 02d84951-36da-4ab5-b273-70a27cfb34f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_accordion_item
+    - field.field.block_content.dripyard_accordion_item.body
+    - field.field.block_content.dripyard_accordion_item.dripyard_title
+  module:
+    - text
+_core:
+  default_config_hash: Zg6wZf4XXA4skphtBDOAIfCwm7ZB3KivC-ywkeZqmsw
+id: block_content.dripyard_accordion_item.default
+targetEntityType: block_content
+bundle: dripyard_accordion_item
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  dripyard_title:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

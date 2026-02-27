@@ -1,0 +1,28 @@
+uuid: 4e1ebe46-9efc-4ffd-b9f4-bae0635ac974
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_tab_item
+  module:
+    - layout_builder
+active_version: 8ea972112ae290a8
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_tab_item'
+        label: 'Tab Item'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Tab Item'
+id: block.inline_block.dripyard_tab_item
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_tab_item'

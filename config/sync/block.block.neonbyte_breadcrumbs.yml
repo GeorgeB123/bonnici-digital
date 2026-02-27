@@ -1,0 +1,22 @@
+uuid: 6296b6b1-5349-4b5a-839e-24155a07232a
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - neonbyte
+_core:
+  default_config_hash: TuheIPPn9nxi3gii5hhvHhfqhdAqk7OlktXwLpnmBWI
+id: neonbyte_breadcrumbs
+theme: neonbyte
+region: highlighted
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: e26efdab-9158-456f-950e-5fa10f6c884c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aG9VGK_MSTj0S_HtJeNShR3EWvszu8s01W77Km2g-OU
+name: neonbyte_logo
+label: 'Neonbyte Logo'
+effects:
+  02c0c37a-45e3-458e-93e4-9dbdba908fe1:
+    uuid: 02c0c37a-45e3-458e-93e4-9dbdba908fe1
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false
+  38268837-98b9-4d16-bd84-75fd191b13a3:
+    uuid: 38268837-98b9-4d16-bd84-75fd191b13a3
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

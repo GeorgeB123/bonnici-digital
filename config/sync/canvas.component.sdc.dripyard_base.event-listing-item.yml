@@ -1,0 +1,85 @@
+uuid: 8d77e250-913c-4fae-97a1-1276d6458262
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - link
+  theme:
+    - dripyard_base
+active_version: 77b03e919277a74d
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Summer Music Festival'
+          expression: ℹ︎string␟value
+        url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /events/summer-festival
+              options: {  }
+          expression: ℹ︎link␟url
+        date_time_stamp_begin:
+          required: true
+          field_type: datetime
+          field_storage_settings:
+            datetime_type: datetime
+          field_instance_settings: {  }
+          field_widget: datetime_default
+          default_value:
+            -
+              value: '2024-07-15T14:30:00Z'
+          expression: ℹ︎datetime␟value
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Join us for an amazing outdoor music experience'
+          expression: ℹ︎string␟value
+        formatted_time:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '2:30 PM - 5:00 PM'
+          expression: ℹ︎string␟value
+        location:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Central Park Amphitheater'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Event Listing Item'
+id: sdc.dripyard_base.event-listing-item
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:event-listing-item'

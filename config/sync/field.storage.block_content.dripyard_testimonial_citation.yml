@@ -1,0 +1,23 @@
+uuid: bd8938f5-f72a-42d1-bd0a-01cff34ff903
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: EG8YYU64j5O2Su6TYhkoaGQwhhYo9h_t2qaqTgo4LvA
+id: block_content.dripyard_testimonial_citation
+field_name: dripyard_testimonial_citation
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

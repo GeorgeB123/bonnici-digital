@@ -1,0 +1,25 @@
+uuid: 75d528b1-e876-4510-91bd-22bc8ff6ff06
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_event_listing_item
+    - field.storage.block_content.dripyard_link
+  module:
+    - link
+_core:
+  default_config_hash: Gz-oXpt5VtjJn247Cv92YfjF-dIigUtj4yCY_AvpBJw
+id: block_content.dripyard_event_listing_item.dripyard_link
+field_name: dripyard_link
+entity_type: block_content
+bundle: dripyard_event_listing_item
+label: 'Event URL'
+description: 'Link to the event details page'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

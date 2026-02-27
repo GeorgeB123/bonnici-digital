@@ -1,0 +1,31 @@
+uuid: a2309a4e-a652-4965-b0dc-ff23862a9a46
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_menu_card
+    - field.storage.block_content.dripyard_image_media
+    - media.type.image
+_core:
+  default_config_hash: rdzxpOhqYjVuOunOud0stERuMymODf-oGI-mu9rwFhI
+id: block_content.dripyard_menu_card.dripyard_image_media
+field_name: dripyard_image_media
+entity_type: block_content
+bundle: dripyard_menu_card
+label: 'Image Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

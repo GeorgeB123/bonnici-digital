@@ -1,0 +1,25 @@
+uuid: 4b6966cc-6bab-4f4e-b45e-043622133d53
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_hero_height
+  module:
+    - options
+_core:
+  default_config_hash: 1gt9Kynq1oTROMAbE8d_tZdN8K4nhNgJJAlT8Lg_UdE
+id: block_content.dripyard_hero.dripyard_hero_height
+field_name: dripyard_hero_height
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Hero height'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: full-screen
+default_value_callback: ''
+settings: {  }
+field_type: list_string

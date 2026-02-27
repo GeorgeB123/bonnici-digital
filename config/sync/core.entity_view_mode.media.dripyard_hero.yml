@@ -1,0 +1,13 @@
+uuid: dbfda0bd-be8a-4a86-8c1a-82d42f2fc6de
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: oxIozPs22GGwTt_2-qlhHMhpSlW1AI3rDcNMiNOYIec
+id: media.dripyard_hero
+label: Hero
+description: ''
+targetEntityType: media
+cache: true

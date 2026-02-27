@@ -1,0 +1,58 @@
+uuid: 0291644f-46d3-4f45-a58f-1975d3a48479
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dripyard_base
+active_version: 9743427112a0a222
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        statistic:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '$2,400'
+          expression: ℹ︎string␟value
+        first_line:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Students
+          expression: ℹ︎string␟value
+        second_line:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Enrolled students from 45 countries'
+          expression: ℹ︎string␟value
+        href:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'http://www.drupal.org'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: Statistic
+id: sdc.dripyard_base.statistic
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:statistic'

@@ -1,0 +1,23 @@
+uuid: bad9fe28-7890-4866-b074-39864434ea43
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: ElY2cSJSM3oH3E0dE931MvZnxxQVh4s10J48ZgkoYQM
+id: block_content.dripyard_statistic_second_line
+field_name: dripyard_statistic_second_line
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

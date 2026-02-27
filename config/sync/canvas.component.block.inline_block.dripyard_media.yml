@@ -1,0 +1,28 @@
+uuid: 37d974a9-83ef-4217-a666-e2fb383e2734
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_media
+  module:
+    - layout_builder
+active_version: 09c92764fe598ee5
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_media'
+        label: Media
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: Media
+id: block.inline_block.dripyard_media
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_media'

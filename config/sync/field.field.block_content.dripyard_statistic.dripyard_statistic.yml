@@ -1,0 +1,21 @@
+uuid: 12db5c75-519a-4ccf-914f-62a0b2413be1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+    - field.storage.block_content.dripyard_statistic
+_core:
+  default_config_hash: 1bFKsigA9jl5yhEL3P6rf9sKu9RV7S7i8bMNnLLYI_g
+id: block_content.dripyard_statistic.dripyard_statistic
+field_name: dripyard_statistic
+entity_type: block_content
+bundle: dripyard_statistic
+label: 'Statistic Value'
+description: 'The main statistic number with optional prefix and/or suffix (e.g., $2,400, 98%, 5000+)'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

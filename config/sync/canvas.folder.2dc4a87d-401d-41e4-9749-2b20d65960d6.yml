@@ -1,0 +1,10 @@
+uuid: 2dc4a87d-401d-41e4-9749-2b20d65960d6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dripyard Lists'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.dripyard_base.icon-list
+  - sdc.dripyard_base.icon-list-item

@@ -1,0 +1,38 @@
+uuid: dff4e87b-c0a1-4251-bf31-282bcf06075a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dripyard_base
+active_version: bf19381a421e6f8c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Accordion item title'
+          expression: ℹ︎string␟value
+        open:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+    fallback_metadata:
+      slot_definitions:
+        accordion_item_content:
+          title: Content
+label: 'Accordion item'
+id: sdc.dripyard_base.accordion-item
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:accordion-item'

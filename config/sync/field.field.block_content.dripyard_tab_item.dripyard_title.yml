@@ -1,0 +1,26 @@
+uuid: 4d6b6476-c010-412d-a5d2-2a5b8c862b7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_tab_item
+    - field.storage.block_content.dripyard_title
+    - filter.format.dripyard_superbasic
+  module:
+    - text
+_core:
+  default_config_hash: 04yV13bbwDPX9VF5gD9Vy5CQeedPZhJt2BrQlWIPU_E
+id: block_content.dripyard_tab_item.dripyard_title
+field_name: dripyard_title
+entity_type: block_content
+bundle: dripyard_tab_item
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - dripyard_superbasic
+field_type: text_long

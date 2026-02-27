@@ -1,0 +1,28 @@
+uuid: 6a60779f-7487-4790-9dac-125875f29042
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_card
+  module:
+    - layout_builder
+active_version: 6a42ba7271c61f1e
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_card'
+        label: Card
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: Card
+id: block.inline_block.dripyard_card
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_card'

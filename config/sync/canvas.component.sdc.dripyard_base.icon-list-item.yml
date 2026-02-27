@@ -1,0 +1,50 @@
+uuid: 4889b222-7ae0-47b3-8760-8a584752eb55
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - dripyard_base
+active_version: 22d7d3a101bbb54a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: check
+          expression: ℹ︎string␟value
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'All of our themes are built to WCAG 2.2 AA standards.'
+          expression: ℹ︎string␟value
+        href:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Icon list item'
+id: sdc.dripyard_base.icon-list-item
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:icon-list-item'

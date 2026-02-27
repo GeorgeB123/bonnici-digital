@@ -1,0 +1,25 @@
+uuid: f42986f8-40f1-4f7b-aac3-5726c72dea73
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_button
+    - field.storage.block_content.dripyard_button_style
+  module:
+    - options
+_core:
+  default_config_hash: JTRtdG7WVvemy0-9lP4YQyentU2SLDrVW7kGl23qwhQ
+id: block_content.dripyard_button.dripyard_button_style
+field_name: dripyard_button_style
+entity_type: block_content
+bundle: dripyard_button
+label: 'Button Style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

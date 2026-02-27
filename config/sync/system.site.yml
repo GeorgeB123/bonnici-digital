@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
+langcode: en
+uuid: 4d3bad73-b63e-4001-bc95-7e57378b9c40
+name: Bonnici
+mail: george@bonnici.co.nz
+slogan: ''
+page:
+  front: /page/10
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

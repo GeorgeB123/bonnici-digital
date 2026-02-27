@@ -1,0 +1,19 @@
+uuid: 70b9adbb-c9e0-4e5c-a1e2-b7b81a00cc05
+langcode: en
+status: true
+dependencies:
+  theme:
+    - neonbyte
+id: dripyard_book_a_demo_block
+theme: neonbyte
+region: header_third
+weight: 10
+provider: null
+plugin: 'block_content:7d0f606a-e73b-459f-a69e-4cdd4c6f1eaa'
+settings:
+  id: broken
+  label: 'Book a Demo Block'
+  label_display: '0'
+  provider: core
+  view_mode: full
+visibility: {  }

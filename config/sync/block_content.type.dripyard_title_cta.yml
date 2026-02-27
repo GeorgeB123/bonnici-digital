@@ -1,0 +1,10 @@
+uuid: d595a2cd-919d-40cd-a9af-3661fc75f435
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ADnQ4gi4KSUZmZjg1p_4-gh9tLPt1cGCBtpCneqcYaI
+id: dripyard_title_cta
+label: 'Title CTA'
+revision: false
+description: 'Provides a block type to display a large title and corresponding call to action.'

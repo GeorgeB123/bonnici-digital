@@ -1,0 +1,19 @@
+uuid: ac00833d-80bb-4f23-a690-529f8114678f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - neonbyte
+id: neonbyte_footeraddress
+theme: neonbyte
+region: footer_right
+weight: -6
+provider: null
+plugin: 'block_content:0ead4788-1baa-43da-bedc-31e3a4e27df5'
+settings:
+  id: broken
+  label: 'Footer Address'
+  label_display: '0'
+  provider: core
+  view_mode: full
+visibility: {  }

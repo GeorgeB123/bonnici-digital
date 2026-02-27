@@ -1,0 +1,26 @@
+uuid: d9df8b75-264a-4674-9aff-eced0b63fa00
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dripyard_logo_grid
+  module:
+    - views
+active_version: 42c8363e7bc273b7
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:dripyard_logo_grid-block_1'
+        label: 'Logo Grid'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Logo Grid'
+id: block.views_block.dripyard_logo_grid-block_1
+provider: views
+source: block
+source_local_id: 'views_block:dripyard_logo_grid-block_1'

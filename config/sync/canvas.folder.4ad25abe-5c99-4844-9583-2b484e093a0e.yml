@@ -1,0 +1,13 @@
+uuid: 4ad25abe-5c99-4844-9583-2b484e093a0e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dripyard Layout'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.dripyard_base.flex-wrapper
+  - sdc.dripyard_base.grid-cell
+  - sdc.dripyard_base.grid-wrapper
+  - sdc.dripyard_base.layout-dynamic
+  - sdc.dripyard_base.section

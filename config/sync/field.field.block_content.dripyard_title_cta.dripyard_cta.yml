@@ -1,0 +1,25 @@
+uuid: becc5007-d977-49d7-b154-3fb64cbccec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_title_cta
+    - field.storage.block_content.dripyard_cta
+  module:
+    - link
+_core:
+  default_config_hash: sSJ4lNZN8HcmEDfyXh3gAY16qUaobC8YFRadmHQrIRQ
+id: block_content.dripyard_title_cta.dripyard_cta
+field_name: dripyard_cta
+entity_type: block_content
+bundle: dripyard_title_cta
+label: 'CTA Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

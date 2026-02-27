@@ -1,0 +1,38 @@
+uuid: c246057e-d8e2-434a-9218-f1add0c95e6a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dripyard_base
+active_version: db84e92a77f252cb
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Tab
+          expression: ℹ︎string␟value
+        icon:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        tab_panel_content:
+          title: 'Tab content'
+label: Tab
+id: sdc.dripyard_base.tab
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:tab'

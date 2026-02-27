@@ -1,0 +1,28 @@
+uuid: 02606d21-71c1-4fc8-b860-4a74c39fa8ac
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+  module:
+    - layout_builder
+active_version: cb70b0bc52492ab7
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_statistic'
+        label: Statistic
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: Statistic
+id: block.inline_block.dripyard_statistic
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_statistic'

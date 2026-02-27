@@ -1,0 +1,28 @@
+uuid: a671f392-d980-4285-b98e-44b35aeb3340
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_card_full_image
+  module:
+    - layout_builder
+active_version: 0ddcb8374367a127
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_card_full_image'
+        label: 'Card Full Image'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Card Full Image'
+id: block.inline_block.dripyard_card_full_image
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_card_full_image'

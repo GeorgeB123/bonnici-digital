@@ -1,0 +1,23 @@
+uuid: 2b92f586-a8fa-404d-8b48-207203209aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_icon_card
+    - field.storage.block_content.dripyard_icon_size
+  module:
+    - options
+_core:
+  default_config_hash: 2gE45y064GVptnqMR20VBC0XYsddzQRyublaD_DzM8o
+id: block_content.dripyard_icon_card.dripyard_icon_size
+field_name: dripyard_icon_size
+entity_type: block_content
+bundle: dripyard_icon_card
+label: 'Icon Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

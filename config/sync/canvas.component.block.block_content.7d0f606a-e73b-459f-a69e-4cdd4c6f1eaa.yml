@@ -1,0 +1,25 @@
+uuid: e852ac5d-efc9-452c-9452-dcff602fb018
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:dripyard_button:7d0f606a-e73b-459f-a69e-4cdd4c6f1eaa'
+  module:
+    - block_content
+active_version: 21e488d28ea986d0
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:7d0f606a-e73b-459f-a69e-4cdd4c6f1eaa'
+        label: 'Book a Demo'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'Book a Demo'
+id: block.block_content.7d0f606a-e73b-459f-a69e-4cdd4c6f1eaa
+provider: block_content
+source: block
+source_local_id: 'block_content:7d0f606a-e73b-459f-a69e-4cdd4c6f1eaa'

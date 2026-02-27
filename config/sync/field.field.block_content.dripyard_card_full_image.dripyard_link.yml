@@ -1,0 +1,25 @@
+uuid: 56130cb0-d5a1-4fc2-adb8-4f332fb85fd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_card_full_image
+    - field.storage.block_content.dripyard_link
+  module:
+    - link
+_core:
+  default_config_hash: _Bz4Q4w8sYO7tuQaeE3QyXFcDMNntAlAtXQ_12s_Gk0
+id: block_content.dripyard_card_full_image.dripyard_link
+field_name: dripyard_link
+entity_type: block_content
+bundle: dripyard_card_full_image
+label: Link
+description: 'Enter a URL for this card to link to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,22 @@
+uuid: bf0c9ab7-a9d9-454e-8d25-3518bf90017c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - menu_link_content
+_core:
+  default_config_hash: yGdbKLasuP2qC3c9YyjxKwvSbIEkcbpxDskXGrUf9ZY
+id: block_content.dripyard_menu_item_reference
+field_name: dripyard_menu_item_reference
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: menu_link_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

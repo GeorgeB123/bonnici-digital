@@ -1,0 +1,11 @@
+uuid: 0afa7492-2e6b-4d36-9ead-6dc0881aa7bb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dripyard Form Elements'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.dripyard_base.button
+  - sdc.dripyard_base.details
+  - sdc.dripyard_base.fieldset

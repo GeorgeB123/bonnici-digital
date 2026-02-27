@@ -1,0 +1,29 @@
+uuid: e3e19a6f-7c70-4fb8-a765-b980a8638e38
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: ozk7-sH_evg76uwOx3ui6AOjGZc3zRPk7i1tCAr_6qU
+id: block_content.dripyard_orientation
+field_name: dripyard_orientation
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: portrait
+      label: Portrait
+    -
+      value: landscape
+      label: Landscape
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

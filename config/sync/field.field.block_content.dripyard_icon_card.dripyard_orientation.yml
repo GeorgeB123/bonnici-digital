@@ -1,0 +1,25 @@
+uuid: a168995e-f73e-4047-b96c-cf66f7131e31
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_icon_card
+    - field.storage.block_content.dripyard_orientation
+  module:
+    - options
+_core:
+  default_config_hash: 1YObJAjp1E0P2AN87QO725u9RuL7TJMi6rNeX8lLLsI
+id: block_content.dripyard_icon_card.dripyard_orientation
+field_name: dripyard_orientation
+entity_type: block_content
+bundle: dripyard_icon_card
+label: Orientation
+description: 'Select the orientation of the icon card.'
+required: true
+translatable: false
+default_value:
+  -
+    value: portrait
+default_value_callback: ''
+settings: {  }
+field_type: list_string

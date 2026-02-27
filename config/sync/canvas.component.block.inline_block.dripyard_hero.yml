@@ -1,0 +1,28 @@
+uuid: 086fa74d-30b9-4f3c-a69c-8b3e6de0bb08
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+  module:
+    - layout_builder
+active_version: 843e7c86a69a31e9
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_hero'
+        label: Hero
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: Hero
+id: block.inline_block.dripyard_hero
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_hero'

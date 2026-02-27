@@ -1,0 +1,21 @@
+uuid: 0738dd3f-1074-4087-b143-1a3e52158ee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+    - field.storage.block_content.dripyard_statistic_first_line
+_core:
+  default_config_hash: KlUGxPh1z2VqNudaHQ7jlnQREdk4HHryCm9vE08zkc0
+id: block_content.dripyard_statistic.dripyard_statistic_first_line
+field_name: dripyard_statistic_first_line
+entity_type: block_content
+bundle: dripyard_statistic
+label: 'First Line'
+description: 'First line of descriptive text (e.g., Students)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: afb42f11-ac16-4c35-ac1a-2255c2d467bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - neonbyte
+_core:
+  default_config_hash: rukfV9l-9TvUYmoyr3dYdx0COHGvN1OlUJfjSLYiC4U
+id: neonbyte_primary_local_tasks
+theme: neonbyte
+region: fixed_middle_right
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/user/login\r\n/user/register\r\n/user/password"

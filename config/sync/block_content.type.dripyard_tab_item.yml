@@ -1,0 +1,10 @@
+uuid: ec65a9d1-e373-434e-ac0a-5b84a82aaaec
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bEW84Sd4s8rC_xbiw7gbLKKyHp-atzQHBw3a7yHACzw
+id: dripyard_tab_item
+label: 'Tab Item'
+revision: false
+description: 'Provides a tab item for displaying content in tabs. '

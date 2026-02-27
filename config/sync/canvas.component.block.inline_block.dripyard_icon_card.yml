@@ -1,0 +1,28 @@
+uuid: 1c93e12f-552d-479b-b6d0-797b49a562e4
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.dripyard_icon_card
+  module:
+    - layout_builder
+active_version: 71a329f4a6b87855
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'inline_block:dripyard_icon_card'
+        label: 'Icon Card'
+        label_display: '0'
+        provider: layout_builder
+        view_mode: full
+        block_id: null
+        block_revision_id: null
+        block_serialized: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Icon Card'
+id: block.inline_block.dripyard_icon_card
+provider: layout_builder
+source: block
+source_local_id: 'inline_block:dripyard_icon_card'

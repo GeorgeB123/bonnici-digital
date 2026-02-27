@@ -1,0 +1,44 @@
+uuid: d3abda9e-a57e-4bf4-bc1b-780780f9da3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_logo_item
+    - field.field.block_content.dripyard_logo_item.dripyard_image_media
+    - field.field.block_content.dripyard_logo_item.dripyard_link
+    - image.style.dripyard_logo
+  module:
+    - link
+    - media
+_core:
+  default_config_hash: aYEdm1FKh5YOzEaO1tHu0EpFEcLnG-uZ1MVosvS73Ek
+id: block_content.dripyard_logo_item.default
+targetEntityType: block_content
+bundle: dripyard_logo_item
+mode: default
+content:
+  dripyard_image_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: dripyard_logo
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  dripyard_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

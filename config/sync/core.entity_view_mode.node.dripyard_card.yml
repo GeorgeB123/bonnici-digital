@@ -1,0 +1,13 @@
+uuid: 73e4fa76-266b-46e0-9d52-a77c8ad74f11
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ae293WA71Y1X-_1l0DY0jhhxbyWKDPqEqoRB3eLf690
+id: node.dripyard_card
+label: Card
+description: ''
+targetEntityType: node
+cache: true

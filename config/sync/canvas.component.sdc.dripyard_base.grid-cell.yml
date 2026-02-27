@@ -1,0 +1,143 @@
+uuid: 2c59580c-8ca4-447f-b562-5086a3df17ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - dripyard_base
+active_version: 54ebe916bdb35c0b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        theme:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: inherit
+          expression: ℹ︎list_string␟value
+        padding:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: zero
+          expression: ℹ︎list_string␟value
+        columns_small:
+          required: true
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings:
+            min: 1
+            max: 12
+          field_widget: number
+          default_value:
+            -
+              value: 12
+          expression: ℹ︎integer␟value
+        columns_medium:
+          required: true
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings:
+            min: 1
+            max: 12
+          field_widget: number
+          default_value:
+            -
+              value: 6
+          expression: ℹ︎integer␟value
+        columns_large:
+          required: true
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings:
+            min: 1
+            max: 12
+          field_widget: number
+          default_value:
+            -
+              value: 4
+          expression: ℹ︎integer␟value
+        rows_small:
+          required: true
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings:
+            min: 1
+            max: null
+          field_widget: number
+          default_value:
+            -
+              value: 1
+          expression: ℹ︎integer␟value
+        rows_medium:
+          required: true
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings:
+            min: 1
+            max: null
+          field_widget: number
+          default_value:
+            -
+              value: 1
+          expression: ℹ︎integer␟value
+        rows_large:
+          required: true
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings:
+            min: 1
+            max: null
+          field_widget: number
+          default_value:
+            -
+              value: 1
+          expression: ℹ︎integer␟value
+        horizontal_alignment:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        vertical_alignment:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        additional_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Content to be placed inside this grid cell'
+label: 'Grid Cell'
+id: sdc.dripyard_base.grid-cell
+provider: dripyard_base
+source: sdc
+source_local_id: 'dripyard_base:grid-cell'

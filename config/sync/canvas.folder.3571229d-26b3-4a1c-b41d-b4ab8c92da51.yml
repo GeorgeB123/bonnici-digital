@@ -1,0 +1,25 @@
+uuid: 3571229d-26b3-4a1c-b41d-b4ab8c92da51
+langcode: en
+status: true
+dependencies: {  }
+name: 'Inline blocks'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.inline_block.basic
+  - block.inline_block.dripyard_accordion_item
+  - block.inline_block.dripyard_button
+  - block.inline_block.dripyard_card
+  - block.inline_block.dripyard_card_full_image
+  - block.inline_block.dripyard_event_listing_item
+  - block.inline_block.dripyard_hero
+  - block.inline_block.dripyard_icon_card
+  - block.inline_block.dripyard_logo_item
+  - block.inline_block.dripyard_media
+  - block.inline_block.dripyard_menu_card
+  - block.inline_block.dripyard_promo
+  - block.inline_block.dripyard_statistic
+  - block.inline_block.dripyard_tab_item
+  - block.inline_block.dripyard_testimonial
+  - block.inline_block.dripyard_title_cta
+  - block.inline_block.dripyard_wrapper

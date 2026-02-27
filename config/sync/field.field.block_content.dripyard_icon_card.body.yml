@@ -1,0 +1,28 @@
+uuid: 063d8d0a-cf68-4725-a832-3269436ee430
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_icon_card
+    - field.storage.block_content.body
+    - filter.format.plain_text
+  module:
+    - text
+_core:
+  default_config_hash: ZbjV-0464TWoXfn_Ohc_gck3a-iU3NTCkBuSH_CFGWs
+id: block_content.dripyard_icon_card.body
+field_name: body
+entity_type: block_content
+bundle: dripyard_icon_card
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - plain_text
+field_type: text_with_summary

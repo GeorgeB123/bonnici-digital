@@ -1,0 +1,26 @@
+uuid: d467203b-c3f3-43be-825a-8f565efa4743
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - neonbyte
+_core:
+  default_config_hash: DGzTEQxSvN-5xJwhr1no_Z8WNGFfPIUy7NGAvBsydQ8
+id: neonbyte_page_title
+theme: neonbyte
+region: highlighted
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/canvas/10"

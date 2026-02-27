@@ -1,0 +1,23 @@
+uuid: 5457f22b-c298-4543-9053-2447d09672b0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dripyard General'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.dripyard_base.accordion-group
+  - sdc.dripyard_base.accordion-item
+  - sdc.dripyard_base.carousel
+  - sdc.dripyard_base.date-block
+  - sdc.dripyard_base.event-listing-item
+  - sdc.dripyard_base.logo-grid
+  - sdc.dripyard_base.logo-item-canvas
+  - sdc.dripyard_base.pill
+  - sdc.dripyard_base.statistic
+  - sdc.dripyard_base.tab
+  - sdc.dripyard_base.tab-group
+  - sdc.dripyard_base.teaser
+  - sdc.dripyard_base.testimonial-canvas
+  - sdc.dripyard_base.title-cta
+  - sdc.dripyard_base.video-youtube

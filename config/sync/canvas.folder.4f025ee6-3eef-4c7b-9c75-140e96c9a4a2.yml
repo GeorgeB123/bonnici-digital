@@ -1,0 +1,9 @@
+uuid: 4f025ee6-3eef-4c7b-9c75-140e96c9a4a2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dripyard Heros'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.neonbyte.hero

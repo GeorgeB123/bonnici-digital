@@ -1,0 +1,44 @@
+uuid: 037fb596-375d-4851-a0f2-c572b1465e0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: usSmIsAP6mvvPm4hhnYSP_3Xss7vZ2qVndDBfhfrisU
+id: block_content.dripyard_button_style
+field_name: dripyard_button_style
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: primary
+      label: Primary
+    -
+      value: secondary
+      label: Secondary
+    -
+      value: light
+      label: Light
+    -
+      value: dark
+      label: Dark
+    -
+      value: outline
+      label: Outline
+    -
+      value: bare
+      label: Bare
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

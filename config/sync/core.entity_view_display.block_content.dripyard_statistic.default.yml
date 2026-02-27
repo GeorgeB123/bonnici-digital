@@ -1,0 +1,57 @@
+uuid: c45f05e0-f2fa-4de1-9d01-f501442a56d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_statistic
+    - field.field.block_content.dripyard_statistic.dripyard_link
+    - field.field.block_content.dripyard_statistic.dripyard_statistic
+    - field.field.block_content.dripyard_statistic.dripyard_statistic_first_line
+    - field.field.block_content.dripyard_statistic.dripyard_statistic_second_line
+  module:
+    - link
+_core:
+  default_config_hash: LVY0N3qhrXvJSpbzM5z6hhxBc4aEKF2XydhGyAxlyBc
+id: block_content.dripyard_statistic.default
+targetEntityType: block_content
+bundle: dripyard_statistic
+mode: default
+content:
+  dripyard_link:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  dripyard_statistic:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  dripyard_statistic_first_line:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  dripyard_statistic_second_line:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

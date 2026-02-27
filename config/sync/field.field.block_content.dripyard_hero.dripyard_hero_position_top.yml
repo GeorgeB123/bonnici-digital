@@ -1,0 +1,25 @@
+uuid: 7d8ea1f6-f132-4ab0-b988-cd39959c3caf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_hero
+    - field.storage.block_content.dripyard_hero_position_top
+_core:
+  default_config_hash: kRBNx4Gu57wZ3imnQTJI0WFDy6Imp_g80cqYeKXQcxo
+id: block_content.dripyard_hero.dripyard_hero_position_top
+field_name: dripyard_hero_position_top
+entity_type: block_content
+bundle: dripyard_hero
+label: 'Position against top edge of screen'
+description: 'Applies negative margin to position the hero against the top edge of the screen (behind the navigation). Only works if the hero is the first component on the page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

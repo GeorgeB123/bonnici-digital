@@ -1,0 +1,23 @@
+uuid: e688b428-2ee2-4b7d-aae0-4ef654c2f6b9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: O1N6vH0R1SVHu77-GDbxK0-5qWIY0b_1s9AhS8rlGiY
+name: dripyard_square
+label: 'Dripyard Square'
+effects:
+  0d7d6c70-bc96-4188-91b1-11b45d2a70fa:
+    uuid: 0d7d6c70-bc96-4188-91b1-11b45d2a70fa
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 800
+      anchor: center-center
+  a392d2d5-d236-4cb3-b5eb-d7fb6062fdee:
+    uuid: a392d2d5-d236-4cb3-b5eb-d7fb6062fdee
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

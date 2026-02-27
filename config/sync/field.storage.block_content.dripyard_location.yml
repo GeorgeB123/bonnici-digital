@@ -1,0 +1,23 @@
+uuid: 1f078007-3f7b-4b8a-831b-cad91ee8f6b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: KgkahIZ3p-AtwzKiXBRvTodSXE_Vn48M-0qPLb2OPJw
+id: block_content.dripyard_location
+field_name: dripyard_location
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

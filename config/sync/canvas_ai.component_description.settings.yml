@@ -1,0 +1,2199 @@
+component_context:
+  block:
+    enabled: 0
+    data: |
+      block.admin_menu_links:
+        id: block.admin_menu_links
+        name: 'Admin Menu Links'
+        description: 'Admin Menu Links'
+      block.ai_operations_status:
+        id: block.ai_operations_status
+        name: 'AI Operations Status'
+        description: 'AI Operations Status'
+      block.ai_setup_ai_provider:
+        id: block.ai_setup_ai_provider
+        name: 'Setup AI Provider'
+        description: 'Setup AI Provider'
+      block.events_block:
+        id: block.events_block
+        name: 'Events Feed'
+        description: 'Events Feed'
+      block.project_browser_block.ai_dashboard_recommended:
+        id: block.project_browser_block.ai_dashboard_recommended
+        name: 'Recommended AI Recipes'
+        description: 'Recommended AI Recipes'
+      block.project_browser_block.drupal_core:
+        id: block.project_browser_block.drupal_core
+        name: 'Core modules'
+        description: 'Core modules'
+      block.project_browser_block.drupalorg_jsonapi:
+        id: block.project_browser_block.drupalorg_jsonapi
+        name: 'Contrib modules'
+        description: 'Contrib modules'
+      block.project_browser_block.local_modules:
+        id: block.project_browser_block.local_modules
+        name: 'Local modules'
+        description: 'Local modules'
+      block.project_browser_block.recipes:
+        id: block.project_browser_block.recipes
+        name: Recipes
+        description: Recipes
+      block.project_browser_block.recommended:
+        id: block.project_browser_block.recommended
+        name: 'Recommended add-ons'
+        description: 'Recommended add-ons'
+      block.system_branding_block:
+        id: block.system_branding_block
+        name: 'Site branding'
+        description: 'Site branding'
+      block.system_breadcrumb_block:
+        id: block.system_breadcrumb_block
+        name: Breadcrumbs
+        description: Breadcrumbs
+      block.system_menu_block.footer:
+        id: block.system_menu_block.footer
+        name: Footer
+        description: Footer
+      block.system_menu_block.main:
+        id: block.system_menu_block.main
+        name: 'Main navigation'
+        description: 'Main navigation'
+      block.system_messages_block:
+        id: block.system_messages_block
+        name: Messages
+        description: Messages
+      block.system_powered_by_block:
+        id: block.system_powered_by_block
+        name: 'Powered by Drupal'
+        description: 'Powered by Drupal'
+      block.views_block.blog-all:
+        id: block.views_block.blog-all
+        name: 'Blog: All blog posts'
+        description: 'Blog: All blog posts'
+      block.views_block.blog-latest:
+        id: block.views_block.blog-latest
+        name: 'Blog: Latest blog posts'
+        description: 'Blog: Latest blog posts'
+      block.views_block.blog-related:
+        id: block.views_block.blog-related
+        name: 'Blog: Related blog posts'
+        description: 'Blog: Related blog posts'
+      block.views_block.dripyard_article_cards-card:
+        id: block.views_block.dripyard_article_cards-card
+        name: 'Article Cards: Dripyard Card'
+        description: 'Article Cards: Dripyard Card'
+      block.views_block.dripyard_article_cards-card_full_image:
+        id: block.views_block.dripyard_article_cards-card_full_image
+        name: 'Article Cards: Dripyard Card Full Image'
+        description: 'Article Cards: Dripyard Card Full Image'
+      block.views_block.dripyard_event_listing-events_blocks:
+        id: block.views_block.dripyard_event_listing-events_blocks
+        name: 'Event Listing: Upcoming Events'
+        description: 'Event Listing: Upcoming Events'
+      block.views_block.dripyard_logo_grid-block_1:
+        id: block.views_block.dripyard_logo_grid-block_1
+        name: 'Logo Grid'
+        description: 'Logo Grid'
+      block.views_block.dripyard_tabs-block_1:
+        id: block.views_block.dripyard_tabs-block_1
+        name: 'Tabs: Dripyard Tabs'
+        description: 'Tabs: Dripyard Tabs'
+      block.views_block.publishing_content-block_drafts:
+        id: block.views_block.publishing_content-block_drafts
+        name: 'My drafts'
+        description: 'My drafts'
+      block.views_block.publishing_content-block_scheduled:
+        id: block.views_block.publishing_content-block_scheduled
+        name: Scheduled
+        description: Scheduled
+      block.views_block.recent_pages-block_recent_pages:
+        id: block.views_block.recent_pages-block_recent_pages
+        name: 'Recent pages'
+        description: 'Recent pages'
+      block.views_exposed_filter_block.search-page:
+        id: block.views_exposed_filter_block.search-page
+        name: 'Exposed form: search-page'
+        description: 'Exposed form: search-page'
+      block.webform_block:
+        id: block.webform_block
+        name: Webform
+        description: Webform
+  sdc:
+    enabled: 1
+    data: |
+      sdc.dripyard_base.accordion-group:
+        id: sdc.dripyard_base.accordion-group
+        name: 'Accordion group'
+        description: 'Accordion group'
+        group: 'Dripyard General'
+        props:
+          variation:
+            name: 'Visual variation'
+            description: 'No description available'
+            type: string
+            default: background-color
+            required: true
+            enum:
+              - background-color
+              - borders
+        slots:
+          accordion_group_content:
+            name: 'Accordion items'
+            description: 'No description available'
+      sdc.dripyard_base.accordion-item:
+        id: sdc.dripyard_base.accordion-item
+        name: 'Accordion item'
+        description: 'Accordion item'
+        group: 'Dripyard General'
+        props:
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'Accordion item title'
+            required: true
+          open:
+            name: Open
+            description: 'No description available'
+            type: boolean
+            default: null
+        slots:
+          accordion_item_content:
+            name: Content
+            description: 'No description available'
+      sdc.dripyard_base.background-image:
+        id: sdc.dripyard_base.background-image
+        name: 'Background image'
+        description: 'Background image'
+        group: 'Dripyard Basic'
+        props:
+          image:
+            name: Image
+            description: 'No description available'
+            type: object
+            default:
+              src: /themes/dripyard_themes/dripyard_base/components/background-image/images/placeholder.webp
+              alt: 'Placeholder image'
+              width: 1024
+              height: 1024
+          background_image_opacity:
+            name: 'Background image opacity (percentage)'
+            description: 'No description available'
+            type: integer
+            default: 100
+          loading:
+            name: 'Image loading'
+            description: 'Keep this set to "lazy" unless you are absolutely sure this will always appear "Above the fold" on page load.'
+            type: string
+            default: lazy
+            enum:
+              - eager
+              - lazy
+          position_x:
+            name: 'Horizontal focal point (%)'
+            description: 'Adjust to center the focal point when screen size is smaller, and image crops.'
+            type: integer
+            default: 50
+          position_y:
+            name: 'Vertical focal point (%)'
+            description: 'Adjust to center the focal point when screen size is smaller, and image crops.'
+            type: integer
+            default: 50
+        slots: 'No slots'
+      sdc.dripyard_base.button:
+        id: sdc.dripyard_base.button
+        name: Button
+        description: Button
+        group: 'Dripyard Form Elements'
+        props:
+          text:
+            name: 'Button text'
+            description: 'No description available'
+            type: string
+            default: 'Learn more'
+            required: true
+          href:
+            name: Hyperlink
+            description: 'Optional. If omitted, a <button> element will render.'
+            type: string
+            default: 'https://www.drupal.org'
+          style:
+            name: 'Button style'
+            description: 'No description available'
+            type:
+              - string
+            default: primary
+            enum:
+              - default
+              - primary
+              - secondary
+              - light
+              - dark
+              - outline
+              - bare
+          size:
+            name: 'Button size'
+            description: 'No description available'
+            type: string
+            default: medium
+            enum:
+              - xs
+              - small
+              - medium
+              - large
+          target:
+            name: 'Open link in new window'
+            description: 'No description available'
+            type:
+              - boolean
+              - 'null'
+            default: null
+          prefix_icon:
+            name: 'Prefix icon'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+          suffix_icon:
+            name: 'Suffix icon'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+        slots: 'No slots'
+      sdc.dripyard_base.canvas-image:
+        id: sdc.dripyard_base.canvas-image
+        name: Image
+        description: Image
+        group: 'Dripyard Basic'
+        props:
+          image:
+            name: Image
+            description: 'No description available'
+            type: object
+            default:
+              src: /themes/dripyard_themes/dripyard_base/components/canvas-image/images/placeholder.webp
+              alt: 'Placeholder image'
+              width: 1024
+              height: 1024
+          image_link:
+            name: 'Link image (optional)'
+            description: 'No description available'
+            type: string
+            default: null
+          border_radius:
+            name: 'Border radius'
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - small
+              - medium
+              - large
+          width:
+            name: 'Image width'
+            description: 'No description available'
+            type: number
+            default: 800.0
+          aspect_ratio:
+            name: 'Aspect ratio override'
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - square
+              - landscape
+              - portrait
+              - wide
+              - tall
+          alt:
+            name: 'Alt text override'
+            description: 'Override the alt text if necessary'
+            type:
+              - string
+              - 'null'
+            default: null
+          loading:
+            name: 'Image loading'
+            description: 'Keep this set to "lazy" unless you are absolutely sure this will always appear "Above the fold" on page load.'
+            type: string
+            default: lazy
+            enum:
+              - eager
+              - lazy
+        slots: 'No slots'
+      sdc.dripyard_base.card-canvas:
+        id: sdc.dripyard_base.card-canvas
+        name: Card
+        description: Card
+        group: 'Dripyard Cards'
+        props:
+          image:
+            name: Image
+            description: 'No description available'
+            type: object
+            default:
+              src: /themes/dripyard_themes/dripyard_base/components/card/images/placeholder.webp
+              alt: 'Placeholder image'
+              width: 1024
+              height: 1024
+          eyebrow_text:
+            name: Pre-title
+            description: 'No description available'
+            type: string
+            default: 'Eyebrow text'
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'Card title'
+            required: true
+          body:
+            name: 'Body text'
+            description: 'No description available'
+            type: string
+            default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, amet.'
+          href:
+            name: Link
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+          flip_layout:
+            name: 'Flip layout when in horizontal mode'
+            description: 'No description available'
+            type: boolean
+            default: null
+        slots: 'No slots'
+      sdc.dripyard_base.card-full-image-canvas:
+        id: sdc.dripyard_base.card-full-image-canvas
+        name: 'Full image card'
+        description: 'Full image card'
+        group: 'Dripyard Cards'
+        props:
+          image:
+            name: Image
+            description: 'No description available'
+            type: object
+            default:
+              src: /themes/dripyard_themes/dripyard_base/components/card-full-image/images/placeholder.webp
+              alt: 'Placeholder image'
+              width: 1024
+              height: 1024
+            required: true
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'Card title'
+            required: true
+          byline:
+            name: Byline
+            description: 'No description available'
+            type: string
+            default: 'Learn more'
+          href:
+            name: Link
+            description: 'No description available'
+            type: string
+            default: 'http://www.drupal.org'
+            required: true
+          overlay:
+            name: Overlay
+            description: 'No description available'
+            type: string
+            default: full
+            enum:
+              - full
+              - 'from bottom'
+          overlay_color:
+            name: 'Overlay Color'
+            description: 'No description available'
+            type: string
+            default: dark
+            required: true
+            enum:
+              - light
+              - dark
+          layout_vertical:
+            name: 'Vertical layout'
+            description: 'No description available'
+            type: string
+            default: bottom
+            enum:
+              - center
+              - bottom
+          title_align:
+            name: 'Title alignment'
+            description: 'No description available'
+            type: string
+            default: start
+            enum:
+              - start
+              - center
+          byline_align:
+            name: 'Byline alignment'
+            description: 'No description available'
+            type: string
+            default: start
+            enum:
+              - start
+              - end
+        slots: 'No slots'
+      sdc.dripyard_base.carousel:
+        id: sdc.dripyard_base.carousel
+        name: Carousel
+        description: Carousel
+        group: 'Dripyard General'
+        props:
+          canvas_edit_mode:
+            name: 'Canvas edit mode'
+            description: 'No description available'
+            type: boolean
+            default: null
+          label:
+            name: 'Label (required by screen readers)'
+            description: 'No description available'
+            type: string
+            default: 'Product features'
+          pager:
+            name: 'Enable pager'
+            description: 'No description available'
+            type: boolean
+            default: true
+          navigation_position:
+            name: 'Navigation button position'
+            description: 'No description available'
+            type: string
+            default: hidden
+            enum:
+              - hidden
+              - inside
+              - outside
+          slides_per_view:
+            name: 'Maximum slides per view'
+            description: 'The carousel can support viewing of up to six items within one view. The amount visible depends on the carousel width.'
+            type: number
+            default: 1.0
+          rows:
+            name: 'Rows per view'
+            description: 'The carousel can support up to three rows of content.'
+            type: number
+            default: 1.0
+          autoplay:
+            name: Autoplay
+            description: 'No description available'
+            type: boolean
+            default: null
+        slots:
+          carousel_items:
+            name: 'Carousel items'
+            description: 'No description available'
+      sdc.dripyard_base.content-card:
+        id: sdc.dripyard_base.content-card
+        name: 'Content Card'
+        description: 'Content Card'
+        group: 'Dripyard Cards'
+        props:
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'Content Card Title'
+            required: true
+          link_href:
+            name: Link
+            description: 'No description available'
+            type: string
+            default: /
+            required: true
+          metadata:
+            name: Metadata
+            description: 'No description available'
+            type: string
+            default: '20 March 2027'
+          body_text:
+            name: 'Body text'
+            description: 'No description available'
+            type: string
+            default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis.'
+            required: true
+          background:
+            name: 'Background color'
+            description: 'Gives the card a background color'
+            type: boolean
+            default: null
+        slots: 'No slots'
+      sdc.dripyard_base.date-block:
+        id: sdc.dripyard_base.date-block
+        name: 'Date Block'
+        description: 'Date Block'
+        group: 'Dripyard General'
+        props:
+          date_time_stamp:
+            name: 'Date/time stamp'
+            description: 'No description available'
+            type: string
+            default: '2024-07-15T14:30:00Z'
+            required: true
+        slots: 'No slots'
+      sdc.dripyard_base.details:
+        id: sdc.dripyard_base.details
+        name: Details
+        description: 'A details component for rendering a collapsible details element.'
+        group: 'Dripyard Form Elements'
+        props:
+          title:
+            name: 'Details title'
+            description: 'No description available'
+            type: string
+            default: 'Details title'
+            required: true
+        slots:
+          details_content:
+            name: 'Details Content'
+            description: 'Main content of the details element.'
+      sdc.dripyard_base.event-listing-item:
+        id: sdc.dripyard_base.event-listing-item
+        name: 'Event Listing Item'
+        description: 'Event Listing Item'
+        group: 'Dripyard General'
+        props:
+          title:
+            name: 'Event title'
+            description: 'No description available'
+            type: string
+            default: 'Summer Music Festival'
+            required: true
+          url:
+            name: 'Event URL'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: /events/summer-festival
+            required: true
+          date_time_stamp_begin:
+            name: 'Event date/time'
+            description: 'No description available'
+            type: string
+            default: '2024-07-15T14:30:00Z'
+            required: true
+          description:
+            name: 'Event description'
+            description: 'No description available'
+            type: string
+            default: 'Join us for an amazing outdoor music experience'
+          formatted_time:
+            name: 'Formatted time display'
+            description: 'No description available'
+            type: string
+            default: '2:30 PM - 5:00 PM'
+          location:
+            name: 'Event location'
+            description: 'No description available'
+            type: string
+            default: 'Central Park Amphitheater'
+        slots: 'No slots'
+      sdc.dripyard_base.fieldset:
+        id: sdc.dripyard_base.fieldset
+        name: Fieldset
+        description: Fieldset
+        group: 'Dripyard Form Elements'
+        props:
+          legend_title:
+            name: 'Fieldset title'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: 'Fieldset title'
+            required: true
+        slots:
+          fieldset_content:
+            name: 'Fieldset content'
+            description: 'No description available'
+      sdc.dripyard_base.flex-wrapper:
+        id: sdc.dripyard_base.flex-wrapper
+        name: 'Flex Wrapper'
+        description: 'Uses flexbox to create a wrapper'
+        group: 'Dripyard Layout'
+        props:
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+          additional_classes:
+            name: 'Additional CSS classes'
+            description: 'Additional CSS classes that will be added to the wrapper of the section layout (separated by spaces).'
+            type: string
+            default: null
+          wrap:
+            name: 'Allow items to wrap'
+            description: 'No description available'
+            type:
+              - boolean
+            default: true
+          align_x:
+            name: 'Horizontal alignment'
+            description: 'No description available'
+            type:
+              - string
+            default: start
+            required: true
+            enum:
+              - start
+              - center
+              - end
+              - space-between
+              - space-around
+          align_y:
+            name: 'Vertical alignment'
+            description: 'No description available'
+            type:
+              - string
+            default: center
+            required: true
+            enum:
+              - top
+              - center
+              - bottom
+              - stretch
+          margin_top:
+            name: 'Top margin'
+            description: 'External spacing at the top of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          margin_bottom:
+            name: 'Bottom margin'
+            description: 'External spacing at the bottom of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          padding_top:
+            name: 'Top padding'
+            description: 'Internal spacing at the top of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          padding_bottom:
+            name: 'Bottom padding'
+            description: 'Internal spacing at the bottom of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          column_gutter:
+            name: 'Column gutter width'
+            description: 'No description available'
+            type:
+              - string
+            default: small
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          row_gutter:
+            name: 'Row gutter width'
+            description: 'No description available'
+            type:
+              - string
+            default: small
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+        slots:
+          content:
+            name: Content
+            description: 'No description available'
+      sdc.dripyard_base.grid-cell:
+        id: sdc.dripyard_base.grid-cell
+        name: 'Grid Cell'
+        description: 'A responsive grid cell that spans a specified number of columns across different breakpoints.'
+        group: 'Dripyard Layout'
+        props:
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+          padding:
+            name: 'Cell padding'
+            description: 'Controls the internal padding of the grid cell.'
+            type: string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          columns_small:
+            name: 'Small screen columns'
+            description: 'Number of grid columns to span on small widths (default breakpoint)'
+            type: integer
+            default: 12
+            required: true
+          columns_medium:
+            name: 'Medium screen columns'
+            description: 'Number of grid columns to span on medium widths (> 600px)'
+            type: integer
+            default: 6
+            required: true
+          columns_large:
+            name: 'Large screen columns'
+            description: 'Number of grid columns to span on large widths (> 1200px)'
+            type: integer
+            default: 4
+            required: true
+          rows_small:
+            name: 'Small screen rows'
+            description: 'Number of grid rows to span on small widths (default breakpoint)'
+            type: integer
+            default: 1
+            required: true
+          rows_medium:
+            name: 'Medium screen rows'
+            description: 'Number of grid rows to span on medium widths (> 600px)'
+            type: integer
+            default: 1
+            required: true
+          rows_large:
+            name: 'Large screen rows'
+            description: 'Number of grid rows to span on large widths (> 1200px)'
+            type: integer
+            default: 1
+            required: true
+          horizontal_alignment:
+            name: 'Horizontal alignment'
+            description: 'Controls horizontal alignment of content within the grid cell.'
+            type: string
+            default: null
+            enum:
+              - start
+              - center
+              - end
+          vertical_alignment:
+            name: 'Vertical alignment'
+            description: 'Controls vertical alignment of content within the grid cell.'
+            type: string
+            default: null
+            enum:
+              - start
+              - center
+              - end
+          additional_classes:
+            name: 'Additional CSS classes'
+            description: 'Additional CSS classes that will be added to the grid cell (separated by spaces).'
+            type: string
+            default: null
+        slots:
+          content:
+            name: Content
+            description: 'Content to be placed inside this grid cell'
+      sdc.dripyard_base.grid-wrapper:
+        id: sdc.dripyard_base.grid-wrapper
+        name: 'Grid Wrapper'
+        description: 'A simple CSS grid layout generator with 12 columns and utility classes support.'
+        group: 'Dripyard Layout'
+        props:
+          canvas_edit_mode:
+            name: 'Canvas edit mode'
+            description: 'No description available'
+            type: boolean
+            default: true
+          additional_classes:
+            name: 'Additional CSS classes'
+            description: 'Additional CSS classes that will be added to the wrapper (separated by spaces).'
+            type: string
+            default: null
+          column_gutter:
+            name: 'Override column gutter width'
+            description: 'No description available'
+            type: string
+            default: medium
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          row_gutter:
+            name: 'Override row gutter width'
+            description: 'No description available'
+            type: string
+            default: medium
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+        slots:
+          grid_cells:
+            name: 'Grid Cells'
+            description: 'Grid cells should be placed here'
+      sdc.dripyard_base.heading:
+        id: sdc.dripyard_base.heading
+        name: Heading
+        description: Heading
+        group: 'Dripyard Basic'
+        props:
+          text:
+            name: 'Heading text'
+            description: 'No description available'
+            type: string
+            default: 'This is my heading'
+            required: true
+          html_element:
+            name: 'HTML element'
+            description: 'No description available'
+            type: string
+            default: h2
+            required: true
+            enum:
+              - h1
+              - h2
+              - h3
+              - h4
+              - h5
+              - h6
+              - p
+              - div
+              - span
+          style:
+            name: Style
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: h2
+            required: true
+            enum:
+              - title
+              - h1
+              - h2
+              - h3
+              - h4
+              - h5
+              - h6
+              - body_l
+              - body_m
+              - body_s
+          color:
+            name: 'Text color'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+            enum:
+              - default
+              - soft
+              - medium
+              - loud
+              - primary
+          modifier_classes:
+            name: 'Modifier CSS classes'
+            description: 'No description available'
+            type: string
+            default: null
+          center:
+            name: 'Center text'
+            description: 'No description available'
+            type: boolean
+            default: null
+          text_max_width:
+            name: 'Text maximum width'
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - 400px
+              - 600px
+              - 800px
+              - 1000px
+              - 1200px
+              - 1400px
+          margin_top:
+            name: 'Override top margin'
+            description: 'Overrides the external spacing at the top of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          margin_bottom:
+            name: 'Override bottom margin'
+            description: 'Overrides the external spacing at the bottom of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+        slots: 'No slots'
+      sdc.dripyard_base.horizontal-line:
+        id: sdc.dripyard_base.horizontal-line
+        name: 'Horizontal line'
+        description: 'Horizontal line'
+        group: 'Dripyard Basic'
+        props:
+          margin_top:
+            name: 'Override top margin'
+            description: 'Overrides the external spacing at the top of the component.'
+            type:
+              - string
+            default: medium
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          margin_bottom:
+            name: 'Override bottom margin'
+            description: 'Overrides the external spacing at the bottom of the component.'
+            type:
+              - string
+            default: medium
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          color:
+            name: 'Line color'
+            description: 'No description available'
+            type:
+              - string
+            default: primary
+            required: true
+            enum:
+              - soft
+              - medium
+              - loud
+              - primary
+          width:
+            name: 'Line width'
+            description: 'No description available'
+            type:
+              - string
+            default: full
+            required: true
+            enum:
+              - small
+              - medium
+              - full
+          alignment:
+            name: 'Horizontal alignment'
+            description: 'No description available'
+            type:
+              - string
+            default: start
+            required: true
+            enum:
+              - start
+              - center
+              - end
+          modifier_classes:
+            name: 'Modifier CSS classes'
+            description: 'No description available'
+            type: string
+            default: null
+        slots: 'No slots'
+      sdc.dripyard_base.icon-card:
+        id: sdc.dripyard_base.icon-card
+        name: 'Icon card'
+        description: 'Icon card'
+        group: 'Dripyard Cards'
+        props:
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'Icon card title'
+            required: true
+          body:
+            name: Body
+            description: 'No description available'
+            type: string
+            default: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+          icon:
+            name: Icon
+            description: 'No description available'
+            type: string
+            default: cloud
+            required: true
+          href:
+            name: Link
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: 'http://www.example.com'
+          no_background:
+            name: 'No background'
+            description: 'No description available'
+            type: boolean
+            default: null
+          layout:
+            name: Layout
+            description: 'No description available'
+            type: string
+            default: portrait
+            enum:
+              - portrait
+              - landscape
+          icon_size:
+            name: 'Icon size'
+            description: 'No description available'
+            type: string
+            default: large
+            enum:
+              - small
+              - medium
+              - large
+        slots: 'No slots'
+      sdc.dripyard_base.icon-list:
+        id: sdc.dripyard_base.icon-list
+        name: 'Icon list'
+        description: 'Icon list'
+        group: 'Dripyard Lists'
+        props:
+          size:
+            name: 'List size'
+            description: 'Controls icon and font size'
+            type: string
+            default: medium
+            required: true
+            enum:
+              - small
+              - medium
+              - large
+          icon_color:
+            name: 'Icon color'
+            description: 'No description available'
+            type: string
+            default: primary
+            required: true
+            enum:
+              - primary
+              - secondary
+              - normal
+          column_width:
+            name: 'Column width'
+            description: 'No description available'
+            type: string
+            default: full-width
+            required: true
+            enum:
+              - small
+              - medium
+              - large
+              - full-width
+        slots:
+          content:
+            name: 'Icon list items'
+            description: 'No description available'
+      sdc.dripyard_base.icon-list-item:
+        id: sdc.dripyard_base.icon-list-item
+        name: 'Icon list item'
+        description: 'Icon list item'
+        group: 'Dripyard Lists'
+        props:
+          icon:
+            name: Icon
+            description: 'No description available'
+            type: string
+            default: check
+            required: true
+          text:
+            name: Text
+            description: 'No description available'
+            type: string
+            default: 'All of our themes are built to WCAG 2.2 AA standards.'
+            required: true
+          href:
+            name: Link
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+        slots: 'No slots'
+      sdc.dripyard_base.layout-dynamic:
+        id: sdc.dripyard_base.layout-dynamic
+        name: 'Dynamic Section'
+        description: 'Enables the creation of dynamic 1, 2, 3, and 4 column layouts.'
+        group: 'Dripyard Layout'
+        props:
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+          additional_classes:
+            name: 'Additional CSS classes'
+            description: 'Additional CSS classes that will be added to the wrapper of the section layout (separated by spaces).'
+            type: string
+            default: null
+          column_count:
+            name: 'Column count'
+            description: 'No description available'
+            type:
+              - number
+            default: 1.0
+            required: true
+            enum:
+              - 1
+              - 2
+              - 3
+              - 4
+          row_count:
+            name: 'Row count'
+            description: 'No description available'
+            type:
+              - number
+            default: 1.0
+            required: true
+            enum:
+              - 1
+              - 2
+              - 3
+              - 4
+          two_column_layout:
+            name: 'Two column layout options'
+            description: 'No description available'
+            type: string
+            default: '50% / 50%'
+            enum:
+              - '50% / 50%'
+              - '25% / 75%'
+              - '33% / 67%'
+              - '75% / 25%'
+              - '67% / 33%'
+          three_column_layout:
+            name: 'Three column layout options'
+            description: 'No description available'
+            type: string
+            default: '33% / 33% / 33%'
+            enum:
+              - '33% / 33% / 33%'
+              - '50% / 25% / 25%'
+              - '25% / 50% / 25%'
+              - '25% / 25% / 50%'
+          cell_align_x:
+            name: 'Cell horizontal alignment'
+            description: 'Sets horizontal alignment within all grid cells.'
+            type:
+              - string
+            default: default
+            required: true
+            enum:
+              - default
+              - start
+              - center
+              - end
+          cell_align_y:
+            name: 'Cell vertical alignment'
+            description: 'Sets vertical alignment within all grid cells.'
+            type:
+              - string
+            default: default
+            required: true
+            enum:
+              - default
+              - top
+              - center
+              - bottom
+          section_width:
+            name: 'Section width'
+            description: 'Controls whether the layout will span the full width of the screen, or be constrained to the max-width.'
+            type: string
+            default: edge-to-edge
+            required: true
+            enum:
+              - edge-to-edge
+              - max-width
+          content_width:
+            name: 'Content width'
+            description: 'Controls whether the width of the content.'
+            type: string
+            default: max-width
+            required: true
+            enum:
+              - edge-to-edge
+              - max-width
+              - narrow
+          margin_top:
+            name: 'Override top margin'
+            description: 'Overrides the external spacing at the top of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          margin_bottom:
+            name: 'Override bottom margin'
+            description: 'Overrides the external spacing at the bottom of the component.'
+            type:
+              - string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          padding_top:
+            name: 'Override top padding'
+            description: 'Overrides the internal spacing at the top of the component.'
+            type:
+              - string
+            default: large
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          padding_bottom:
+            name: 'Override bottom padding'
+            description: 'Overrides the internal spacing at the bottom of the component.'
+            type:
+              - string
+            default: large
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          column_gutter:
+            name: 'Override column gutter width'
+            description: 'No description available'
+            type:
+              - string
+            default: default
+            required: true
+            enum:
+              - default
+              - zero
+              - small
+              - medium
+              - large
+          row_gutter:
+            name: 'Override row gutter width'
+            description: 'No description available'
+            type:
+              - string
+            default: default
+            required: true
+            enum:
+              - default
+              - zero
+              - small
+              - medium
+              - large
+        slots:
+          header:
+            name: Header
+            description: 'No description available'
+          cell_1:
+            name: 'Cell 1'
+            description: 'No description available'
+          cell_2:
+            name: 'Cell 2'
+            description: 'No description available'
+          cell_3:
+            name: 'Cell 3'
+            description: 'No description available'
+          cell_4:
+            name: 'Cell 4'
+            description: 'No description available'
+          cell_5:
+            name: 'Cell 5'
+            description: 'No description available'
+          cell_6:
+            name: 'Cell 6'
+            description: 'No description available'
+          cell_7:
+            name: 'Cell 7'
+            description: 'No description available'
+          cell_8:
+            name: 'Cell 8'
+            description: 'No description available'
+          cell_9:
+            name: 'Cell 9'
+            description: 'No description available'
+          cell_10:
+            name: 'Cell 10'
+            description: 'No description available'
+          cell_11:
+            name: 'Cell 11'
+            description: 'No description available'
+          cell_12:
+            name: 'Cell 12'
+            description: 'No description available'
+          cell_13:
+            name: 'Cell 13'
+            description: 'No description available'
+          cell_14:
+            name: 'Cell 14'
+            description: 'No description available'
+          cell_15:
+            name: 'Cell 15'
+            description: 'No description available'
+          cell_16:
+            name: 'Cell 16'
+            description: 'No description available'
+      sdc.dripyard_base.logo-grid:
+        id: sdc.dripyard_base.logo-grid
+        name: 'Logo grid'
+        description: 'Logo grid'
+        group: 'Dripyard General'
+        props:
+          logo_size:
+            name: 'Logo size'
+            description: 'No description available'
+            type: string
+            default: medium
+            required: true
+            enum:
+              - small
+              - medium
+              - large
+          layout:
+            name: Layout
+            description: 'No description available'
+            type: string
+            default: start
+            required: true
+            enum:
+              - start
+              - center
+              - end
+          logo_background:
+            name: 'Logo background color'
+            description: 'No description available'
+            type: string
+            default: auto
+            required: true
+            enum:
+              - auto
+              - transparent
+              - white
+              - black
+              - primary
+          logo_border_radius:
+            name: 'Logo border radius'
+            description: 'No description available'
+            type: string
+            default: 'extra large'
+            enum:
+              - small
+              - medium
+              - large
+              - 'extra large'
+        slots:
+          logo_grid_content:
+            name: 'Logo items'
+            description: 'Logos from the logo-item component'
+      sdc.dripyard_base.logo-item-canvas:
+        id: sdc.dripyard_base.logo-item-canvas
+        name: 'Logo item'
+        description: 'Logo item'
+        group: 'Dripyard General'
+        props:
+          href:
+            name: Link
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+          image:
+            name: Image
+            description: 'No description available'
+            type: object
+            default:
+              src: /themes/dripyard_themes/dripyard_base/components/logo-grid/logo-item/images/logoipsum-330.svg
+              alt: 'Boring placeholder'
+              width: 187
+              height: 40
+        slots: 'No slots'
+      sdc.dripyard_base.pill:
+        id: sdc.dripyard_base.pill
+        name: Pill
+        description: Pill
+        group: 'Dripyard General'
+        props: 'No props'
+        slots:
+          content:
+            name: Content
+            description: 'No description available'
+      sdc.dripyard_base.promo:
+        id: sdc.dripyard_base.promo
+        name: Promo
+        description: Promo
+        group: 'Dripyard Cards'
+        props:
+          align_x:
+            name: 'Horizontal alignment'
+            description: 'No description available'
+            type: string
+            default: start
+            enum:
+              - start
+              - center
+              - end
+          align_y:
+            name: 'Vertical alignment'
+            description: 'No description available'
+            type: string
+            default: center
+            enum:
+              - top
+              - center
+              - bottom
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'Promo title'
+            required: true
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+          eyebrow:
+            name: 'Pre-title text'
+            description: 'No description available'
+            type: string
+            default: null
+          body:
+            name: 'Body text'
+            description: 'No description available'
+            type: string
+            default: null
+        slots:
+          promo_content:
+            name: 'Promo content'
+            description: 'No description available'
+      sdc.dripyard_base.section:
+        id: sdc.dripyard_base.section
+        name: 'Basic Section'
+        description: 'A flexible section component with header and content areas, supporting themes and responsive layouts.'
+        group: 'Dripyard Layout'
+        props:
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+          additional_classes:
+            name: 'Additional CSS classes'
+            description: 'Additional CSS classes that will be added to the wrapper of the section layout (separated by spaces).'
+            type: string
+            default: null
+          section_width:
+            name: 'Section width'
+            description: 'Controls whether the layout will span the full width of the screen, or be constrained to the max-width.'
+            type: string
+            default: edge-to-edge
+            required: true
+            enum:
+              - edge-to-edge
+              - max-width
+          content_width:
+            name: 'Content width'
+            description: 'Controls whether the width of the content.'
+            type: string
+            default: max-width
+            required: true
+            enum:
+              - edge-to-edge
+              - max-width
+              - narrow
+          margin_top:
+            name: 'Override top margin'
+            description: 'Overrides the external spacing at the top of the component.'
+            type: string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          margin_bottom:
+            name: 'Override bottom margin'
+            description: 'Overrides the external spacing at the bottom of the component.'
+            type: string
+            default: zero
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          padding_top:
+            name: 'Override top padding'
+            description: 'Overrides the internal spacing at the top of the component.'
+            type: string
+            default: large
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+          padding_bottom:
+            name: 'Override bottom padding'
+            description: 'Overrides the internal spacing at the bottom of the component.'
+            type: string
+            default: large
+            required: true
+            enum:
+              - zero
+              - small
+              - medium
+              - large
+        slots:
+          header:
+            name: 'Header content'
+            description: 'Optional header content for the section'
+          content:
+            name: 'Section content'
+            description: 'Main content area of the section'
+      sdc.dripyard_base.statistic:
+        id: sdc.dripyard_base.statistic
+        name: Statistic
+        description: Statistic
+        group: 'Dripyard General'
+        props:
+          statistic:
+            name: Statistic
+            description: 'Number with optional prefix and/or suffix'
+            type: string
+            default: '$2,400'
+            required: true
+          first_line:
+            name: 'First line of text'
+            description: 'No description available'
+            type: string
+            default: Students
+          second_line:
+            name: 'Second line of text'
+            description: 'No description available'
+            type: string
+            default: 'Enrolled students from 45 countries'
+          href:
+            name: Link
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: 'http://www.drupal.org'
+        slots: 'No slots'
+      sdc.dripyard_base.tab:
+        id: sdc.dripyard_base.tab
+        name: Tab
+        description: Tab
+        group: 'Dripyard General'
+        props:
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: Tab
+            required: true
+          icon:
+            name: 'Optional icon'
+            description: 'No description available'
+            type: string
+            default: null
+        slots:
+          tab_panel_content:
+            name: 'Tab content'
+            description: 'No description available'
+      sdc.dripyard_base.tab-group:
+        id: sdc.dripyard_base.tab-group
+        name: 'Tab group'
+        description: 'Tab group'
+        group: 'Dripyard General'
+        props:
+          canvas_edit_mode:
+            name: 'Canvas edit mode'
+            description: 'No description available'
+            type: boolean
+            default: null
+          centered:
+            name: 'Center title content'
+            description: 'No description available'
+            type: boolean
+            default: null
+          placement:
+            name: 'Tab position'
+            description: 'No description available'
+            type: string
+            default: top
+            enum:
+              - top
+              - start
+              - bottom
+              - end
+          icon_size:
+            name: 'Icon size'
+            description: 'No description available'
+            type: string
+            default: small
+            enum:
+              - small
+              - large
+          icon_placement:
+            name: 'Placement of the icons'
+            description: 'No description available'
+            type: string
+            default: vertical
+            enum:
+              - vertical
+              - horizontal
+        slots:
+          tabs:
+            name: 'Tab group content'
+            description: 'Insert tabs here.'
+      sdc.dripyard_base.teaser:
+        id: sdc.dripyard_base.teaser
+        name: Teaser
+        description: Teaser
+        group: 'Dripyard General'
+        props:
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'This is the teaser title'
+            required: true
+          href:
+            name: Link
+            description: 'No description available'
+            type: string
+            default: 'http://www.example.com'
+            required: true
+        slots:
+          teaser_content:
+            name: Content
+            description: 'No description available'
+          meta:
+            name: Meta
+            description: 'Teaser meta'
+      sdc.dripyard_base.testimonial-canvas:
+        id: sdc.dripyard_base.testimonial-canvas
+        name: Testimonial
+        description: Testimonial
+        group: 'Dripyard General'
+        props:
+          image:
+            name: Image
+            description: 'No description available'
+            type: object
+            default:
+              src: /themes/dripyard_themes/dripyard_base/components/testimonial/images/student1.jpg
+              alt: Placeholder
+              width: 800
+              height: 800
+          quote:
+            name: Quote
+            description: 'No description available'
+            type: string
+            default: 'I have made lifelong friendships that I would have never imagined before coming to Great Lake Institute. The university and the people here have helped shape me into the person I am now.'
+          citation:
+            name: Citation
+            description: 'No description available'
+            type: string
+            default: 'Sophie, 19'
+          reversed:
+            name: 'Reverse layout'
+            description: 'No description available'
+            type: boolean
+            default: null
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+        slots: 'No slots'
+      sdc.dripyard_base.text:
+        id: sdc.dripyard_base.text
+        name: Text
+        description: Text
+        group: 'Dripyard Basic'
+        props:
+          text:
+            name: Text
+            description: 'No description available'
+            type: string
+            default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae amet harum placeat voluptates nobis, quis ratione, blanditiis inventore esse, libero magnam facilis odio nostrum ullam saepe. Iure, obcaecati quisquam.'
+          style:
+            name: 'Text size'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: body_m
+            required: true
+            enum:
+              - body_l
+              - body_m
+              - body_s
+          color:
+            name: 'Text color'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: inherit
+            required: true
+            enum:
+              - inherit
+              - soft
+              - medium
+              - loud
+              - primary
+          center:
+            name: 'Center text'
+            description: 'No description available'
+            type: boolean
+            default: null
+          text_max_width:
+            name: 'Text maximum width'
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - 400px
+              - 600px
+              - 800px
+              - 1000px
+              - 1200px
+              - 1400px
+          modifier_classes:
+            name: 'Modifier CSS classes'
+            description: 'No description available'
+            type: string
+            default: null
+        slots: 'No slots'
+      sdc.dripyard_base.theme-test:
+        id: sdc.dripyard_base.theme-test
+        name: 'Theme Test'
+        description: 'Theme Test'
+        group: ''
+        props: 'No props'
+        slots: 'No slots'
+      sdc.dripyard_base.title-cta:
+        id: sdc.dripyard_base.title-cta
+        name: 'Title and CTA'
+        description: 'Title and CTA'
+        group: 'Dripyard General'
+        props:
+          layout:
+            name: Layout
+            description: 'No description available'
+            type: string
+            default: default
+            enum:
+              - default
+              - center
+          title:
+            name: Title
+            description: 'No description available'
+            type: string
+            default: 'This is title text that is paired with a CTA'
+            required: true
+          heading_style:
+            name: 'Heading style'
+            description: 'No description available'
+            type: string
+            default: h2
+            enum:
+              - title
+              - h1
+              - h2
+              - h3
+              - h4
+              - h5
+              - h6
+              - body_l
+              - body_m
+              - body_s
+          button_text:
+            name: 'Button text'
+            description: 'No description available'
+            type: string
+            default: 'Learn more'
+          button_href:
+            name: Hyperlink
+            description: 'No description available'
+            type: string
+            default: 'https://www.drupal.org'
+          button_style:
+            name: 'Button style'
+            description: 'No description available'
+            type: string
+            default: default
+            enum:
+              - default
+              - primary
+              - secondary
+              - light
+              - dark
+              - outline
+              - bare
+          button_size:
+            name: 'Button size'
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - small
+              - medium
+              - large
+          button_target:
+            name: 'Open link in new window'
+            description: 'No description available'
+            type:
+              - boolean
+              - 'null'
+            default: null
+          button_prefix_icon:
+            name: 'Prefix icon'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+          button_suffix_icon:
+            name: 'Suffix icon'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+        slots: 'No slots'
+      sdc.dripyard_base.video-player-canvas:
+        id: sdc.dripyard_base.video-player-canvas
+        name: Video
+        description: Video
+        group: 'Dripyard Basic'
+        props:
+          aria_label:
+            name: 'Description of video for accessibility'
+            description: 'No description available'
+            type: string
+            default: 'Grand canyon during the winter'
+          video:
+            name: 'Video file'
+            description: 'No description available'
+            type: object
+            default: null
+          poster:
+            name: 'Video placeholder image'
+            description: 'No description available'
+            type: object
+            default: null
+          muted:
+            name: 'Mute video'
+            description: 'No description available'
+            type: boolean
+            default: true
+          loop:
+            name: 'Loop video'
+            description: 'No description available'
+            type: boolean
+            default: true
+          autoplay:
+            name: 'Autoplay video (if user preferences permit)'
+            description: 'No description available'
+            type: boolean
+            default: false
+          button_align_x:
+            name: 'Horizontal alignment of play/pause button'
+            description: 'No description available'
+            type: string
+            default: end
+            enum:
+              - start
+              - center
+              - end
+          button_align_y:
+            name: 'Vertical alignment of play/pause button'
+            description: 'No description available'
+            type: string
+            default: bottom
+            enum:
+              - top
+              - center
+              - bottom
+          border_radius:
+            name: 'Border radius'
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - small
+              - medium
+              - large
+        slots: 'No slots'
+      sdc.dripyard_base.video-youtube:
+        id: sdc.dripyard_base.video-youtube
+        name: 'Youtube video'
+        description: 'Youtube video'
+        group: 'Dripyard General'
+        props:
+          url:
+            name: 'YouTube URL'
+            description: 'No description available'
+            type: string
+            default: 'https://www.youtube.com/watch?v=nGWdpVd8Bz8'
+            required: true
+          title:
+            name: 'Title (for accessibility)'
+            description: 'No description available'
+            type: string
+            default: null
+          border_radius:
+            name: 'Border radius'
+            description: 'No description available'
+            type: string
+            default: null
+            enum:
+              - small
+              - medium
+              - large
+        slots: 'No slots'
+      sdc.neonbyte.hero:
+        id: sdc.neonbyte.hero
+        name: Hero
+        description: Hero
+        group: 'Dripyard Heros'
+        props:
+          theme:
+            name: Theme
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - white
+              - light
+              - dark
+              - black
+              - primary
+              - secondary
+          height:
+            name: 'Hero height'
+            description: 'No description available'
+            type: string
+            default: full-screen
+            required: true
+            enum:
+              - small
+              - medium
+              - large
+              - full-screen
+          position_behind_against_screen_top:
+            name: 'Position against top edge of screen'
+            description: 'Applies negative margin to position the hero against the top edge of the screen (behind the navigation). Only works if the hero is the first component on the page.'
+            type:
+              - boolean
+              - 'null'
+            default: true
+          align_x:
+            name: 'Alignment - horizontal'
+            description: 'No description available'
+            type: string
+            default: start
+            enum:
+              - start
+              - center
+              - end
+          align_y:
+            name: 'Alignment - vertical'
+            description: 'No description available'
+            type: string
+            default: bottom
+            enum:
+              - top
+              - center
+              - bottom
+          text_color:
+            name: 'Text color'
+            description: 'No description available'
+            type: string
+            default: inherit
+            enum:
+              - inherit
+              - black
+              - white
+              - primary
+        slots:
+          hero_media:
+            name: 'Image or video'
+            description: 'Accepts either background-image or video components to be used as background media. For Drupal Canvas, use background-image, and video-player-canvas components.'
+          hero_content:
+            name: 'Hero content'
+            description: 'Accepts any component including text, and flex-wrappers with nested buttons.'
+      sdc.neonbyte.icon:
+        id: sdc.neonbyte.icon
+        name: Icon
+        description: Icon
+        group: 'Dripyard Basic'
+        props:
+          size:
+            name: Size
+            description: 'No description available'
+            type: integer
+            default: 32
+          icon:
+            name: Icon
+            description: 'No description available'
+            type: string
+            default: drupal
+            required: true
+          color:
+            name: 'Text color'
+            description: 'No description available'
+            type:
+              - string
+              - 'null'
+            default: null
+            enum:
+              - soft
+              - medium
+              - loud
+              - primary
+          link_href:
+            name: Link
+            description: 'No description available'
+            type: string
+            default: null
+          link_text:
+            name: 'Link text (for accessibility)'
+            description: 'Not visible. Necessary to make the hyperlink accessible. Hyperlink will not appear without this.'
+            type: string
+            default: null
+          open_new_window:
+            name: 'Open link in new window'
+            description: 'No description available'
+            type: boolean
+            default: null
+        slots: 'No slots'

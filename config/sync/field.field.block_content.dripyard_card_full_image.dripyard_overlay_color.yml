@@ -1,0 +1,25 @@
+uuid: 446f4db2-386c-4c4b-a8ce-17aecd84833f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dripyard_card_full_image
+    - field.storage.block_content.dripyard_overlay_color
+  module:
+    - options
+_core:
+  default_config_hash: Z2JVCUOIL2rKHJfJdPSR6ZewhR6M5B1_0jIWysvuxpQ
+id: block_content.dripyard_card_full_image.dripyard_overlay_color
+field_name: dripyard_overlay_color
+entity_type: block_content
+bundle: dripyard_card_full_image
+label: 'Overlay Color'
+description: 'Controls the appearance of the image overlay (dark or light).'
+required: true
+translatable: false
+default_value:
+  -
+    value: dark
+default_value_callback: ''
+settings: {  }
+field_type: list_string

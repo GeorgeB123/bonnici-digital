@@ -1,0 +1,26 @@
+uuid: f3018882-3171-440e-a369-601b7897ac70
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dripyard_article_cards
+  module:
+    - views
+active_version: bb71575bc671d6cc
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:dripyard_article_cards-card'
+        label: 'Article Cards: Dripyard Card'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Article Cards: Dripyard Card'
+id: block.views_block.dripyard_article_cards-card
+provider: views
+source: block
+source_local_id: 'views_block:dripyard_article_cards-card'
