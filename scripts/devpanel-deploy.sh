@@ -17,7 +17,7 @@ ARTIFACT_URL=${3:-""}
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 LOG_FILE="/tmp/deployment-${BRANCH}-${TIMESTAMP}.log"
 TEMP_DIR="/tmp/deploy-${SHA}"
-WEBROOT="/home/devpanel/applications/bonnici-digital/public_html"
+WEBROOT="/var/www/html"
 
 # Colors for output
 RED='\033[0;31m'
