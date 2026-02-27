@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 # DevPanel Deployment Script
-# Handles artifact download, backup, and safe Drupal deployment
+# Handles git pull, composer install, and safe Drupal deployment
 #
-# Usage: ./devpanel-deploy.sh <branch> <sha> <artifact_url>
+# Usage: ./devpanel-deploy.sh <branch> <sha>
 #
 
 set -e  # Exit on any error
@@ -12,11 +12,9 @@ set -o pipefail  # Exit on pipe failure
 
 # Configuration
 BRANCH=${1:-""}
-SHA=${2:-""}
-ARTIFACT_URL=${3:-""}
+SHA=${2:-"unknown"}
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 LOG_FILE="/tmp/deployment-${BRANCH}-${TIMESTAMP}.log"
-TEMP_DIR="/tmp/deploy-${SHA}"
 WEBROOT="/var/www/html"
 
 # Colors for output
@@ -34,7 +32,6 @@ log() {
 error_exit() {
     echo -e "${RED}[$(date +'%Y-%m-%d %H:%M:%S')] ERROR: $1${NC}" | tee -a "$LOG_FILE"
     log "Deployment failed. Check log: $LOG_FILE"
-    cleanup
     exit 1
 }
 
@@ -48,57 +45,23 @@ warning() {
     echo -e "${YELLOW}[$(date +'%Y-%m-%d %H:%M:%S')] WARNING: $1${NC}" | tee -a "$LOG_FILE"
 }
 
-# Cleanup function
-cleanup() {
-    if [ -d "$TEMP_DIR" ]; then
-        log "Cleaning up temporary directory: $TEMP_DIR"
-        rm -rf "$TEMP_DIR"
-    fi
-}
-
 # Validate inputs
-if [ -z "$BRANCH" ] || [ -z "$SHA" ]; then
-    error_exit "Usage: $0 <branch> <sha> <artifact_url>"
+if [ -z "$BRANCH" ]; then
+    error_exit "Usage: $0 <branch> [<sha>]"
 fi
 
 log "========================================="
 log "Starting deployment for branch: $BRANCH"
 log "Commit SHA: $SHA"
-log "Artifact URL: $ARTIFACT_URL"
 log "========================================="
 
-# Step 1: Create temporary directory
-log "Creating temporary directory..."
-mkdir -p "$TEMP_DIR" || error_exit "Failed to create temp directory"
+# Step 1: Pull latest code from git
+log "Pulling latest code from git..."
+cd "$WEBROOT" || error_exit "Failed to change to webroot"
+git pull origin "$BRANCH" || error_exit "Git pull failed"
+success "Code updated successfully"
 
-# Step 2: Download artifact (if URL provided)
-if [ -n "$ARTIFACT_URL" ]; then
-    log "Downloading artifact from GitHub Actions..."
-    ARTIFACT_FILE="$TEMP_DIR/artifact.tar.gz"
-
-    if [ -n "${GITHUB_TOKEN:-}" ]; then
-        curl -L -f -H "Authorization: token $GITHUB_TOKEN" \
-            -o "$ARTIFACT_FILE" "$ARTIFACT_URL" || error_exit "Failed to download artifact"
-    else
-        warning "GITHUB_TOKEN not set, skipping artifact download"
-    fi
-
-    # Verify artifact was downloaded
-    if [ -f "$ARTIFACT_FILE" ]; then
-        log "Artifact downloaded successfully"
-
-        # Extract artifact
-        log "Extracting artifact..."
-        tar -xzf "$ARTIFACT_FILE" -C "$TEMP_DIR" || error_exit "Failed to extract artifact"
-        success "Artifact extracted successfully"
-    fi
-else
-    log "No artifact URL provided, using git pull method..."
-    cd "$WEBROOT" || error_exit "Failed to change to webroot"
-    git pull origin "$BRANCH" || error_exit "Git pull failed"
-fi
-
-# Step 3: Install dependencies based on branch
+# Step 2: Install dependencies based on branch
 cd "$WEBROOT" || error_exit "Failed to change to webroot"
 
 log "Installing Composer dependencies..."
@@ -150,9 +113,6 @@ if [ "$BRANCH" = "staging" ] || [ "$BRANCH" = "main" ]; then
     log "Running drush status check..."
     vendor/bin/drush status >> "$LOG_FILE" 2>&1 || warning "drush status check failed"
 fi
-
-# Step 8: Cleanup
-cleanup
 
 # Final success
 log "========================================="
